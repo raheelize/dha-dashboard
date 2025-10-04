@@ -1,0 +1,21 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>{% block title %}My Site{% endblock %}</title>
+    <style>
+        body { font-family: Arial, sans-serif; margin: 20px; }
+        nav a { margin-right: 15px; text-decoration: none; }
+    </style>
+</head>
+<body>
+    <nav>
+        <a href="{% url 'login' %}">Login</a>
+        <a href="{% url 'dashboard1' %}">Dashboard 1</a>
+        <a href="{% url 'dashboard2' %}">Dashboard 2</a>
+        <a href="{% url 'dashboard3' %}">Dashboard 3</a>
+    </nav>
+    <hr>
+    {% block content %}{% endblock %}
+</body>
+</html>
