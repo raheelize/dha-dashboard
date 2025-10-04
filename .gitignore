@@ -1,0 +1,35 @@
+
+---
+
+### 📌 .gitignore
+```gitignore
+# Python
+*.pyc
+__pycache__/
+*.pyo
+*.pyd
+*.so
+*.egg-info/
+dist/
+build/
+
+# Virtual environment
+venv/
+env/
+.venv/
+
+# Django
+db.sqlite3
+/media/
+staticfiles/
+
+# VSCode / PyCharm
+.vscode/
+.idea/
+
+# OS
+.DS_Store
+Thumbs.db
+
+# Logs
+*.log
