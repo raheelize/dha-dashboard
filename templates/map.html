@@ -1,0 +1,57 @@
+{% extends 'base.html' %}
+
+{% block title %}Pakistan — multiple polygons demo{% endblock %}
+
+{% block content %}
+<h2>Pakistan — multi-polygon highlights (demo)</h2>
+
+<link rel="stylesheet" href="https://unpkg.com/leaflet/dist/leaflet.css" />
+<div id="map" style="height: 650px; width: 100%; margin-bottom: 1rem;"></div>
+<script src="https://unpkg.com/leaflet/dist/leaflet.js"></script>
+
+<script>
+    // Polygons passed from Django view
+    const polygons = {{ polygons_json|safe }};
+
+    // Initialize map roughly centered on Pakistan
+    const map = L.map('map').setView([30.3753, 69.3451], 5);
+
+    L.tileLayer('https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png', {
+        attribution: '© OpenStreetMap contributors'
+    }).addTo(map);
+
+    // Keep created layers to compute bounds
+    const layers = [];
+
+    polygons.forEach(function(p) {
+        // Create polygon with provided style
+        const poly = L.polygon(p.coords, {
+            color: p.style.color,
+            fillColor: p.style.fillColor,
+            fillOpacity: p.style.fillOpacity,
+            weight: 2
+        }).addTo(map);
+
+        // Popup and hover interactions
+        poly.bindPopup("<strong>" + p.name + "</strong>");
+
+        poly.on('mouseover', function(e) {
+            this.setStyle({ weight: 4, fillOpacity: Math.min(0.9, p.style.fillOpacity + 0.25) });
+            if (!L.Browser.ie && !L.Browser.opera && !L.Browser.edge) {
+                this.bringToFront();
+            }
+        });
+        poly.on('mouseout', function(e) {
+            this.setStyle({ weight: 2, fillOpacity: p.style.fillOpacity });
+        });
+
+        layers.push(poly);
+    });
+
+    // Fit the map to show all polygons with padding
+    if (layers.length) {
+        const group = L.featureGroup(layers);
+        map.fitBounds(group.getBounds(), { padding: [20, 20] });
+    }
+</script>
+{% endblock %}
