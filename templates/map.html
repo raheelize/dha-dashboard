@@ -1,57 +1,52 @@
 {% extends 'base.html' %}
 
-{% block title %}Pakistan — multiple polygons demo{% endblock %}
+{% block title %}Map Demo{% endblock %}
 
 {% block content %}
-<h2>Pakistan — multi-polygon highlights (demo)</h2>
+<h2>Map Demo(Leaflet)</h2>
 
+<!-- Leaflet CSS -->
 <link rel="stylesheet" href="https://unpkg.com/leaflet/dist/leaflet.css" />
-<div id="map" style="height: 650px; width: 100%; margin-bottom: 1rem;"></div>
+
+<div id="map" style="height: 500px; width: 100%;"></div>
+
+<!-- Leaflet JS -->
 <script src="https://unpkg.com/leaflet/dist/leaflet.js"></script>
 
 <script>
-    // Polygons passed from Django view
-    const polygons = {{ polygons_json|safe }};
+    // Initialize map (centered on Islamabad for demo)
+    var map = L.map('map').setView([33.6844, 73.0479], 12);
 
-    // Initialize map roughly centered on Pakistan
-    const map = L.map('map').setView([30.3753, 69.3451], 5);
-
+    // Add OpenStreetMap tiles
     L.tileLayer('https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png', {
         attribution: '© OpenStreetMap contributors'
     }).addTo(map);
 
-    // Keep created layers to compute bounds
-    const layers = [];
+    // Dummy polygon coordinates (around Islamabad-ish area)
+    var polygonCoords = [
+        [33.7200, 73.0550], // Point 1
+        [33.7100, 73.0900], // Point 2
+        [33.6800, 73.1200], // Point 3
+        [33.6500, 73.0800], // Point 4
+        [33.6700, 73.0300], // Point 5
+        [33.7200, 73.0550]  // Back to start to close polygon
+    ];
 
-    polygons.forEach(function(p) {
-        // Create polygon with provided style
-        const poly = L.polygon(p.coords, {
-            color: p.style.color,
-            fillColor: p.style.fillColor,
-            fillOpacity: p.style.fillOpacity,
-            weight: 2
-        }).addTo(map);
+    // Draw polygon (filled area)
+    var polygon = L.polygon(polygonCoords, {
+        color: "blue",       // border color
+        fillColor: "lightblue", 
+        fillOpacity: 0.4
+    }).addTo(map);
 
-        // Popup and hover interactions
-        poly.bindPopup("<strong>" + p.name + "</strong>");
+    polygon.bindPopup("This is the demo polygon area.");
 
-        poly.on('mouseover', function(e) {
-            this.setStyle({ weight: 4, fillOpacity: Math.min(0.9, p.style.fillOpacity + 0.25) });
-            if (!L.Browser.ie && !L.Browser.opera && !L.Browser.edge) {
-                this.bringToFront();
-            }
-        });
-        poly.on('mouseout', function(e) {
-            this.setStyle({ weight: 2, fillOpacity: p.style.fillOpacity });
-        });
+    // Also draw polyline (same coords but just connected lines)
+    var polyline = L.polyline(polygonCoords, {
+        color: "red",
+        weight: 3
+    }).addTo(map);
 
-        layers.push(poly);
-    });
-
-    // Fit the map to show all polygons with padding
-    if (layers.length) {
-        const group = L.featureGroup(layers);
-        map.fitBounds(group.getBounds(), { padding: [20, 20] });
-    }
+    polyline.bindPopup("This is the outline path.");
 </script>
 {% endblock %}
