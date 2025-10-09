@@ -33,7 +33,7 @@
     <nav class="navbar navbar-expand-lg fixed-top">
         <div class="container-fluid">
             <a class="navbar-brand" href="#">
-                <img src="{% static 'assets/img/images/R2V-Logo.png'%}" alt="logo" width="140" height="40">
+                <img src="{% static 'assets/img/images/DecisionHubLogo.png'%}" alt="logo" width="140" height="40">
             </a>
             <div class="navbar-tabs d-none d-lg-flex flex-grow-1 justify-content-center gap-3">
                 <a href="{% url 'land' %}" class="nav-tab {% if request.resolver_match.url_name == 'land' %}active{% endif %}">Land</a>
@@ -46,9 +46,9 @@
                 <a href="#" class="nav-tab {% if request.resolver_match.url_name == 'analytics' %}active{% endif %}">Analytics</a>
             </div>
             <div class="d-flex align-items-center ms-auto">
-                <button class="btn btn-red" title="Login">
+                <a href = "{% url 'logout'%}" class="btn btn-red" title="Log Out">
                     <i class="bi bi-power fs-5"></i>
-                </button>
+                </a>
             </div>
         </div>
     </nav>
@@ -72,46 +72,62 @@
     <script>// Toast functionality
         function showToast(message, type = 'success') {
             const colors = {
-                success: 'bg-green-500',
-                error: 'bg-red-500',
-                info: 'bg-blue-500',
-                warning: 'bg-yellow-400',
+                success: 'text-bg-success',
+                error: 'text-bg-danger',
+                info: 'text-bg-info',
+                warning: 'text-bg-warning',
             };
 
+            const containerId = 'toast-container';
+            let container = document.getElementById(containerId);
+
+            // Create container if not already in DOM
+            if (!container) {
+                container = document.createElement('div');
+                container.id = containerId;
+                container.className = 'toast-container position-fixed top-0 end-0 p-3';
+                document.body.appendChild(container);
+            }
+
+            // Create toast element
             const toast = document.createElement('div');
-            toast.className = `text-white px-4 py-3 rounded-lg shadow-lg ${colors[type]} transform transition-all duration-300 translate-x-full opacity-0`;
+            toast.className = `toast align-items-center ${colors[type]} border-0`;
+            toast.role = 'alert';
+            toast.ariaLive = 'assertive';
+            toast.ariaAtomic = 'true';
             toast.innerHTML = `
-                <div class="flex items-center justify-between">
-                    <span class="text-sm font-medium">${message}</span>
-                    <button onclick="this.parentElement.parentElement.remove()" class="ml-3 text-white/80 hover:text-white">
-                        <i class="fas fa-times text-xs"></i>
-                    </button>
+                <div class="d-flex">
+                    <div class="toast-body">
+                        ${message}
+                    </div>
+                    <button type="button" class="btn-close btn-close-white me-2 m-auto" data-bs-dismiss="toast" aria-label="Close"></button>
                 </div>
             `;
 
-            document.getElementById('toast-container').appendChild(toast);
+            container.appendChild(toast);
 
-            // Animate in
-            setTimeout(() => {
-                toast.classList.remove('translate-x-full', 'opacity-0');
-            }, 100);
+            // Initialize Bootstrap toast
+            const bsToast = new bootstrap.Toast(toast, {
+                delay: 4000,
+                autohide: true
+            });
 
-            // Auto remove after 5 seconds
-            setTimeout(() => {
-                toast.classList.add('translate-x-full', 'opacity-0');
-                setTimeout(() => toast.remove(), 300);
-            }, 5000);
+            bsToast.show();
+
+            // Remove from DOM after it hides
+            toast.addEventListener('hidden.bs.toast', () => toast.remove());
         }
     </script>
 
     {% if messages %}
     <script>
+    document.addEventListener('DOMContentLoaded', function () {
         {% for message in messages %}
-        showToast('{{ message }}', '{{ message.tags }}');
+        showToast(`{{ message|escapejs }}`, `{{ message.tags }}`);
         {% endfor %}
+    });
     </script>
     {% endif %}
-
 </body>
 
 </html>

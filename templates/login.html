@@ -62,6 +62,7 @@
                         <h6 class="px-1 mb-4"> Login </h6>
                     </div>
                     <form id="loginForm" class="login" action="{% url 'login' %}" method="POST">
+                        {% csrf_token %}
                         <div class="mb-4 mt-5">
                             <label for="username" class="visually-hidden">Username or Email</label>
                             <div class="input-group">
