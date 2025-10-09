@@ -222,6 +222,24 @@
                 step();
                 window.addEventListener('resize', resize, { passive: true });
             })();
+
+
+        document.querySelectorAll('.toggle-password').forEach(button => {
+            button.addEventListener('click', () => {
+            const input = document.querySelector(button.getAttribute('data-target'));
+            const icon = button.querySelector('i');
+
+            if (input.type === 'password') {
+                input.type = 'text';
+                icon.classList.replace('bi-eye', 'bi-eye-slash');
+                button.setAttribute('aria-label', 'Hide password');
+            } else {
+                input.type = 'password';
+                icon.classList.replace('bi-eye-slash', 'bi-eye');
+                button.setAttribute('aria-label', 'Show password');
+            }
+            });
+        });
     </script>
 
 </body>
