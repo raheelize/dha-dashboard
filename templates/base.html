@@ -117,17 +117,18 @@
             // Remove from DOM after it hides
             toast.addEventListener('hidden.bs.toast', () => toast.remove());
         }
+
+
+        {% if messages %}
+        document.addEventListener('DOMContentLoaded', function () {
+            {% for message in messages %}
+            showToast(`{{ message|escapejs }}`, `{{ message.tags }}`);
+            {% endfor %}
+        });
+        {% endif %}
     </script>
 
-    {% if messages %}
-    <script>
-    document.addEventListener('DOMContentLoaded', function () {
-        {% for message in messages %}
-        showToast(`{{ message|escapejs }}`, `{{ message.tags }}`);
-        {% endfor %}
-    });
-    </script>
-    {% endif %}
+    
 </body>
 
 </html>

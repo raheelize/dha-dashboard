@@ -43,12 +43,12 @@
                         <p class="pt-2 text-dark-50 mb-0">A comprehensive geospatial solution for managing and
                             visualizing Defence Housing Authority data.</p>
                     </div>
-                    <div class="brand-logo-section d-flex align-items-center justify-content-left">
+                    <!-- <div class="brand-logo-section d-flex align-items-center justify-content-left">
                         <img src="{% static 'assets/img/images/dha_logo.png' %}" alt="DHA Logo" class="brand-logo" width="90"
                             height="90">
                         <img src="{% static 'assets/img/images/logo1.png' %}" alt="Logo" class="brand-logo" width="90"
                             height="90">
-                    </div>
+                    </div> -->
                 </div>
             </div>
             <div class="card card-login card-compact m-5 h-50 pt-0 border-1 mx-4">
@@ -240,6 +240,63 @@
             }
             });
         });
+
+        function showToast(message, type = 'success') {
+            const colors = {
+                success: 'text-bg-success',
+                error: 'text-bg-danger',
+                info: 'text-bg-info',
+                warning: 'text-bg-warning',
+            };
+
+            const containerId = 'toast-container';
+            let container = document.getElementById(containerId);
+
+            // Create container if not already in DOM
+            if (!container) {
+                container = document.createElement('div');
+                container.id = containerId;
+                container.className = 'toast-container position-fixed top-0 end-0 p-3';
+                document.body.appendChild(container);
+            }
+
+            // Create toast element
+            const toast = document.createElement('div');
+            toast.className = `toast align-items-center ${colors[type]} border-0`;
+            toast.role = 'alert';
+            toast.ariaLive = 'assertive';
+            toast.ariaAtomic = 'true';
+            toast.innerHTML = `
+                <div class="d-flex">
+                    <div class="toast-body">
+                        ${message}
+                    </div>
+                    <button type="button" class="btn-close btn-close-white me-2 m-auto" data-bs-dismiss="toast" aria-label="Close"></button>
+                </div>
+            `;
+
+            container.appendChild(toast);
+
+            // Initialize Bootstrap toast
+            const bsToast = new bootstrap.Toast(toast, {
+                delay: 4000,
+                autohide: true
+            });
+
+            bsToast.show();
+
+            // Remove from DOM after it hides
+            toast.addEventListener('hidden.bs.toast', () => toast.remove());
+        }
+
+
+        {% if messages %}
+        document.addEventListener('DOMContentLoaded', function () {
+            {% for message in messages %}
+            showToast(`{{ message|escapejs }}`, `{{ message.tags }}`);
+            {% endfor %}
+        });
+        {% endif %}
     </script>
 
 </body>

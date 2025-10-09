@@ -74,24 +74,6 @@ WSGI_APPLICATION = 'dha_dashboard.wsgi.application'
 # Database
 # https://docs.djangoproject.com/en/5.2/ref/settings/#databases
 
-# DATABASES = {
-#     'default': {
-#         'ENGINE': 'django.db.backends.sqlite3',
-#         'NAME': BASE_DIR / 'db.sqlite3',
-#     }
-# }
-
-
-DATABASES = {
-    'default': {
-        'ENGINE': 'django.db.backends.postgresql',
-        'NAME': 'dha_cims',             # <-- your DB name
-        'USER': 'postgres',           # <-- your DB username
-        'PASSWORD': 'postgres12345',  # <-- your DB password
-        'HOST': '100.123.175.40',          # or IP if remote
-        'PORT': '5432',               # default PostgreSQL port
-    }
-}
 
 
 DATABASES = {
