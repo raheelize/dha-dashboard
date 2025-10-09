@@ -1,15 +1,228 @@
-{% extends 'base.html' %}
+<!DOCTYPE html>
+<html lang="en" class="h-100">
+{% load static %}
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport"
+        content="width=device-width, initial-scale=1.0, user-scalable=no, minimum-scale=1.0, maximum-scale=1.0">
+    <title>WEB-GIS Dashboard</title>
 
-{% block title %}Login{% endblock %}
+    <!-- Bootstrap CSS -->
+    <link rel="stylesheet" href="{% static 'assets/css/bootstrap53.css' %}">
 
-{% block content %}
-<h2>Login Page</h2>
-<form method="post">
-    {% csrf_token %}
-    <label>Username:</label><br>
-    <input type="text" name="username"><br><br>
-    <label>Password:</label><br>
-    <input type="password" name="password"><br><br>
-    <button type="submit">Login</button>
-</form>
-{% endblock %}
+    <!-- Bootstrap Icons -->
+    <link rel="stylesheet" href="{% static 'assets/bootstrap-icons-1.11.3/font/bootstrap-icons.css' %}">
+
+    <!-- Google Fonts -->
+    <link rel="stylesheet" href="{% static 'assets/fonts/css/fonts.css' %}">
+
+    <!-- Custom CSS -->
+    <link rel="stylesheet" href="{% static 'assets/css/login.css' %}">
+
+</head>
+
+<body>
+
+    <canvas id="canvi" aria-hidden="true"></canvas>
+    <!-- <div class="slider" id="slider">
+        <img id="img" src="assets/img/images/90617.jpg" alt="Background Image" />
+    </div> -->
+
+    <div class="content">
+        <div class="login-container pt-5 mt-5 d-flex gap-4 justify-content-between align-items-stretch flex-wrap w-100">
+            <div class="card mt-5 bg-transparent">
+                <div class="card-body mt-4 p-5">
+                    <div class="text-left mt-0 mb-4">
+                        <h6 class="welcome-label mb-4">WELCOME TO COREGIS</h6>
+                    </div>
+                    <div class="text-start fs-1 mb-4">
+                        <h2 class="display-6 fw-bold shaded-title mb-3">CENTRALIZED GIS FOR DEFENCE HOUSING AUTHORITIES
+                        </h2>
+                    </div>
+                    <div class="mt-4">
+                        <p class="pt-2 text-dark-50 mb-0">A comprehensive geospatial solution for managing and
+                            visualizing Defence Housing Authority data.</p>
+                    </div>
+                    <div class="brand-logo-section d-flex align-items-center justify-content-left">
+                        <img src="{% static 'assets/img/images/dha_logo.png' %}" alt="DHA Logo" class="brand-logo" width="90"
+                            height="90">
+                        <img src="{% static 'assets/img/images/logo1.png' %}" alt="Logo" class="brand-logo" width="90"
+                            height="90">
+                    </div>
+                </div>
+            </div>
+            <div class="card card-login card-compact m-5 h-50 pt-0 border-1 mx-4">
+                <div class="card-body pb-2 mx-1">
+                    <div class="logo-section text-left pt-1 mb-5">
+                        <img src="{% static 'assets/img/images/DecisionHubLogo.png' %}" alt="logo" class="logo" width="190"
+                            height="30">
+                        <h6 class="px-1 mb-0 subtitle"> COREGIS </h6>
+                    </div>
+                    <div class="text-left">
+                        <h6 class="px-1 mb-4"> Login </h6>
+                    </div>
+                    <form id="loginForm" class="login" action="{% url 'login' %}" method="POST">
+                        <div class="mb-4 mt-5">
+                            <label for="username" class="visually-hidden">Username or Email</label>
+                            <div class="input-group">
+                                <span class="input-group-text" id="username-addon">
+                                    <i class="bi bi-person"></i>
+                                </span>
+                                <input type="text" class="form-control" id="username" name="username" placeholder="Username / Email"
+                                    aria-label="Username or Email" aria-describedby="username-addon" required>
+                            </div>
+                        </div>
+
+                        <div class="mb-5 mt-4">
+                            <label for="password" class="visually-hidden">Password</label>
+                            <div class="input-group">
+                                <span class="input-group-text" id="password-addon">
+                                    <i class="bi bi-lock"></i>
+                                </span>
+                                <input type="password" class="form-control" id="password" name="password" placeholder="Password"
+                                    aria-label="Password" aria-describedby="password-addon" required>
+                                <button type="button" class="btn btn-outline-dark toggle-password"
+                                    aria-label="Show password" data-target="#password">
+                                    <i class="bi bi-eye"></i>
+                                </button>
+                            </div>
+                        </div>
+
+                        <div class="mb-3 d-flex justify-content-between align-items-center">
+                            <div class="form-check">
+                                <input type="checkbox" class="form-check-input" id="rememberMe" name="remember_me">
+                                <label class="form-check-label" for="rememberMe">Remember me</label>
+                            </div>
+                            <a href="#" class="forgot-password">Forgot Password?</a>
+                        </div>
+
+                        <div class="d-grid gap-2 mt-5">
+                            <button type="submit" class="btn btn-login" id="loginButton">
+                                <span class="btn-label">Login</span>
+                                <i class="bi bi-box-arrow-in-right ms-2"></i>
+                            </button>
+                        </div>
+                    </form>
+
+                </div>
+                <div class="d-flex align-items-center justify-content-left position-relative mt-3 px-3">
+                    <small class="authors fw-light">Developed by <a href="https://www.r2v.com"
+                            target="_blank">www.r2v.com</a></small>
+                </div>
+            </div>
+        </div>
+
+        <footer class="footer text-center">
+            <div class="container">
+                <span class="text-light small">
+                    ©
+                    <script>document.write(new Date().getFullYear())</script> . All rights reserved.
+                </span>
+            </div>
+        </footer>
+
+    </div>
+
+
+    <!-- Bootstrap JS -->
+    <script src = "{% static 'assets/js/bootstrap53.bundle.min.js' %}"></script>
+
+    <script>
+            (function () {
+                const mql = window.matchMedia('(prefers-reduced-motion: reduce)');
+                const canvas = document.getElementById('canvi');
+                if (!canvas || mql.matches) return;
+
+                const ctx = canvas.getContext('2d');
+                const DPR = Math.max(1, Math.floor(window.devicePixelRatio || 1));
+                let w = 0, h = 0, particles = [];
+                const GREEN = 'rgba(22,163,74,0.22)';
+                const BLUE = 'rgba(59,130,246,0.22)';   // blue accent
+                const PURP = 'rgba(147,51,234,0.22)';   // purple accent
+                const WHITE = 'rgba(255,255,255,0.16)';  // slightly softer white
+
+                function resize() {
+                    const { innerWidth, innerHeight } = window;
+                    w = canvas.width = innerWidth * DPR;
+                    h = canvas.height = innerHeight * DPR;
+                    canvas.style.width = innerWidth + 'px';
+                    canvas.style.height = innerHeight + 'px';
+                    initParticles();
+                }
+
+                function initParticles() {
+                    const area = (w / DPR) * (h / DPR);
+                    // slightly higher density, with safe caps
+                    const count = Math.min(200, Math.max(80, Math.floor(area / 12000)));
+                    particles = Array.from({ length: count }, () => {
+                        const r = Math.random() * 1.8 + 0.8;
+                        // slightly faster range than before
+                        const speed = (Math.random() * 0.6 + 0.2) * DPR;
+                        const angle = Math.random() * Math.PI * 2;
+                        const palette = [GREEN, BLUE, PURP, WHITE, GREEN, BLUE]; // bias toward color
+                        return {
+                            x: Math.random() * w,
+                            y: Math.random() * h,
+                            vx: Math.cos(angle) * speed,
+                            vy: Math.sin(angle) * speed,
+                            r: r * DPR,
+                            color: palette[Math.floor(Math.random() * palette.length)],
+                        };
+                    });
+                }
+
+                function step() {
+                    ctx.clearRect(0, 0, w, h);
+                    for (let p of particles) {
+                        p.x += p.vx;
+                        p.y += p.vy;
+
+                        if (p.x < -10) p.x = w + 10;
+                        if (p.x > w + 10) p.x = -10;
+                        if (p.y < -10) p.y = h + 10;
+                        if (p.y > h + 10) p.y = -10;
+
+                        ctx.beginPath();
+                        ctx.fillStyle = p.color;
+                        ctx.shadowBlur = 8 * DPR;
+                        ctx.shadowColor = p.color;
+                        ctx.arc(p.x, p.y, p.r, 0, Math.PI * 2);
+                        ctx.fill();
+                        // reset shadow to avoid affecting strokes
+                        ctx.shadowBlur = 0;
+                    }
+
+                    const maxDist = 130 * DPR;        // a touch longer links
+                    const maxDist2 = maxDist * maxDist;
+                    ctx.lineWidth = 0.6 * DPR;
+                    for (let i = 0; i < particles.length; i++) {
+                        const p = particles[i];
+                        for (let j = i + 1; j < particles.length; j++) {
+                            const q = particles[j];
+                            const dx = p.x - q.x;
+                            const dy = p.y - q.y;
+                            const d2 = dx * dx + dy * dy;
+                            if (d2 <= maxDist2) {
+                                const d = Math.sqrt(d2);
+                                const alpha = Math.max(0, 1 - d / maxDist) * 0.22; // faint lines
+                                ctx.strokeStyle = 'rgba(255,255,255,' + alpha + ')';
+                                ctx.beginPath();
+                                ctx.moveTo(p.x, p.y);
+                                ctx.lineTo(q.x, q.y);
+                                ctx.stroke();
+                            }
+                        }
+                    }
+
+                    requestAnimationFrame(step);
+                }
+
+                resize();
+                step();
+                window.addEventListener('resize', resize, { passive: true });
+            })();
+    </script>
+
+</body>
+
+</html>

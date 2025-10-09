@@ -1,22 +1,117 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="en" class="h-100">
+{% load static %}
 <head>
-    <meta charset="UTF-8">
-    <title>{% block title %}My Site{% endblock %}</title>
-    <style>
-        body { font-family: Arial, sans-serif; margin: 20px; }
-        nav a { margin-right: 15px; text-decoration: none; }
-    </style>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=no, minimum-scale=1.0, maximum-scale=1.0">
+    
+    <title>WEB-GIS Dashboard</title>
+
+    <!-- Bootstrap CSS -->
+    <link rel="stylesheet" href="{% static 'assets/css/bootstrap53.css' %}">
+
+    <!-- Bootstrap Icons -->
+    <link rel="stylesheet" href="{% static 'assets/bootstrap-icons-1.11.3/font/bootstrap-icons.css' %}">
+
+    <!-- Fonts -->
+    <link rel="stylesheet" href="{% static 'assets/fonts/css/fonts.css' %}">
+
+    <!-- Style CSS -->
+    <link rel="stylesheet" href="{% static 'assets/css/modules/main.css' %}">
+
+    <!-- Leaflet CSS -->
+    <link rel="stylesheet" href="{% static 'lib/leaflet/dist/leaflet.css' %}">
+
+    {# External CDN links can stay commented out or restored if needed #}
+    <!-- <link rel="stylesheet" href="https://js.arcgis.com/3.46/esri/css/esri.css">
+    <link rel="stylesheet" href="https://js.arcgis.com/3.46/dijit/themes/claro/claro.css"> -->
+
+
 </head>
+
 <body>
-    <nav>
-        <a href="{% url 'login' %}">Login</a>
-        <a href="{% url 'dashboard1' %}">Dashboard 1</a>
-        <a href="{% url 'dashboard2' %}">Dashboard 2</a>
-        <a href="{% url 'dashboard3' %}">Dashboard 3</a>
-        <a href="{% url 'map' %}">Map</a>
+    <nav class="navbar navbar-expand-lg fixed-top">
+        <div class="container-fluid">
+            <a class="navbar-brand" href="#">
+                <img src="{% static 'assets/img/images/R2V-Logo.png'%}" alt="logo" width="140" height="40">
+            </a>
+            <div class="navbar-tabs d-none d-lg-flex flex-grow-1 justify-content-center gap-3">
+                <a href="{% url 'land' %}" class="nav-tab {% if request.resolver_match.url_name == 'land' %}active{% endif %}">Land</a>
+                <a href="{% url 'townplan' %}" class="nav-tab {% if request.resolver_match.url_name == 'townplan' %}active{% endif %}">Townplan</a>
+                <a href="#" class="nav-tab {% if request.resolver_match.url_name == 'services' %}active{% endif %}">Services</a>
+                <a href="#" class="nav-tab {% if request.resolver_match.url_name == 'horticulture' %}active{% endif %}">Horticulture</a>
+                <a href="#" class="nav-tab {% if request.resolver_match.url_name == 'security' %}active{% endif %}">Security</a>
+                <a href="#" class="nav-tab {% if request.resolver_match.url_name == 'coregis' %}active{% endif %}">CoreGIS</a>
+                <a href="#" class="nav-tab {% if request.resolver_match.url_name == 'query_engine' %}active{% endif %}">Query Engine</a>
+                <a href="#" class="nav-tab {% if request.resolver_match.url_name == 'analytics' %}active{% endif %}">Analytics</a>
+            </div>
+            <div class="d-flex align-items-center ms-auto">
+                <button class="btn btn-red" title="Login">
+                    <i class="bi bi-power fs-5"></i>
+                </button>
+            </div>
+        </div>
     </nav>
-    <hr>
-    {% block content %}{% endblock %}
+    {% block content %}
+    {% endblock %}
+    
+    
+    <!-- <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
+    <script src="https://js.arcgis.com/3.46/"></script> -->
+    <!-- Local JS Files -->
+    <script src="{% static 'assets/js/bootstrap53.bundle.min.js' %}"></script>
+    <script src="{% static 'lib/leaflet/dist/leaflet.js' %}"></script>
+    <script src="{% static 'assets/js/map.js' %}"></script>
+    <script src="{% static 'lib/highcharts/highcharts.js' %}"></script>
+    <script src="{% static 'lib/highcharts/highcharts-more.js' %}"></script>
+    <script src="{% static 'assets/js/graph.js' %}"></script>
+    <script src="{% static 'assets/js/style.js' %}"></script>
+
+
+
+    <script>// Toast functionality
+        function showToast(message, type = 'success') {
+            const colors = {
+                success: 'bg-green-500',
+                error: 'bg-red-500',
+                info: 'bg-blue-500',
+                warning: 'bg-yellow-400',
+            };
+
+            const toast = document.createElement('div');
+            toast.className = `text-white px-4 py-3 rounded-lg shadow-lg ${colors[type]} transform transition-all duration-300 translate-x-full opacity-0`;
+            toast.innerHTML = `
+                <div class="flex items-center justify-between">
+                    <span class="text-sm font-medium">${message}</span>
+                    <button onclick="this.parentElement.parentElement.remove()" class="ml-3 text-white/80 hover:text-white">
+                        <i class="fas fa-times text-xs"></i>
+                    </button>
+                </div>
+            `;
+
+            document.getElementById('toast-container').appendChild(toast);
+
+            // Animate in
+            setTimeout(() => {
+                toast.classList.remove('translate-x-full', 'opacity-0');
+            }, 100);
+
+            // Auto remove after 5 seconds
+            setTimeout(() => {
+                toast.classList.add('translate-x-full', 'opacity-0');
+                setTimeout(() => toast.remove(), 300);
+            }, 5000);
+        }
+    </script>
+
+    {% if messages %}
+    <script>
+        {% for message in messages %}
+        showToast('{{ message }}', '{{ message.tags }}');
+        {% endfor %}
+    </script>
+    {% endif %}
+
 </body>
+
 </html>
