@@ -1,0 +1,141 @@
+/* --- Beautiful Glass Loader --- */
+#page-loader.loader-overlay {
+  position: fixed;
+  inset: 0;
+  z-index: 9999;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  backdrop-filter: blur(10px) brightness(0.7);
+  background: rgba(0, 0, 0, 0.3);
+  transition: opacity 0.4s ease, visibility 0.4s ease;
+  opacity: 0;
+  visibility: hidden;
+}
+
+#page-loader.loader-overlay.show {
+  opacity: 1;
+  visibility: visible;
+}
+
+.loader-glass {
+  background: rgba(255, 255, 255, 0.12);
+  border: 1px solid rgba(255, 255, 255, 0.2);
+  border-radius: 1rem;
+  padding: 2rem 3rem;
+  box-shadow: 0 8px 32px rgba(0, 0, 0, 0.4);
+  backdrop-filter: blur(20px);
+  animation: popIn 0.3s ease-out;
+}
+
+.loader-spinner {
+  width: 4rem;
+  height: 4rem;
+  border-width: 0.35rem;
+  animation: spinGlow 1.5s linear infinite;
+}
+
+.loader-text {
+  font-size: 1.1rem;
+  letter-spacing: 0.5px;
+  color: #00ffae !important;
+  text-shadow: 0 0 8px rgba(0, 255, 174, 0.7);
+  animation: pulseText 1.8s ease-in-out infinite;
+}
+
+/* --- Animations --- */
+@keyframes popIn {
+  from {
+    transform: scale(0.95);
+    opacity: 0;
+  }
+  to {
+    transform: scale(1);
+    opacity: 1;
+  }
+}
+
+@keyframes spinGlow {
+  0% {
+    filter: drop-shadow(0 0 2px #00ffae);
+  }
+  50% {
+    filter: drop-shadow(0 0 10px #00ffae);
+  }
+  100% {
+    filter: drop-shadow(0 0 2px #00ffae);
+  }
+}
+
+@keyframes pulseText {
+  0%, 100% {
+    opacity: 1;
+  }
+  50% {
+    opacity: 0.5;
+  }
+}
+/* ----------------------------------------
+Skeleton
+*/
+/* --- SKELETON LOADER --- */
+.skeleton-wrapper {
+  display: flex;
+  flex-direction: column;
+  align-items: center;        /* center horizontally */
+  justify-content: center;    /* center vertically */
+  gap: 8px;
+  min-height: 15px;           /* ensures proper vertical space */
+  padding: 3px;
+  position: relative;
+}
+
+.skeleton-block {
+  border-radius: 6px;
+  background: linear-gradient(90deg, #e0e0e0 25%, #f5f5f5 50%, #e0e0e0 75%);
+  background-size: 200% 100%;
+  animation: shimmer 1.5s infinite ease-in-out;
+  margin: 4px 0;
+  opacity: 0.9;
+  transition: opacity 0.3s ease;
+}
+
+.skeleton-lg {
+  width: 85%;
+  height: 15px;
+}
+
+.skeleton-md {
+  width: 65%;
+  height: 8px;
+}
+
+.skeleton-sm {
+  width: 35%;
+  height: 5px;
+}
+
+@keyframes shimmer {
+  0% {
+    background-position: -200% 0;
+  }
+  100% {
+    background-position: 200% 0;
+  }
+}
+
+/* Optional polish for cards */
+.card-body.skeleton-wrapper {
+  min-height: 10px; /* taller cards get better vertical centering */
+}
+
+/* Smooth fade-in/out for skeleton appearance */
+.skeleton-wrapper {
+  animation: fadeIn 0.4s ease forwards;
+}
+@keyframes fadeIn {
+  from { opacity: 0; transform: scale(0.98); }
+  to { opacity: 1; transform: scale(1); }
+}
+
+

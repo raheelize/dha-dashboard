@@ -1,5 +1,5 @@
-﻿"""
-WSGI config for dha_dashboard project.
+"""
+WSGI config for dha_web_gis project.
 
 It exposes the WSGI callable as a module-level variable named ``application``.
 
@@ -11,7 +11,7 @@ import os
 
 from django.core.wsgi import get_wsgi_application
 
-os.environ.setdefault('DJANGO_SETTINGS_MODULE', 'dha_dashboard.settings')
+os.environ.setdefault('DJANGO_SETTINGS_MODULE', 'dha_web_gis.settings')
 
 application = get_wsgi_application()
 

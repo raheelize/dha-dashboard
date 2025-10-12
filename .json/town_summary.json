@@ -1,0 +1,274 @@
+{
+  "total_summary": {
+    "Residential": 5760,
+    "Commercial": 1332,
+    "Education": 45,
+    "Amenities": 81,
+    "Parks": 27,
+    "Total_Plots": 36225
+  },
+  "stations": [
+    {
+      "station_name": "Multan",
+      "phases": {
+        "phase1": {
+          "Residential": 336,
+          "Commercial": 69,
+          "Education": 3,
+          "Amenities": 6,
+          "Parks": 2,
+          "Total_Plots": 2080
+        },
+        "phase2": {
+          "Residential": 304,
+          "Commercial": 79,
+          "Education": 2,
+          "Amenities": 3,
+          "Parks": 1,
+          "Total_Plots": 1945
+        }
+      },
+      "totals": {
+        "Residential": 640,
+        "Commercial": 148,
+        "Education": 5,
+        "Amenities": 9,
+        "Parks": 3,
+        "Total_Plots": 4025
+      }
+    },
+    {
+      "station_name": "Lahore",
+      "phases": {
+        "phase1": {
+          "Residential": 336,
+          "Commercial": 69,
+          "Education": 3,
+          "Amenities": 6,
+          "Parks": 2,
+          "Total_Plots": 2080
+        },
+        "phase2": {
+          "Residential": 304,
+          "Commercial": 79,
+          "Education": 2,
+          "Amenities": 3,
+          "Parks": 1,
+          "Total_Plots": 1945
+        }
+      },
+      "totals": {
+        "Residential": 640,
+        "Commercial": 148,
+        "Education": 5,
+        "Amenities": 9,
+        "Parks": 3,
+        "Total_Plots": 4025
+      }
+    },
+    {
+      "station_name": "Gujranwala",
+      "phases": {
+        "phase1": {
+          "Residential": 336,
+          "Commercial": 69,
+          "Education": 3,
+          "Amenities": 6,
+          "Parks": 2,
+          "Total_Plots": 2080
+        },
+        "phase2": {
+          "Residential": 304,
+          "Commercial": 79,
+          "Education": 2,
+          "Amenities": 3,
+          "Parks": 1,
+          "Total_Plots": 1945
+        }
+      },
+      "totals": {
+        "Residential": 640,
+        "Commercial": 148,
+        "Education": 5,
+        "Amenities": 9,
+        "Parks": 3,
+        "Total_Plots": 4025
+      }
+    },
+    {
+      "station_name": "Karachi",
+      "phases": {
+        "phase1": {
+          "Residential": 336,
+          "Commercial": 69,
+          "Education": 3,
+          "Amenities": 6,
+          "Parks": 2,
+          "Total_Plots": 2080
+        },
+        "phase2": {
+          "Residential": 304,
+          "Commercial": 79,
+          "Education": 2,
+          "Amenities": 3,
+          "Parks": 1,
+          "Total_Plots": 1945
+        }
+      },
+      "totals": {
+        "Residential": 640,
+        "Commercial": 148,
+        "Education": 5,
+        "Amenities": 9,
+        "Parks": 3,
+        "Total_Plots": 4025
+      }
+    },
+    {
+      "station_name": "Karachi_City",
+      "phases": {
+        "phase1": {
+          "Residential": 336,
+          "Commercial": 69,
+          "Education": 3,
+          "Amenities": 6,
+          "Parks": 2,
+          "Total_Plots": 2080
+        },
+        "phase2": {
+          "Residential": 304,
+          "Commercial": 79,
+          "Education": 2,
+          "Amenities": 3,
+          "Parks": 1,
+          "Total_Plots": 1945
+        }
+      },
+      "totals": {
+        "Residential": 640,
+        "Commercial": 148,
+        "Education": 5,
+        "Amenities": 9,
+        "Parks": 3,
+        "Total_Plots": 4025
+      }
+    },
+    {
+      "station_name": "Islamabad",
+      "phases": {
+        "phase1": {
+          "Residential": 336,
+          "Commercial": 69,
+          "Education": 3,
+          "Amenities": 6,
+          "Parks": 2,
+          "Total_Plots": 2080
+        },
+        "phase2": {
+          "Residential": 304,
+          "Commercial": 79,
+          "Education": 2,
+          "Amenities": 3,
+          "Parks": 1,
+          "Total_Plots": 1945
+        }
+      },
+      "totals": {
+        "Residential": 640,
+        "Commercial": 148,
+        "Education": 5,
+        "Amenities": 9,
+        "Parks": 3,
+        "Total_Plots": 4025
+      }
+    },
+    {
+      "station_name": "Quetta",
+      "phases": {
+        "phase1": {
+          "Residential": 336,
+          "Commercial": 69,
+          "Education": 3,
+          "Amenities": 6,
+          "Parks": 2,
+          "Total_Plots": 2080
+        },
+        "phase2": {
+          "Residential": 304,
+          "Commercial": 79,
+          "Education": 2,
+          "Amenities": 3,
+          "Parks": 1,
+          "Total_Plots": 1945
+        }
+      },
+      "totals": {
+        "Residential": 640,
+        "Commercial": 148,
+        "Education": 5,
+        "Amenities": 9,
+        "Parks": 3,
+        "Total_Plots": 4025
+      }
+    },
+    {
+      "station_name": "Bahawalpur",
+      "phases": {
+        "phase1": {
+          "Residential": 336,
+          "Commercial": 69,
+          "Education": 3,
+          "Amenities": 6,
+          "Parks": 2,
+          "Total_Plots": 2080
+        },
+        "phase2": {
+          "Residential": 304,
+          "Commercial": 79,
+          "Education": 2,
+          "Amenities": 3,
+          "Parks": 1,
+          "Total_Plots": 1945
+        }
+      },
+      "totals": {
+        "Residential": 640,
+        "Commercial": 148,
+        "Education": 5,
+        "Amenities": 9,
+        "Parks": 3,
+        "Total_Plots": 4025
+      }
+    },
+    {
+      "station_name": "Peshawar",
+      "phases": {
+        "phase1": {
+          "Residential": 336,
+          "Commercial": 69,
+          "Education": 3,
+          "Amenities": 6,
+          "Parks": 2,
+          "Total_Plots": 2080
+        },
+        "phase2": {
+          "Residential": 304,
+          "Commercial": 79,
+          "Education": 2,
+          "Amenities": 3,
+          "Parks": 1,
+          "Total_Plots": 1945
+        }
+      },
+      "totals": {
+        "Residential": 640,
+        "Commercial": 148,
+        "Education": 5,
+        "Amenities": 9,
+        "Parks": 3,
+        "Total_Plots": 4025
+      }
+    }
+  ],
+  "timestamp": "2025-10-12T15:56:22.306871"
+}

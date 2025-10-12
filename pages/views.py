@@ -3,7 +3,9 @@ from django.contrib.auth.decorators import login_required
 from django.contrib.auth import authenticate, login as auth_login, logout as auth_logout
 from django.contrib import messages
 
-
+# -------------------------------------
+# AUTH 
+# -------------------------------------
 def login_view(request):
     # If user is already logged in, send them straight to dashboard
     if request.user.is_authenticated:
@@ -38,24 +40,30 @@ def login_view(request):
 @login_required(login_url='login')
 def logout_view(request):
     auth_logout(request)
-    messages.info(request, "You’ve been logged out successfully.")
+    messages.info(request, "You've been logged out successfully.")
     return redirect('login')
 
-
-
+# -------------------------------------
+# PAGES 
+# -------------------------------------
 
 @login_required(login_url='/login/')
 def land(request):
-    context = {'dashboard_number': 2}
-    return render(request, 'land.html',context)
-
+    return render(request, 'land.html')
 
 @login_required(login_url='/login/')
 def townplan(request):
-    context = {'dashboard_number': 2}
-    return render(request, 'townplan.html',context)
+    return render(request, 'townplan.html')
 
 @login_required(login_url='/login/')
-def map_view(request):
-    return render(request, 'map.html')
+def cheif_engineering(request):
+    return render(request, 'cheif_engineering.html')
+
+@login_required(login_url='/login/')
+def horticulture(request):
+    return render(request, 'horticulture.html')
+
+@login_required(login_url='/login/')
+def security(request):
+    return render(request, 'security.html')
 

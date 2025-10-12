@@ -1,0 +1,4468 @@
+{
+  "total_summary": {
+    "total_possessed": 285748.38,
+    "total_unpossessed": 9,
+    "total_purchased": 290678.445,
+    "total_unpurchased": 107608.932,
+    "total_hold": 9,
+    "total_litigation": 4713.471
+  },
+  "stations": [
+    {
+      "station_name": "Gujranwala",
+      "totals": {
+        "possessed": 31749.82,
+        "unpossessed": 1,
+        "purchased": 32297.605,
+        "unpurchased": 11956.548,
+        "hold": 1,
+        "litigation": 523.719
+      },
+      "phase_summary": {
+        "I": {
+          "possessed": 22975.963,
+          "unpossessed": 1,
+          "purchased": 23402.126,
+          "unpurchased": 8379.934,
+          "hold": 1,
+          "litigation": 410.097
+        },
+        "Ii": {
+          "possessed": 8773.857,
+          "unpossessed": 0,
+          "purchased": 8895.479,
+          "unpurchased": 3576.614,
+          "hold": 0,
+          "litigation": 113.622
+        }
+      },
+      "land_provider_summary": {
+        "Muhammad Masood": {
+          "possessed": 1746.981,
+          "unpossessed": 0,
+          "purchased": 1765.281,
+          "unpurchased": 536.319,
+          "hold": 0,
+          "litigation": 18.3
+        },
+        "Ch. Muhammad Nawaz": {
+          "possessed": 1355.128,
+          "unpossessed": 0,
+          "purchased": 1355.128,
+          "unpurchased": 794.571,
+          "hold": 0,
+          "litigation": 0
+        },
+        "Babar Shehzad Chatha": {
+          "possessed": 1682.274,
+          "unpossessed": 0,
+          "purchased": 1718.374,
+          "unpurchased": 506.381,
+          "hold": 0,
+          "litigation": 36.1
+        },
+        "Sheikh Ejaz": {
+          "possessed": 583.041,
+          "unpossessed": 0,
+          "purchased": 583.041,
+          "unpurchased": 143.253,
+          "hold": 0,
+          "litigation": 0
+        },
+        "Murtaza Raza Ladu Bhai": {
+          "possessed": 781.791,
+          "unpossessed": 0,
+          "purchased": 788.741,
+          "unpurchased": 300.109,
+          "hold": 0,
+          "litigation": 6.95
+        },
+        "Abdul Majeed & Muzaffar": {
+          "possessed": 3037.003,
+          "unpossessed": 0,
+          "purchased": 3111.131,
+          "unpurchased": 1096.769,
+          "hold": 0,
+          "litigation": 74.128
+        },
+        "Ijaz Ahmed Cheema": {
+          "possessed": 641.481,
+          "unpossessed": 0,
+          "purchased": 641.481,
+          "unpurchased": 135.444,
+          "hold": 0,
+          "litigation": 0
+        },
+        "Ansir Mahmood Sandhu": {
+          "possessed": 3086.383,
+          "unpossessed": 0,
+          "purchased": 3116.308,
+          "unpurchased": 1470.517,
+          "hold": 0,
+          "litigation": 29.925
+        },
+        "Rana Allah Rakha & Hamid Mushtaq": {
+          "possessed": 873.056,
+          "unpossessed": 0,
+          "purchased": 873.056,
+          "unpurchased": 368.939,
+          "hold": 0,
+          "litigation": 0
+        },
+        "Muhammad Sher Anwar": {
+          "possessed": 1194.644,
+          "unpossessed": 0,
+          "purchased": 1194.644,
+          "unpurchased": 181.906,
+          "hold": 0,
+          "litigation": 0
+        },
+        "Zaka Ullah Ranjha": {
+          "possessed": 249.378,
+          "unpossessed": 0,
+          "purchased": 249.378,
+          "unpurchased": 41.672,
+          "hold": 0,
+          "litigation": 0
+        },
+        "Saad Shafiq Khokhar": {
+          "possessed": 25.635,
+          "unpossessed": 0,
+          "purchased": 34.635,
+          "unpurchased": 22.865,
+          "hold": 0,
+          "litigation": 9
+        },
+        "Nil": {
+          "possessed": 959.53,
+          "unpossessed": 0,
+          "purchased": 981.597,
+          "unpurchased": 410.857,
+          "hold": 0,
+          "litigation": 0
+        },
+        "Saadat Ali Cheema": {
+          "possessed": 3539.746,
+          "unpossessed": 0,
+          "purchased": 3574.629,
+          "unpurchased": 1636.927,
+          "hold": 0,
+          "litigation": 34.883
+        },
+        "Mehboob Danish": {
+          "possessed": 586.976,
+          "unpossessed": 0,
+          "purchased": 631.41,
+          "unpurchased": 122.19,
+          "hold": 0,
+          "litigation": 44.434
+        },
+        "Muhammad Nawaz Ghani": {
+          "possessed": 446.388,
+          "unpossessed": 0,
+          "purchased": 446.388,
+          "unpurchased": 54.062,
+          "hold": 0,
+          "litigation": 0
+        },
+        "Mirza Muhammad Saeed": {
+          "possessed": 96.4,
+          "unpossessed": 0,
+          "purchased": 96.4,
+          "unpurchased": 17.0,
+          "hold": 0,
+          "litigation": 0
+        },
+        "Abid & Shahid": {
+          "possessed": 884.355,
+          "unpossessed": 0,
+          "purchased": 982.005,
+          "unpurchased": 199.845,
+          "hold": 0,
+          "litigation": 97.65
+        },
+        "Javaid Iqbal Cheema": {
+          "possessed": 136.433,
+          "unpossessed": 0,
+          "purchased": 136.433,
+          "unpurchased": 25.867,
+          "hold": 0,
+          "litigation": 0
+        },
+        "Sheikh Nadeem Akhtar": {
+          "possessed": 234.077,
+          "unpossessed": 0,
+          "purchased": 234.077,
+          "unpurchased": 42.973,
+          "hold": 0,
+          "litigation": 0
+        },
+        "Sheikh Iftikhar Ahmad Hashmi": {
+          "possessed": 737.972,
+          "unpossessed": 0,
+          "purchased": 737.972,
+          "unpurchased": 127.128,
+          "hold": 0,
+          "litigation": 0
+        },
+        "Rustam Ali Chatha": {
+          "possessed": 862.194,
+          "unpossessed": 0,
+          "purchased": 881.994,
+          "unpurchased": 143.006,
+          "hold": 0,
+          "litigation": 19.8
+        },
+        "Direct Dha": {
+          "possessed": 1146.313,
+          "unpossessed": 0,
+          "purchased": 1146.313,
+          "unpurchased": 492.353,
+          "hold": 0,
+          "litigation": 0
+        },
+        "Sheikh Hassnain Akram": {
+          "possessed": 179.65,
+          "unpossessed": 0,
+          "purchased": 179.65,
+          "unpurchased": 24.6,
+          "hold": 0,
+          "litigation": 0
+        },
+        "Rana Allah Rakha": {
+          "possessed": 263.901,
+          "unpossessed": 0,
+          "purchased": 268.912,
+          "unpurchased": 202.938,
+          "hold": 0,
+          "litigation": 5.012
+        },
+        "Iftikhar Ali": {
+          "possessed": 77.056,
+          "unpossessed": 0,
+          "purchased": 77.056,
+          "unpurchased": 26.894,
+          "hold": 0,
+          "litigation": 0
+        },
+        "Shahbaz Ali": {
+          "possessed": 150.089,
+          "unpossessed": 0,
+          "purchased": 150.089,
+          "unpurchased": 133.394,
+          "hold": 0,
+          "litigation": 0
+        },
+        "Muhmmad Farooq": {
+          "possessed": 574.683,
+          "unpossessed": 0,
+          "purchased": 574.683,
+          "unpurchased": 296.167,
+          "hold": 0,
+          "litigation": 0
+        },
+        "Muhammad Shafique": {
+          "possessed": 40.65,
+          "unpossessed": 0,
+          "purchased": 40.65,
+          "unpurchased": 9.1,
+          "hold": 0,
+          "litigation": 0
+        },
+        "Sheikh Muhammad Akram": {
+          "possessed": 282.472,
+          "unpossessed": 0,
+          "purchased": 292.572,
+          "unpurchased": 32.878,
+          "hold": 0,
+          "litigation": 10.1
+        },
+        "Muzaffar Ahmed": {
+          "possessed": 1604.498,
+          "unpossessed": 0,
+          "purchased": 1678.92,
+          "unpurchased": 765.268,
+          "hold": 0,
+          "litigation": 74.422
+        },
+        "Ehsan Ullah Cheema": {
+          "possessed": 73.675,
+          "unpossessed": 0,
+          "purchased": 73.675,
+          "unpurchased": 125.925,
+          "hold": 0,
+          "litigation": 0
+        },
+        "Nasir Mahmood": {
+          "possessed": 448.631,
+          "unpossessed": 0,
+          "purchased": 504.646,
+          "unpurchased": 286.166,
+          "hold": 0,
+          "litigation": 56.015
+        },
+        "Iftikhar Ali & Saadat": {
+          "possessed": 318.591,
+          "unpossessed": 0,
+          "purchased": 318.591,
+          "unpurchased": 95.109,
+          "hold": 0,
+          "litigation": 0
+        },
+        "Kaleem Sabir Taseer": {
+          "possessed": 127.738,
+          "unpossessed": 0,
+          "purchased": 127.738,
+          "unpurchased": 35.262,
+          "hold": 0,
+          "litigation": 0
+        },
+        "Abdul Majeed Cheema": {
+          "possessed": 130.258,
+          "unpossessed": 0,
+          "purchased": 136.258,
+          "unpurchased": 61.692,
+          "hold": 0,
+          "litigation": 6.0
+        },
+        "Shahzad Ahmed": {
+          "possessed": 59.072,
+          "unpossessed": 0,
+          "purchased": 59.072,
+          "unpurchased": 38.278,
+          "hold": 0,
+          "litigation": 0
+        },
+        "Zaka Ullah": {
+          "possessed": 395.675,
+          "unpossessed": 0,
+          "purchased": 395.675,
+          "unpurchased": 100.625,
+          "hold": 0,
+          "litigation": 0
+        },
+        "Amjad Khan Kakar": {
+          "possessed": 40.344,
+          "unpossessed": 0,
+          "purchased": 40.344,
+          "unpurchased": 24.656,
+          "hold": 0,
+          "litigation": 0
+        },
+        "Sohrab Khan": {
+          "possessed": 20.897,
+          "unpossessed": 0,
+          "purchased": 20.897,
+          "unpurchased": 22.653,
+          "hold": 0,
+          "litigation": 0
+        },
+        "Khalid Mehmood": {
+          "possessed": 56.644,
+          "unpossessed": 0,
+          "purchased": 56.644,
+          "unpurchased": 21.006,
+          "hold": 0,
+          "litigation": 0
+        },
+        "Muhammad Saeed Afzal": {
+          "possessed": 254.346,
+          "unpossessed": 0,
+          "purchased": 254.346,
+          "unpurchased": 133.554,
+          "hold": 0,
+          "litigation": 0
+        },
+        "Babar Shehzad Chatha/Ansir Mahmood Sandhu": {
+          "possessed": 286.7,
+          "unpossessed": 1,
+          "purchased": 289.7,
+          "unpurchased": 74.75,
+          "hold": 1,
+          "litigation": 1
+        },
+        "Khalid Rauf": {
+          "possessed": 98.0,
+          "unpossessed": 0,
+          "purchased": 98.0,
+          "unpurchased": 41.7,
+          "hold": 0,
+          "litigation": 0
+        },
+        "Muhammad Ahsan": {
+          "possessed": 115.9,
+          "unpossessed": 0,
+          "purchased": 115.9,
+          "unpurchased": 49.15,
+          "hold": 0,
+          "litigation": 0
+        },
+        "Malik Ranbaz Khan & Irfan Ahmed": {
+          "possessed": 896.487,
+          "unpossessed": 0,
+          "purchased": 896.487,
+          "unpurchased": 358.313,
+          "hold": 0,
+          "litigation": 0
+        },
+        "Najeeb Ullah": {
+          "possessed": 70.0,
+          "unpossessed": 0,
+          "purchased": 70.0,
+          "unpurchased": 8.0,
+          "hold": 0,
+          "litigation": 0
+        },
+        "Muhammad Haseeb": {
+          "possessed": 6,
+          "unpossessed": 0,
+          "purchased": 6,
+          "unpurchased": 2,
+          "hold": 0,
+          "litigation": 0
+        },
+        "Mansoor Cheema": {
+          "possessed": 73.929,
+          "unpossessed": 0,
+          "purchased": 73.929,
+          "unpurchased": 12.971,
+          "hold": 0,
+          "litigation": 0
+        },
+        "Hamid Raza": {
+          "possessed": 31.1,
+          "unpossessed": 0,
+          "purchased": 31.1,
+          "unpurchased": 16.5,
+          "hold": 0,
+          "litigation": 0
+        },
+        "Shahadat Ali": {
+          "possessed": 44.667,
+          "unpossessed": 0,
+          "purchased": 44.667,
+          "unpurchased": 15.333,
+          "hold": 0,
+          "litigation": 0
+        },
+        "Zaheer Ghani": {
+          "possessed": 19.876,
+          "unpossessed": 0,
+          "purchased": 19.876,
+          "unpurchased": 18.374,
+          "hold": 0,
+          "litigation": 0
+        },
+        "Tariq Rauf Ahmad": {
+          "possessed": 39.45,
+          "unpossessed": 0,
+          "purchased": 39.45,
+          "unpurchased": 0.0,
+          "hold": 0,
+          "litigation": 0
+        },
+        "Nazaqat Ali": {
+          "possessed": 58.15,
+          "unpossessed": 0,
+          "purchased": 58.15,
+          "unpurchased": 21.4,
+          "hold": 0,
+          "litigation": 0
+        },
+        "Tahir Mehmood Khan": {
+          "possessed": 6.0,
+          "unpossessed": 0,
+          "purchased": 6.0,
+          "unpurchased": 9.1,
+          "hold": 0,
+          "litigation": 0
+        },
+        "Javed Iqbal": {
+          "possessed": 2.844,
+          "unpossessed": 0,
+          "purchased": 2.844,
+          "unpurchased": 12.506,
+          "hold": 0,
+          "litigation": 0
+        },
+        "Amjad Ali": {
+          "possessed": 10.666,
+          "unpossessed": 0,
+          "purchased": 10.666,
+          "unpurchased": 5.334,
+          "hold": 0,
+          "litigation": 0
+        },
+        "Javed Iqbal / Shahzad Ahmed": {
+          "possessed": 4,
+          "unpossessed": 0,
+          "purchased": 4,
+          "unpurchased": 4,
+          "hold": 0,
+          "litigation": 0
+        }
+      }
+    },
+    {
+      "station_name": "Karachi",
+      "totals": {
+        "possessed": 31749.82,
+        "unpossessed": 1,
+        "purchased": 32297.605,
+        "unpurchased": 11956.548,
+        "hold": 1,
+        "litigation": 523.719
+      },
+      "phase_summary": {
+        "I": {
+          "possessed": 22975.963,
+          "unpossessed": 1,
+          "purchased": 23402.126,
+          "unpurchased": 8379.934,
+          "hold": 1,
+          "litigation": 410.097
+        },
+        "Ii": {
+          "possessed": 8773.857,
+          "unpossessed": 0,
+          "purchased": 8895.479,
+          "unpurchased": 3576.614,
+          "hold": 0,
+          "litigation": 113.622
+        }
+      },
+      "land_provider_summary": {
+        "Muhammad Masood": {
+          "possessed": 1746.981,
+          "unpossessed": 0,
+          "purchased": 1765.281,
+          "unpurchased": 536.319,
+          "hold": 0,
+          "litigation": 18.3
+        },
+        "Ch. Muhammad Nawaz": {
+          "possessed": 1355.128,
+          "unpossessed": 0,
+          "purchased": 1355.128,
+          "unpurchased": 794.571,
+          "hold": 0,
+          "litigation": 0
+        },
+        "Babar Shehzad Chatha": {
+          "possessed": 1682.274,
+          "unpossessed": 0,
+          "purchased": 1718.374,
+          "unpurchased": 506.381,
+          "hold": 0,
+          "litigation": 36.1
+        },
+        "Sheikh Ejaz": {
+          "possessed": 583.041,
+          "unpossessed": 0,
+          "purchased": 583.041,
+          "unpurchased": 143.253,
+          "hold": 0,
+          "litigation": 0
+        },
+        "Murtaza Raza Ladu Bhai": {
+          "possessed": 781.791,
+          "unpossessed": 0,
+          "purchased": 788.741,
+          "unpurchased": 300.109,
+          "hold": 0,
+          "litigation": 6.95
+        },
+        "Abdul Majeed & Muzaffar": {
+          "possessed": 3037.003,
+          "unpossessed": 0,
+          "purchased": 3111.131,
+          "unpurchased": 1096.769,
+          "hold": 0,
+          "litigation": 74.128
+        },
+        "Ijaz Ahmed Cheema": {
+          "possessed": 641.481,
+          "unpossessed": 0,
+          "purchased": 641.481,
+          "unpurchased": 135.444,
+          "hold": 0,
+          "litigation": 0
+        },
+        "Ansir Mahmood Sandhu": {
+          "possessed": 3086.383,
+          "unpossessed": 0,
+          "purchased": 3116.308,
+          "unpurchased": 1470.517,
+          "hold": 0,
+          "litigation": 29.925
+        },
+        "Rana Allah Rakha & Hamid Mushtaq": {
+          "possessed": 873.056,
+          "unpossessed": 0,
+          "purchased": 873.056,
+          "unpurchased": 368.939,
+          "hold": 0,
+          "litigation": 0
+        },
+        "Muhammad Sher Anwar": {
+          "possessed": 1194.644,
+          "unpossessed": 0,
+          "purchased": 1194.644,
+          "unpurchased": 181.906,
+          "hold": 0,
+          "litigation": 0
+        },
+        "Zaka Ullah Ranjha": {
+          "possessed": 249.378,
+          "unpossessed": 0,
+          "purchased": 249.378,
+          "unpurchased": 41.672,
+          "hold": 0,
+          "litigation": 0
+        },
+        "Saad Shafiq Khokhar": {
+          "possessed": 25.635,
+          "unpossessed": 0,
+          "purchased": 34.635,
+          "unpurchased": 22.865,
+          "hold": 0,
+          "litigation": 9
+        },
+        "Nil": {
+          "possessed": 959.53,
+          "unpossessed": 0,
+          "purchased": 981.597,
+          "unpurchased": 410.857,
+          "hold": 0,
+          "litigation": 0
+        },
+        "Saadat Ali Cheema": {
+          "possessed": 3539.746,
+          "unpossessed": 0,
+          "purchased": 3574.629,
+          "unpurchased": 1636.927,
+          "hold": 0,
+          "litigation": 34.883
+        },
+        "Mehboob Danish": {
+          "possessed": 586.976,
+          "unpossessed": 0,
+          "purchased": 631.41,
+          "unpurchased": 122.19,
+          "hold": 0,
+          "litigation": 44.434
+        },
+        "Muhammad Nawaz Ghani": {
+          "possessed": 446.388,
+          "unpossessed": 0,
+          "purchased": 446.388,
+          "unpurchased": 54.062,
+          "hold": 0,
+          "litigation": 0
+        },
+        "Mirza Muhammad Saeed": {
+          "possessed": 96.4,
+          "unpossessed": 0,
+          "purchased": 96.4,
+          "unpurchased": 17.0,
+          "hold": 0,
+          "litigation": 0
+        },
+        "Abid & Shahid": {
+          "possessed": 884.355,
+          "unpossessed": 0,
+          "purchased": 982.005,
+          "unpurchased": 199.845,
+          "hold": 0,
+          "litigation": 97.65
+        },
+        "Javaid Iqbal Cheema": {
+          "possessed": 136.433,
+          "unpossessed": 0,
+          "purchased": 136.433,
+          "unpurchased": 25.867,
+          "hold": 0,
+          "litigation": 0
+        },
+        "Sheikh Nadeem Akhtar": {
+          "possessed": 234.077,
+          "unpossessed": 0,
+          "purchased": 234.077,
+          "unpurchased": 42.973,
+          "hold": 0,
+          "litigation": 0
+        },
+        "Sheikh Iftikhar Ahmad Hashmi": {
+          "possessed": 737.972,
+          "unpossessed": 0,
+          "purchased": 737.972,
+          "unpurchased": 127.128,
+          "hold": 0,
+          "litigation": 0
+        },
+        "Rustam Ali Chatha": {
+          "possessed": 862.194,
+          "unpossessed": 0,
+          "purchased": 881.994,
+          "unpurchased": 143.006,
+          "hold": 0,
+          "litigation": 19.8
+        },
+        "Direct Dha": {
+          "possessed": 1146.313,
+          "unpossessed": 0,
+          "purchased": 1146.313,
+          "unpurchased": 492.353,
+          "hold": 0,
+          "litigation": 0
+        },
+        "Sheikh Hassnain Akram": {
+          "possessed": 179.65,
+          "unpossessed": 0,
+          "purchased": 179.65,
+          "unpurchased": 24.6,
+          "hold": 0,
+          "litigation": 0
+        },
+        "Rana Allah Rakha": {
+          "possessed": 263.901,
+          "unpossessed": 0,
+          "purchased": 268.912,
+          "unpurchased": 202.938,
+          "hold": 0,
+          "litigation": 5.012
+        },
+        "Iftikhar Ali": {
+          "possessed": 77.056,
+          "unpossessed": 0,
+          "purchased": 77.056,
+          "unpurchased": 26.894,
+          "hold": 0,
+          "litigation": 0
+        },
+        "Shahbaz Ali": {
+          "possessed": 150.089,
+          "unpossessed": 0,
+          "purchased": 150.089,
+          "unpurchased": 133.394,
+          "hold": 0,
+          "litigation": 0
+        },
+        "Muhmmad Farooq": {
+          "possessed": 574.683,
+          "unpossessed": 0,
+          "purchased": 574.683,
+          "unpurchased": 296.167,
+          "hold": 0,
+          "litigation": 0
+        },
+        "Muhammad Shafique": {
+          "possessed": 40.65,
+          "unpossessed": 0,
+          "purchased": 40.65,
+          "unpurchased": 9.1,
+          "hold": 0,
+          "litigation": 0
+        },
+        "Sheikh Muhammad Akram": {
+          "possessed": 282.472,
+          "unpossessed": 0,
+          "purchased": 292.572,
+          "unpurchased": 32.878,
+          "hold": 0,
+          "litigation": 10.1
+        },
+        "Muzaffar Ahmed": {
+          "possessed": 1604.498,
+          "unpossessed": 0,
+          "purchased": 1678.92,
+          "unpurchased": 765.268,
+          "hold": 0,
+          "litigation": 74.422
+        },
+        "Ehsan Ullah Cheema": {
+          "possessed": 73.675,
+          "unpossessed": 0,
+          "purchased": 73.675,
+          "unpurchased": 125.925,
+          "hold": 0,
+          "litigation": 0
+        },
+        "Nasir Mahmood": {
+          "possessed": 448.631,
+          "unpossessed": 0,
+          "purchased": 504.646,
+          "unpurchased": 286.166,
+          "hold": 0,
+          "litigation": 56.015
+        },
+        "Iftikhar Ali & Saadat": {
+          "possessed": 318.591,
+          "unpossessed": 0,
+          "purchased": 318.591,
+          "unpurchased": 95.109,
+          "hold": 0,
+          "litigation": 0
+        },
+        "Kaleem Sabir Taseer": {
+          "possessed": 127.738,
+          "unpossessed": 0,
+          "purchased": 127.738,
+          "unpurchased": 35.262,
+          "hold": 0,
+          "litigation": 0
+        },
+        "Abdul Majeed Cheema": {
+          "possessed": 130.258,
+          "unpossessed": 0,
+          "purchased": 136.258,
+          "unpurchased": 61.692,
+          "hold": 0,
+          "litigation": 6.0
+        },
+        "Shahzad Ahmed": {
+          "possessed": 59.072,
+          "unpossessed": 0,
+          "purchased": 59.072,
+          "unpurchased": 38.278,
+          "hold": 0,
+          "litigation": 0
+        },
+        "Zaka Ullah": {
+          "possessed": 395.675,
+          "unpossessed": 0,
+          "purchased": 395.675,
+          "unpurchased": 100.625,
+          "hold": 0,
+          "litigation": 0
+        },
+        "Amjad Khan Kakar": {
+          "possessed": 40.344,
+          "unpossessed": 0,
+          "purchased": 40.344,
+          "unpurchased": 24.656,
+          "hold": 0,
+          "litigation": 0
+        },
+        "Sohrab Khan": {
+          "possessed": 20.897,
+          "unpossessed": 0,
+          "purchased": 20.897,
+          "unpurchased": 22.653,
+          "hold": 0,
+          "litigation": 0
+        },
+        "Khalid Mehmood": {
+          "possessed": 56.644,
+          "unpossessed": 0,
+          "purchased": 56.644,
+          "unpurchased": 21.006,
+          "hold": 0,
+          "litigation": 0
+        },
+        "Muhammad Saeed Afzal": {
+          "possessed": 254.346,
+          "unpossessed": 0,
+          "purchased": 254.346,
+          "unpurchased": 133.554,
+          "hold": 0,
+          "litigation": 0
+        },
+        "Babar Shehzad Chatha/Ansir Mahmood Sandhu": {
+          "possessed": 286.7,
+          "unpossessed": 1,
+          "purchased": 289.7,
+          "unpurchased": 74.75,
+          "hold": 1,
+          "litigation": 1
+        },
+        "Khalid Rauf": {
+          "possessed": 98.0,
+          "unpossessed": 0,
+          "purchased": 98.0,
+          "unpurchased": 41.7,
+          "hold": 0,
+          "litigation": 0
+        },
+        "Muhammad Ahsan": {
+          "possessed": 115.9,
+          "unpossessed": 0,
+          "purchased": 115.9,
+          "unpurchased": 49.15,
+          "hold": 0,
+          "litigation": 0
+        },
+        "Malik Ranbaz Khan & Irfan Ahmed": {
+          "possessed": 896.487,
+          "unpossessed": 0,
+          "purchased": 896.487,
+          "unpurchased": 358.313,
+          "hold": 0,
+          "litigation": 0
+        },
+        "Najeeb Ullah": {
+          "possessed": 70.0,
+          "unpossessed": 0,
+          "purchased": 70.0,
+          "unpurchased": 8.0,
+          "hold": 0,
+          "litigation": 0
+        },
+        "Muhammad Haseeb": {
+          "possessed": 6,
+          "unpossessed": 0,
+          "purchased": 6,
+          "unpurchased": 2,
+          "hold": 0,
+          "litigation": 0
+        },
+        "Mansoor Cheema": {
+          "possessed": 73.929,
+          "unpossessed": 0,
+          "purchased": 73.929,
+          "unpurchased": 12.971,
+          "hold": 0,
+          "litigation": 0
+        },
+        "Hamid Raza": {
+          "possessed": 31.1,
+          "unpossessed": 0,
+          "purchased": 31.1,
+          "unpurchased": 16.5,
+          "hold": 0,
+          "litigation": 0
+        },
+        "Shahadat Ali": {
+          "possessed": 44.667,
+          "unpossessed": 0,
+          "purchased": 44.667,
+          "unpurchased": 15.333,
+          "hold": 0,
+          "litigation": 0
+        },
+        "Zaheer Ghani": {
+          "possessed": 19.876,
+          "unpossessed": 0,
+          "purchased": 19.876,
+          "unpurchased": 18.374,
+          "hold": 0,
+          "litigation": 0
+        },
+        "Tariq Rauf Ahmad": {
+          "possessed": 39.45,
+          "unpossessed": 0,
+          "purchased": 39.45,
+          "unpurchased": 0.0,
+          "hold": 0,
+          "litigation": 0
+        },
+        "Nazaqat Ali": {
+          "possessed": 58.15,
+          "unpossessed": 0,
+          "purchased": 58.15,
+          "unpurchased": 21.4,
+          "hold": 0,
+          "litigation": 0
+        },
+        "Tahir Mehmood Khan": {
+          "possessed": 6.0,
+          "unpossessed": 0,
+          "purchased": 6.0,
+          "unpurchased": 9.1,
+          "hold": 0,
+          "litigation": 0
+        },
+        "Javed Iqbal": {
+          "possessed": 2.844,
+          "unpossessed": 0,
+          "purchased": 2.844,
+          "unpurchased": 12.506,
+          "hold": 0,
+          "litigation": 0
+        },
+        "Amjad Ali": {
+          "possessed": 10.666,
+          "unpossessed": 0,
+          "purchased": 10.666,
+          "unpurchased": 5.334,
+          "hold": 0,
+          "litigation": 0
+        },
+        "Javed Iqbal / Shahzad Ahmed": {
+          "possessed": 4,
+          "unpossessed": 0,
+          "purchased": 4,
+          "unpurchased": 4,
+          "hold": 0,
+          "litigation": 0
+        }
+      }
+    },
+    {
+      "station_name": "Peshawar",
+      "totals": {
+        "possessed": 31749.82,
+        "unpossessed": 1,
+        "purchased": 32297.605,
+        "unpurchased": 11956.548,
+        "hold": 1,
+        "litigation": 523.719
+      },
+      "phase_summary": {
+        "I": {
+          "possessed": 22975.963,
+          "unpossessed": 1,
+          "purchased": 23402.126,
+          "unpurchased": 8379.934,
+          "hold": 1,
+          "litigation": 410.097
+        },
+        "Ii": {
+          "possessed": 8773.857,
+          "unpossessed": 0,
+          "purchased": 8895.479,
+          "unpurchased": 3576.614,
+          "hold": 0,
+          "litigation": 113.622
+        }
+      },
+      "land_provider_summary": {
+        "Muhammad Masood": {
+          "possessed": 1746.981,
+          "unpossessed": 0,
+          "purchased": 1765.281,
+          "unpurchased": 536.319,
+          "hold": 0,
+          "litigation": 18.3
+        },
+        "Ch. Muhammad Nawaz": {
+          "possessed": 1355.128,
+          "unpossessed": 0,
+          "purchased": 1355.128,
+          "unpurchased": 794.571,
+          "hold": 0,
+          "litigation": 0
+        },
+        "Babar Shehzad Chatha": {
+          "possessed": 1682.274,
+          "unpossessed": 0,
+          "purchased": 1718.374,
+          "unpurchased": 506.381,
+          "hold": 0,
+          "litigation": 36.1
+        },
+        "Sheikh Ejaz": {
+          "possessed": 583.041,
+          "unpossessed": 0,
+          "purchased": 583.041,
+          "unpurchased": 143.253,
+          "hold": 0,
+          "litigation": 0
+        },
+        "Murtaza Raza Ladu Bhai": {
+          "possessed": 781.791,
+          "unpossessed": 0,
+          "purchased": 788.741,
+          "unpurchased": 300.109,
+          "hold": 0,
+          "litigation": 6.95
+        },
+        "Abdul Majeed & Muzaffar": {
+          "possessed": 3037.003,
+          "unpossessed": 0,
+          "purchased": 3111.131,
+          "unpurchased": 1096.769,
+          "hold": 0,
+          "litigation": 74.128
+        },
+        "Ijaz Ahmed Cheema": {
+          "possessed": 641.481,
+          "unpossessed": 0,
+          "purchased": 641.481,
+          "unpurchased": 135.444,
+          "hold": 0,
+          "litigation": 0
+        },
+        "Ansir Mahmood Sandhu": {
+          "possessed": 3086.383,
+          "unpossessed": 0,
+          "purchased": 3116.308,
+          "unpurchased": 1470.517,
+          "hold": 0,
+          "litigation": 29.925
+        },
+        "Rana Allah Rakha & Hamid Mushtaq": {
+          "possessed": 873.056,
+          "unpossessed": 0,
+          "purchased": 873.056,
+          "unpurchased": 368.939,
+          "hold": 0,
+          "litigation": 0
+        },
+        "Muhammad Sher Anwar": {
+          "possessed": 1194.644,
+          "unpossessed": 0,
+          "purchased": 1194.644,
+          "unpurchased": 181.906,
+          "hold": 0,
+          "litigation": 0
+        },
+        "Zaka Ullah Ranjha": {
+          "possessed": 249.378,
+          "unpossessed": 0,
+          "purchased": 249.378,
+          "unpurchased": 41.672,
+          "hold": 0,
+          "litigation": 0
+        },
+        "Saad Shafiq Khokhar": {
+          "possessed": 25.635,
+          "unpossessed": 0,
+          "purchased": 34.635,
+          "unpurchased": 22.865,
+          "hold": 0,
+          "litigation": 9
+        },
+        "Nil": {
+          "possessed": 959.53,
+          "unpossessed": 0,
+          "purchased": 981.597,
+          "unpurchased": 410.857,
+          "hold": 0,
+          "litigation": 0
+        },
+        "Saadat Ali Cheema": {
+          "possessed": 3539.746,
+          "unpossessed": 0,
+          "purchased": 3574.629,
+          "unpurchased": 1636.927,
+          "hold": 0,
+          "litigation": 34.883
+        },
+        "Mehboob Danish": {
+          "possessed": 586.976,
+          "unpossessed": 0,
+          "purchased": 631.41,
+          "unpurchased": 122.19,
+          "hold": 0,
+          "litigation": 44.434
+        },
+        "Muhammad Nawaz Ghani": {
+          "possessed": 446.388,
+          "unpossessed": 0,
+          "purchased": 446.388,
+          "unpurchased": 54.062,
+          "hold": 0,
+          "litigation": 0
+        },
+        "Mirza Muhammad Saeed": {
+          "possessed": 96.4,
+          "unpossessed": 0,
+          "purchased": 96.4,
+          "unpurchased": 17.0,
+          "hold": 0,
+          "litigation": 0
+        },
+        "Abid & Shahid": {
+          "possessed": 884.355,
+          "unpossessed": 0,
+          "purchased": 982.005,
+          "unpurchased": 199.845,
+          "hold": 0,
+          "litigation": 97.65
+        },
+        "Javaid Iqbal Cheema": {
+          "possessed": 136.433,
+          "unpossessed": 0,
+          "purchased": 136.433,
+          "unpurchased": 25.867,
+          "hold": 0,
+          "litigation": 0
+        },
+        "Sheikh Nadeem Akhtar": {
+          "possessed": 234.077,
+          "unpossessed": 0,
+          "purchased": 234.077,
+          "unpurchased": 42.973,
+          "hold": 0,
+          "litigation": 0
+        },
+        "Sheikh Iftikhar Ahmad Hashmi": {
+          "possessed": 737.972,
+          "unpossessed": 0,
+          "purchased": 737.972,
+          "unpurchased": 127.128,
+          "hold": 0,
+          "litigation": 0
+        },
+        "Rustam Ali Chatha": {
+          "possessed": 862.194,
+          "unpossessed": 0,
+          "purchased": 881.994,
+          "unpurchased": 143.006,
+          "hold": 0,
+          "litigation": 19.8
+        },
+        "Direct Dha": {
+          "possessed": 1146.313,
+          "unpossessed": 0,
+          "purchased": 1146.313,
+          "unpurchased": 492.353,
+          "hold": 0,
+          "litigation": 0
+        },
+        "Sheikh Hassnain Akram": {
+          "possessed": 179.65,
+          "unpossessed": 0,
+          "purchased": 179.65,
+          "unpurchased": 24.6,
+          "hold": 0,
+          "litigation": 0
+        },
+        "Rana Allah Rakha": {
+          "possessed": 263.901,
+          "unpossessed": 0,
+          "purchased": 268.912,
+          "unpurchased": 202.938,
+          "hold": 0,
+          "litigation": 5.012
+        },
+        "Iftikhar Ali": {
+          "possessed": 77.056,
+          "unpossessed": 0,
+          "purchased": 77.056,
+          "unpurchased": 26.894,
+          "hold": 0,
+          "litigation": 0
+        },
+        "Shahbaz Ali": {
+          "possessed": 150.089,
+          "unpossessed": 0,
+          "purchased": 150.089,
+          "unpurchased": 133.394,
+          "hold": 0,
+          "litigation": 0
+        },
+        "Muhmmad Farooq": {
+          "possessed": 574.683,
+          "unpossessed": 0,
+          "purchased": 574.683,
+          "unpurchased": 296.167,
+          "hold": 0,
+          "litigation": 0
+        },
+        "Muhammad Shafique": {
+          "possessed": 40.65,
+          "unpossessed": 0,
+          "purchased": 40.65,
+          "unpurchased": 9.1,
+          "hold": 0,
+          "litigation": 0
+        },
+        "Sheikh Muhammad Akram": {
+          "possessed": 282.472,
+          "unpossessed": 0,
+          "purchased": 292.572,
+          "unpurchased": 32.878,
+          "hold": 0,
+          "litigation": 10.1
+        },
+        "Muzaffar Ahmed": {
+          "possessed": 1604.498,
+          "unpossessed": 0,
+          "purchased": 1678.92,
+          "unpurchased": 765.268,
+          "hold": 0,
+          "litigation": 74.422
+        },
+        "Ehsan Ullah Cheema": {
+          "possessed": 73.675,
+          "unpossessed": 0,
+          "purchased": 73.675,
+          "unpurchased": 125.925,
+          "hold": 0,
+          "litigation": 0
+        },
+        "Nasir Mahmood": {
+          "possessed": 448.631,
+          "unpossessed": 0,
+          "purchased": 504.646,
+          "unpurchased": 286.166,
+          "hold": 0,
+          "litigation": 56.015
+        },
+        "Iftikhar Ali & Saadat": {
+          "possessed": 318.591,
+          "unpossessed": 0,
+          "purchased": 318.591,
+          "unpurchased": 95.109,
+          "hold": 0,
+          "litigation": 0
+        },
+        "Kaleem Sabir Taseer": {
+          "possessed": 127.738,
+          "unpossessed": 0,
+          "purchased": 127.738,
+          "unpurchased": 35.262,
+          "hold": 0,
+          "litigation": 0
+        },
+        "Abdul Majeed Cheema": {
+          "possessed": 130.258,
+          "unpossessed": 0,
+          "purchased": 136.258,
+          "unpurchased": 61.692,
+          "hold": 0,
+          "litigation": 6.0
+        },
+        "Shahzad Ahmed": {
+          "possessed": 59.072,
+          "unpossessed": 0,
+          "purchased": 59.072,
+          "unpurchased": 38.278,
+          "hold": 0,
+          "litigation": 0
+        },
+        "Zaka Ullah": {
+          "possessed": 395.675,
+          "unpossessed": 0,
+          "purchased": 395.675,
+          "unpurchased": 100.625,
+          "hold": 0,
+          "litigation": 0
+        },
+        "Amjad Khan Kakar": {
+          "possessed": 40.344,
+          "unpossessed": 0,
+          "purchased": 40.344,
+          "unpurchased": 24.656,
+          "hold": 0,
+          "litigation": 0
+        },
+        "Sohrab Khan": {
+          "possessed": 20.897,
+          "unpossessed": 0,
+          "purchased": 20.897,
+          "unpurchased": 22.653,
+          "hold": 0,
+          "litigation": 0
+        },
+        "Khalid Mehmood": {
+          "possessed": 56.644,
+          "unpossessed": 0,
+          "purchased": 56.644,
+          "unpurchased": 21.006,
+          "hold": 0,
+          "litigation": 0
+        },
+        "Muhammad Saeed Afzal": {
+          "possessed": 254.346,
+          "unpossessed": 0,
+          "purchased": 254.346,
+          "unpurchased": 133.554,
+          "hold": 0,
+          "litigation": 0
+        },
+        "Babar Shehzad Chatha/Ansir Mahmood Sandhu": {
+          "possessed": 286.7,
+          "unpossessed": 1,
+          "purchased": 289.7,
+          "unpurchased": 74.75,
+          "hold": 1,
+          "litigation": 1
+        },
+        "Khalid Rauf": {
+          "possessed": 98.0,
+          "unpossessed": 0,
+          "purchased": 98.0,
+          "unpurchased": 41.7,
+          "hold": 0,
+          "litigation": 0
+        },
+        "Muhammad Ahsan": {
+          "possessed": 115.9,
+          "unpossessed": 0,
+          "purchased": 115.9,
+          "unpurchased": 49.15,
+          "hold": 0,
+          "litigation": 0
+        },
+        "Malik Ranbaz Khan & Irfan Ahmed": {
+          "possessed": 896.487,
+          "unpossessed": 0,
+          "purchased": 896.487,
+          "unpurchased": 358.313,
+          "hold": 0,
+          "litigation": 0
+        },
+        "Najeeb Ullah": {
+          "possessed": 70.0,
+          "unpossessed": 0,
+          "purchased": 70.0,
+          "unpurchased": 8.0,
+          "hold": 0,
+          "litigation": 0
+        },
+        "Muhammad Haseeb": {
+          "possessed": 6,
+          "unpossessed": 0,
+          "purchased": 6,
+          "unpurchased": 2,
+          "hold": 0,
+          "litigation": 0
+        },
+        "Mansoor Cheema": {
+          "possessed": 73.929,
+          "unpossessed": 0,
+          "purchased": 73.929,
+          "unpurchased": 12.971,
+          "hold": 0,
+          "litigation": 0
+        },
+        "Hamid Raza": {
+          "possessed": 31.1,
+          "unpossessed": 0,
+          "purchased": 31.1,
+          "unpurchased": 16.5,
+          "hold": 0,
+          "litigation": 0
+        },
+        "Shahadat Ali": {
+          "possessed": 44.667,
+          "unpossessed": 0,
+          "purchased": 44.667,
+          "unpurchased": 15.333,
+          "hold": 0,
+          "litigation": 0
+        },
+        "Zaheer Ghani": {
+          "possessed": 19.876,
+          "unpossessed": 0,
+          "purchased": 19.876,
+          "unpurchased": 18.374,
+          "hold": 0,
+          "litigation": 0
+        },
+        "Tariq Rauf Ahmad": {
+          "possessed": 39.45,
+          "unpossessed": 0,
+          "purchased": 39.45,
+          "unpurchased": 0.0,
+          "hold": 0,
+          "litigation": 0
+        },
+        "Nazaqat Ali": {
+          "possessed": 58.15,
+          "unpossessed": 0,
+          "purchased": 58.15,
+          "unpurchased": 21.4,
+          "hold": 0,
+          "litigation": 0
+        },
+        "Tahir Mehmood Khan": {
+          "possessed": 6.0,
+          "unpossessed": 0,
+          "purchased": 6.0,
+          "unpurchased": 9.1,
+          "hold": 0,
+          "litigation": 0
+        },
+        "Javed Iqbal": {
+          "possessed": 2.844,
+          "unpossessed": 0,
+          "purchased": 2.844,
+          "unpurchased": 12.506,
+          "hold": 0,
+          "litigation": 0
+        },
+        "Amjad Ali": {
+          "possessed": 10.666,
+          "unpossessed": 0,
+          "purchased": 10.666,
+          "unpurchased": 5.334,
+          "hold": 0,
+          "litigation": 0
+        },
+        "Javed Iqbal / Shahzad Ahmed": {
+          "possessed": 4,
+          "unpossessed": 0,
+          "purchased": 4,
+          "unpurchased": 4,
+          "hold": 0,
+          "litigation": 0
+        }
+      }
+    },
+    {
+      "station_name": "Quetta",
+      "totals": {
+        "possessed": 31749.82,
+        "unpossessed": 1,
+        "purchased": 32297.605,
+        "unpurchased": 11956.548,
+        "hold": 1,
+        "litigation": 523.719
+      },
+      "phase_summary": {
+        "I": {
+          "possessed": 22975.963,
+          "unpossessed": 1,
+          "purchased": 23402.126,
+          "unpurchased": 8379.934,
+          "hold": 1,
+          "litigation": 410.097
+        },
+        "Ii": {
+          "possessed": 8773.857,
+          "unpossessed": 0,
+          "purchased": 8895.479,
+          "unpurchased": 3576.614,
+          "hold": 0,
+          "litigation": 113.622
+        }
+      },
+      "land_provider_summary": {
+        "Muhammad Masood": {
+          "possessed": 1746.981,
+          "unpossessed": 0,
+          "purchased": 1765.281,
+          "unpurchased": 536.319,
+          "hold": 0,
+          "litigation": 18.3
+        },
+        "Ch. Muhammad Nawaz": {
+          "possessed": 1355.128,
+          "unpossessed": 0,
+          "purchased": 1355.128,
+          "unpurchased": 794.571,
+          "hold": 0,
+          "litigation": 0
+        },
+        "Babar Shehzad Chatha": {
+          "possessed": 1682.274,
+          "unpossessed": 0,
+          "purchased": 1718.374,
+          "unpurchased": 506.381,
+          "hold": 0,
+          "litigation": 36.1
+        },
+        "Sheikh Ejaz": {
+          "possessed": 583.041,
+          "unpossessed": 0,
+          "purchased": 583.041,
+          "unpurchased": 143.253,
+          "hold": 0,
+          "litigation": 0
+        },
+        "Murtaza Raza Ladu Bhai": {
+          "possessed": 781.791,
+          "unpossessed": 0,
+          "purchased": 788.741,
+          "unpurchased": 300.109,
+          "hold": 0,
+          "litigation": 6.95
+        },
+        "Abdul Majeed & Muzaffar": {
+          "possessed": 3037.003,
+          "unpossessed": 0,
+          "purchased": 3111.131,
+          "unpurchased": 1096.769,
+          "hold": 0,
+          "litigation": 74.128
+        },
+        "Ijaz Ahmed Cheema": {
+          "possessed": 641.481,
+          "unpossessed": 0,
+          "purchased": 641.481,
+          "unpurchased": 135.444,
+          "hold": 0,
+          "litigation": 0
+        },
+        "Ansir Mahmood Sandhu": {
+          "possessed": 3086.383,
+          "unpossessed": 0,
+          "purchased": 3116.308,
+          "unpurchased": 1470.517,
+          "hold": 0,
+          "litigation": 29.925
+        },
+        "Rana Allah Rakha & Hamid Mushtaq": {
+          "possessed": 873.056,
+          "unpossessed": 0,
+          "purchased": 873.056,
+          "unpurchased": 368.939,
+          "hold": 0,
+          "litigation": 0
+        },
+        "Muhammad Sher Anwar": {
+          "possessed": 1194.644,
+          "unpossessed": 0,
+          "purchased": 1194.644,
+          "unpurchased": 181.906,
+          "hold": 0,
+          "litigation": 0
+        },
+        "Zaka Ullah Ranjha": {
+          "possessed": 249.378,
+          "unpossessed": 0,
+          "purchased": 249.378,
+          "unpurchased": 41.672,
+          "hold": 0,
+          "litigation": 0
+        },
+        "Saad Shafiq Khokhar": {
+          "possessed": 25.635,
+          "unpossessed": 0,
+          "purchased": 34.635,
+          "unpurchased": 22.865,
+          "hold": 0,
+          "litigation": 9
+        },
+        "Nil": {
+          "possessed": 959.53,
+          "unpossessed": 0,
+          "purchased": 981.597,
+          "unpurchased": 410.857,
+          "hold": 0,
+          "litigation": 0
+        },
+        "Saadat Ali Cheema": {
+          "possessed": 3539.746,
+          "unpossessed": 0,
+          "purchased": 3574.629,
+          "unpurchased": 1636.927,
+          "hold": 0,
+          "litigation": 34.883
+        },
+        "Mehboob Danish": {
+          "possessed": 586.976,
+          "unpossessed": 0,
+          "purchased": 631.41,
+          "unpurchased": 122.19,
+          "hold": 0,
+          "litigation": 44.434
+        },
+        "Muhammad Nawaz Ghani": {
+          "possessed": 446.388,
+          "unpossessed": 0,
+          "purchased": 446.388,
+          "unpurchased": 54.062,
+          "hold": 0,
+          "litigation": 0
+        },
+        "Mirza Muhammad Saeed": {
+          "possessed": 96.4,
+          "unpossessed": 0,
+          "purchased": 96.4,
+          "unpurchased": 17.0,
+          "hold": 0,
+          "litigation": 0
+        },
+        "Abid & Shahid": {
+          "possessed": 884.355,
+          "unpossessed": 0,
+          "purchased": 982.005,
+          "unpurchased": 199.845,
+          "hold": 0,
+          "litigation": 97.65
+        },
+        "Javaid Iqbal Cheema": {
+          "possessed": 136.433,
+          "unpossessed": 0,
+          "purchased": 136.433,
+          "unpurchased": 25.867,
+          "hold": 0,
+          "litigation": 0
+        },
+        "Sheikh Nadeem Akhtar": {
+          "possessed": 234.077,
+          "unpossessed": 0,
+          "purchased": 234.077,
+          "unpurchased": 42.973,
+          "hold": 0,
+          "litigation": 0
+        },
+        "Sheikh Iftikhar Ahmad Hashmi": {
+          "possessed": 737.972,
+          "unpossessed": 0,
+          "purchased": 737.972,
+          "unpurchased": 127.128,
+          "hold": 0,
+          "litigation": 0
+        },
+        "Rustam Ali Chatha": {
+          "possessed": 862.194,
+          "unpossessed": 0,
+          "purchased": 881.994,
+          "unpurchased": 143.006,
+          "hold": 0,
+          "litigation": 19.8
+        },
+        "Direct Dha": {
+          "possessed": 1146.313,
+          "unpossessed": 0,
+          "purchased": 1146.313,
+          "unpurchased": 492.353,
+          "hold": 0,
+          "litigation": 0
+        },
+        "Sheikh Hassnain Akram": {
+          "possessed": 179.65,
+          "unpossessed": 0,
+          "purchased": 179.65,
+          "unpurchased": 24.6,
+          "hold": 0,
+          "litigation": 0
+        },
+        "Rana Allah Rakha": {
+          "possessed": 263.901,
+          "unpossessed": 0,
+          "purchased": 268.912,
+          "unpurchased": 202.938,
+          "hold": 0,
+          "litigation": 5.012
+        },
+        "Iftikhar Ali": {
+          "possessed": 77.056,
+          "unpossessed": 0,
+          "purchased": 77.056,
+          "unpurchased": 26.894,
+          "hold": 0,
+          "litigation": 0
+        },
+        "Shahbaz Ali": {
+          "possessed": 150.089,
+          "unpossessed": 0,
+          "purchased": 150.089,
+          "unpurchased": 133.394,
+          "hold": 0,
+          "litigation": 0
+        },
+        "Muhmmad Farooq": {
+          "possessed": 574.683,
+          "unpossessed": 0,
+          "purchased": 574.683,
+          "unpurchased": 296.167,
+          "hold": 0,
+          "litigation": 0
+        },
+        "Muhammad Shafique": {
+          "possessed": 40.65,
+          "unpossessed": 0,
+          "purchased": 40.65,
+          "unpurchased": 9.1,
+          "hold": 0,
+          "litigation": 0
+        },
+        "Sheikh Muhammad Akram": {
+          "possessed": 282.472,
+          "unpossessed": 0,
+          "purchased": 292.572,
+          "unpurchased": 32.878,
+          "hold": 0,
+          "litigation": 10.1
+        },
+        "Muzaffar Ahmed": {
+          "possessed": 1604.498,
+          "unpossessed": 0,
+          "purchased": 1678.92,
+          "unpurchased": 765.268,
+          "hold": 0,
+          "litigation": 74.422
+        },
+        "Ehsan Ullah Cheema": {
+          "possessed": 73.675,
+          "unpossessed": 0,
+          "purchased": 73.675,
+          "unpurchased": 125.925,
+          "hold": 0,
+          "litigation": 0
+        },
+        "Nasir Mahmood": {
+          "possessed": 448.631,
+          "unpossessed": 0,
+          "purchased": 504.646,
+          "unpurchased": 286.166,
+          "hold": 0,
+          "litigation": 56.015
+        },
+        "Iftikhar Ali & Saadat": {
+          "possessed": 318.591,
+          "unpossessed": 0,
+          "purchased": 318.591,
+          "unpurchased": 95.109,
+          "hold": 0,
+          "litigation": 0
+        },
+        "Kaleem Sabir Taseer": {
+          "possessed": 127.738,
+          "unpossessed": 0,
+          "purchased": 127.738,
+          "unpurchased": 35.262,
+          "hold": 0,
+          "litigation": 0
+        },
+        "Abdul Majeed Cheema": {
+          "possessed": 130.258,
+          "unpossessed": 0,
+          "purchased": 136.258,
+          "unpurchased": 61.692,
+          "hold": 0,
+          "litigation": 6.0
+        },
+        "Shahzad Ahmed": {
+          "possessed": 59.072,
+          "unpossessed": 0,
+          "purchased": 59.072,
+          "unpurchased": 38.278,
+          "hold": 0,
+          "litigation": 0
+        },
+        "Zaka Ullah": {
+          "possessed": 395.675,
+          "unpossessed": 0,
+          "purchased": 395.675,
+          "unpurchased": 100.625,
+          "hold": 0,
+          "litigation": 0
+        },
+        "Amjad Khan Kakar": {
+          "possessed": 40.344,
+          "unpossessed": 0,
+          "purchased": 40.344,
+          "unpurchased": 24.656,
+          "hold": 0,
+          "litigation": 0
+        },
+        "Sohrab Khan": {
+          "possessed": 20.897,
+          "unpossessed": 0,
+          "purchased": 20.897,
+          "unpurchased": 22.653,
+          "hold": 0,
+          "litigation": 0
+        },
+        "Khalid Mehmood": {
+          "possessed": 56.644,
+          "unpossessed": 0,
+          "purchased": 56.644,
+          "unpurchased": 21.006,
+          "hold": 0,
+          "litigation": 0
+        },
+        "Muhammad Saeed Afzal": {
+          "possessed": 254.346,
+          "unpossessed": 0,
+          "purchased": 254.346,
+          "unpurchased": 133.554,
+          "hold": 0,
+          "litigation": 0
+        },
+        "Babar Shehzad Chatha/Ansir Mahmood Sandhu": {
+          "possessed": 286.7,
+          "unpossessed": 1,
+          "purchased": 289.7,
+          "unpurchased": 74.75,
+          "hold": 1,
+          "litigation": 1
+        },
+        "Khalid Rauf": {
+          "possessed": 98.0,
+          "unpossessed": 0,
+          "purchased": 98.0,
+          "unpurchased": 41.7,
+          "hold": 0,
+          "litigation": 0
+        },
+        "Muhammad Ahsan": {
+          "possessed": 115.9,
+          "unpossessed": 0,
+          "purchased": 115.9,
+          "unpurchased": 49.15,
+          "hold": 0,
+          "litigation": 0
+        },
+        "Malik Ranbaz Khan & Irfan Ahmed": {
+          "possessed": 896.487,
+          "unpossessed": 0,
+          "purchased": 896.487,
+          "unpurchased": 358.313,
+          "hold": 0,
+          "litigation": 0
+        },
+        "Najeeb Ullah": {
+          "possessed": 70.0,
+          "unpossessed": 0,
+          "purchased": 70.0,
+          "unpurchased": 8.0,
+          "hold": 0,
+          "litigation": 0
+        },
+        "Muhammad Haseeb": {
+          "possessed": 6,
+          "unpossessed": 0,
+          "purchased": 6,
+          "unpurchased": 2,
+          "hold": 0,
+          "litigation": 0
+        },
+        "Mansoor Cheema": {
+          "possessed": 73.929,
+          "unpossessed": 0,
+          "purchased": 73.929,
+          "unpurchased": 12.971,
+          "hold": 0,
+          "litigation": 0
+        },
+        "Hamid Raza": {
+          "possessed": 31.1,
+          "unpossessed": 0,
+          "purchased": 31.1,
+          "unpurchased": 16.5,
+          "hold": 0,
+          "litigation": 0
+        },
+        "Shahadat Ali": {
+          "possessed": 44.667,
+          "unpossessed": 0,
+          "purchased": 44.667,
+          "unpurchased": 15.333,
+          "hold": 0,
+          "litigation": 0
+        },
+        "Zaheer Ghani": {
+          "possessed": 19.876,
+          "unpossessed": 0,
+          "purchased": 19.876,
+          "unpurchased": 18.374,
+          "hold": 0,
+          "litigation": 0
+        },
+        "Tariq Rauf Ahmad": {
+          "possessed": 39.45,
+          "unpossessed": 0,
+          "purchased": 39.45,
+          "unpurchased": 0.0,
+          "hold": 0,
+          "litigation": 0
+        },
+        "Nazaqat Ali": {
+          "possessed": 58.15,
+          "unpossessed": 0,
+          "purchased": 58.15,
+          "unpurchased": 21.4,
+          "hold": 0,
+          "litigation": 0
+        },
+        "Tahir Mehmood Khan": {
+          "possessed": 6.0,
+          "unpossessed": 0,
+          "purchased": 6.0,
+          "unpurchased": 9.1,
+          "hold": 0,
+          "litigation": 0
+        },
+        "Javed Iqbal": {
+          "possessed": 2.844,
+          "unpossessed": 0,
+          "purchased": 2.844,
+          "unpurchased": 12.506,
+          "hold": 0,
+          "litigation": 0
+        },
+        "Amjad Ali": {
+          "possessed": 10.666,
+          "unpossessed": 0,
+          "purchased": 10.666,
+          "unpurchased": 5.334,
+          "hold": 0,
+          "litigation": 0
+        },
+        "Javed Iqbal / Shahzad Ahmed": {
+          "possessed": 4,
+          "unpossessed": 0,
+          "purchased": 4,
+          "unpurchased": 4,
+          "hold": 0,
+          "litigation": 0
+        }
+      }
+    },
+    {
+      "station_name": "Bahawalpur",
+      "totals": {
+        "possessed": 31749.82,
+        "unpossessed": 1,
+        "purchased": 32297.605,
+        "unpurchased": 11956.548,
+        "hold": 1,
+        "litigation": 523.719
+      },
+      "phase_summary": {
+        "I": {
+          "possessed": 22975.963,
+          "unpossessed": 1,
+          "purchased": 23402.126,
+          "unpurchased": 8379.934,
+          "hold": 1,
+          "litigation": 410.097
+        },
+        "Ii": {
+          "possessed": 8773.857,
+          "unpossessed": 0,
+          "purchased": 8895.479,
+          "unpurchased": 3576.614,
+          "hold": 0,
+          "litigation": 113.622
+        }
+      },
+      "land_provider_summary": {
+        "Muhammad Masood": {
+          "possessed": 1746.981,
+          "unpossessed": 0,
+          "purchased": 1765.281,
+          "unpurchased": 536.319,
+          "hold": 0,
+          "litigation": 18.3
+        },
+        "Ch. Muhammad Nawaz": {
+          "possessed": 1355.128,
+          "unpossessed": 0,
+          "purchased": 1355.128,
+          "unpurchased": 794.571,
+          "hold": 0,
+          "litigation": 0
+        },
+        "Babar Shehzad Chatha": {
+          "possessed": 1682.274,
+          "unpossessed": 0,
+          "purchased": 1718.374,
+          "unpurchased": 506.381,
+          "hold": 0,
+          "litigation": 36.1
+        },
+        "Sheikh Ejaz": {
+          "possessed": 583.041,
+          "unpossessed": 0,
+          "purchased": 583.041,
+          "unpurchased": 143.253,
+          "hold": 0,
+          "litigation": 0
+        },
+        "Murtaza Raza Ladu Bhai": {
+          "possessed": 781.791,
+          "unpossessed": 0,
+          "purchased": 788.741,
+          "unpurchased": 300.109,
+          "hold": 0,
+          "litigation": 6.95
+        },
+        "Abdul Majeed & Muzaffar": {
+          "possessed": 3037.003,
+          "unpossessed": 0,
+          "purchased": 3111.131,
+          "unpurchased": 1096.769,
+          "hold": 0,
+          "litigation": 74.128
+        },
+        "Ijaz Ahmed Cheema": {
+          "possessed": 641.481,
+          "unpossessed": 0,
+          "purchased": 641.481,
+          "unpurchased": 135.444,
+          "hold": 0,
+          "litigation": 0
+        },
+        "Ansir Mahmood Sandhu": {
+          "possessed": 3086.383,
+          "unpossessed": 0,
+          "purchased": 3116.308,
+          "unpurchased": 1470.517,
+          "hold": 0,
+          "litigation": 29.925
+        },
+        "Rana Allah Rakha & Hamid Mushtaq": {
+          "possessed": 873.056,
+          "unpossessed": 0,
+          "purchased": 873.056,
+          "unpurchased": 368.939,
+          "hold": 0,
+          "litigation": 0
+        },
+        "Muhammad Sher Anwar": {
+          "possessed": 1194.644,
+          "unpossessed": 0,
+          "purchased": 1194.644,
+          "unpurchased": 181.906,
+          "hold": 0,
+          "litigation": 0
+        },
+        "Zaka Ullah Ranjha": {
+          "possessed": 249.378,
+          "unpossessed": 0,
+          "purchased": 249.378,
+          "unpurchased": 41.672,
+          "hold": 0,
+          "litigation": 0
+        },
+        "Saad Shafiq Khokhar": {
+          "possessed": 25.635,
+          "unpossessed": 0,
+          "purchased": 34.635,
+          "unpurchased": 22.865,
+          "hold": 0,
+          "litigation": 9
+        },
+        "Nil": {
+          "possessed": 959.53,
+          "unpossessed": 0,
+          "purchased": 981.597,
+          "unpurchased": 410.857,
+          "hold": 0,
+          "litigation": 0
+        },
+        "Saadat Ali Cheema": {
+          "possessed": 3539.746,
+          "unpossessed": 0,
+          "purchased": 3574.629,
+          "unpurchased": 1636.927,
+          "hold": 0,
+          "litigation": 34.883
+        },
+        "Mehboob Danish": {
+          "possessed": 586.976,
+          "unpossessed": 0,
+          "purchased": 631.41,
+          "unpurchased": 122.19,
+          "hold": 0,
+          "litigation": 44.434
+        },
+        "Muhammad Nawaz Ghani": {
+          "possessed": 446.388,
+          "unpossessed": 0,
+          "purchased": 446.388,
+          "unpurchased": 54.062,
+          "hold": 0,
+          "litigation": 0
+        },
+        "Mirza Muhammad Saeed": {
+          "possessed": 96.4,
+          "unpossessed": 0,
+          "purchased": 96.4,
+          "unpurchased": 17.0,
+          "hold": 0,
+          "litigation": 0
+        },
+        "Abid & Shahid": {
+          "possessed": 884.355,
+          "unpossessed": 0,
+          "purchased": 982.005,
+          "unpurchased": 199.845,
+          "hold": 0,
+          "litigation": 97.65
+        },
+        "Javaid Iqbal Cheema": {
+          "possessed": 136.433,
+          "unpossessed": 0,
+          "purchased": 136.433,
+          "unpurchased": 25.867,
+          "hold": 0,
+          "litigation": 0
+        },
+        "Sheikh Nadeem Akhtar": {
+          "possessed": 234.077,
+          "unpossessed": 0,
+          "purchased": 234.077,
+          "unpurchased": 42.973,
+          "hold": 0,
+          "litigation": 0
+        },
+        "Sheikh Iftikhar Ahmad Hashmi": {
+          "possessed": 737.972,
+          "unpossessed": 0,
+          "purchased": 737.972,
+          "unpurchased": 127.128,
+          "hold": 0,
+          "litigation": 0
+        },
+        "Rustam Ali Chatha": {
+          "possessed": 862.194,
+          "unpossessed": 0,
+          "purchased": 881.994,
+          "unpurchased": 143.006,
+          "hold": 0,
+          "litigation": 19.8
+        },
+        "Direct Dha": {
+          "possessed": 1146.313,
+          "unpossessed": 0,
+          "purchased": 1146.313,
+          "unpurchased": 492.353,
+          "hold": 0,
+          "litigation": 0
+        },
+        "Sheikh Hassnain Akram": {
+          "possessed": 179.65,
+          "unpossessed": 0,
+          "purchased": 179.65,
+          "unpurchased": 24.6,
+          "hold": 0,
+          "litigation": 0
+        },
+        "Rana Allah Rakha": {
+          "possessed": 263.901,
+          "unpossessed": 0,
+          "purchased": 268.912,
+          "unpurchased": 202.938,
+          "hold": 0,
+          "litigation": 5.012
+        },
+        "Iftikhar Ali": {
+          "possessed": 77.056,
+          "unpossessed": 0,
+          "purchased": 77.056,
+          "unpurchased": 26.894,
+          "hold": 0,
+          "litigation": 0
+        },
+        "Shahbaz Ali": {
+          "possessed": 150.089,
+          "unpossessed": 0,
+          "purchased": 150.089,
+          "unpurchased": 133.394,
+          "hold": 0,
+          "litigation": 0
+        },
+        "Muhmmad Farooq": {
+          "possessed": 574.683,
+          "unpossessed": 0,
+          "purchased": 574.683,
+          "unpurchased": 296.167,
+          "hold": 0,
+          "litigation": 0
+        },
+        "Muhammad Shafique": {
+          "possessed": 40.65,
+          "unpossessed": 0,
+          "purchased": 40.65,
+          "unpurchased": 9.1,
+          "hold": 0,
+          "litigation": 0
+        },
+        "Sheikh Muhammad Akram": {
+          "possessed": 282.472,
+          "unpossessed": 0,
+          "purchased": 292.572,
+          "unpurchased": 32.878,
+          "hold": 0,
+          "litigation": 10.1
+        },
+        "Muzaffar Ahmed": {
+          "possessed": 1604.498,
+          "unpossessed": 0,
+          "purchased": 1678.92,
+          "unpurchased": 765.268,
+          "hold": 0,
+          "litigation": 74.422
+        },
+        "Ehsan Ullah Cheema": {
+          "possessed": 73.675,
+          "unpossessed": 0,
+          "purchased": 73.675,
+          "unpurchased": 125.925,
+          "hold": 0,
+          "litigation": 0
+        },
+        "Nasir Mahmood": {
+          "possessed": 448.631,
+          "unpossessed": 0,
+          "purchased": 504.646,
+          "unpurchased": 286.166,
+          "hold": 0,
+          "litigation": 56.015
+        },
+        "Iftikhar Ali & Saadat": {
+          "possessed": 318.591,
+          "unpossessed": 0,
+          "purchased": 318.591,
+          "unpurchased": 95.109,
+          "hold": 0,
+          "litigation": 0
+        },
+        "Kaleem Sabir Taseer": {
+          "possessed": 127.738,
+          "unpossessed": 0,
+          "purchased": 127.738,
+          "unpurchased": 35.262,
+          "hold": 0,
+          "litigation": 0
+        },
+        "Abdul Majeed Cheema": {
+          "possessed": 130.258,
+          "unpossessed": 0,
+          "purchased": 136.258,
+          "unpurchased": 61.692,
+          "hold": 0,
+          "litigation": 6.0
+        },
+        "Shahzad Ahmed": {
+          "possessed": 59.072,
+          "unpossessed": 0,
+          "purchased": 59.072,
+          "unpurchased": 38.278,
+          "hold": 0,
+          "litigation": 0
+        },
+        "Zaka Ullah": {
+          "possessed": 395.675,
+          "unpossessed": 0,
+          "purchased": 395.675,
+          "unpurchased": 100.625,
+          "hold": 0,
+          "litigation": 0
+        },
+        "Amjad Khan Kakar": {
+          "possessed": 40.344,
+          "unpossessed": 0,
+          "purchased": 40.344,
+          "unpurchased": 24.656,
+          "hold": 0,
+          "litigation": 0
+        },
+        "Sohrab Khan": {
+          "possessed": 20.897,
+          "unpossessed": 0,
+          "purchased": 20.897,
+          "unpurchased": 22.653,
+          "hold": 0,
+          "litigation": 0
+        },
+        "Khalid Mehmood": {
+          "possessed": 56.644,
+          "unpossessed": 0,
+          "purchased": 56.644,
+          "unpurchased": 21.006,
+          "hold": 0,
+          "litigation": 0
+        },
+        "Muhammad Saeed Afzal": {
+          "possessed": 254.346,
+          "unpossessed": 0,
+          "purchased": 254.346,
+          "unpurchased": 133.554,
+          "hold": 0,
+          "litigation": 0
+        },
+        "Babar Shehzad Chatha/Ansir Mahmood Sandhu": {
+          "possessed": 286.7,
+          "unpossessed": 1,
+          "purchased": 289.7,
+          "unpurchased": 74.75,
+          "hold": 1,
+          "litigation": 1
+        },
+        "Khalid Rauf": {
+          "possessed": 98.0,
+          "unpossessed": 0,
+          "purchased": 98.0,
+          "unpurchased": 41.7,
+          "hold": 0,
+          "litigation": 0
+        },
+        "Muhammad Ahsan": {
+          "possessed": 115.9,
+          "unpossessed": 0,
+          "purchased": 115.9,
+          "unpurchased": 49.15,
+          "hold": 0,
+          "litigation": 0
+        },
+        "Malik Ranbaz Khan & Irfan Ahmed": {
+          "possessed": 896.487,
+          "unpossessed": 0,
+          "purchased": 896.487,
+          "unpurchased": 358.313,
+          "hold": 0,
+          "litigation": 0
+        },
+        "Najeeb Ullah": {
+          "possessed": 70.0,
+          "unpossessed": 0,
+          "purchased": 70.0,
+          "unpurchased": 8.0,
+          "hold": 0,
+          "litigation": 0
+        },
+        "Muhammad Haseeb": {
+          "possessed": 6,
+          "unpossessed": 0,
+          "purchased": 6,
+          "unpurchased": 2,
+          "hold": 0,
+          "litigation": 0
+        },
+        "Mansoor Cheema": {
+          "possessed": 73.929,
+          "unpossessed": 0,
+          "purchased": 73.929,
+          "unpurchased": 12.971,
+          "hold": 0,
+          "litigation": 0
+        },
+        "Hamid Raza": {
+          "possessed": 31.1,
+          "unpossessed": 0,
+          "purchased": 31.1,
+          "unpurchased": 16.5,
+          "hold": 0,
+          "litigation": 0
+        },
+        "Shahadat Ali": {
+          "possessed": 44.667,
+          "unpossessed": 0,
+          "purchased": 44.667,
+          "unpurchased": 15.333,
+          "hold": 0,
+          "litigation": 0
+        },
+        "Zaheer Ghani": {
+          "possessed": 19.876,
+          "unpossessed": 0,
+          "purchased": 19.876,
+          "unpurchased": 18.374,
+          "hold": 0,
+          "litigation": 0
+        },
+        "Tariq Rauf Ahmad": {
+          "possessed": 39.45,
+          "unpossessed": 0,
+          "purchased": 39.45,
+          "unpurchased": 0.0,
+          "hold": 0,
+          "litigation": 0
+        },
+        "Nazaqat Ali": {
+          "possessed": 58.15,
+          "unpossessed": 0,
+          "purchased": 58.15,
+          "unpurchased": 21.4,
+          "hold": 0,
+          "litigation": 0
+        },
+        "Tahir Mehmood Khan": {
+          "possessed": 6.0,
+          "unpossessed": 0,
+          "purchased": 6.0,
+          "unpurchased": 9.1,
+          "hold": 0,
+          "litigation": 0
+        },
+        "Javed Iqbal": {
+          "possessed": 2.844,
+          "unpossessed": 0,
+          "purchased": 2.844,
+          "unpurchased": 12.506,
+          "hold": 0,
+          "litigation": 0
+        },
+        "Amjad Ali": {
+          "possessed": 10.666,
+          "unpossessed": 0,
+          "purchased": 10.666,
+          "unpurchased": 5.334,
+          "hold": 0,
+          "litigation": 0
+        },
+        "Javed Iqbal / Shahzad Ahmed": {
+          "possessed": 4,
+          "unpossessed": 0,
+          "purchased": 4,
+          "unpurchased": 4,
+          "hold": 0,
+          "litigation": 0
+        }
+      }
+    },
+    {
+      "station_name": "Islamabad",
+      "totals": {
+        "possessed": 31749.82,
+        "unpossessed": 1,
+        "purchased": 32297.605,
+        "unpurchased": 11956.548,
+        "hold": 1,
+        "litigation": 523.719
+      },
+      "phase_summary": {
+        "I": {
+          "possessed": 22975.963,
+          "unpossessed": 1,
+          "purchased": 23402.126,
+          "unpurchased": 8379.934,
+          "hold": 1,
+          "litigation": 410.097
+        },
+        "Ii": {
+          "possessed": 8773.857,
+          "unpossessed": 0,
+          "purchased": 8895.479,
+          "unpurchased": 3576.614,
+          "hold": 0,
+          "litigation": 113.622
+        }
+      },
+      "land_provider_summary": {
+        "Muhammad Masood": {
+          "possessed": 1746.981,
+          "unpossessed": 0,
+          "purchased": 1765.281,
+          "unpurchased": 536.319,
+          "hold": 0,
+          "litigation": 18.3
+        },
+        "Ch. Muhammad Nawaz": {
+          "possessed": 1355.128,
+          "unpossessed": 0,
+          "purchased": 1355.128,
+          "unpurchased": 794.571,
+          "hold": 0,
+          "litigation": 0
+        },
+        "Babar Shehzad Chatha": {
+          "possessed": 1682.274,
+          "unpossessed": 0,
+          "purchased": 1718.374,
+          "unpurchased": 506.381,
+          "hold": 0,
+          "litigation": 36.1
+        },
+        "Sheikh Ejaz": {
+          "possessed": 583.041,
+          "unpossessed": 0,
+          "purchased": 583.041,
+          "unpurchased": 143.253,
+          "hold": 0,
+          "litigation": 0
+        },
+        "Murtaza Raza Ladu Bhai": {
+          "possessed": 781.791,
+          "unpossessed": 0,
+          "purchased": 788.741,
+          "unpurchased": 300.109,
+          "hold": 0,
+          "litigation": 6.95
+        },
+        "Abdul Majeed & Muzaffar": {
+          "possessed": 3037.003,
+          "unpossessed": 0,
+          "purchased": 3111.131,
+          "unpurchased": 1096.769,
+          "hold": 0,
+          "litigation": 74.128
+        },
+        "Ijaz Ahmed Cheema": {
+          "possessed": 641.481,
+          "unpossessed": 0,
+          "purchased": 641.481,
+          "unpurchased": 135.444,
+          "hold": 0,
+          "litigation": 0
+        },
+        "Ansir Mahmood Sandhu": {
+          "possessed": 3086.383,
+          "unpossessed": 0,
+          "purchased": 3116.308,
+          "unpurchased": 1470.517,
+          "hold": 0,
+          "litigation": 29.925
+        },
+        "Rana Allah Rakha & Hamid Mushtaq": {
+          "possessed": 873.056,
+          "unpossessed": 0,
+          "purchased": 873.056,
+          "unpurchased": 368.939,
+          "hold": 0,
+          "litigation": 0
+        },
+        "Muhammad Sher Anwar": {
+          "possessed": 1194.644,
+          "unpossessed": 0,
+          "purchased": 1194.644,
+          "unpurchased": 181.906,
+          "hold": 0,
+          "litigation": 0
+        },
+        "Zaka Ullah Ranjha": {
+          "possessed": 249.378,
+          "unpossessed": 0,
+          "purchased": 249.378,
+          "unpurchased": 41.672,
+          "hold": 0,
+          "litigation": 0
+        },
+        "Saad Shafiq Khokhar": {
+          "possessed": 25.635,
+          "unpossessed": 0,
+          "purchased": 34.635,
+          "unpurchased": 22.865,
+          "hold": 0,
+          "litigation": 9
+        },
+        "Nil": {
+          "possessed": 959.53,
+          "unpossessed": 0,
+          "purchased": 981.597,
+          "unpurchased": 410.857,
+          "hold": 0,
+          "litigation": 0
+        },
+        "Saadat Ali Cheema": {
+          "possessed": 3539.746,
+          "unpossessed": 0,
+          "purchased": 3574.629,
+          "unpurchased": 1636.927,
+          "hold": 0,
+          "litigation": 34.883
+        },
+        "Mehboob Danish": {
+          "possessed": 586.976,
+          "unpossessed": 0,
+          "purchased": 631.41,
+          "unpurchased": 122.19,
+          "hold": 0,
+          "litigation": 44.434
+        },
+        "Muhammad Nawaz Ghani": {
+          "possessed": 446.388,
+          "unpossessed": 0,
+          "purchased": 446.388,
+          "unpurchased": 54.062,
+          "hold": 0,
+          "litigation": 0
+        },
+        "Mirza Muhammad Saeed": {
+          "possessed": 96.4,
+          "unpossessed": 0,
+          "purchased": 96.4,
+          "unpurchased": 17.0,
+          "hold": 0,
+          "litigation": 0
+        },
+        "Abid & Shahid": {
+          "possessed": 884.355,
+          "unpossessed": 0,
+          "purchased": 982.005,
+          "unpurchased": 199.845,
+          "hold": 0,
+          "litigation": 97.65
+        },
+        "Javaid Iqbal Cheema": {
+          "possessed": 136.433,
+          "unpossessed": 0,
+          "purchased": 136.433,
+          "unpurchased": 25.867,
+          "hold": 0,
+          "litigation": 0
+        },
+        "Sheikh Nadeem Akhtar": {
+          "possessed": 234.077,
+          "unpossessed": 0,
+          "purchased": 234.077,
+          "unpurchased": 42.973,
+          "hold": 0,
+          "litigation": 0
+        },
+        "Sheikh Iftikhar Ahmad Hashmi": {
+          "possessed": 737.972,
+          "unpossessed": 0,
+          "purchased": 737.972,
+          "unpurchased": 127.128,
+          "hold": 0,
+          "litigation": 0
+        },
+        "Rustam Ali Chatha": {
+          "possessed": 862.194,
+          "unpossessed": 0,
+          "purchased": 881.994,
+          "unpurchased": 143.006,
+          "hold": 0,
+          "litigation": 19.8
+        },
+        "Direct Dha": {
+          "possessed": 1146.313,
+          "unpossessed": 0,
+          "purchased": 1146.313,
+          "unpurchased": 492.353,
+          "hold": 0,
+          "litigation": 0
+        },
+        "Sheikh Hassnain Akram": {
+          "possessed": 179.65,
+          "unpossessed": 0,
+          "purchased": 179.65,
+          "unpurchased": 24.6,
+          "hold": 0,
+          "litigation": 0
+        },
+        "Rana Allah Rakha": {
+          "possessed": 263.901,
+          "unpossessed": 0,
+          "purchased": 268.912,
+          "unpurchased": 202.938,
+          "hold": 0,
+          "litigation": 5.012
+        },
+        "Iftikhar Ali": {
+          "possessed": 77.056,
+          "unpossessed": 0,
+          "purchased": 77.056,
+          "unpurchased": 26.894,
+          "hold": 0,
+          "litigation": 0
+        },
+        "Shahbaz Ali": {
+          "possessed": 150.089,
+          "unpossessed": 0,
+          "purchased": 150.089,
+          "unpurchased": 133.394,
+          "hold": 0,
+          "litigation": 0
+        },
+        "Muhmmad Farooq": {
+          "possessed": 574.683,
+          "unpossessed": 0,
+          "purchased": 574.683,
+          "unpurchased": 296.167,
+          "hold": 0,
+          "litigation": 0
+        },
+        "Muhammad Shafique": {
+          "possessed": 40.65,
+          "unpossessed": 0,
+          "purchased": 40.65,
+          "unpurchased": 9.1,
+          "hold": 0,
+          "litigation": 0
+        },
+        "Sheikh Muhammad Akram": {
+          "possessed": 282.472,
+          "unpossessed": 0,
+          "purchased": 292.572,
+          "unpurchased": 32.878,
+          "hold": 0,
+          "litigation": 10.1
+        },
+        "Muzaffar Ahmed": {
+          "possessed": 1604.498,
+          "unpossessed": 0,
+          "purchased": 1678.92,
+          "unpurchased": 765.268,
+          "hold": 0,
+          "litigation": 74.422
+        },
+        "Ehsan Ullah Cheema": {
+          "possessed": 73.675,
+          "unpossessed": 0,
+          "purchased": 73.675,
+          "unpurchased": 125.925,
+          "hold": 0,
+          "litigation": 0
+        },
+        "Nasir Mahmood": {
+          "possessed": 448.631,
+          "unpossessed": 0,
+          "purchased": 504.646,
+          "unpurchased": 286.166,
+          "hold": 0,
+          "litigation": 56.015
+        },
+        "Iftikhar Ali & Saadat": {
+          "possessed": 318.591,
+          "unpossessed": 0,
+          "purchased": 318.591,
+          "unpurchased": 95.109,
+          "hold": 0,
+          "litigation": 0
+        },
+        "Kaleem Sabir Taseer": {
+          "possessed": 127.738,
+          "unpossessed": 0,
+          "purchased": 127.738,
+          "unpurchased": 35.262,
+          "hold": 0,
+          "litigation": 0
+        },
+        "Abdul Majeed Cheema": {
+          "possessed": 130.258,
+          "unpossessed": 0,
+          "purchased": 136.258,
+          "unpurchased": 61.692,
+          "hold": 0,
+          "litigation": 6.0
+        },
+        "Shahzad Ahmed": {
+          "possessed": 59.072,
+          "unpossessed": 0,
+          "purchased": 59.072,
+          "unpurchased": 38.278,
+          "hold": 0,
+          "litigation": 0
+        },
+        "Zaka Ullah": {
+          "possessed": 395.675,
+          "unpossessed": 0,
+          "purchased": 395.675,
+          "unpurchased": 100.625,
+          "hold": 0,
+          "litigation": 0
+        },
+        "Amjad Khan Kakar": {
+          "possessed": 40.344,
+          "unpossessed": 0,
+          "purchased": 40.344,
+          "unpurchased": 24.656,
+          "hold": 0,
+          "litigation": 0
+        },
+        "Sohrab Khan": {
+          "possessed": 20.897,
+          "unpossessed": 0,
+          "purchased": 20.897,
+          "unpurchased": 22.653,
+          "hold": 0,
+          "litigation": 0
+        },
+        "Khalid Mehmood": {
+          "possessed": 56.644,
+          "unpossessed": 0,
+          "purchased": 56.644,
+          "unpurchased": 21.006,
+          "hold": 0,
+          "litigation": 0
+        },
+        "Muhammad Saeed Afzal": {
+          "possessed": 254.346,
+          "unpossessed": 0,
+          "purchased": 254.346,
+          "unpurchased": 133.554,
+          "hold": 0,
+          "litigation": 0
+        },
+        "Babar Shehzad Chatha/Ansir Mahmood Sandhu": {
+          "possessed": 286.7,
+          "unpossessed": 1,
+          "purchased": 289.7,
+          "unpurchased": 74.75,
+          "hold": 1,
+          "litigation": 1
+        },
+        "Khalid Rauf": {
+          "possessed": 98.0,
+          "unpossessed": 0,
+          "purchased": 98.0,
+          "unpurchased": 41.7,
+          "hold": 0,
+          "litigation": 0
+        },
+        "Muhammad Ahsan": {
+          "possessed": 115.9,
+          "unpossessed": 0,
+          "purchased": 115.9,
+          "unpurchased": 49.15,
+          "hold": 0,
+          "litigation": 0
+        },
+        "Malik Ranbaz Khan & Irfan Ahmed": {
+          "possessed": 896.487,
+          "unpossessed": 0,
+          "purchased": 896.487,
+          "unpurchased": 358.313,
+          "hold": 0,
+          "litigation": 0
+        },
+        "Najeeb Ullah": {
+          "possessed": 70.0,
+          "unpossessed": 0,
+          "purchased": 70.0,
+          "unpurchased": 8.0,
+          "hold": 0,
+          "litigation": 0
+        },
+        "Muhammad Haseeb": {
+          "possessed": 6,
+          "unpossessed": 0,
+          "purchased": 6,
+          "unpurchased": 2,
+          "hold": 0,
+          "litigation": 0
+        },
+        "Mansoor Cheema": {
+          "possessed": 73.929,
+          "unpossessed": 0,
+          "purchased": 73.929,
+          "unpurchased": 12.971,
+          "hold": 0,
+          "litigation": 0
+        },
+        "Hamid Raza": {
+          "possessed": 31.1,
+          "unpossessed": 0,
+          "purchased": 31.1,
+          "unpurchased": 16.5,
+          "hold": 0,
+          "litigation": 0
+        },
+        "Shahadat Ali": {
+          "possessed": 44.667,
+          "unpossessed": 0,
+          "purchased": 44.667,
+          "unpurchased": 15.333,
+          "hold": 0,
+          "litigation": 0
+        },
+        "Zaheer Ghani": {
+          "possessed": 19.876,
+          "unpossessed": 0,
+          "purchased": 19.876,
+          "unpurchased": 18.374,
+          "hold": 0,
+          "litigation": 0
+        },
+        "Tariq Rauf Ahmad": {
+          "possessed": 39.45,
+          "unpossessed": 0,
+          "purchased": 39.45,
+          "unpurchased": 0.0,
+          "hold": 0,
+          "litigation": 0
+        },
+        "Nazaqat Ali": {
+          "possessed": 58.15,
+          "unpossessed": 0,
+          "purchased": 58.15,
+          "unpurchased": 21.4,
+          "hold": 0,
+          "litigation": 0
+        },
+        "Tahir Mehmood Khan": {
+          "possessed": 6.0,
+          "unpossessed": 0,
+          "purchased": 6.0,
+          "unpurchased": 9.1,
+          "hold": 0,
+          "litigation": 0
+        },
+        "Javed Iqbal": {
+          "possessed": 2.844,
+          "unpossessed": 0,
+          "purchased": 2.844,
+          "unpurchased": 12.506,
+          "hold": 0,
+          "litigation": 0
+        },
+        "Amjad Ali": {
+          "possessed": 10.666,
+          "unpossessed": 0,
+          "purchased": 10.666,
+          "unpurchased": 5.334,
+          "hold": 0,
+          "litigation": 0
+        },
+        "Javed Iqbal / Shahzad Ahmed": {
+          "possessed": 4,
+          "unpossessed": 0,
+          "purchased": 4,
+          "unpurchased": 4,
+          "hold": 0,
+          "litigation": 0
+        }
+      }
+    },
+    {
+      "station_name": "Lahore",
+      "totals": {
+        "possessed": 31749.82,
+        "unpossessed": 1,
+        "purchased": 32297.605,
+        "unpurchased": 11956.548,
+        "hold": 1,
+        "litigation": 523.719
+      },
+      "phase_summary": {
+        "I": {
+          "possessed": 22975.963,
+          "unpossessed": 1,
+          "purchased": 23402.126,
+          "unpurchased": 8379.934,
+          "hold": 1,
+          "litigation": 410.097
+        },
+        "Ii": {
+          "possessed": 8773.857,
+          "unpossessed": 0,
+          "purchased": 8895.479,
+          "unpurchased": 3576.614,
+          "hold": 0,
+          "litigation": 113.622
+        }
+      },
+      "land_provider_summary": {
+        "Muhammad Masood": {
+          "possessed": 1746.981,
+          "unpossessed": 0,
+          "purchased": 1765.281,
+          "unpurchased": 536.319,
+          "hold": 0,
+          "litigation": 18.3
+        },
+        "Ch. Muhammad Nawaz": {
+          "possessed": 1355.128,
+          "unpossessed": 0,
+          "purchased": 1355.128,
+          "unpurchased": 794.571,
+          "hold": 0,
+          "litigation": 0
+        },
+        "Babar Shehzad Chatha": {
+          "possessed": 1682.274,
+          "unpossessed": 0,
+          "purchased": 1718.374,
+          "unpurchased": 506.381,
+          "hold": 0,
+          "litigation": 36.1
+        },
+        "Sheikh Ejaz": {
+          "possessed": 583.041,
+          "unpossessed": 0,
+          "purchased": 583.041,
+          "unpurchased": 143.253,
+          "hold": 0,
+          "litigation": 0
+        },
+        "Murtaza Raza Ladu Bhai": {
+          "possessed": 781.791,
+          "unpossessed": 0,
+          "purchased": 788.741,
+          "unpurchased": 300.109,
+          "hold": 0,
+          "litigation": 6.95
+        },
+        "Abdul Majeed & Muzaffar": {
+          "possessed": 3037.003,
+          "unpossessed": 0,
+          "purchased": 3111.131,
+          "unpurchased": 1096.769,
+          "hold": 0,
+          "litigation": 74.128
+        },
+        "Ijaz Ahmed Cheema": {
+          "possessed": 641.481,
+          "unpossessed": 0,
+          "purchased": 641.481,
+          "unpurchased": 135.444,
+          "hold": 0,
+          "litigation": 0
+        },
+        "Ansir Mahmood Sandhu": {
+          "possessed": 3086.383,
+          "unpossessed": 0,
+          "purchased": 3116.308,
+          "unpurchased": 1470.517,
+          "hold": 0,
+          "litigation": 29.925
+        },
+        "Rana Allah Rakha & Hamid Mushtaq": {
+          "possessed": 873.056,
+          "unpossessed": 0,
+          "purchased": 873.056,
+          "unpurchased": 368.939,
+          "hold": 0,
+          "litigation": 0
+        },
+        "Muhammad Sher Anwar": {
+          "possessed": 1194.644,
+          "unpossessed": 0,
+          "purchased": 1194.644,
+          "unpurchased": 181.906,
+          "hold": 0,
+          "litigation": 0
+        },
+        "Zaka Ullah Ranjha": {
+          "possessed": 249.378,
+          "unpossessed": 0,
+          "purchased": 249.378,
+          "unpurchased": 41.672,
+          "hold": 0,
+          "litigation": 0
+        },
+        "Saad Shafiq Khokhar": {
+          "possessed": 25.635,
+          "unpossessed": 0,
+          "purchased": 34.635,
+          "unpurchased": 22.865,
+          "hold": 0,
+          "litigation": 9
+        },
+        "Nil": {
+          "possessed": 959.53,
+          "unpossessed": 0,
+          "purchased": 981.597,
+          "unpurchased": 410.857,
+          "hold": 0,
+          "litigation": 0
+        },
+        "Saadat Ali Cheema": {
+          "possessed": 3539.746,
+          "unpossessed": 0,
+          "purchased": 3574.629,
+          "unpurchased": 1636.927,
+          "hold": 0,
+          "litigation": 34.883
+        },
+        "Mehboob Danish": {
+          "possessed": 586.976,
+          "unpossessed": 0,
+          "purchased": 631.41,
+          "unpurchased": 122.19,
+          "hold": 0,
+          "litigation": 44.434
+        },
+        "Muhammad Nawaz Ghani": {
+          "possessed": 446.388,
+          "unpossessed": 0,
+          "purchased": 446.388,
+          "unpurchased": 54.062,
+          "hold": 0,
+          "litigation": 0
+        },
+        "Mirza Muhammad Saeed": {
+          "possessed": 96.4,
+          "unpossessed": 0,
+          "purchased": 96.4,
+          "unpurchased": 17.0,
+          "hold": 0,
+          "litigation": 0
+        },
+        "Abid & Shahid": {
+          "possessed": 884.355,
+          "unpossessed": 0,
+          "purchased": 982.005,
+          "unpurchased": 199.845,
+          "hold": 0,
+          "litigation": 97.65
+        },
+        "Javaid Iqbal Cheema": {
+          "possessed": 136.433,
+          "unpossessed": 0,
+          "purchased": 136.433,
+          "unpurchased": 25.867,
+          "hold": 0,
+          "litigation": 0
+        },
+        "Sheikh Nadeem Akhtar": {
+          "possessed": 234.077,
+          "unpossessed": 0,
+          "purchased": 234.077,
+          "unpurchased": 42.973,
+          "hold": 0,
+          "litigation": 0
+        },
+        "Sheikh Iftikhar Ahmad Hashmi": {
+          "possessed": 737.972,
+          "unpossessed": 0,
+          "purchased": 737.972,
+          "unpurchased": 127.128,
+          "hold": 0,
+          "litigation": 0
+        },
+        "Rustam Ali Chatha": {
+          "possessed": 862.194,
+          "unpossessed": 0,
+          "purchased": 881.994,
+          "unpurchased": 143.006,
+          "hold": 0,
+          "litigation": 19.8
+        },
+        "Direct Dha": {
+          "possessed": 1146.313,
+          "unpossessed": 0,
+          "purchased": 1146.313,
+          "unpurchased": 492.353,
+          "hold": 0,
+          "litigation": 0
+        },
+        "Sheikh Hassnain Akram": {
+          "possessed": 179.65,
+          "unpossessed": 0,
+          "purchased": 179.65,
+          "unpurchased": 24.6,
+          "hold": 0,
+          "litigation": 0
+        },
+        "Rana Allah Rakha": {
+          "possessed": 263.901,
+          "unpossessed": 0,
+          "purchased": 268.912,
+          "unpurchased": 202.938,
+          "hold": 0,
+          "litigation": 5.012
+        },
+        "Iftikhar Ali": {
+          "possessed": 77.056,
+          "unpossessed": 0,
+          "purchased": 77.056,
+          "unpurchased": 26.894,
+          "hold": 0,
+          "litigation": 0
+        },
+        "Shahbaz Ali": {
+          "possessed": 150.089,
+          "unpossessed": 0,
+          "purchased": 150.089,
+          "unpurchased": 133.394,
+          "hold": 0,
+          "litigation": 0
+        },
+        "Muhmmad Farooq": {
+          "possessed": 574.683,
+          "unpossessed": 0,
+          "purchased": 574.683,
+          "unpurchased": 296.167,
+          "hold": 0,
+          "litigation": 0
+        },
+        "Muhammad Shafique": {
+          "possessed": 40.65,
+          "unpossessed": 0,
+          "purchased": 40.65,
+          "unpurchased": 9.1,
+          "hold": 0,
+          "litigation": 0
+        },
+        "Sheikh Muhammad Akram": {
+          "possessed": 282.472,
+          "unpossessed": 0,
+          "purchased": 292.572,
+          "unpurchased": 32.878,
+          "hold": 0,
+          "litigation": 10.1
+        },
+        "Muzaffar Ahmed": {
+          "possessed": 1604.498,
+          "unpossessed": 0,
+          "purchased": 1678.92,
+          "unpurchased": 765.268,
+          "hold": 0,
+          "litigation": 74.422
+        },
+        "Ehsan Ullah Cheema": {
+          "possessed": 73.675,
+          "unpossessed": 0,
+          "purchased": 73.675,
+          "unpurchased": 125.925,
+          "hold": 0,
+          "litigation": 0
+        },
+        "Nasir Mahmood": {
+          "possessed": 448.631,
+          "unpossessed": 0,
+          "purchased": 504.646,
+          "unpurchased": 286.166,
+          "hold": 0,
+          "litigation": 56.015
+        },
+        "Iftikhar Ali & Saadat": {
+          "possessed": 318.591,
+          "unpossessed": 0,
+          "purchased": 318.591,
+          "unpurchased": 95.109,
+          "hold": 0,
+          "litigation": 0
+        },
+        "Kaleem Sabir Taseer": {
+          "possessed": 127.738,
+          "unpossessed": 0,
+          "purchased": 127.738,
+          "unpurchased": 35.262,
+          "hold": 0,
+          "litigation": 0
+        },
+        "Abdul Majeed Cheema": {
+          "possessed": 130.258,
+          "unpossessed": 0,
+          "purchased": 136.258,
+          "unpurchased": 61.692,
+          "hold": 0,
+          "litigation": 6.0
+        },
+        "Shahzad Ahmed": {
+          "possessed": 59.072,
+          "unpossessed": 0,
+          "purchased": 59.072,
+          "unpurchased": 38.278,
+          "hold": 0,
+          "litigation": 0
+        },
+        "Zaka Ullah": {
+          "possessed": 395.675,
+          "unpossessed": 0,
+          "purchased": 395.675,
+          "unpurchased": 100.625,
+          "hold": 0,
+          "litigation": 0
+        },
+        "Amjad Khan Kakar": {
+          "possessed": 40.344,
+          "unpossessed": 0,
+          "purchased": 40.344,
+          "unpurchased": 24.656,
+          "hold": 0,
+          "litigation": 0
+        },
+        "Sohrab Khan": {
+          "possessed": 20.897,
+          "unpossessed": 0,
+          "purchased": 20.897,
+          "unpurchased": 22.653,
+          "hold": 0,
+          "litigation": 0
+        },
+        "Khalid Mehmood": {
+          "possessed": 56.644,
+          "unpossessed": 0,
+          "purchased": 56.644,
+          "unpurchased": 21.006,
+          "hold": 0,
+          "litigation": 0
+        },
+        "Muhammad Saeed Afzal": {
+          "possessed": 254.346,
+          "unpossessed": 0,
+          "purchased": 254.346,
+          "unpurchased": 133.554,
+          "hold": 0,
+          "litigation": 0
+        },
+        "Babar Shehzad Chatha/Ansir Mahmood Sandhu": {
+          "possessed": 286.7,
+          "unpossessed": 1,
+          "purchased": 289.7,
+          "unpurchased": 74.75,
+          "hold": 1,
+          "litigation": 1
+        },
+        "Khalid Rauf": {
+          "possessed": 98.0,
+          "unpossessed": 0,
+          "purchased": 98.0,
+          "unpurchased": 41.7,
+          "hold": 0,
+          "litigation": 0
+        },
+        "Muhammad Ahsan": {
+          "possessed": 115.9,
+          "unpossessed": 0,
+          "purchased": 115.9,
+          "unpurchased": 49.15,
+          "hold": 0,
+          "litigation": 0
+        },
+        "Malik Ranbaz Khan & Irfan Ahmed": {
+          "possessed": 896.487,
+          "unpossessed": 0,
+          "purchased": 896.487,
+          "unpurchased": 358.313,
+          "hold": 0,
+          "litigation": 0
+        },
+        "Najeeb Ullah": {
+          "possessed": 70.0,
+          "unpossessed": 0,
+          "purchased": 70.0,
+          "unpurchased": 8.0,
+          "hold": 0,
+          "litigation": 0
+        },
+        "Muhammad Haseeb": {
+          "possessed": 6,
+          "unpossessed": 0,
+          "purchased": 6,
+          "unpurchased": 2,
+          "hold": 0,
+          "litigation": 0
+        },
+        "Mansoor Cheema": {
+          "possessed": 73.929,
+          "unpossessed": 0,
+          "purchased": 73.929,
+          "unpurchased": 12.971,
+          "hold": 0,
+          "litigation": 0
+        },
+        "Hamid Raza": {
+          "possessed": 31.1,
+          "unpossessed": 0,
+          "purchased": 31.1,
+          "unpurchased": 16.5,
+          "hold": 0,
+          "litigation": 0
+        },
+        "Shahadat Ali": {
+          "possessed": 44.667,
+          "unpossessed": 0,
+          "purchased": 44.667,
+          "unpurchased": 15.333,
+          "hold": 0,
+          "litigation": 0
+        },
+        "Zaheer Ghani": {
+          "possessed": 19.876,
+          "unpossessed": 0,
+          "purchased": 19.876,
+          "unpurchased": 18.374,
+          "hold": 0,
+          "litigation": 0
+        },
+        "Tariq Rauf Ahmad": {
+          "possessed": 39.45,
+          "unpossessed": 0,
+          "purchased": 39.45,
+          "unpurchased": 0.0,
+          "hold": 0,
+          "litigation": 0
+        },
+        "Nazaqat Ali": {
+          "possessed": 58.15,
+          "unpossessed": 0,
+          "purchased": 58.15,
+          "unpurchased": 21.4,
+          "hold": 0,
+          "litigation": 0
+        },
+        "Tahir Mehmood Khan": {
+          "possessed": 6.0,
+          "unpossessed": 0,
+          "purchased": 6.0,
+          "unpurchased": 9.1,
+          "hold": 0,
+          "litigation": 0
+        },
+        "Javed Iqbal": {
+          "possessed": 2.844,
+          "unpossessed": 0,
+          "purchased": 2.844,
+          "unpurchased": 12.506,
+          "hold": 0,
+          "litigation": 0
+        },
+        "Amjad Ali": {
+          "possessed": 10.666,
+          "unpossessed": 0,
+          "purchased": 10.666,
+          "unpurchased": 5.334,
+          "hold": 0,
+          "litigation": 0
+        },
+        "Javed Iqbal / Shahzad Ahmed": {
+          "possessed": 4,
+          "unpossessed": 0,
+          "purchased": 4,
+          "unpurchased": 4,
+          "hold": 0,
+          "litigation": 0
+        }
+      }
+    },
+    {
+      "station_name": "Multan",
+      "totals": {
+        "possessed": 31749.82,
+        "unpossessed": 1,
+        "purchased": 32297.605,
+        "unpurchased": 11956.548,
+        "hold": 1,
+        "litigation": 523.719
+      },
+      "phase_summary": {
+        "I": {
+          "possessed": 22975.963,
+          "unpossessed": 1,
+          "purchased": 23402.126,
+          "unpurchased": 8379.934,
+          "hold": 1,
+          "litigation": 410.097
+        },
+        "Ii": {
+          "possessed": 8773.857,
+          "unpossessed": 0,
+          "purchased": 8895.479,
+          "unpurchased": 3576.614,
+          "hold": 0,
+          "litigation": 113.622
+        }
+      },
+      "land_provider_summary": {
+        "Muhammad Masood": {
+          "possessed": 1746.981,
+          "unpossessed": 0,
+          "purchased": 1765.281,
+          "unpurchased": 536.319,
+          "hold": 0,
+          "litigation": 18.3
+        },
+        "Ch. Muhammad Nawaz": {
+          "possessed": 1355.128,
+          "unpossessed": 0,
+          "purchased": 1355.128,
+          "unpurchased": 794.571,
+          "hold": 0,
+          "litigation": 0
+        },
+        "Babar Shehzad Chatha": {
+          "possessed": 1682.274,
+          "unpossessed": 0,
+          "purchased": 1718.374,
+          "unpurchased": 506.381,
+          "hold": 0,
+          "litigation": 36.1
+        },
+        "Sheikh Ejaz": {
+          "possessed": 583.041,
+          "unpossessed": 0,
+          "purchased": 583.041,
+          "unpurchased": 143.253,
+          "hold": 0,
+          "litigation": 0
+        },
+        "Murtaza Raza Ladu Bhai": {
+          "possessed": 781.791,
+          "unpossessed": 0,
+          "purchased": 788.741,
+          "unpurchased": 300.109,
+          "hold": 0,
+          "litigation": 6.95
+        },
+        "Abdul Majeed & Muzaffar": {
+          "possessed": 3037.003,
+          "unpossessed": 0,
+          "purchased": 3111.131,
+          "unpurchased": 1096.769,
+          "hold": 0,
+          "litigation": 74.128
+        },
+        "Ijaz Ahmed Cheema": {
+          "possessed": 641.481,
+          "unpossessed": 0,
+          "purchased": 641.481,
+          "unpurchased": 135.444,
+          "hold": 0,
+          "litigation": 0
+        },
+        "Ansir Mahmood Sandhu": {
+          "possessed": 3086.383,
+          "unpossessed": 0,
+          "purchased": 3116.308,
+          "unpurchased": 1470.517,
+          "hold": 0,
+          "litigation": 29.925
+        },
+        "Rana Allah Rakha & Hamid Mushtaq": {
+          "possessed": 873.056,
+          "unpossessed": 0,
+          "purchased": 873.056,
+          "unpurchased": 368.939,
+          "hold": 0,
+          "litigation": 0
+        },
+        "Muhammad Sher Anwar": {
+          "possessed": 1194.644,
+          "unpossessed": 0,
+          "purchased": 1194.644,
+          "unpurchased": 181.906,
+          "hold": 0,
+          "litigation": 0
+        },
+        "Zaka Ullah Ranjha": {
+          "possessed": 249.378,
+          "unpossessed": 0,
+          "purchased": 249.378,
+          "unpurchased": 41.672,
+          "hold": 0,
+          "litigation": 0
+        },
+        "Saad Shafiq Khokhar": {
+          "possessed": 25.635,
+          "unpossessed": 0,
+          "purchased": 34.635,
+          "unpurchased": 22.865,
+          "hold": 0,
+          "litigation": 9
+        },
+        "Nil": {
+          "possessed": 959.53,
+          "unpossessed": 0,
+          "purchased": 981.597,
+          "unpurchased": 410.857,
+          "hold": 0,
+          "litigation": 0
+        },
+        "Saadat Ali Cheema": {
+          "possessed": 3539.746,
+          "unpossessed": 0,
+          "purchased": 3574.629,
+          "unpurchased": 1636.927,
+          "hold": 0,
+          "litigation": 34.883
+        },
+        "Mehboob Danish": {
+          "possessed": 586.976,
+          "unpossessed": 0,
+          "purchased": 631.41,
+          "unpurchased": 122.19,
+          "hold": 0,
+          "litigation": 44.434
+        },
+        "Muhammad Nawaz Ghani": {
+          "possessed": 446.388,
+          "unpossessed": 0,
+          "purchased": 446.388,
+          "unpurchased": 54.062,
+          "hold": 0,
+          "litigation": 0
+        },
+        "Mirza Muhammad Saeed": {
+          "possessed": 96.4,
+          "unpossessed": 0,
+          "purchased": 96.4,
+          "unpurchased": 17.0,
+          "hold": 0,
+          "litigation": 0
+        },
+        "Abid & Shahid": {
+          "possessed": 884.355,
+          "unpossessed": 0,
+          "purchased": 982.005,
+          "unpurchased": 199.845,
+          "hold": 0,
+          "litigation": 97.65
+        },
+        "Javaid Iqbal Cheema": {
+          "possessed": 136.433,
+          "unpossessed": 0,
+          "purchased": 136.433,
+          "unpurchased": 25.867,
+          "hold": 0,
+          "litigation": 0
+        },
+        "Sheikh Nadeem Akhtar": {
+          "possessed": 234.077,
+          "unpossessed": 0,
+          "purchased": 234.077,
+          "unpurchased": 42.973,
+          "hold": 0,
+          "litigation": 0
+        },
+        "Sheikh Iftikhar Ahmad Hashmi": {
+          "possessed": 737.972,
+          "unpossessed": 0,
+          "purchased": 737.972,
+          "unpurchased": 127.128,
+          "hold": 0,
+          "litigation": 0
+        },
+        "Rustam Ali Chatha": {
+          "possessed": 862.194,
+          "unpossessed": 0,
+          "purchased": 881.994,
+          "unpurchased": 143.006,
+          "hold": 0,
+          "litigation": 19.8
+        },
+        "Direct Dha": {
+          "possessed": 1146.313,
+          "unpossessed": 0,
+          "purchased": 1146.313,
+          "unpurchased": 492.353,
+          "hold": 0,
+          "litigation": 0
+        },
+        "Sheikh Hassnain Akram": {
+          "possessed": 179.65,
+          "unpossessed": 0,
+          "purchased": 179.65,
+          "unpurchased": 24.6,
+          "hold": 0,
+          "litigation": 0
+        },
+        "Rana Allah Rakha": {
+          "possessed": 263.901,
+          "unpossessed": 0,
+          "purchased": 268.912,
+          "unpurchased": 202.938,
+          "hold": 0,
+          "litigation": 5.012
+        },
+        "Iftikhar Ali": {
+          "possessed": 77.056,
+          "unpossessed": 0,
+          "purchased": 77.056,
+          "unpurchased": 26.894,
+          "hold": 0,
+          "litigation": 0
+        },
+        "Shahbaz Ali": {
+          "possessed": 150.089,
+          "unpossessed": 0,
+          "purchased": 150.089,
+          "unpurchased": 133.394,
+          "hold": 0,
+          "litigation": 0
+        },
+        "Muhmmad Farooq": {
+          "possessed": 574.683,
+          "unpossessed": 0,
+          "purchased": 574.683,
+          "unpurchased": 296.167,
+          "hold": 0,
+          "litigation": 0
+        },
+        "Muhammad Shafique": {
+          "possessed": 40.65,
+          "unpossessed": 0,
+          "purchased": 40.65,
+          "unpurchased": 9.1,
+          "hold": 0,
+          "litigation": 0
+        },
+        "Sheikh Muhammad Akram": {
+          "possessed": 282.472,
+          "unpossessed": 0,
+          "purchased": 292.572,
+          "unpurchased": 32.878,
+          "hold": 0,
+          "litigation": 10.1
+        },
+        "Muzaffar Ahmed": {
+          "possessed": 1604.498,
+          "unpossessed": 0,
+          "purchased": 1678.92,
+          "unpurchased": 765.268,
+          "hold": 0,
+          "litigation": 74.422
+        },
+        "Ehsan Ullah Cheema": {
+          "possessed": 73.675,
+          "unpossessed": 0,
+          "purchased": 73.675,
+          "unpurchased": 125.925,
+          "hold": 0,
+          "litigation": 0
+        },
+        "Nasir Mahmood": {
+          "possessed": 448.631,
+          "unpossessed": 0,
+          "purchased": 504.646,
+          "unpurchased": 286.166,
+          "hold": 0,
+          "litigation": 56.015
+        },
+        "Iftikhar Ali & Saadat": {
+          "possessed": 318.591,
+          "unpossessed": 0,
+          "purchased": 318.591,
+          "unpurchased": 95.109,
+          "hold": 0,
+          "litigation": 0
+        },
+        "Kaleem Sabir Taseer": {
+          "possessed": 127.738,
+          "unpossessed": 0,
+          "purchased": 127.738,
+          "unpurchased": 35.262,
+          "hold": 0,
+          "litigation": 0
+        },
+        "Abdul Majeed Cheema": {
+          "possessed": 130.258,
+          "unpossessed": 0,
+          "purchased": 136.258,
+          "unpurchased": 61.692,
+          "hold": 0,
+          "litigation": 6.0
+        },
+        "Shahzad Ahmed": {
+          "possessed": 59.072,
+          "unpossessed": 0,
+          "purchased": 59.072,
+          "unpurchased": 38.278,
+          "hold": 0,
+          "litigation": 0
+        },
+        "Zaka Ullah": {
+          "possessed": 395.675,
+          "unpossessed": 0,
+          "purchased": 395.675,
+          "unpurchased": 100.625,
+          "hold": 0,
+          "litigation": 0
+        },
+        "Amjad Khan Kakar": {
+          "possessed": 40.344,
+          "unpossessed": 0,
+          "purchased": 40.344,
+          "unpurchased": 24.656,
+          "hold": 0,
+          "litigation": 0
+        },
+        "Sohrab Khan": {
+          "possessed": 20.897,
+          "unpossessed": 0,
+          "purchased": 20.897,
+          "unpurchased": 22.653,
+          "hold": 0,
+          "litigation": 0
+        },
+        "Khalid Mehmood": {
+          "possessed": 56.644,
+          "unpossessed": 0,
+          "purchased": 56.644,
+          "unpurchased": 21.006,
+          "hold": 0,
+          "litigation": 0
+        },
+        "Muhammad Saeed Afzal": {
+          "possessed": 254.346,
+          "unpossessed": 0,
+          "purchased": 254.346,
+          "unpurchased": 133.554,
+          "hold": 0,
+          "litigation": 0
+        },
+        "Babar Shehzad Chatha/Ansir Mahmood Sandhu": {
+          "possessed": 286.7,
+          "unpossessed": 1,
+          "purchased": 289.7,
+          "unpurchased": 74.75,
+          "hold": 1,
+          "litigation": 1
+        },
+        "Khalid Rauf": {
+          "possessed": 98.0,
+          "unpossessed": 0,
+          "purchased": 98.0,
+          "unpurchased": 41.7,
+          "hold": 0,
+          "litigation": 0
+        },
+        "Muhammad Ahsan": {
+          "possessed": 115.9,
+          "unpossessed": 0,
+          "purchased": 115.9,
+          "unpurchased": 49.15,
+          "hold": 0,
+          "litigation": 0
+        },
+        "Malik Ranbaz Khan & Irfan Ahmed": {
+          "possessed": 896.487,
+          "unpossessed": 0,
+          "purchased": 896.487,
+          "unpurchased": 358.313,
+          "hold": 0,
+          "litigation": 0
+        },
+        "Najeeb Ullah": {
+          "possessed": 70.0,
+          "unpossessed": 0,
+          "purchased": 70.0,
+          "unpurchased": 8.0,
+          "hold": 0,
+          "litigation": 0
+        },
+        "Muhammad Haseeb": {
+          "possessed": 6,
+          "unpossessed": 0,
+          "purchased": 6,
+          "unpurchased": 2,
+          "hold": 0,
+          "litigation": 0
+        },
+        "Mansoor Cheema": {
+          "possessed": 73.929,
+          "unpossessed": 0,
+          "purchased": 73.929,
+          "unpurchased": 12.971,
+          "hold": 0,
+          "litigation": 0
+        },
+        "Hamid Raza": {
+          "possessed": 31.1,
+          "unpossessed": 0,
+          "purchased": 31.1,
+          "unpurchased": 16.5,
+          "hold": 0,
+          "litigation": 0
+        },
+        "Shahadat Ali": {
+          "possessed": 44.667,
+          "unpossessed": 0,
+          "purchased": 44.667,
+          "unpurchased": 15.333,
+          "hold": 0,
+          "litigation": 0
+        },
+        "Zaheer Ghani": {
+          "possessed": 19.876,
+          "unpossessed": 0,
+          "purchased": 19.876,
+          "unpurchased": 18.374,
+          "hold": 0,
+          "litigation": 0
+        },
+        "Tariq Rauf Ahmad": {
+          "possessed": 39.45,
+          "unpossessed": 0,
+          "purchased": 39.45,
+          "unpurchased": 0.0,
+          "hold": 0,
+          "litigation": 0
+        },
+        "Nazaqat Ali": {
+          "possessed": 58.15,
+          "unpossessed": 0,
+          "purchased": 58.15,
+          "unpurchased": 21.4,
+          "hold": 0,
+          "litigation": 0
+        },
+        "Tahir Mehmood Khan": {
+          "possessed": 6.0,
+          "unpossessed": 0,
+          "purchased": 6.0,
+          "unpurchased": 9.1,
+          "hold": 0,
+          "litigation": 0
+        },
+        "Javed Iqbal": {
+          "possessed": 2.844,
+          "unpossessed": 0,
+          "purchased": 2.844,
+          "unpurchased": 12.506,
+          "hold": 0,
+          "litigation": 0
+        },
+        "Amjad Ali": {
+          "possessed": 10.666,
+          "unpossessed": 0,
+          "purchased": 10.666,
+          "unpurchased": 5.334,
+          "hold": 0,
+          "litigation": 0
+        },
+        "Javed Iqbal / Shahzad Ahmed": {
+          "possessed": 4,
+          "unpossessed": 0,
+          "purchased": 4,
+          "unpurchased": 4,
+          "hold": 0,
+          "litigation": 0
+        }
+      }
+    },
+    {
+      "station_name": "Karachi_City",
+      "totals": {
+        "possessed": 31749.82,
+        "unpossessed": 1,
+        "purchased": 32297.605,
+        "unpurchased": 11956.548,
+        "hold": 1,
+        "litigation": 523.719
+      },
+      "phase_summary": {
+        "I": {
+          "possessed": 22975.963,
+          "unpossessed": 1,
+          "purchased": 23402.126,
+          "unpurchased": 8379.934,
+          "hold": 1,
+          "litigation": 410.097
+        },
+        "Ii": {
+          "possessed": 8773.857,
+          "unpossessed": 0,
+          "purchased": 8895.479,
+          "unpurchased": 3576.614,
+          "hold": 0,
+          "litigation": 113.622
+        }
+      },
+      "land_provider_summary": {
+        "Muhammad Masood": {
+          "possessed": 1746.981,
+          "unpossessed": 0,
+          "purchased": 1765.281,
+          "unpurchased": 536.319,
+          "hold": 0,
+          "litigation": 18.3
+        },
+        "Ch. Muhammad Nawaz": {
+          "possessed": 1355.128,
+          "unpossessed": 0,
+          "purchased": 1355.128,
+          "unpurchased": 794.571,
+          "hold": 0,
+          "litigation": 0
+        },
+        "Babar Shehzad Chatha": {
+          "possessed": 1682.274,
+          "unpossessed": 0,
+          "purchased": 1718.374,
+          "unpurchased": 506.381,
+          "hold": 0,
+          "litigation": 36.1
+        },
+        "Sheikh Ejaz": {
+          "possessed": 583.041,
+          "unpossessed": 0,
+          "purchased": 583.041,
+          "unpurchased": 143.253,
+          "hold": 0,
+          "litigation": 0
+        },
+        "Murtaza Raza Ladu Bhai": {
+          "possessed": 781.791,
+          "unpossessed": 0,
+          "purchased": 788.741,
+          "unpurchased": 300.109,
+          "hold": 0,
+          "litigation": 6.95
+        },
+        "Abdul Majeed & Muzaffar": {
+          "possessed": 3037.003,
+          "unpossessed": 0,
+          "purchased": 3111.131,
+          "unpurchased": 1096.769,
+          "hold": 0,
+          "litigation": 74.128
+        },
+        "Ijaz Ahmed Cheema": {
+          "possessed": 641.481,
+          "unpossessed": 0,
+          "purchased": 641.481,
+          "unpurchased": 135.444,
+          "hold": 0,
+          "litigation": 0
+        },
+        "Ansir Mahmood Sandhu": {
+          "possessed": 3086.383,
+          "unpossessed": 0,
+          "purchased": 3116.308,
+          "unpurchased": 1470.517,
+          "hold": 0,
+          "litigation": 29.925
+        },
+        "Rana Allah Rakha & Hamid Mushtaq": {
+          "possessed": 873.056,
+          "unpossessed": 0,
+          "purchased": 873.056,
+          "unpurchased": 368.939,
+          "hold": 0,
+          "litigation": 0
+        },
+        "Muhammad Sher Anwar": {
+          "possessed": 1194.644,
+          "unpossessed": 0,
+          "purchased": 1194.644,
+          "unpurchased": 181.906,
+          "hold": 0,
+          "litigation": 0
+        },
+        "Zaka Ullah Ranjha": {
+          "possessed": 249.378,
+          "unpossessed": 0,
+          "purchased": 249.378,
+          "unpurchased": 41.672,
+          "hold": 0,
+          "litigation": 0
+        },
+        "Saad Shafiq Khokhar": {
+          "possessed": 25.635,
+          "unpossessed": 0,
+          "purchased": 34.635,
+          "unpurchased": 22.865,
+          "hold": 0,
+          "litigation": 9
+        },
+        "Nil": {
+          "possessed": 959.53,
+          "unpossessed": 0,
+          "purchased": 981.597,
+          "unpurchased": 410.857,
+          "hold": 0,
+          "litigation": 0
+        },
+        "Saadat Ali Cheema": {
+          "possessed": 3539.746,
+          "unpossessed": 0,
+          "purchased": 3574.629,
+          "unpurchased": 1636.927,
+          "hold": 0,
+          "litigation": 34.883
+        },
+        "Mehboob Danish": {
+          "possessed": 586.976,
+          "unpossessed": 0,
+          "purchased": 631.41,
+          "unpurchased": 122.19,
+          "hold": 0,
+          "litigation": 44.434
+        },
+        "Muhammad Nawaz Ghani": {
+          "possessed": 446.388,
+          "unpossessed": 0,
+          "purchased": 446.388,
+          "unpurchased": 54.062,
+          "hold": 0,
+          "litigation": 0
+        },
+        "Mirza Muhammad Saeed": {
+          "possessed": 96.4,
+          "unpossessed": 0,
+          "purchased": 96.4,
+          "unpurchased": 17.0,
+          "hold": 0,
+          "litigation": 0
+        },
+        "Abid & Shahid": {
+          "possessed": 884.355,
+          "unpossessed": 0,
+          "purchased": 982.005,
+          "unpurchased": 199.845,
+          "hold": 0,
+          "litigation": 97.65
+        },
+        "Javaid Iqbal Cheema": {
+          "possessed": 136.433,
+          "unpossessed": 0,
+          "purchased": 136.433,
+          "unpurchased": 25.867,
+          "hold": 0,
+          "litigation": 0
+        },
+        "Sheikh Nadeem Akhtar": {
+          "possessed": 234.077,
+          "unpossessed": 0,
+          "purchased": 234.077,
+          "unpurchased": 42.973,
+          "hold": 0,
+          "litigation": 0
+        },
+        "Sheikh Iftikhar Ahmad Hashmi": {
+          "possessed": 737.972,
+          "unpossessed": 0,
+          "purchased": 737.972,
+          "unpurchased": 127.128,
+          "hold": 0,
+          "litigation": 0
+        },
+        "Rustam Ali Chatha": {
+          "possessed": 862.194,
+          "unpossessed": 0,
+          "purchased": 881.994,
+          "unpurchased": 143.006,
+          "hold": 0,
+          "litigation": 19.8
+        },
+        "Direct Dha": {
+          "possessed": 1146.313,
+          "unpossessed": 0,
+          "purchased": 1146.313,
+          "unpurchased": 492.353,
+          "hold": 0,
+          "litigation": 0
+        },
+        "Sheikh Hassnain Akram": {
+          "possessed": 179.65,
+          "unpossessed": 0,
+          "purchased": 179.65,
+          "unpurchased": 24.6,
+          "hold": 0,
+          "litigation": 0
+        },
+        "Rana Allah Rakha": {
+          "possessed": 263.901,
+          "unpossessed": 0,
+          "purchased": 268.912,
+          "unpurchased": 202.938,
+          "hold": 0,
+          "litigation": 5.012
+        },
+        "Iftikhar Ali": {
+          "possessed": 77.056,
+          "unpossessed": 0,
+          "purchased": 77.056,
+          "unpurchased": 26.894,
+          "hold": 0,
+          "litigation": 0
+        },
+        "Shahbaz Ali": {
+          "possessed": 150.089,
+          "unpossessed": 0,
+          "purchased": 150.089,
+          "unpurchased": 133.394,
+          "hold": 0,
+          "litigation": 0
+        },
+        "Muhmmad Farooq": {
+          "possessed": 574.683,
+          "unpossessed": 0,
+          "purchased": 574.683,
+          "unpurchased": 296.167,
+          "hold": 0,
+          "litigation": 0
+        },
+        "Muhammad Shafique": {
+          "possessed": 40.65,
+          "unpossessed": 0,
+          "purchased": 40.65,
+          "unpurchased": 9.1,
+          "hold": 0,
+          "litigation": 0
+        },
+        "Sheikh Muhammad Akram": {
+          "possessed": 282.472,
+          "unpossessed": 0,
+          "purchased": 292.572,
+          "unpurchased": 32.878,
+          "hold": 0,
+          "litigation": 10.1
+        },
+        "Muzaffar Ahmed": {
+          "possessed": 1604.498,
+          "unpossessed": 0,
+          "purchased": 1678.92,
+          "unpurchased": 765.268,
+          "hold": 0,
+          "litigation": 74.422
+        },
+        "Ehsan Ullah Cheema": {
+          "possessed": 73.675,
+          "unpossessed": 0,
+          "purchased": 73.675,
+          "unpurchased": 125.925,
+          "hold": 0,
+          "litigation": 0
+        },
+        "Nasir Mahmood": {
+          "possessed": 448.631,
+          "unpossessed": 0,
+          "purchased": 504.646,
+          "unpurchased": 286.166,
+          "hold": 0,
+          "litigation": 56.015
+        },
+        "Iftikhar Ali & Saadat": {
+          "possessed": 318.591,
+          "unpossessed": 0,
+          "purchased": 318.591,
+          "unpurchased": 95.109,
+          "hold": 0,
+          "litigation": 0
+        },
+        "Kaleem Sabir Taseer": {
+          "possessed": 127.738,
+          "unpossessed": 0,
+          "purchased": 127.738,
+          "unpurchased": 35.262,
+          "hold": 0,
+          "litigation": 0
+        },
+        "Abdul Majeed Cheema": {
+          "possessed": 130.258,
+          "unpossessed": 0,
+          "purchased": 136.258,
+          "unpurchased": 61.692,
+          "hold": 0,
+          "litigation": 6.0
+        },
+        "Shahzad Ahmed": {
+          "possessed": 59.072,
+          "unpossessed": 0,
+          "purchased": 59.072,
+          "unpurchased": 38.278,
+          "hold": 0,
+          "litigation": 0
+        },
+        "Zaka Ullah": {
+          "possessed": 395.675,
+          "unpossessed": 0,
+          "purchased": 395.675,
+          "unpurchased": 100.625,
+          "hold": 0,
+          "litigation": 0
+        },
+        "Amjad Khan Kakar": {
+          "possessed": 40.344,
+          "unpossessed": 0,
+          "purchased": 40.344,
+          "unpurchased": 24.656,
+          "hold": 0,
+          "litigation": 0
+        },
+        "Sohrab Khan": {
+          "possessed": 20.897,
+          "unpossessed": 0,
+          "purchased": 20.897,
+          "unpurchased": 22.653,
+          "hold": 0,
+          "litigation": 0
+        },
+        "Khalid Mehmood": {
+          "possessed": 56.644,
+          "unpossessed": 0,
+          "purchased": 56.644,
+          "unpurchased": 21.006,
+          "hold": 0,
+          "litigation": 0
+        },
+        "Muhammad Saeed Afzal": {
+          "possessed": 254.346,
+          "unpossessed": 0,
+          "purchased": 254.346,
+          "unpurchased": 133.554,
+          "hold": 0,
+          "litigation": 0
+        },
+        "Babar Shehzad Chatha/Ansir Mahmood Sandhu": {
+          "possessed": 286.7,
+          "unpossessed": 1,
+          "purchased": 289.7,
+          "unpurchased": 74.75,
+          "hold": 1,
+          "litigation": 1
+        },
+        "Khalid Rauf": {
+          "possessed": 98.0,
+          "unpossessed": 0,
+          "purchased": 98.0,
+          "unpurchased": 41.7,
+          "hold": 0,
+          "litigation": 0
+        },
+        "Muhammad Ahsan": {
+          "possessed": 115.9,
+          "unpossessed": 0,
+          "purchased": 115.9,
+          "unpurchased": 49.15,
+          "hold": 0,
+          "litigation": 0
+        },
+        "Malik Ranbaz Khan & Irfan Ahmed": {
+          "possessed": 896.487,
+          "unpossessed": 0,
+          "purchased": 896.487,
+          "unpurchased": 358.313,
+          "hold": 0,
+          "litigation": 0
+        },
+        "Najeeb Ullah": {
+          "possessed": 70.0,
+          "unpossessed": 0,
+          "purchased": 70.0,
+          "unpurchased": 8.0,
+          "hold": 0,
+          "litigation": 0
+        },
+        "Muhammad Haseeb": {
+          "possessed": 6,
+          "unpossessed": 0,
+          "purchased": 6,
+          "unpurchased": 2,
+          "hold": 0,
+          "litigation": 0
+        },
+        "Mansoor Cheema": {
+          "possessed": 73.929,
+          "unpossessed": 0,
+          "purchased": 73.929,
+          "unpurchased": 12.971,
+          "hold": 0,
+          "litigation": 0
+        },
+        "Hamid Raza": {
+          "possessed": 31.1,
+          "unpossessed": 0,
+          "purchased": 31.1,
+          "unpurchased": 16.5,
+          "hold": 0,
+          "litigation": 0
+        },
+        "Shahadat Ali": {
+          "possessed": 44.667,
+          "unpossessed": 0,
+          "purchased": 44.667,
+          "unpurchased": 15.333,
+          "hold": 0,
+          "litigation": 0
+        },
+        "Zaheer Ghani": {
+          "possessed": 19.876,
+          "unpossessed": 0,
+          "purchased": 19.876,
+          "unpurchased": 18.374,
+          "hold": 0,
+          "litigation": 0
+        },
+        "Tariq Rauf Ahmad": {
+          "possessed": 39.45,
+          "unpossessed": 0,
+          "purchased": 39.45,
+          "unpurchased": 0.0,
+          "hold": 0,
+          "litigation": 0
+        },
+        "Nazaqat Ali": {
+          "possessed": 58.15,
+          "unpossessed": 0,
+          "purchased": 58.15,
+          "unpurchased": 21.4,
+          "hold": 0,
+          "litigation": 0
+        },
+        "Tahir Mehmood Khan": {
+          "possessed": 6.0,
+          "unpossessed": 0,
+          "purchased": 6.0,
+          "unpurchased": 9.1,
+          "hold": 0,
+          "litigation": 0
+        },
+        "Javed Iqbal": {
+          "possessed": 2.844,
+          "unpossessed": 0,
+          "purchased": 2.844,
+          "unpurchased": 12.506,
+          "hold": 0,
+          "litigation": 0
+        },
+        "Amjad Ali": {
+          "possessed": 10.666,
+          "unpossessed": 0,
+          "purchased": 10.666,
+          "unpurchased": 5.334,
+          "hold": 0,
+          "litigation": 0
+        },
+        "Javed Iqbal / Shahzad Ahmed": {
+          "possessed": 4,
+          "unpossessed": 0,
+          "purchased": 4,
+          "unpurchased": 4,
+          "hold": 0,
+          "litigation": 0
+        }
+      }
+    }
+  ],
+  "timestamp": "2025-10-10T20:15:39.780177"
+}

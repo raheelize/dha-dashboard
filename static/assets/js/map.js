@@ -8,15 +8,15 @@ L.tileLayer('https://server.arcgisonline.com/ArcGIS/rest/services/World_Imagery/
 
 // DHA Phases across Pakistan
 var dhaPhases = [
-    { name: "DHA City", coords: [25.008, 67.4528] },
-    { name: "DHA Karachi", coords: [24.7873, 67.0705] },
-    { name: "DHA Lahore", coords: [31.47780, 74.40966] },
-    { name: "DHA Gujranwala", coords: [32.27924, 74.13658] },
-    { name: "DHA Bahawalpur", coords: [29.32569, 71.67619] },
-    { name: "DHA Islamabad", coords: [33.5395, 73.0986] },
-    { name: "DHA Multan", coords: [30.2907, 71.51773] },
-    { name: "DHA Peshawar", coords: [34.05411, 71.43258] },
-    { name: "DHA Quetta", coords: [30.3049, 66.9150] }
+    { name: "DHA CITY", coords: [25.008, 67.4528] },
+    { name: "DHA K", coords: [24.7873, 67.0705] },
+    { name: "DHA L", coords: [31.47780, 74.40966] },
+    { name: "DHA G", coords: [32.27924, 74.13658] },
+    { name: "DHA B", coords: [29.32569, 71.67619] },
+    { name: "DHA IR", coords: [33.5395, 73.0986] },
+    { name: "DHA M", coords: [30.2907, 71.51773] },
+    { name: "DHA P", coords: [34.05411, 71.43258] },
+    { name: "DHA Q", coords: [30.3049, 66.9150] }
 ];
 
 // Create LatLngBounds to fit all markers

@@ -1,413 +1,434 @@
 
 {% extends 'base.html' %}
 {% block content %}
-    <div class="main-content container-fluid pt-0">
-        <div class="row g-2 mb-2 row-slim">
-            <div class="col-6 col-md-4 col-lg-2 mt-0 mb-0 pt-2">
-                <div class="card stat-card stat-card-1 border-2 p-0 fade-in" style="animation-delay: 0.1s;">
-                    <div class="card-header">
-                        <span class="">Possessed Land</span>
-                    </div>
-                    <div class="card-body mt-0 p-0">
-                        <h5 class="mb-0">252,030</h5>
-                        <small class="text-muted">Kanals</small>
-                    </div>
-                </div>
-            </div>
+{% load static %}
 
-            <div class="col-6 col-md-4 col-lg-2 mt-0 mb-0 pt-2">
-                <div class="card stat-card stat-card-2 border-2 p-0 fade-in" style="animation-delay: 0.2s;">
-                    <div class="card-header">
-                        <span class="">Purchased Land</span>
-                    </div>
-                    <div class="card-body mt-0 p-0">
-                        <h5 class="mb-0">408,000</h5>
-                        <small class="text-muted">Kanals</small>
-                    </div>
-                </div>
-            </div>
+<!-- Main Content -->
+<div class="main-content container-fluid pt-0 d-flex flex-row flex-column">
 
-            <div class="col-6 col-md-4 col-lg-2 mt-0 mb-0 pt-2">
-                <div class="card stat-card stat-card-3 border-2 p-0 fade-in" style="animation-delay: 0.3s;">
-                    <div class="card-header">
-                        <span class="">Unpossessed Land</span>
-                    </div>
-                    <div class="card-body mt-0 p-0">
-                        <h5 class="mb-0">253,100</h5>
-                        <small class="text-muted">Kanals</small>
-                    </div>
+    <!-- Row - 1 for Stats-cards -->
+    <div class="row g-2 mb-2 row-slim">
+        <div class="col-6 col-md-4 col-lg-2 mt-0 mb-0 pt-2">
+            <div id="stat-card-possessed" class="card stat-card border-2 p-0 fade-in"
+                style="animation-delay: 0.1s;">
+                <div class="card-header">
+                    <span class="">Possessed Land</span>
                 </div>
-            </div>
-
-            <div class="col-6 col-md-4 col-lg-2 mt-0 mb-0 pt-2">
-                <div class="card stat-card stat-card-4 border-2 p-0 fade-in" style="animation-delay: 0.45s;">
-                    <div class="card-header">
-                        <span class="">Possessed Not Purchased</span>
-                    </div>
-                    <div class="card-body mt-0 p-0">
-                        <h5 class="mb-0">111,253</h5>
-                        <small class="text-muted">Kanals</small>
-                    </div>
-                </div>
-            </div>
-
-            <div class="col-6 col-md-4 col-lg-2 mt-0 mb-0 pt-2">
-                <div class="card stat-card stat-card-5 border-2 p-0 fade-in" style="animation-delay: 0.6s;">
-                    <div class="card-header">
-                        <span class="">Hold Land</span>
-                    </div>
-                    <div class="card-body mt-0 p-0">
-                        <h5 class="mb-0">113,100</h5>
-                        <small class="text-muted">Kanals</small>
-                    </div>
-                </div>
-            </div>
-
-            <div class="col-6 col-md-4 col-lg-2 mt-0 mb-0 pt-2">
-                <div class="card stat-card stat-card-6 border-2 p-0 fade-in" style="animation-delay: 0.6s;">
-                    <div class="card-header">
-                        <span class="">Litigation Land</span>
-                    </div>
-                    <div class="card-body mt-0 p-0 ">
-                        <h5 class="mb-0">71,010</h5>
-                        <small class="text-muted">Kanals</small>
-                    </div>
+                <div class="card-body mt-0 p-0 ">
                 </div>
             </div>
         </div>
-        <div class="row g-2 mb-2 row-slim">
-            <div class="col-6 col-sm-4 col-md-4 col-lg">
-                <div class="card city-card city-card-khi border-3 p-0" id="khi">
-                    <div class="card-header mt-1">
-                        <h6 class="mb-0 px-2">Karachi</h6>
-                    </div>
-                    <div class="card-body mt-1 p-0">
-                        <p class="mb-0 px-2">408,000 <small class="text-muted">Kanals</small></p>
 
-                    </div>
+        <div class="col-6 col-md-4 col-lg-2 mt-0 mb-0 pt-2">
+            <div id="stat-card-purchased" class="card stat-card border-2 p-0 fade-in" style="animation-delay: 0.2s;">
+                <div class="card-header">
+                    <span class="">Purchased Land</span>
                 </div>
-            </div>
-
-            <div class="col-6 col-sm-4 col-md-4 col-lg">
-                <div class="card city-card city-card-lhr border-3 p-0" id="lhr">
-                    <div class="card-header mt-1">
-                        <h6 class="mb-0 px-2">Lahore</h6>
-                    </div>
-                    <div class="card-body mt-1 p-0">
-                        <p class="mb-0 px-2">408,000 <small class="text-muted">Kanals</small></p>
-
-                    </div>
-                </div>
-            </div>
-
-            <div class="col-6 col-sm-4 col-md-4 col-lg">
-                <div class="card city-card city-card-isl border-3 p-0" id="isl">
-                    <div class="card-header mt-1">
-                        <h6 class="mb-0 px-2">Islamabad</h6>
-                    </div>
-                    <div class="card-body mt-1 p-0">
-                        <p class="mb-0 px-2">408,000 <small class="text-muted">Kanals</small></p>
-
-                    </div>
-                </div>
-            </div>
-
-            <div class="col-6 col-sm-4 col-md-4 col-lg">
-                <div class="card city-card city-card-qut border-3 p-0" id="qut">
-                    <div class="card-header mt-1">
-                        <h6 class="mb-0 px-2">Quetta</h6>
-                    </div>
-                    <div class="card-body mt-1 p-0">
-                        <p class="mb-0 px-2">408,000 <small class="text-muted">Kanals</small></p>
-
-                    </div>
-                </div>
-            </div>
-
-            <div class="col-6 col-sm-4 col-md-4 col-lg">
-                <div class="card city-card city-card-mul border-3 p-0" id="mul">
-                    <div class="card-header mt-1">
-                        <h6 class="mb-0 px-2">Multan</h6>
-                    </div>
-                    <div class="card-body mt-1 p-0">
-                        <p class="mb-0 px-2">408,000 <small class="text-muted">Kanals</small></p>
-
-                    </div>
-                </div>
-            </div>
-
-            <div class="col-6 col-sm-4 col-md-4 col-lg">
-                <div class="card city-card city-card-bhw border-3 p-0" id="bhw">
-                    <div class="card-header mt-1">
-                        <h6 class="mb-0 px-2">Bahawalpur</h6>
-                    </div>
-                    <div class="card-body mt-1 p-0">
-                        <p class="mb-0 px-2">408,000 <small class="text-muted">Kanals</small></p>
-
-                    </div>
-                </div>
-            </div>
-
-            <div class="col-6 col-sm-4 col-md-4 col-lg">
-                <div class="card city-card city-card-guj border-3 p-0" id="guj">
-                    <div class="card-header mt-1">
-                        <h6 class="mb-0 px-2">Gujranwala</h6>
-                    </div>
-                    <div class="card-body mt-1 p-0">
-                        <p class="mb-0 px-2">408,000 <small class="text-muted">Kanals</small></p>
-
-                    </div>
-                </div>
-            </div>
-
-            <div class="col-6 col-sm-4 col-md-4 col-lg">
-                <div class="card city-card city-card-city border-3 p-0" id="city">
-                    <div class="card-header mt-1">
-                        <h6 class="mb-0 px-2">City</h6>
-                    </div>
-                    <div class="card-body mt-1 p-0">
-                        <p class="mb-0 px-2">408,000 <small class="text-muted">Kanals</small></p>
-
-                    </div>
-                </div>
-            </div>
-
-            <div class="col-6 col-sm-4 col-md-4 col-lg">
-                <div class="card city-card city-card-psw border-3 p-0" id="psw">
-                    <div class="card-header mt-1">
-                        <h6 class="mb-0 px-2">Peshawar</h6>
-                    </div>
-                    <div class="card-body mt-1 p-0">
-                        <p class="mb-0 px-2">408,000 <small class="text-muted">Kanals</small></p>
-
-                    </div>
+                <div class="card-body mt-0 p-0 ">
                 </div>
             </div>
         </div>
-        <div class="row g-3 flex-grow-1 row-main">
-            <div class="col-12 col-lg-3 order-1 order-lg-1">
-                <div class="charts-panel h-100 d-flex flex-column pt-0 px-0 gap-2">
-                    <div class="chart-wrapper flex-grow-0">
-                        <!-- <div class="chart-header">Bar-chart</div> -->
-                        <div id="pie-chart" class="chart-body p-0"></div>
-                    </div>
-                    <div class="chart-wrapper flex-grow-1">
-                        <!-- <div id="bar-chart" class="chart-body"></div> -->
-                        <div class="progress-container mt-0 p-0">
-                            <div class="progress-item">
-                                <div class="progress-label">
-                                    <span class="district-name">Karachi- Possessed</span>
-                                    <div class=" d-flex inline-flex p-0 m-0">
-                                        <span class="progress-value">195,252 / 310,000 Total Land</span>
-                                        <!-- <span class="progress-value il btn-green">
-                                            <i class="bi bi-map-fill"></i>
-                                        </span> -->
-                                    </div>
-                                </div>
-                                <div class="custom-progress">
-                                    <div class="custom-progress-bar khi" style="width: 65%">
-                                        <span class="progress-percentage">65%</span>
-                                    </div>
-                                </div>
-                            </div>
-                            <div class="progress-item">
-                                <div class="progress-label">
-                                    <span class="district-name">Lahore- Possessed</span>
-                                    <div class="d-flex inline-flex">
-                                        <span class="progress-value">195,252 / 310,000 Total Land</span>
-                                        <!-- <span class="progress-value il btn-green">
-                                            <i class="bi bi-map-fill"></i>
-                                        </span> -->
-                                    </div>
 
-                                </div>
-                                <div class="custom-progress">
-                                    <div class="custom-progress-bar lhr" style="width: 60%">
-                                        <span class="progress-percentage">60%</span>
-                                    </div>
-                                </div>
+        <div class="col-6 col-md-4 col-lg-2 mt-0 mb-0 pt-2">
+            <div id="stat-card-unpossessed" class="card stat-card border-2 p-0 fade-in" style="animation-delay: 0.3s;">
+                <div class="card-header">
+                    <span class="">Unpossessed Land</span>
+                </div>
+                <div class="card-body mt-0 p-0 ">
+                </div>
+            </div>
+        </div>
+
+        <div class="col-6 col-md-4 col-lg-2 mt-0 mb-0 pt-2">
+            <div id="stat-card-unpurchased" class="card stat-card border-2 p-0 fade-in" style="animation-delay: 0.45s;">
+                <div class="card-header">
+                    <span class="">Possessed Not Purchased</span>
+                </div>
+                <div class="card-body mt-0 p-0 ">
+                </div>
+            </div>
+        </div>
+
+        <div class="col-6 col-md-4 col-lg-2 mt-0 mb-0 pt-2">
+            <div id="stat-card-hold" class="card stat-card border-2 p-0 fade-in" style="animation-delay: 0.6s;">
+                <div class="card-header">
+                    <span class="">Hold Land</span>
+                </div>
+                <div class="card-body mt-0 p-0 ">
+                </div>
+            </div>
+        </div>
+
+        <div class="col-6 col-md-4 col-lg-2 mt-0 mb-0 pt-2">
+            <div id="stat-card-litigation" class="card stat-card border-2 p-0 fade-in" style="animation-delay: 0.6s;">
+                <div class="card-header">
+                    <span class="">Litigation Land</span>
+                </div>
+                <div class="card-body mt-0 p-0 ">
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Row - 2 for City-cards -->
+    <div class="row g-2 mb-2 row-slim">
+        <div class="col-6 col-sm-4 col-md-4 col-lg">
+            <div class="card city-card city-card-khi border-2 p-0" id="khi" data-station="Karachi">
+                <div class="card-header mt-1">
+                    <h6 class="mb-0 px-2">DHA K</h6>
+                </div>
+                <div class="card-body mt-1 p-0"></div>
+            </div>
+        </div>
+
+        <div class="col-6 col-sm-4 col-md-4 col-lg">
+            <div class="card city-card city-card-lhr border-2 p-0" id="lhr" data-station="Lahore">
+                <div class="card-header mt-1">
+                    <h6 class="mb-0 px-2">DHA L</h6>
+                </div>
+                <div class="card-body mt-1 p-0"></div>
+            </div>
+        </div>
+
+        <div class="col-6 col-sm-4 col-md-4 col-lg">
+            <div class="card city-card city-card-isl border-2 p-0" id="isl" data-station="Islamabad">
+                <div class="card-header mt-1">
+                    <h6 class="mb-0 px-2">DHA IR</h6>
+                </div>
+                <div class="card-body mt-1 p-0"></div>
+            </div>
+        </div>
+
+        <div class="col-6 col-sm-4 col-md-4 col-lg">
+            <div class="card city-card city-card-qut border-2 p-0" id="qut" data-station="Quetta">
+                <div class="card-header mt-1">
+                    <h6 class="mb-0 px-2">DHA Q</h6>
+                </div>
+                <div class="card-body mt-1 p-0"></div>
+            </div>
+        </div>
+
+        <div class="col-6 col-sm-4 col-md-4 col-lg">
+            <div class="card city-card city-card-mul border-2 p-0" id="mul" data-station="Multan">
+                <div class="card-header mt-1">
+                    <h6 class="mb-0 px-2">DHA M</h6>
+                </div>
+                <div class="card-body mt-1 p-0"></div>
+            </div>
+        </div>
+
+        <div class="col-6 col-sm-4 col-md-4 col-lg">
+            <div class="card city-card city-card-bhw border-2 p-0" id="bhwp" data-station="Bahawalpur">
+                <div class="card-header mt-1">
+                    <h6 class="mb-0 px-2">DHA B</h6>
+                </div>
+                <div class="card-body mt-1 p-0"></div>
+            </div>
+        </div>
+
+        <div class="col-6 col-sm-4 col-md-4 col-lg">
+            <div class="card city-card city-card-guj border-2 p-0" id="guj" data-station="Gujranwala">
+                <div class="card-header mt-1">
+                    <h6 class="mb-0 px-2">DHA G</h6>
+                </div>
+                <div class="card-body mt-1 p-0"></div>
+            </div>
+        </div>
+
+        <div class="col-6 col-sm-4 col-md-4 col-lg">
+            <div class="card city-card city-card-city border-2 p-0" id="city" data-station="Karachi_City">
+                <div class="card-header mt-1">
+                    <h6 class="mb-0 px-2">DHA CITY</h6>
+                </div>
+                <div class="card-body mt-1 p-0"></div>
+            </div>
+        </div>
+
+        <div class="col-6 col-sm-4 col-md-4 col-lg">
+            <div class="card city-card city-card-psw border-2 p-0" id="psw" data-station="Peshawar">
+                <div class="card-header mt-1">
+                    <h6 class="mb-0 px-2">DHA P</h6>
+                </div>
+                <div class="card-body mt-1 p-0"></div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Row - 3 for Charts and Map Panel-->
+    <div class="row g-3 flex-grow-1 row-main">
+        
+        <!-- Progress bars / Charts Panel-->
+
+        <div class="col-12 col-lg-3 order-1 order-lg-1">
+            <!-- Progress bars -->
+            <div id="progressbarspanel" class="charts-panel h-100 d-flex flex-column pt-0 px-0">
+                <div class="chart-wrapper">
+                    <div class="chart-header"> Possessed Land - DHA Wise Statistics</div>
+                    <div class="progress-container m-0 p-0">
+                        <div class="progress-item mb-2"></div>
+                        <div class="progress-item mb-2"></div>
+                        <div class="progress-item mb-2"></div>
+                        <div class="progress-item mb-2"></div>
+                        <div class="progress-item mb-2"></div>
+                        <div class="progress-item mb-2"></div>
+                        <div class="progress-item mb-2"></div>
+                        <div class="progress-item mb-2"></div>
+                        <div class="progress-item mb-2"></div>                        
+                    </div>
+                </div>
+            </div>
+            <!-- Stacked progress bars for stat-card-purchased only-->
+            <div id="purchasedbarspanel" class="charts-panel h-100 d-flex flex-column pt-0 px-0">
+                <div class="chart-wrapper">
+                    <div class="chart-header pb-2">Purchased Land — DHA Wise Statistics</div>
+                    <div class="progress-container mx-1 m-0 p-0 pt-2">
+
+                        <!-- Stacked Progress Bars -->
+
+                        <div class="progress-stacked-item mb-1">
+                            <div class="stacked-label d-flex justify-content-between align-items-center">
+                                <span class="district-name">DHA K</span>
+                                <span class="progress-value">310,000 Kanals</span>
                             </div>
-                            <div class="progress-item">
-                                <div class="progress-label">
-                                    <span class="district-name">Islamabad- Possessed</span>
-                                    <div class=" d-flex inline-flex">
-                                        <span class="progress-value">195,252 / 310,000 Total Land</span>
-                                        <!-- <span class="progress-value il btn-green">
-                                            <i class="bi bi-map-fill"></i>
-                                        </span> -->
-                                    </div>
+                            <div class="stacked-progress">
+                                <div class="stacked-segment possessed" style="width: 60%"><span
+                                        class="seg-percent">60%</span></div>
+                                <div class="stacked-segment unpossessed" style="width: 10%"><span
+                                        class="seg-percent">10%</span></div>
+                                <div class="stacked-segment hold" style="width:5%"><span class="seg-percent">5%</span>
                                 </div>
-                                <div class="custom-progress">
-                                    <div class="custom-progress-bar isl" style="width: 56%">
-                                        <span class="progress-percentage">56%</span>
-                                    </div>
-                                </div>
-                            </div>
-                            <div class="progress-item">
-                                <div class="progress-label">
-                                    <span class="district-name">Peshawar- Possessed</span>
-                                    <div class="d-flex inline-flex">
-                                        <span class="progress-value">195,252 / 310,000 Total Land</span>
-                                        <!-- <span class="progress-value il btn-green">
-                                            <i class="bi bi-map-fill"></i>
-                                        </span> -->
-                                    </div>
-                                </div>
-                                <div class="custom-progress">
-                                    <div class="custom-progress-bar psw" style="width: 20%">
-                                        <span class="progress-percentage">20%</span>
-                                    </div>
-                                </div>
-                            </div>
-                            <div class="progress-item">
-                                <div class="progress-label">
-                                    <span class="district-name">Quetta- Possessed</span>
-                                    <div class="d-flex inline-flex">
-                                        <span class="progress-value">195,252 / 310,000 Total Land</span>
-                                        <!-- <span class="progress-value il btn-green">
-                                            <i class="bi bi-map-fill"></i>
-                                        </span> -->
-                                    </div>
-                                </div>
-                                <div class="custom-progress">
-                                    <div class="custom-progress-bar qut" style="width: 42%">
-                                        <span class="progress-percentage">42%</span>
-                                    </div>
-                                </div>
-                            </div>
-                            <div class="progress-item">
-                                <div class="progress-label">
-                                    <span class="district-name">Multan- Possessed</span>
-                                    <div class="d-flex inline-flex">
-                                        <span class="progress-value">195,252 / 310,000 Total Land</span>
-                                        <!-- <span class="progress-value il btn-green">
-                                            <i class="bi bi-map-fill"></i>
-                                        </span> -->
-                                    </div>
-                                </div>
-                                <div class="custom-progress">
-                                    <div class="custom-progress-bar mul" style="width: 42%">
-                                        <span class="progress-percentage">42%</span>
-                                    </div>
-                                </div>
-                            </div>
-                            <div class="progress-item">
-                                <div class="progress-label">
-                                    <span class="district-name">Bahawalpur- Possessed</span>
-                                    <div class="d-flex inline-flex">
-                                        <span class="progress-value">195,252 / 310,000 Total Land</span>
-                                        <!-- <span class="progress-value il btn-green">
-                                            <i class="bi bi-map-fill"></i>
-                                        </span> -->
-                                    </div>
-                                </div>
-                                <div class="custom-progress">
-                                    <div class="custom-progress-bar bhwp" style="width: 42%">
-                                        <span class="progress-percentage">42%</span>
-                                    </div>
-                                </div>
-                            </div>
-                            <div class="progress-item">
-                                <div class="progress-label">
-                                    <span class="district-name">City- Possessed</span>
-                                    <div class="d-flex inline-flex">
-                                        <span class="progress-value">195,252 / 310,000 Total Land</span>
-                                        <!-- <span class="progress-value il btn-green">
-                                            <i class="bi bi-map-fill"></i>
-                                        </span> -->
-                                    </div>
-                                </div>
-                                <div class="custom-progress">
-                                    <div class="custom-progress-bar city" style="width: 42%">
-                                        <span class="progress-percentage">42%</span>
-                                    </div>
-                                </div>
-                            </div>
-                            <div class="progress-item">
-                                <div class="progress-label">
-                                    <span class="district-name">Gujranwala- Possessed</span>
-                                    <div class="d-flex inline-flex">
-                                        <span class="progress-value">195,252 / 310,000 Total Land</span>
-                                        <!-- <span class="progress-value il btn-green">
-                                            <i class="bi bi-map-fill"></i>
-                                        </span> -->
-                                    </div>
-                                </div>
-                                <div class="custom-progress">
-                                    <div class="custom-progress-bar guj" style="width: 42%">
-                                        <span class="progress-percentage">42%</span>
-                                    </div>
-                                </div>
+                                <div class="stacked-segment litigation" style="width: 25%"><span
+                                        class="seg-percent">25%</span></div>
                             </div>
                         </div>
+
+                        <div class="progress-stacked-item mb-1">
+                            <div class="stacked-label d-flex justify-content-between align-items-center">
+                                <span class="district-name">DHA L</span>
+                                <span class="progress-value">0 Kanals</span>
+                            </div>
+                            <div class="stacked-progress">
+                                <div class="stacked-segment possessed" style="width: 50%"><span
+                                        class="seg-percent">50%</span></div>
+                                <div class="stacked-segment unpossessed" style="width: 27%"><span
+                                        class="seg-percent">27%</span></div>
+                                <div class="stacked-segment hold" style="width: 15%"><span
+                                        class="seg-percent">15%</span></div>
+                                <div class="stacked-segment litigation" style="width: 8%"><span
+                                        class="seg-percent">8%</span></div>
+                            </div>
+                        </div>
+
+                        <div class="progress-stacked-item mb-1">
+                            <div class="stacked-label d-flex justify-content-between align-items-center">
+                                <span class="district-name">DHA IR</span>
+                                <span class="progress-value">0 Kanals</span>
+                            </div>
+                            <div class="stacked-progress">
+                                <div class="stacked-segment possessed" style="width: 50%"><span
+                                        class="seg-percent">50%</span></div>
+                                <div class="stacked-segment unpossessed" style="width: 27%"><span
+                                        class="seg-percent">27%</span></div>
+                                <div class="stacked-segment hold" style="width: 15%"><span
+                                        class="seg-percent">15%</span></div>
+                                <div class="stacked-segment litigation" style="width: 8%"><span
+                                        class="seg-percent">8%</span></div>
+                            </div>
+                        </div>
+                        <div class="progress-stacked-item mb-1">
+                            <div class="stacked-label d-flex justify-content-between align-items-center">
+                                <span class="district-name">DHA P</span>
+                                <span class="progress-value">0 Kanals</span>
+                            </div>
+                            <div class="stacked-progress">
+                                <div class="stacked-segment possessed" style="width: 50%"><span
+                                        class="seg-percent">50%</span></div>
+                                <div class="stacked-segment unpossessed" style="width: 27%"><span
+                                        class="seg-percent">27%</span></div>
+                                <div class="stacked-segment hold" style="width: 15%"><span
+                                        class="seg-percent">15%</span></div>
+                                <div class="stacked-segment litigation" style="width: 8%"><span
+                                        class="seg-percent">8%</span></div>
+                            </div>
+                        </div>
+                        <div class="progress-stacked-item mb-1">
+                            <div class="stacked-label d-flex justify-content-between align-items-center">
+                                <span class="district-name">DHA Q</span>
+                                <span class="progress-value">0 Kanals</span>
+                            </div>
+                            <div class="stacked-progress">
+                                <div class="stacked-segment possessed" style="width: 50%"><span
+                                        class="seg-percent">50%</span></div>
+                                <div class="stacked-segment unpossessed" style="width: 27%"><span
+                                        class="seg-percent">27%</span></div>
+                                <div class="stacked-segment hold" style="width: 15%"><span
+                                        class="seg-percent">15%</span></div>
+                                <div class="stacked-segment litigation" style="width: 8%"><span
+                                        class="seg-percent">8%</span></div>
+                            </div>
+                        </div>
+                        <div class="progress-stacked-item mb-1">
+                            <div class="stacked-label d-flex justify-content-between align-items-center">
+                                <span class="district-name">DHA M</span>
+                                <span class="progress-value">0 Kanals</span>
+                            </div>
+                            <div class="stacked-progress">
+                                <div class="stacked-segment possessed" style="width: 50%"><span
+                                        class="seg-percent">50%</span></div>
+                                <div class="stacked-segment unpossessed" style="width: 27%"><span
+                                        class="seg-percent">27%</span></div>
+                                <div class="stacked-segment hold" style="width: 15%"><span
+                                        class="seg-percent">15%</span></div>
+                                <div class="stacked-segment litigation" style="width: 8%"><span
+                                        class="seg-percent">8%</span></div>
+                            </div>
+                        </div>
+                        <div class="progress-stacked-item mb-1">
+                            <div class="stacked-label d-flex justify-content-between align-items-center">
+                                <span class="district-name">DHA B</span>
+                                <span class="progress-value">0 Kanals</span>
+                            </div>
+                            <div class="stacked-progress">
+                                <div class="stacked-segment possessed" style="width: 50%"><span
+                                        class="seg-percent">50%</span></div>
+                                <div class="stacked-segment unpossessed" style="width: 27%"><span
+                                        class="seg-percent">27%</span></div>
+                                <div class="stacked-segment hold" style="width: 15%"><span
+                                        class="seg-percent">15%</span></div>
+                                <div class="stacked-segment litigation" style="width: 8%"><span
+                                        class="seg-percent">8%</span></div>
+                            </div>
+                        </div>
+                        <div class="progress-stacked-item mb-1">
+                            <div class="stacked-label d-flex justify-content-between align-items-center">
+                                <span class="district-name">DHA CITY</span>
+                                <span class="progress-value">0 Kanals</span>
+                            </div>
+                            <div class="stacked-progress">
+                                <div class="stacked-segment possessed" style="width: 50%"><span
+                                        class="seg-percent">50%</span></div>
+                                <div class="stacked-segment unpossessed" style="width: 27%"><span
+                                        class="seg-percent">27%</span></div>
+                                <div class="stacked-segment hold" style="width: 15%"><span
+                                        class="seg-percent">15%</span></div>
+                                <div class="stacked-segment litigation" style="width: 8%"><span
+                                        class="seg-percent">8%</span></div>
+                            </div>
+                        </div>
+                        <div class="progress-stacked-item mb-1">
+                            <div class="stacked-label d-flex justify-content-between align-items-center">
+                                <span class="district-name">DHA G</span>
+                                <span class="progress-value"> 0 Kanals</span>
+                            </div>
+                            <div class="stacked-progress">
+                                <div class="stacked-segment possessed" style="width: 50%"><span
+                                        class="seg-percent">50%</span></div>
+                                <div class="stacked-segment unpossessed" style="width: 27%"><span
+                                        class="seg-percent">27%</span></div>
+                                <div class="stacked-segment hold" style="width: 15%"><span
+                                        class="seg-percent">15%</span></div>
+                                <div class="stacked-segment litigation" style="width: 8%"><span
+                                        class="seg-percent">8%</span></div>
+                            </div>
+                        </div>
+                        <div
+                            class="stacked-legend d-flex justify-content-evenly align-items-center mb-0 mt-2 flex-wrap">
+                            <div class="legend-item"><span class="legend-color possessed"></span> Possessed</div>
+                            <div class="legend-item"><span class="legend-color unpossessed"></span> Unpossessed
+                            </div>
+                            <div class="legend-item"><span class="legend-color hold"></span> Hold</div>
+                            <div class="legend-item"><span class="legend-color litigation"></span> Litigation</div>
+                        </div>
                     </div>
-                    <!-- <div class="chart-column p-0 m-0 ">
-                        <div id="pie-chart-1" class="chart-box"></div>
-                        <div id="pie-chart-2" class="chart-box"></div>
-                        <div id="pie-chart-3" class="chart-box"></div>
-                    </div> -->
                 </div>
             </div>
-            <div class="col-12 col-lg-9 order-2 order-lg-2">
-                <div class="map-panel h-100">
-                    <div id="map"></div>
-                    <div id="legend" class="position-absolute end-0 top-0 m-0 shadow map-overlay-box m-2">
-                        <h6 class="mb-3">Map Legend</h6>
-                        <button class="close-btn btn-red" aria-label="Close">×</button>
-                        <div class="legend-content">
-                            <div class="legend-item">
-                                <div class="d-flex align-items-center">
-                                    <input type="checkbox" id="phase1" class="legend-checkbox me-2" checked>
-                                    <label for="running-checkbox" class="legend-label mb-0">
-                                        <span class="legend-icon icon1"></span>
-                                        <span>Possessed</span>
-                                    </label>
-                                </div>
+            <!-- Charts Panel-->
+            <div id="stationwisechartpanel" class="charts-panel-back h-100 d-flex flex-column pt-0 px-0">
+                <div class="chart-wrapper flex-grow-0">
+                    <div class="chart-header"> DHA K - Land Providers</div>
+                    <div id="pie-chart" class="chart-body m-0 p-0"></div>
+                </div>
+                <div class="chart-wrapper flex-grow-1">
+                    <div class="chart-header"> DHA K - Land Categories</div>
+                    <div id="bar-chart" class="chart-body"></div>
+                </div>
+            </div>
+            <!-- Authors -->
+            <div class="small authors fw-light px-2 p-0 m-0">Developed by <a href="https://www.r2v.com"
+                    target="_blank">www.r2v.com</a></small></div>
+        </div>
+
+        <!-- Map Panel -->
+        <div class="col-12 col-lg-9 order-2 order-lg-2">
+            <div class="map-panel h-100">
+                <div id="map"></div>
+                <div id="legend" class="position-absolute end-0 top-0 m-0 shadow map-overlay-box m-2">
+                    <h6 class="mb-3">Map Legend</h6>
+                    <button class="close-btn btn-red" aria-label="Close">×</button>
+                    <div class="legend-content">
+                        <div class="legend-item">
+                            <div class="d-flex align-items-center">
+                                <input type="checkbox" id="phase1" class="legend-checkbox me-2" checked>
+                                <label for="running-checkbox" class="legend-label mb-0">
+                                    <span class="legend-icon icon1"></span>
+                                    <span>Possessed</span>
+                                </label>
                             </div>
-                            <div class="legend-item">
-                                <div class="d-flex align-items-center">
-                                    <input type="checkbox" id="" value="0" class="legend-checkbox me-2" checked>
-                                    <label for="running-checkbox" class="legend-label mb-0">
-                                        <span class="legend-icon icon2"></span>
-                                        <span>Unpossessed</span>
-                                    </label>
-                                </div>
+                        </div>
+                        <div class="legend-item">
+                            <div class="d-flex align-items-center">
+                                <input type="checkbox" id="" value="0" class="legend-checkbox me-2" checked>
+                                <label for="running-checkbox" class="legend-label mb-0">
+                                    <span class="legend-icon icon2"></span>
+                                    <span>Unpossessed</span>
+                                </label>
                             </div>
-                            <div class="legend-item">
-                                <div class="d-flex align-items-center">
-                                    <input type="checkbox" id="" value="0" class="legend-checkbox me-2" checked>
-                                    <label for="running-checkbox" class="legend-label mb-0">
-                                        <span class="legend-icon icon3"></span>
-                                        <span>Purchased</span>
-                                    </label>
-                                </div>
+                        </div>
+                        <div class="legend-item">
+                            <div class="d-flex align-items-center">
+                                <input type="checkbox" id="" value="0" class="legend-checkbox me-2" checked>
+                                <label for="running-checkbox" class="legend-label mb-0">
+                                    <span class="legend-icon icon3"></span>
+                                    <span>Purchased</span>
+                                </label>
                             </div>
-                            <div class="legend-item">
-                                <div class="d-flex align-items-center">
-                                    <input type="checkbox" id="" value="0" class="legend-checkbox me-2" checked>
-                                    <label for="running-checkbox" class="legend-label mb-0">
-                                        <span class="legend-icon icon4"></span>
-                                        <span class="text-wrap">Possessed </br> Not Purchased</span>
-                                    </label>
-                                </div>
+                        </div>
+                        <div class="legend-item">
+                            <div class="d-flex align-items-center">
+                                <input type="checkbox" id="" value="0" class="legend-checkbox me-2" checked>
+                                <label for="running-checkbox" class="legend-label mb-0">
+                                    <span class="legend-icon icon4"></span>
+                                    <span class="text-wrap">Possessed </br> Not Purchased</span>
+                                </label>
                             </div>
-                            <div class="legend-item">
-                                <div class="d-flex align-items-center">
-                                    <input type="checkbox" id="" value="0" class="legend-checkbox me-2" checked>
-                                    <label for="running-checkbox" class="legend-label mb-0">
-                                        <span class="legend-icon icon5"></span>
-                                        <span>Hold</span>
-                                    </label>
-                                </div>
+                        </div>
+                        <div class="legend-item">
+                            <div class="d-flex align-items-center">
+                                <input type="checkbox" id="" value="0" class="legend-checkbox me-2" checked>
+                                <label for="running-checkbox" class="legend-label mb-0">
+                                    <span class="legend-icon icon5"></span>
+                                    <span>Hold</span>
+                                </label>
                             </div>
-                            <div class="legend-item">
-                                <div class="d-flex align-items-center">
-                                    <input type="checkbox" id="" value="0" class="legend-checkbox me-2" checked>
-                                    <label for="running-checkbox" class="legend-label mb-0">
-                                        <span class="legend-icon icon6"></span>
-                                        <span>Litigation</span>
-                                    </label>
-                                </div>
+                        </div>
+                        <div class="legend-item">
+                            <div class="d-flex align-items-center">
+                                <input type="checkbox" id="" value="0" class="legend-checkbox me-2" checked>
+                                <label for="running-checkbox" class="legend-label mb-0">
+                                    <span class="legend-icon icon6"></span>
+                                    <span>Litigation</span>
+                                </label>
+                            </div>
+                        </div>
+                        <div class="legend-item">
+                            <div class="d-flex align-items-center">
+                                <input type="checkbox" id="" value="0" class="legend-checkbox me-2" checked>
+                                <label for="running-checkbox" class="legend-label mb-0">
+                                    <span class="legend-icon ">
+                                        <i class="bi bi-map-fill"></i>
+                                    </span>
+                                    <span>Townplan</span>
+                                </label>
                             </div>
                         </div>
                     </div>
@@ -416,4 +437,447 @@
         </div>
     </div>
 
+
+</div>
+
+<script>
+
+document.addEventListener('DOMContentLoaded', function () {
+    showSkeleton(".card-body", 2);
+    showSkeleton('.progress-item',1);
+    // Call the API when page loads
+    fetchLandSummary();
+});
+
+
+let landData = {};
+
+function fetchLandSummary() {
+    // showLoader("Fetching Land Summary...");
+
+    fetch("{% url 'land_summary' %}")
+        .then(response => response.json())
+        .then(data => {
+            landData = data; // ✅ Store globally
+            hideSkeleton(".card-body");
+            updateStatCards(data.total_summary);
+            updateCityCards(data.stations);
+            updateProgressBars(data.stations);
+        })
+        .catch(error => {
+            console.error('Error fetching land summary:', error);
+            alert("Failed to fetch land summary. Please try again later.");
+        })
+        .finally(() => {
+            hideLoader();
+            // hideSkeleton(".card-body");
+        });
+}
+
+
+
+
+
+// -------------------------
+// Update Total Summary Cards
+// -------------------------
+function updateStatCards(summary) {
+    const formatter = num => Number(num).toLocaleString(undefined, { maximumFractionDigits: 2 });
+    const makeCardHTML = value => `
+        <h5 class="mb-0 px-2">${formatter(value)} <small class="text-muted">Kanals</small></h5>
+        <small class="text-muted">${formatter(value * 0.125)}</small>
+        <small class="text-muted">Acres</small>
+    `;
+
+    // Map your summary keys to their corresponding card IDs
+    const cardMap = {
+        total_possessed: '#stat-card-possessed',
+        total_purchased: '#stat-card-purchased',
+        total_unpossessed: '#stat-card-unpossessed',
+        total_unpurchased: '#stat-card-unpurchased',
+        total_hold: '#stat-card-hold',
+        total_litigation: '#stat-card-litigation',
+    };
+
+    for (const [key, selector] of Object.entries(cardMap)) {
+        const value = summary[key] ?? 0; // fallback if missing
+        const cardBody = document.querySelector(`${selector} .card-body`);
+        if (cardBody) cardBody.innerHTML = makeCardHTML(value);
+    }
+}
+
+
+// -------------------------
+// Update City Cards
+// -------------------------
+
+const mapCityToId = {
+    'Karachi': '#khi',
+    'Karachi_City': '#city',
+    'Lahore': '#lhr',
+    'Islamabad': '#isl',
+    'Quetta': '#qut',
+    'Multan': '#mul',
+    'Bahawalpur': '#bhwp',
+    'Gujranwala': '#guj',
+    'Peshawar': '#psw',
+};
+
+
+const mapDHATag = {
+    'Karachi': 'DHA K',
+    'Karachi_City': 'DHA CITY',
+    'Lahore': 'DHA L',
+    'Islamabad': 'DHA IR',
+    'Quetta': 'DHA Q',
+    'Multan': 'DHA M',
+    'Bahawalpur': 'DHA B',
+    'Gujranwala': 'DHA G',
+    'Peshawar': 'DHA P',
+};
+
+
+function updateCityCards(stations) {
+
+
+    stations.forEach(st => {
+        const elId = mapCityToId[st.station_name];
+
+        if (elId) {
+            const el = document.querySelector(elId + ' .card-body');
+
+
+            
+            if (el) {
+                el.innerHTML = `
+                <p class="mb-0 px-2">${Number(st.totals.possessed).toLocaleString()}&nbsp;<small class="text-muted">Kanals</small></p>
+                `;
+            }
+        }
+    });
+}
+
+
+// -------------------------
+// Selections
+// -------------------------
+
+// Stat Cards
+document.addEventListener('DOMContentLoaded', function () {
+    // Handle stat-card clicks
+    document.querySelectorAll('.stat-card').forEach(card => {
+        card.addEventListener('click', function () {
+            const id = this.id;          
+            document.querySelectorAll('.city-card').forEach(c => c.classList.remove('selected'));
+            document.querySelectorAll('.stat-card').forEach(c => c.classList.remove('selected'));
+            this.classList.add('selected');
+            const type = id.replace('stat-card-', '');            
+            if (id === 'stat-card-purchased') {
+                updatePurchasedBars(landData.stations);
+            }else{
+                updateProgressBars(landData.stations, type);
+                const chartTitle = type.charAt(0).toUpperCase() + type.slice(1);
+                // document.querySelector('#phaseChartTitle').textContent = `${chartTitle} - Phase-wise Summary`;
+            }; // skip Purchased block
+            
+        });
+    });
+});
+
+
+// City Cards
+document.querySelectorAll('.city-card').forEach(block => {
+    block.addEventListener('click', function () {
+        console.log(this.dataset.station)
+        const station = landData.stations.find(st => st.station_name === this.dataset.station);;  // e.g. data-station="Karachi"
+        
+        console.log(station);
+
+        updateStationBarChart(station);
+        updateStationPieChart(station);
+    });
+});
+
+
+// -------------------------
+// Graphs
+// -------------------------
+
+
+// -------------------------
+// Update Progress Bars
+// -------------------------
+
+function updateProgressBars(stations, selectedType = 'possessed') {
+    const panel = document.getElementById('progressbarspanel');
+    const title = panel.querySelector('.chart-header');
+
+    // Update heading
+    const titleMap = {
+        possessed: 'Possessed Land — DHA Wise Statistics',
+        unpossessed: 'Unpossessed Land — DHA Wise Statistics',
+        unpurchased: 'Possessed Not Purchased — DHA Wise Statistics',
+        hold: 'Hold Land — DHA Wise Statistics',
+        litigation: 'Litigation Land — DHA Wise Statistics'
+    };
+    title.textContent = titleMap[selectedType] || 'Land Summary — DHA Wise Statistics';
+
+    // Build HTML dynamically
+    const container = panel.querySelector('.progress-container');
+    container.innerHTML = ''; // Clear old bars
+
+    stations.forEach(st => {
+        const name = st.station_name;
+        // const cls = name.toLowerCase().replace('_', '');
+
+        const cls =  mapCityToId[st.station_name].replace('#', '');
+        const val = st.totals[selectedType] || 0;
+        const total = st.totals.purchased || 1; // avoid divide-by-zero
+        const percent = ((val / total) * 100).toFixed(1);
+
+
+        const item = document.createElement('div');
+        item.className = 'progress-item mb-2';
+        item.innerHTML = `
+            <div class="progress-label">
+                <span class="district-name">${mapDHATag[st.station_name]}</span>
+                <div class="d-flex inline-flex">
+                    <span class="progress-value">${val.toLocaleString()} / ${total.toLocaleString()} Kanals</span>
+                </div>
+            </div>
+            <div class="custom-progress">
+                <div class="custom-progress-bar ${cls}" style="width: ${percent}%">
+                    <span class="progress-percentage">${percent}%</span>
+                </div>
+            </div>`;
+        container.appendChild(item);
+    });
+}
+
+
+
+function updatePurchasedBars(stations) {
+    const panel = document.getElementById('purchasedbarspanel');
+    const title = panel.querySelector('.chart-header');
+    const container = panel.querySelector('.progress-container');
+
+    // Update title dynamically
+    title.textContent = 'Purchased Land — DHA Wise Statistics';
+    container.innerHTML = ''; // clear existing items
+
+    stations.forEach(st => {
+        const name = mapDHATag?.[st.station_name] || st.station_name;
+        const totals = st.totals || {};
+
+        const purchased = totals.purchased || 0;
+        const possessed = totals.possessed || 0;
+        const unpossessed = totals.unpossessed || 0;
+        const hold = totals.hold || 0;
+        const litigation = totals.litigation || 0;
+
+        const sum = possessed + unpossessed + hold + litigation;
+        const safeTotal = purchased || sum || 1;
+
+        // Calculate percentages (always total up to ~100%)
+        const calcPercent = (val) => ((val / safeTotal) * 100).toFixed(1);
+
+        const percentPos = calcPercent(possessed);
+        const percentUnpos = calcPercent(unpossessed);
+        const percentHold = calcPercent(hold);
+        const percentLit = calcPercent(litigation);
+
+        // Create DOM structure
+        const item = document.createElement('div');
+        item.className = 'progress-stacked-item mb-1';
+        item.innerHTML = `
+            <div class="stacked-label d-flex justify-content-between align-items-center">
+                <span class="district-name">${name}</span>
+                <span class="progress-value">${purchased.toLocaleString()} Kanals</span>
+            </div>
+            <div class="stacked-progress">
+                <div class="stacked-segment possessed" style="width: ${percentPos}%">
+                    <span class="seg-percent">${percentPos}%</span>
+                </div>
+                <div class="stacked-segment unpossessed" style="width: ${percentUnpos}%">
+                    <span class="seg-percent">${percentUnpos}%</span>
+                </div>
+                <div class="stacked-segment hold" style="width: ${percentHold}%">
+                    <span class="seg-percent">${percentHold}%</span>
+                </div>
+                <div class="stacked-segment litigation" style="width: ${percentLit}%">
+                    <span class="seg-percent">${percentLit}%</span>
+                </div>
+            </div>
+        `;
+        container.appendChild(item);
+    });
+
+    // Add legend at the end
+    const legend = document.createElement('div');
+    legend.className = 'stacked-legend d-flex justify-content-evenly align-items-center mb-0 mt-2 flex-wrap';
+    legend.innerHTML = `
+        <div class="legend-item"><span class="legend-color possessed"></span> Possessed</div>
+        <div class="legend-item"><span class="legend-color unpossessed"></span> Unpossessed</div>
+        <div class="legend-item"><span class="legend-color hold"></span> Hold</div>
+        <div class="legend-item"><span class="legend-color litigation"></span> Litigation</div>
+    `;
+    container.appendChild(legend);
+}
+
+
+
+function updateStationBarChart(station) {
+  const totals = station.totals || {};
+  const name = station.station_name || 'Unknown';
+
+  // Update chart title
+  document.querySelector('#stationwisechartpanel .chart-wrapper:nth-child(2) .chart-header')
+    .textContent = `${mapDHATag[name]} - Land Categories`;
+
+  const categories = [
+    'Possessed',
+    'Unpossessed',
+    'Purchased',
+    'Possessed Not Purchased',
+    'Hold',
+    'Litigation'
+  ];
+
+  const values = [
+    totals.possessed || 0,
+    totals.unpossessed || 0,
+    totals.purchased || 0,
+    totals.unpurchased || 0,
+    totals.hold || 0,
+    totals.litigation || 0
+  ];
+
+  const colors = ['#f99d5f', '#75f577', '#25e17a', '#92a5f9', '#6cadee', '#c95a5a'];
+
+  Highcharts.chart('bar-chart', {
+    chart: {
+      type: 'column',
+      backgroundColor: 'transparent',
+      height: '66%',
+      spacing: [0, 0, 0, 0],
+      marginLeft: 2
+    },
+    title: { text: null },
+    xAxis: {
+      categories,
+      title: { text: 'Land Categories' },
+      labels: { enabled: false },
+      lineWidth: 0,
+      tickLength: 0
+    },
+    yAxis: {
+      title: { text: 'Kanals' },
+      labels: {
+        style: { fontSize: '9px', color: '#333' }
+      },
+      gridLineColor: '#e2e8f0'
+    },
+    legend: { enabled: false },
+    credits: { enabled: false },
+    plotOptions: {
+      column: {
+        pointPadding: 0.7,
+        groupPadding: 0.05,
+        pointWidth: 40,
+        borderRadius: 4,
+        states: {
+          hover: { brightness: -0.4 }
+        },
+        dataLabels: {
+          enabled: true,
+          useHTML: true,
+          inside: false,
+          y: -18,
+          style: {
+            color: '#3b3f46',
+            fontSize: '9px',
+            fontWeight: 'normal',
+            textOutline: 'none',
+            textShadow: 'none'
+          },
+          formatter: function () {
+            return `${this.point.name}:<br/>
+                    <strong>${Highcharts.numberFormat(this.y, 0)}</strong><br/>
+                    Kanals`;
+          }
+        }
+      }
+    },
+    series: [{
+      name: 'Count',
+      data: categories.map((cat, i) => ({
+        name: cat,
+        y: values[i],
+        color: colors[i]
+      })),
+      colorByPoint: true
+    }]
+  });
+}
+
+
+
+function updateStationPieChart(station) {
+
+    // Update chart title
+    document.querySelector('#stationwisechartpanel .chart-wrapper:nth-child(1) .chart-header')
+    .textContent = `${mapDHATag[station.station_name]} - Land Providers`;
+
+    // const phaseSummary = station.phase_summary;
+    // if (!phaseSummary) return;
+
+    // const data = Object.entries(phaseSummary).map(([phase, vals]) => ({
+    //     name: `Phase ${phase}`,
+    //     y: vals.purchased || 0
+    // }));
+
+
+    const landProviders = station.land_provider_summary;
+    if (!landProviders) return;
+
+    const data = Object.entries(landProviders).map(([name, vals]) => ({
+        name: `${name}`,
+        y: vals.purchased || 0
+    }));
+
+
+    
+
+    Highcharts.chart('pie-chart', {
+        chart: {
+            type: 'pie',
+            backgroundColor: 'transparent',
+            height: '60%'
+        },
+        title: { text: null },
+        tooltip: {
+            pointFormat: '{series.name}: <b>{point.y:.2f} Kanals</b>'
+        },
+        plotOptions: {
+            pie: {
+                allowPointSelect: true,
+                cursor: 'pointer',
+                dataLabels: {
+                    enabled: true,
+                    format: '<b>{point.name}</b>: {point.percentage:.1f} %'
+                }
+            }
+        },
+        series: [{
+            name: 'Purchased Land',
+            colorByPoint: true,
+            data
+        }]
+    });
+}
+
+
+
+
+</script>
 {% endblock %}
