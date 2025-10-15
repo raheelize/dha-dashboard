@@ -107,24 +107,26 @@ function setMap(layer = "purchase_layer", category = null, station = "DHA G") {
     // 💾 Layer Mapping (friendly names → actual GeoServer layers)
     const layerMap = {
         "purchase_layer": "dha_coregis:purchase_layer",
-        // "Residential": "dha_coregis_v2:Residential",
-        // "Commercial": "dha_coregis_v2:Commercial",
+        "Residential": "dha_coregis_v2:Residential",
+        "Commercial": "dha_coregis_v2:Commercial",
+        "Education" : "dha_coregis_v2:Education",
+        "Amenities" : "dha_coregis_v2:Amenities",
         "Parks": "dha_coregis_v2:Park and open Space",
         "Area_Kanals": "dha_coregis_v2:Horticulture Polygon",
         "Length_Km": "dha_coregis_v2:Horticulture Line",
         "Points": "dha_coregis_v2:Horticulture Point",
         "Check Post": "dha_coregis_v2:Check Post",
-        "QRF" : "dha_coregis_v2:QRF",
+        "QRF" : "dha_coregis:qrf",
         "Picquet": "dha_coregis_v2:Picquet",
         "Camera" : "dha_coregis_v2:Camera",
         "Incidents" : "dha_coregis_v2:incidents",
-
+        "Roads": "dha_coregis_v2:Roads",
         "Water Supply": "dha_coregis_v2:Water_Supply_Lines_Mains",
         "Electricity": "dha_coregis_v2:Electric_Lines_LT",
         "Gas Supply": "dha_coregis_v2:Gas_Network_Lines_Pipelines",
         "Sewerage": "dha_coregis:sewerage_line",
         "Drainage": "dha_coregis:strom_drains",
-        "Commnnication": "	dha_coregis:telcom_utility_line",
+        "Commnnication": "dha_coregis:telcom_utility_line",
     };
 
 
@@ -139,13 +141,15 @@ function setMap(layer = "purchase_layer", category = null, station = "DHA G") {
     const selectedLayer = layerMap[layer];
     const isV2 = selectedLayer?.includes("_v2:") ?? false;
 
-    
+    console.log("Selected Layer:", selectedLayer);
     const wmsBaseUrl = isV2
         ? `http://${ip}/geoserver/dha_coregis_v2/wms`
         : `http://${ip}/geoserver/dha_coregis/wms`;
 
     // 🧩 Determine final layer name
     const fullLayerName = layerMap[layer] || (isV2 ? `dha_coregis_v2:${layer}` : `dha_coregis:${layer}`);
+
+    console.log("Base URL :", wmsBaseUrl);
 
     let cqlFilter = null;
     if (isV2 && category) {

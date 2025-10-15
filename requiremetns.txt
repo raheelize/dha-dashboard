@@ -7,4 +7,5 @@ requests
 aiohttp
 asyncio
 python-decouple
+django-cors-headers
 

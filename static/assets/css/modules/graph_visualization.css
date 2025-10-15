@@ -502,12 +502,12 @@
     overflow: hidden;
 }
 
-.graph-container[style*="position: fixed"] .card {
+.graph-container[style*="position: relative"] .card {
     display: flex;
     flex-direction: column;
 }
 
-.graph-container[style*="position: fixed"] .graph-body {
+.graph-container[style*="position: relative"] .graph-body {
     flex: 1;
     height: calc(100% - 45px);
     overflow: auto;

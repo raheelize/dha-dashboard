@@ -1,0 +1,1112 @@
+{
+  "total_summary": {
+    "Roads": 1437.741,
+    "Water Supply": 523.3499999999999,
+    "Electricity": 0.0,
+    "Gas Supply": 0.0,
+    "Sewerage": 13.291200000000003,
+    "Drainage": 37584.0,
+    "Communication": 11754.0
+  },
+  "stations": [
+    {
+      "station_name": "Multan",
+      "success": true,
+      "phase_wise": {
+        "phase1": {
+          "Developed": {
+            "Roads": 43.724,
+            "Water Supply": 0.0,
+            "Electricity": 0.0,
+            "Gas Supply": 0.0,
+            "Sewerage": 0.3166,
+            "Drainage": 0.0,
+            "Communication": 0.0
+          },
+          "Planned": {
+            "Roads": 73.681,
+            "Water Supply": 0.0,
+            "Electricity": 0.0,
+            "Gas Supply": 0.0,
+            "Sewerage": 0.824,
+            "Drainage": 0.0,
+            "Communication": 0.0
+          },
+          "Undeveloped": {
+            "Roads": 22.386,
+            "Water Supply": 0.0,
+            "Electricity": 0.0,
+            "Gas Supply": 0.0,
+            "Sewerage": 0.3362,
+            "Drainage": 0.0,
+            "Communication": 0.0
+          },
+          "Unknown": {
+            "Roads": 0.0,
+            "Water Supply": 20.55,
+            "Electricity": 0.0,
+            "Gas Supply": 0.0,
+            "Sewerage": 0.0,
+            "Drainage": 4176.0,
+            "Communication": 759.0
+          }
+        },
+        "phase2": {
+          "Planned": {
+            "Roads": 16.363,
+            "Water Supply": 0.0,
+            "Electricity": 0.0,
+            "Gas Supply": 0.0,
+            "Sewerage": 0.0,
+            "Drainage": 0.0,
+            "Communication": 0.0
+          },
+          "Undeveloped": {
+            "Roads": 3.595,
+            "Water Supply": 0.0,
+            "Electricity": 0.0,
+            "Gas Supply": 0.0,
+            "Sewerage": 0.0,
+            "Drainage": 0.0,
+            "Communication": 0.0
+          },
+          "Unknown": {
+            "Roads": 0.0,
+            "Water Supply": 37.6,
+            "Electricity": 0.0,
+            "Gas Supply": 0.0,
+            "Sewerage": 0.0,
+            "Drainage": 0.0,
+            "Communication": 547.0
+          }
+        },
+        "unknown": {
+          "Unknown": {
+            "Roads": 0.0,
+            "Water Supply": 0.0,
+            "Electricity": 0.0,
+            "Gas Supply": 0.0,
+            "Sewerage": 0.0,
+            "Drainage": 0.0,
+            "Communication": 0.0
+          }
+        }
+      },
+      "phase_totals": {
+        "phase1": {
+          "Roads": 139.791,
+          "Water Supply": 20.55,
+          "Electricity": 0.0,
+          "Gas Supply": 0.0,
+          "Sewerage": 1.4768000000000001,
+          "Drainage": 4176.0,
+          "Communication": 759.0
+        },
+        "phase2": {
+          "Roads": 19.958,
+          "Water Supply": 37.6,
+          "Electricity": 0.0,
+          "Gas Supply": 0.0,
+          "Sewerage": 0.0,
+          "Drainage": 0.0,
+          "Communication": 547.0
+        },
+        "unknown": {
+          "Roads": 0.0,
+          "Water Supply": 0.0,
+          "Electricity": 0.0,
+          "Gas Supply": 0.0,
+          "Sewerage": 0.0,
+          "Drainage": 0.0,
+          "Communication": 0.0
+        }
+      },
+      "totals": {
+        "Roads": 159.749,
+        "Water Supply": 58.150000000000006,
+        "Electricity": 0.0,
+        "Gas Supply": 0.0,
+        "Sewerage": 1.4768000000000001,
+        "Drainage": 4176.0,
+        "Communication": 1306.0
+      }
+    },
+    {
+      "station_name": "Karachi",
+      "success": true,
+      "phase_wise": {
+        "phase1": {
+          "Developed": {
+            "Roads": 43.724,
+            "Water Supply": 0.0,
+            "Electricity": 0.0,
+            "Gas Supply": 0.0,
+            "Sewerage": 0.3166,
+            "Drainage": 0.0,
+            "Communication": 0.0
+          },
+          "Planned": {
+            "Roads": 73.681,
+            "Water Supply": 0.0,
+            "Electricity": 0.0,
+            "Gas Supply": 0.0,
+            "Sewerage": 0.824,
+            "Drainage": 0.0,
+            "Communication": 0.0
+          },
+          "Undeveloped": {
+            "Roads": 22.386,
+            "Water Supply": 0.0,
+            "Electricity": 0.0,
+            "Gas Supply": 0.0,
+            "Sewerage": 0.3362,
+            "Drainage": 0.0,
+            "Communication": 0.0
+          },
+          "Unknown": {
+            "Roads": 0.0,
+            "Water Supply": 20.55,
+            "Electricity": 0.0,
+            "Gas Supply": 0.0,
+            "Sewerage": 0.0,
+            "Drainage": 4176.0,
+            "Communication": 759.0
+          }
+        },
+        "phase2": {
+          "Planned": {
+            "Roads": 16.363,
+            "Water Supply": 0.0,
+            "Electricity": 0.0,
+            "Gas Supply": 0.0,
+            "Sewerage": 0.0,
+            "Drainage": 0.0,
+            "Communication": 0.0
+          },
+          "Undeveloped": {
+            "Roads": 3.595,
+            "Water Supply": 0.0,
+            "Electricity": 0.0,
+            "Gas Supply": 0.0,
+            "Sewerage": 0.0,
+            "Drainage": 0.0,
+            "Communication": 0.0
+          },
+          "Unknown": {
+            "Roads": 0.0,
+            "Water Supply": 37.6,
+            "Electricity": 0.0,
+            "Gas Supply": 0.0,
+            "Sewerage": 0.0,
+            "Drainage": 0.0,
+            "Communication": 547.0
+          }
+        },
+        "unknown": {
+          "Unknown": {
+            "Roads": 0.0,
+            "Water Supply": 0.0,
+            "Electricity": 0.0,
+            "Gas Supply": 0.0,
+            "Sewerage": 0.0,
+            "Drainage": 0.0,
+            "Communication": 0.0
+          }
+        }
+      },
+      "phase_totals": {
+        "phase1": {
+          "Roads": 139.791,
+          "Water Supply": 20.55,
+          "Electricity": 0.0,
+          "Gas Supply": 0.0,
+          "Sewerage": 1.4768000000000001,
+          "Drainage": 4176.0,
+          "Communication": 759.0
+        },
+        "phase2": {
+          "Roads": 19.958,
+          "Water Supply": 37.6,
+          "Electricity": 0.0,
+          "Gas Supply": 0.0,
+          "Sewerage": 0.0,
+          "Drainage": 0.0,
+          "Communication": 547.0
+        },
+        "unknown": {
+          "Roads": 0.0,
+          "Water Supply": 0.0,
+          "Electricity": 0.0,
+          "Gas Supply": 0.0,
+          "Sewerage": 0.0,
+          "Drainage": 0.0,
+          "Communication": 0.0
+        }
+      },
+      "totals": {
+        "Roads": 159.749,
+        "Water Supply": 58.150000000000006,
+        "Electricity": 0.0,
+        "Gas Supply": 0.0,
+        "Sewerage": 1.4768000000000001,
+        "Drainage": 4176.0,
+        "Communication": 1306.0
+      }
+    },
+    {
+      "station_name": "Gujranwala",
+      "success": true,
+      "phase_wise": {
+        "phase1": {
+          "Developed": {
+            "Roads": 43.724,
+            "Water Supply": 0.0,
+            "Electricity": 0.0,
+            "Gas Supply": 0.0,
+            "Sewerage": 0.3166,
+            "Drainage": 0.0,
+            "Communication": 0.0
+          },
+          "Planned": {
+            "Roads": 73.681,
+            "Water Supply": 0.0,
+            "Electricity": 0.0,
+            "Gas Supply": 0.0,
+            "Sewerage": 0.824,
+            "Drainage": 0.0,
+            "Communication": 0.0
+          },
+          "Undeveloped": {
+            "Roads": 22.386,
+            "Water Supply": 0.0,
+            "Electricity": 0.0,
+            "Gas Supply": 0.0,
+            "Sewerage": 0.3362,
+            "Drainage": 0.0,
+            "Communication": 0.0
+          },
+          "Unknown": {
+            "Roads": 0.0,
+            "Water Supply": 20.55,
+            "Electricity": 0.0,
+            "Gas Supply": 0.0,
+            "Sewerage": 0.0,
+            "Drainage": 4176.0,
+            "Communication": 759.0
+          }
+        },
+        "phase2": {
+          "Planned": {
+            "Roads": 16.363,
+            "Water Supply": 0.0,
+            "Electricity": 0.0,
+            "Gas Supply": 0.0,
+            "Sewerage": 0.0,
+            "Drainage": 0.0,
+            "Communication": 0.0
+          },
+          "Undeveloped": {
+            "Roads": 3.595,
+            "Water Supply": 0.0,
+            "Electricity": 0.0,
+            "Gas Supply": 0.0,
+            "Sewerage": 0.0,
+            "Drainage": 0.0,
+            "Communication": 0.0
+          },
+          "Unknown": {
+            "Roads": 0.0,
+            "Water Supply": 37.6,
+            "Electricity": 0.0,
+            "Gas Supply": 0.0,
+            "Sewerage": 0.0,
+            "Drainage": 0.0,
+            "Communication": 547.0
+          }
+        },
+        "unknown": {
+          "Unknown": {
+            "Roads": 0.0,
+            "Water Supply": 0.0,
+            "Electricity": 0.0,
+            "Gas Supply": 0.0,
+            "Sewerage": 0.0,
+            "Drainage": 0.0,
+            "Communication": 0.0
+          }
+        }
+      },
+      "phase_totals": {
+        "phase1": {
+          "Roads": 139.791,
+          "Water Supply": 20.55,
+          "Electricity": 0.0,
+          "Gas Supply": 0.0,
+          "Sewerage": 1.4768000000000001,
+          "Drainage": 4176.0,
+          "Communication": 759.0
+        },
+        "phase2": {
+          "Roads": 19.958,
+          "Water Supply": 37.6,
+          "Electricity": 0.0,
+          "Gas Supply": 0.0,
+          "Sewerage": 0.0,
+          "Drainage": 0.0,
+          "Communication": 547.0
+        },
+        "unknown": {
+          "Roads": 0.0,
+          "Water Supply": 0.0,
+          "Electricity": 0.0,
+          "Gas Supply": 0.0,
+          "Sewerage": 0.0,
+          "Drainage": 0.0,
+          "Communication": 0.0
+        }
+      },
+      "totals": {
+        "Roads": 159.749,
+        "Water Supply": 58.150000000000006,
+        "Electricity": 0.0,
+        "Gas Supply": 0.0,
+        "Sewerage": 1.4768000000000001,
+        "Drainage": 4176.0,
+        "Communication": 1306.0
+      }
+    },
+    {
+      "station_name": "Lahore",
+      "success": true,
+      "phase_wise": {
+        "phase1": {
+          "Developed": {
+            "Roads": 43.724,
+            "Water Supply": 0.0,
+            "Electricity": 0.0,
+            "Gas Supply": 0.0,
+            "Sewerage": 0.3166,
+            "Drainage": 0.0,
+            "Communication": 0.0
+          },
+          "Planned": {
+            "Roads": 73.681,
+            "Water Supply": 0.0,
+            "Electricity": 0.0,
+            "Gas Supply": 0.0,
+            "Sewerage": 0.824,
+            "Drainage": 0.0,
+            "Communication": 0.0
+          },
+          "Undeveloped": {
+            "Roads": 22.386,
+            "Water Supply": 0.0,
+            "Electricity": 0.0,
+            "Gas Supply": 0.0,
+            "Sewerage": 0.3362,
+            "Drainage": 0.0,
+            "Communication": 0.0
+          },
+          "Unknown": {
+            "Roads": 0.0,
+            "Water Supply": 20.55,
+            "Electricity": 0.0,
+            "Gas Supply": 0.0,
+            "Sewerage": 0.0,
+            "Drainage": 4176.0,
+            "Communication": 759.0
+          }
+        },
+        "phase2": {
+          "Planned": {
+            "Roads": 16.363,
+            "Water Supply": 0.0,
+            "Electricity": 0.0,
+            "Gas Supply": 0.0,
+            "Sewerage": 0.0,
+            "Drainage": 0.0,
+            "Communication": 0.0
+          },
+          "Undeveloped": {
+            "Roads": 3.595,
+            "Water Supply": 0.0,
+            "Electricity": 0.0,
+            "Gas Supply": 0.0,
+            "Sewerage": 0.0,
+            "Drainage": 0.0,
+            "Communication": 0.0
+          },
+          "Unknown": {
+            "Roads": 0.0,
+            "Water Supply": 37.6,
+            "Electricity": 0.0,
+            "Gas Supply": 0.0,
+            "Sewerage": 0.0,
+            "Drainage": 0.0,
+            "Communication": 547.0
+          }
+        },
+        "unknown": {
+          "Unknown": {
+            "Roads": 0.0,
+            "Water Supply": 0.0,
+            "Electricity": 0.0,
+            "Gas Supply": 0.0,
+            "Sewerage": 0.0,
+            "Drainage": 0.0,
+            "Communication": 0.0
+          }
+        }
+      },
+      "phase_totals": {
+        "phase1": {
+          "Roads": 139.791,
+          "Water Supply": 20.55,
+          "Electricity": 0.0,
+          "Gas Supply": 0.0,
+          "Sewerage": 1.4768000000000001,
+          "Drainage": 4176.0,
+          "Communication": 759.0
+        },
+        "phase2": {
+          "Roads": 19.958,
+          "Water Supply": 37.6,
+          "Electricity": 0.0,
+          "Gas Supply": 0.0,
+          "Sewerage": 0.0,
+          "Drainage": 0.0,
+          "Communication": 547.0
+        },
+        "unknown": {
+          "Roads": 0.0,
+          "Water Supply": 0.0,
+          "Electricity": 0.0,
+          "Gas Supply": 0.0,
+          "Sewerage": 0.0,
+          "Drainage": 0.0,
+          "Communication": 0.0
+        }
+      },
+      "totals": {
+        "Roads": 159.749,
+        "Water Supply": 58.150000000000006,
+        "Electricity": 0.0,
+        "Gas Supply": 0.0,
+        "Sewerage": 1.4768000000000001,
+        "Drainage": 4176.0,
+        "Communication": 1306.0
+      }
+    },
+    {
+      "station_name": "Karachi_City",
+      "success": true,
+      "phase_wise": {
+        "phase1": {
+          "Developed": {
+            "Roads": 43.724,
+            "Water Supply": 0.0,
+            "Electricity": 0.0,
+            "Gas Supply": 0.0,
+            "Sewerage": 0.3166,
+            "Drainage": 0.0,
+            "Communication": 0.0
+          },
+          "Planned": {
+            "Roads": 73.681,
+            "Water Supply": 0.0,
+            "Electricity": 0.0,
+            "Gas Supply": 0.0,
+            "Sewerage": 0.824,
+            "Drainage": 0.0,
+            "Communication": 0.0
+          },
+          "Undeveloped": {
+            "Roads": 22.386,
+            "Water Supply": 0.0,
+            "Electricity": 0.0,
+            "Gas Supply": 0.0,
+            "Sewerage": 0.3362,
+            "Drainage": 0.0,
+            "Communication": 0.0
+          },
+          "Unknown": {
+            "Roads": 0.0,
+            "Water Supply": 20.55,
+            "Electricity": 0.0,
+            "Gas Supply": 0.0,
+            "Sewerage": 0.0,
+            "Drainage": 4176.0,
+            "Communication": 759.0
+          }
+        },
+        "phase2": {
+          "Planned": {
+            "Roads": 16.363,
+            "Water Supply": 0.0,
+            "Electricity": 0.0,
+            "Gas Supply": 0.0,
+            "Sewerage": 0.0,
+            "Drainage": 0.0,
+            "Communication": 0.0
+          },
+          "Undeveloped": {
+            "Roads": 3.595,
+            "Water Supply": 0.0,
+            "Electricity": 0.0,
+            "Gas Supply": 0.0,
+            "Sewerage": 0.0,
+            "Drainage": 0.0,
+            "Communication": 0.0
+          },
+          "Unknown": {
+            "Roads": 0.0,
+            "Water Supply": 37.6,
+            "Electricity": 0.0,
+            "Gas Supply": 0.0,
+            "Sewerage": 0.0,
+            "Drainage": 0.0,
+            "Communication": 547.0
+          }
+        },
+        "unknown": {
+          "Unknown": {
+            "Roads": 0.0,
+            "Water Supply": 0.0,
+            "Electricity": 0.0,
+            "Gas Supply": 0.0,
+            "Sewerage": 0.0,
+            "Drainage": 0.0,
+            "Communication": 0.0
+          }
+        }
+      },
+      "phase_totals": {
+        "phase1": {
+          "Roads": 139.791,
+          "Water Supply": 20.55,
+          "Electricity": 0.0,
+          "Gas Supply": 0.0,
+          "Sewerage": 1.4768000000000001,
+          "Drainage": 4176.0,
+          "Communication": 759.0
+        },
+        "phase2": {
+          "Roads": 19.958,
+          "Water Supply": 37.6,
+          "Electricity": 0.0,
+          "Gas Supply": 0.0,
+          "Sewerage": 0.0,
+          "Drainage": 0.0,
+          "Communication": 547.0
+        },
+        "unknown": {
+          "Roads": 0.0,
+          "Water Supply": 0.0,
+          "Electricity": 0.0,
+          "Gas Supply": 0.0,
+          "Sewerage": 0.0,
+          "Drainage": 0.0,
+          "Communication": 0.0
+        }
+      },
+      "totals": {
+        "Roads": 159.749,
+        "Water Supply": 58.150000000000006,
+        "Electricity": 0.0,
+        "Gas Supply": 0.0,
+        "Sewerage": 1.4768000000000001,
+        "Drainage": 4176.0,
+        "Communication": 1306.0
+      }
+    },
+    {
+      "station_name": "Bahawalpur",
+      "success": true,
+      "phase_wise": {
+        "phase1": {
+          "Developed": {
+            "Roads": 43.724,
+            "Water Supply": 0.0,
+            "Electricity": 0.0,
+            "Gas Supply": 0.0,
+            "Sewerage": 0.3166,
+            "Drainage": 0.0,
+            "Communication": 0.0
+          },
+          "Planned": {
+            "Roads": 73.681,
+            "Water Supply": 0.0,
+            "Electricity": 0.0,
+            "Gas Supply": 0.0,
+            "Sewerage": 0.824,
+            "Drainage": 0.0,
+            "Communication": 0.0
+          },
+          "Undeveloped": {
+            "Roads": 22.386,
+            "Water Supply": 0.0,
+            "Electricity": 0.0,
+            "Gas Supply": 0.0,
+            "Sewerage": 0.3362,
+            "Drainage": 0.0,
+            "Communication": 0.0
+          },
+          "Unknown": {
+            "Roads": 0.0,
+            "Water Supply": 20.55,
+            "Electricity": 0.0,
+            "Gas Supply": 0.0,
+            "Sewerage": 0.0,
+            "Drainage": 4176.0,
+            "Communication": 759.0
+          }
+        },
+        "phase2": {
+          "Planned": {
+            "Roads": 16.363,
+            "Water Supply": 0.0,
+            "Electricity": 0.0,
+            "Gas Supply": 0.0,
+            "Sewerage": 0.0,
+            "Drainage": 0.0,
+            "Communication": 0.0
+          },
+          "Undeveloped": {
+            "Roads": 3.595,
+            "Water Supply": 0.0,
+            "Electricity": 0.0,
+            "Gas Supply": 0.0,
+            "Sewerage": 0.0,
+            "Drainage": 0.0,
+            "Communication": 0.0
+          },
+          "Unknown": {
+            "Roads": 0.0,
+            "Water Supply": 37.6,
+            "Electricity": 0.0,
+            "Gas Supply": 0.0,
+            "Sewerage": 0.0,
+            "Drainage": 0.0,
+            "Communication": 547.0
+          }
+        },
+        "unknown": {
+          "Unknown": {
+            "Roads": 0.0,
+            "Water Supply": 0.0,
+            "Electricity": 0.0,
+            "Gas Supply": 0.0,
+            "Sewerage": 0.0,
+            "Drainage": 0.0,
+            "Communication": 0.0
+          }
+        }
+      },
+      "phase_totals": {
+        "phase1": {
+          "Roads": 139.791,
+          "Water Supply": 20.55,
+          "Electricity": 0.0,
+          "Gas Supply": 0.0,
+          "Sewerage": 1.4768000000000001,
+          "Drainage": 4176.0,
+          "Communication": 759.0
+        },
+        "phase2": {
+          "Roads": 19.958,
+          "Water Supply": 37.6,
+          "Electricity": 0.0,
+          "Gas Supply": 0.0,
+          "Sewerage": 0.0,
+          "Drainage": 0.0,
+          "Communication": 547.0
+        },
+        "unknown": {
+          "Roads": 0.0,
+          "Water Supply": 0.0,
+          "Electricity": 0.0,
+          "Gas Supply": 0.0,
+          "Sewerage": 0.0,
+          "Drainage": 0.0,
+          "Communication": 0.0
+        }
+      },
+      "totals": {
+        "Roads": 159.749,
+        "Water Supply": 58.150000000000006,
+        "Electricity": 0.0,
+        "Gas Supply": 0.0,
+        "Sewerage": 1.4768000000000001,
+        "Drainage": 4176.0,
+        "Communication": 1306.0
+      }
+    },
+    {
+      "station_name": "Islamabad",
+      "success": true,
+      "phase_wise": {
+        "phase1": {
+          "Developed": {
+            "Roads": 43.724,
+            "Water Supply": 0.0,
+            "Electricity": 0.0,
+            "Gas Supply": 0.0,
+            "Sewerage": 0.3166,
+            "Drainage": 0.0,
+            "Communication": 0.0
+          },
+          "Planned": {
+            "Roads": 73.681,
+            "Water Supply": 0.0,
+            "Electricity": 0.0,
+            "Gas Supply": 0.0,
+            "Sewerage": 0.824,
+            "Drainage": 0.0,
+            "Communication": 0.0
+          },
+          "Undeveloped": {
+            "Roads": 22.386,
+            "Water Supply": 0.0,
+            "Electricity": 0.0,
+            "Gas Supply": 0.0,
+            "Sewerage": 0.3362,
+            "Drainage": 0.0,
+            "Communication": 0.0
+          },
+          "Unknown": {
+            "Roads": 0.0,
+            "Water Supply": 20.55,
+            "Electricity": 0.0,
+            "Gas Supply": 0.0,
+            "Sewerage": 0.0,
+            "Drainage": 4176.0,
+            "Communication": 759.0
+          }
+        },
+        "phase2": {
+          "Planned": {
+            "Roads": 16.363,
+            "Water Supply": 0.0,
+            "Electricity": 0.0,
+            "Gas Supply": 0.0,
+            "Sewerage": 0.0,
+            "Drainage": 0.0,
+            "Communication": 0.0
+          },
+          "Undeveloped": {
+            "Roads": 3.595,
+            "Water Supply": 0.0,
+            "Electricity": 0.0,
+            "Gas Supply": 0.0,
+            "Sewerage": 0.0,
+            "Drainage": 0.0,
+            "Communication": 0.0
+          },
+          "Unknown": {
+            "Roads": 0.0,
+            "Water Supply": 37.6,
+            "Electricity": 0.0,
+            "Gas Supply": 0.0,
+            "Sewerage": 0.0,
+            "Drainage": 0.0,
+            "Communication": 547.0
+          }
+        },
+        "unknown": {
+          "Unknown": {
+            "Roads": 0.0,
+            "Water Supply": 0.0,
+            "Electricity": 0.0,
+            "Gas Supply": 0.0,
+            "Sewerage": 0.0,
+            "Drainage": 0.0,
+            "Communication": 0.0
+          }
+        }
+      },
+      "phase_totals": {
+        "phase1": {
+          "Roads": 139.791,
+          "Water Supply": 20.55,
+          "Electricity": 0.0,
+          "Gas Supply": 0.0,
+          "Sewerage": 1.4768000000000001,
+          "Drainage": 4176.0,
+          "Communication": 759.0
+        },
+        "phase2": {
+          "Roads": 19.958,
+          "Water Supply": 37.6,
+          "Electricity": 0.0,
+          "Gas Supply": 0.0,
+          "Sewerage": 0.0,
+          "Drainage": 0.0,
+          "Communication": 547.0
+        },
+        "unknown": {
+          "Roads": 0.0,
+          "Water Supply": 0.0,
+          "Electricity": 0.0,
+          "Gas Supply": 0.0,
+          "Sewerage": 0.0,
+          "Drainage": 0.0,
+          "Communication": 0.0
+        }
+      },
+      "totals": {
+        "Roads": 159.749,
+        "Water Supply": 58.150000000000006,
+        "Electricity": 0.0,
+        "Gas Supply": 0.0,
+        "Sewerage": 1.4768000000000001,
+        "Drainage": 4176.0,
+        "Communication": 1306.0
+      }
+    },
+    {
+      "station_name": "Quetta",
+      "success": true,
+      "phase_wise": {
+        "phase1": {
+          "Developed": {
+            "Roads": 43.724,
+            "Water Supply": 0.0,
+            "Electricity": 0.0,
+            "Gas Supply": 0.0,
+            "Sewerage": 0.3166,
+            "Drainage": 0.0,
+            "Communication": 0.0
+          },
+          "Planned": {
+            "Roads": 73.681,
+            "Water Supply": 0.0,
+            "Electricity": 0.0,
+            "Gas Supply": 0.0,
+            "Sewerage": 0.824,
+            "Drainage": 0.0,
+            "Communication": 0.0
+          },
+          "Undeveloped": {
+            "Roads": 22.386,
+            "Water Supply": 0.0,
+            "Electricity": 0.0,
+            "Gas Supply": 0.0,
+            "Sewerage": 0.3362,
+            "Drainage": 0.0,
+            "Communication": 0.0
+          },
+          "Unknown": {
+            "Roads": 0.0,
+            "Water Supply": 20.55,
+            "Electricity": 0.0,
+            "Gas Supply": 0.0,
+            "Sewerage": 0.0,
+            "Drainage": 4176.0,
+            "Communication": 759.0
+          }
+        },
+        "phase2": {
+          "Planned": {
+            "Roads": 16.363,
+            "Water Supply": 0.0,
+            "Electricity": 0.0,
+            "Gas Supply": 0.0,
+            "Sewerage": 0.0,
+            "Drainage": 0.0,
+            "Communication": 0.0
+          },
+          "Undeveloped": {
+            "Roads": 3.595,
+            "Water Supply": 0.0,
+            "Electricity": 0.0,
+            "Gas Supply": 0.0,
+            "Sewerage": 0.0,
+            "Drainage": 0.0,
+            "Communication": 0.0
+          },
+          "Unknown": {
+            "Roads": 0.0,
+            "Water Supply": 37.6,
+            "Electricity": 0.0,
+            "Gas Supply": 0.0,
+            "Sewerage": 0.0,
+            "Drainage": 0.0,
+            "Communication": 547.0
+          }
+        },
+        "unknown": {
+          "Unknown": {
+            "Roads": 0.0,
+            "Water Supply": 0.0,
+            "Electricity": 0.0,
+            "Gas Supply": 0.0,
+            "Sewerage": 0.0,
+            "Drainage": 0.0,
+            "Communication": 0.0
+          }
+        }
+      },
+      "phase_totals": {
+        "phase1": {
+          "Roads": 139.791,
+          "Water Supply": 20.55,
+          "Electricity": 0.0,
+          "Gas Supply": 0.0,
+          "Sewerage": 1.4768000000000001,
+          "Drainage": 4176.0,
+          "Communication": 759.0
+        },
+        "phase2": {
+          "Roads": 19.958,
+          "Water Supply": 37.6,
+          "Electricity": 0.0,
+          "Gas Supply": 0.0,
+          "Sewerage": 0.0,
+          "Drainage": 0.0,
+          "Communication": 547.0
+        },
+        "unknown": {
+          "Roads": 0.0,
+          "Water Supply": 0.0,
+          "Electricity": 0.0,
+          "Gas Supply": 0.0,
+          "Sewerage": 0.0,
+          "Drainage": 0.0,
+          "Communication": 0.0
+        }
+      },
+      "totals": {
+        "Roads": 159.749,
+        "Water Supply": 58.150000000000006,
+        "Electricity": 0.0,
+        "Gas Supply": 0.0,
+        "Sewerage": 1.4768000000000001,
+        "Drainage": 4176.0,
+        "Communication": 1306.0
+      }
+    },
+    {
+      "station_name": "Peshawar",
+      "success": true,
+      "phase_wise": {
+        "phase1": {
+          "Developed": {
+            "Roads": 43.724,
+            "Water Supply": 0.0,
+            "Electricity": 0.0,
+            "Gas Supply": 0.0,
+            "Sewerage": 0.3166,
+            "Drainage": 0.0,
+            "Communication": 0.0
+          },
+          "Planned": {
+            "Roads": 73.681,
+            "Water Supply": 0.0,
+            "Electricity": 0.0,
+            "Gas Supply": 0.0,
+            "Sewerage": 0.824,
+            "Drainage": 0.0,
+            "Communication": 0.0
+          },
+          "Undeveloped": {
+            "Roads": 22.386,
+            "Water Supply": 0.0,
+            "Electricity": 0.0,
+            "Gas Supply": 0.0,
+            "Sewerage": 0.3362,
+            "Drainage": 0.0,
+            "Communication": 0.0
+          },
+          "Unknown": {
+            "Roads": 0.0,
+            "Water Supply": 20.55,
+            "Electricity": 0.0,
+            "Gas Supply": 0.0,
+            "Sewerage": 0.0,
+            "Drainage": 4176.0,
+            "Communication": 759.0
+          }
+        },
+        "phase2": {
+          "Planned": {
+            "Roads": 16.363,
+            "Water Supply": 0.0,
+            "Electricity": 0.0,
+            "Gas Supply": 0.0,
+            "Sewerage": 0.0,
+            "Drainage": 0.0,
+            "Communication": 0.0
+          },
+          "Undeveloped": {
+            "Roads": 3.595,
+            "Water Supply": 0.0,
+            "Electricity": 0.0,
+            "Gas Supply": 0.0,
+            "Sewerage": 0.0,
+            "Drainage": 0.0,
+            "Communication": 0.0
+          },
+          "Unknown": {
+            "Roads": 0.0,
+            "Water Supply": 37.6,
+            "Electricity": 0.0,
+            "Gas Supply": 0.0,
+            "Sewerage": 0.0,
+            "Drainage": 0.0,
+            "Communication": 547.0
+          }
+        },
+        "unknown": {
+          "Unknown": {
+            "Roads": 0.0,
+            "Water Supply": 0.0,
+            "Electricity": 0.0,
+            "Gas Supply": 0.0,
+            "Sewerage": 0.0,
+            "Drainage": 0.0,
+            "Communication": 0.0
+          }
+        }
+      },
+      "phase_totals": {
+        "phase1": {
+          "Roads": 139.791,
+          "Water Supply": 20.55,
+          "Electricity": 0.0,
+          "Gas Supply": 0.0,
+          "Sewerage": 1.4768000000000001,
+          "Drainage": 4176.0,
+          "Communication": 759.0
+        },
+        "phase2": {
+          "Roads": 19.958,
+          "Water Supply": 37.6,
+          "Electricity": 0.0,
+          "Gas Supply": 0.0,
+          "Sewerage": 0.0,
+          "Drainage": 0.0,
+          "Communication": 547.0
+        },
+        "unknown": {
+          "Roads": 0.0,
+          "Water Supply": 0.0,
+          "Electricity": 0.0,
+          "Gas Supply": 0.0,
+          "Sewerage": 0.0,
+          "Drainage": 0.0,
+          "Communication": 0.0
+        }
+      },
+      "totals": {
+        "Roads": 159.749,
+        "Water Supply": 58.150000000000006,
+        "Electricity": 0.0,
+        "Gas Supply": 0.0,
+        "Sewerage": 1.4768000000000001,
+        "Drainage": 4176.0,
+        "Communication": 1306.0
+      }
+    }
+  ],
+  "timestamp": "2025-10-15T11:45:13.613067"
+}

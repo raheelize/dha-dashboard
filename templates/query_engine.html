@@ -5,6 +5,35 @@
 
 <link rel="stylesheet" href="{% static 'assets/css/modules/queryeng.css' %}" />
 <link rel="stylesheet" href="{% static 'assets/css/modules/graph_visualization.css' %}" />
+
+
+<style>
+    .col-12.col-lg-3.d-flex.flex-column {
+        height: calc(100vh - 100px) !important;
+        overflow: hidden !important;
+    }
+        
+    #configPanel, .graph-display-area{
+        overflow-y: scroll !important;
+        overflow-x: hidden !important;
+        height: calc(100vh - 100px) !important;
+        -webkit-overflow-scrolling: touch;
+        scrollbar-width: thin;
+        scrollbar-color: #aaa transparent;
+    }
+
+    #configPanel::-webkit-scrollbar {
+        width: 6px;
+    }
+    #configPanel::-webkit-scrollbar-thumb {
+        background: #bbb;
+        border-radius: 4px;
+    }
+    #configPanel::-webkit-scrollbar-thumb:hover {
+        background: #888;
+    }
+
+</style>
     <!-- Main Content -->
     <div class="main-content container-fluid pt-0 d-flex flex-column">
         <div class="row">
@@ -47,7 +76,7 @@
                             </div>
                         </div>
                         <button id="testConnectionBtn" class="btn btn-sm btn-outline-primary mt-1 w-100 p-1">
-                            <i class="bi bi-lightning-charge"></i>
+                            <i class="bi bi-lightning-charge"></i> Connect
                         </button>
                         <div id="connectionMessage" class="mt-1 small"></div>
                     </div>
@@ -138,4 +167,12 @@
             </div>
         </div>
     </div>
+
+
+
+
+<script src="{% static 'assets/js/jquery/jquery-3.6.0.min.js'%}"></script>
+<script src="{% static 'assets/js/jquery/jquery-ui.min.js'%}"></script>
+<script src="{% static 'assets/js/query_engine/config_loader.js'%}"></script>
+<script src="{% static 'assets/js/query_engine/graph_controller.js'%}"></script>
 {% endblock %}
