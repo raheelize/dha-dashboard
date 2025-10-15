@@ -10,7 +10,7 @@
     <div class="row g-2 mb-2 row-slim">
         <div class="col-6 col-md-4 col-lg-2 mt-0 mb-0 pt-2">
             <div id="stat-card-possessed" class="card stat-card border-2 p-0 fade-in"
-                style="animation-delay: 0.1s;">
+                style="animation-delay: 0.1s;" data-category ='possessed'>
                 <div class="card-header">
                     <span class="">Possessed Land</span>
                 </div>
@@ -20,7 +20,7 @@
         </div>
 
         <div class="col-6 col-md-4 col-lg-2 mt-0 mb-0 pt-2">
-            <div id="stat-card-purchased" class="card stat-card border-2 p-0 fade-in" style="animation-delay: 0.2s;">
+            <div id="stat-card-purchased" class="card stat-card border-2 p-0 fade-in" style="animation-delay: 0.2s;" data-category ='purchased'>
                 <div class="card-header">
                     <span class="">Purchased Land</span>
                 </div>
@@ -30,7 +30,7 @@
         </div>
 
         <div class="col-6 col-md-4 col-lg-2 mt-0 mb-0 pt-2">
-            <div id="stat-card-unpossessed" class="card stat-card border-2 p-0 fade-in" style="animation-delay: 0.3s;">
+            <div id="stat-card-unpossessed" class="card stat-card border-2 p-0 fade-in" style="animation-delay: 0.3s;" data-category ='unpossessed'>
                 <div class="card-header">
                     <span class="">Unpossessed Land</span>
                 </div>
@@ -40,7 +40,7 @@
         </div>
 
         <div class="col-6 col-md-4 col-lg-2 mt-0 mb-0 pt-2">
-            <div id="stat-card-unpurchased" class="card stat-card border-2 p-0 fade-in" style="animation-delay: 0.45s;">
+            <div id="stat-card-unpurchased" class="card stat-card border-2 p-0 fade-in" style="animation-delay: 0.45s;" data-category ='unpurchased'>
                 <div class="card-header">
                     <span class="">Possessed Not Purchased</span>
                 </div>
@@ -50,7 +50,7 @@
         </div>
 
         <div class="col-6 col-md-4 col-lg-2 mt-0 mb-0 pt-2">
-            <div id="stat-card-hold" class="card stat-card border-2 p-0 fade-in" style="animation-delay: 0.6s;">
+            <div id="stat-card-hold" class="card stat-card border-2 p-0 fade-in" style="animation-delay: 0.6s;" data-category ='hold'>
                 <div class="card-header">
                     <span class="">Hold Land</span>
                 </div>
@@ -60,7 +60,7 @@
         </div>
 
         <div class="col-6 col-md-4 col-lg-2 mt-0 mb-0 pt-2">
-            <div id="stat-card-litigation" class="card stat-card border-2 p-0 fade-in" style="animation-delay: 0.6s;">
+            <div id="stat-card-litigation" class="card stat-card border-2 p-0 fade-in" style="animation-delay: 0.6s;" data-category ='litigation'>
                 <div class="card-header">
                     <span class="">Litigation Land</span>
                 </div>
@@ -453,11 +453,13 @@ document.addEventListener('DOMContentLoaded', function () {
 let landData = {};
 
 function fetchLandSummary() {
+    // return false;
     // showLoader("Fetching Land Summary...");
 
     fetch("{% url 'land_summary' %}")
         .then(response => response.json())
         .then(data => {
+            data.stations = sortStationsGlobally(data.stations);
             landData = data; // ✅ Store globally
             hideSkeleton(".card-body");
             updateStatCards(data.total_summary);
@@ -511,34 +513,9 @@ function updateStatCards(summary) {
 // Update City Cards
 // -------------------------
 
-const mapCityToId = {
-    'Karachi': '#khi',
-    'Karachi_City': '#city',
-    'Lahore': '#lhr',
-    'Islamabad': '#isl',
-    'Quetta': '#qut',
-    'Multan': '#mul',
-    'Bahawalpur': '#bhwp',
-    'Gujranwala': '#guj',
-    'Peshawar': '#psw',
-};
-
-
-const mapDHATag = {
-    'Karachi': 'DHA K',
-    'Karachi_City': 'DHA CITY',
-    'Lahore': 'DHA L',
-    'Islamabad': 'DHA IR',
-    'Quetta': 'DHA Q',
-    'Multan': 'DHA M',
-    'Bahawalpur': 'DHA B',
-    'Gujranwala': 'DHA G',
-    'Peshawar': 'DHA P',
-};
 
 
 function updateCityCards(stations) {
-
 
     stations.forEach(st => {
         const elId = mapCityToId[st.station_name];
@@ -555,6 +532,7 @@ function updateCityCards(stations) {
             }
         }
     });
+
 }
 
 
@@ -571,7 +549,8 @@ document.addEventListener('DOMContentLoaded', function () {
             document.querySelectorAll('.city-card').forEach(c => c.classList.remove('selected'));
             document.querySelectorAll('.stat-card').forEach(c => c.classList.remove('selected'));
             this.classList.add('selected');
-            const type = id.replace('stat-card-', '');            
+            const type = id.replace('stat-card-', '');    
+            resetMap();        
             if (id === 'stat-card-purchased') {
                 updatePurchasedBars(landData.stations);
             }else{
@@ -582,6 +561,9 @@ document.addEventListener('DOMContentLoaded', function () {
             
         });
     });
+
+
+    
 });
 
 
@@ -591,10 +573,17 @@ document.querySelectorAll('.city-card').forEach(block => {
         console.log(this.dataset.station)
         const station = landData.stations.find(st => st.station_name === this.dataset.station);;  // e.g. data-station="Karachi"
         
-        console.log(station);
+        
+
+        const selectedCard = document.querySelector('.stat-card.selected');
+        const category = selectedCard ? selectedCard.dataset.category : null;
+
+        console.log(category,station);
 
         updateStationBarChart(station);
         updateStationPieChart(station);
+
+        setMap('purchase_layer', category,mapDHATag[station.station_name]);
     });
 });
 
@@ -868,6 +857,7 @@ function updateStationPieChart(station) {
                 }
             }
         },
+        credits: { enabled: false },
         series: [{
             name: 'Purchased Land',
             colorByPoint: true,

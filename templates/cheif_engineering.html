@@ -439,54 +439,53 @@
 
     <script>
         
-const mapCityToId = {
-    'Karachi': '#khi',
-    'Karachi_City': '#city',
-    'Lahore': '#lhr',
-    'Islamabad': '#isl',
-    'Quetta': '#qut',
-    'Multan': '#mul',
-    'Bahawalpur': '#bhwp',
-    'Gujranwala': '#guj',
-    'Peshawar': '#psw',
-};
+
+let servicesData;
+
+const CATEGORIES = [
+    "Roads",
+    "Water Supply",
+    "Electricity",
+    "Gas Supply",
+    "Sewerage",
+    "Drainage",
+    "Commnnication",
+]
 
 
-const mapDHATag = {
-    'Karachi': 'DHA K',
-    'Karachi_City': 'DHA CITY',
-    'Lahore': 'DHA L',
-    'Islamabad': 'DHA IR',
-    'Quetta': 'DHA Q',
-    'Multan': 'DHA M',
-    'Bahawalpur': 'DHA B',
-    'Gujranwala': 'DHA G',
-    'Peshawar': 'DHA P',
-};
+const CATEGORY_UNITS = {
+    "Roads": "KM",
+    "Water Supply": "GPD",
+    "Electricity": "KV",
+    "Gas Supply": "BTU",
+    "Sewerage": "KM",
+    "Drainage": "CFT",
+    "Commnnication": "Kanals",
+}
 
-
-let securityData;
-const CATEGORIES = ["Check Post","QRF","Picquet","Camera","Incidents"];
 
 document.addEventListener('DOMContentLoaded', function () {
+    // return;
     showSkeleton(".card-body", 2);
     showSkeleton('.progress-item',1);
     // Call the API when page loads
-    fetchSecurityData();
+    fetchServicesData();
 });
 
 
 
 // Fetch with cache
-async function fetchSecurityData() {
+async function fetchServicesData() {
 
-    fetch("{% url 'security_summary' %}")
+    fetch("{% url 'services_summary' %}")
         .then(response => response.json())
         .then(data => {
-            securityData = data; // ✅ Store globally
-            updateStatCards(securityData.total_summary);
-            updateStationCards(securityData.stations);
-            updateProgressBars(securityData.stations);
+
+            data.stations = sortStationsGlobally(data.stations);
+            servicesData = data; // ✅ Store globally
+            updateStatCards(servicesData.total_summary);
+            updateStationCards(servicesData.stations);
+            updateProgressBars(servicesData.stations);
         })
         .catch(error => {
             console.error('Error fetching land summary:', error);
@@ -521,7 +520,7 @@ function updateStatCards(summary) {
                 </div>
                 <div class="card-body mt-0 p-0 ">
                     <h5 class="mb-0 px-2">${value.toLocaleString()}</h5>
-                    <small class="text-muted">Count of Plots</small>
+                    <small class="text-muted">${CATEGORY_UNITS[cat]}</small>
                 </div>
             </div>
     `;
@@ -534,14 +533,14 @@ function updateStatCards(summary) {
 }
 
 // Render station-wise cards
-function updateStationCards(stations, category = "Check Post") {
+function updateStationCards(stations, category = "Roads") {
   const container = document.getElementById("station-cards");
   container.innerHTML = "";
 
   stations.forEach(st => {
-    const phase1 = st.phases.phase1?.[category] || 0;
-    const phase2 = st.phases.phase2?.[category] || 0;
-    const total = phase1 + phase2;
+    // const phase1 = st.phases.phase1?.[category] || 0;
+    // const phase2 = st.phases.phase2?.[category] || 0;
+    const total = st.totals?.[category] || 0
 
     const card = document.createElement("div");
     card.className = "col col-sm-6 -sm-4 col-md-4 col-lg";
@@ -553,7 +552,7 @@ function updateStationCards(stations, category = "Check Post") {
                     <h6 class="mb-0 px-2">${mapDHATag[st.station_name]}</h6>
                 </div>
                 <div class="card-body mt-1 p-0">
-                    <p class="mb-0 px-2">${total.toLocaleString()} <small class="text-muted">Plots</small></p>
+                    <p class="mb-0 px-2">${total.toLocaleString()} <small class="text-muted">${CATEGORY_UNITS[category]}</small></p>
 
                 </div>
             </div>`;
@@ -583,13 +582,14 @@ document.addEventListener('click', function (e) {
 
     const category = e.target.closest('.stat-card')?.dataset.category
 
-    updateStationCards(securityData.stations, category);
+    updateStationCards(servicesData.stations, category);
 
 
     // Generate Cards
-    updateProgressBars(securityData.stations, category);
-    const chartTitle = type.charAt(0).toUpperCase() + type.slice(1);
-    document.querySelector('#phaseChartTitle').textContent = `${category} Plot - DHA Wise Statistics`;
+    updateProgressBars(servicesData.stations, category);
+    resetMap();
+    // const chartTitle = type.charAt(0).toUpperCase() + type.slice(1);
+    // document.querySelector('#phaseChartTitle').textContent = `${category} Plot - DHA Wise Statistics`;
 });
 
 
@@ -611,8 +611,12 @@ document.addEventListener('click', function (e) {
 
 
     const station_name = e.target.closest('.city-card')?.dataset.station;
+    const station = servicesData.stations.find(st => st.station_name === station_name);
 
-    const station = securityData.stations.find(st => st.station_name === station_name);
+    const selectedCard = document.querySelector('.stat-card.selected');
+    const category = selectedCard ? selectedCard.dataset.category : null;
+
+    setMap(category, null,mapDHATag[station_name]);
 
     updateStationBarChart(station);
     updateStationPieChart(station);
@@ -629,7 +633,7 @@ document.addEventListener('click', function (e) {
 // Update Progress Bars
 // -------------------------
 
-function updateProgressBars(stations, selectedType = 'Check Post') {
+function updateProgressBars(stations, selectedType = 'Roads') {
     const panel = document.getElementById('progressbarspanel');
     const title = panel.querySelector('.chart-header');
 
@@ -656,7 +660,7 @@ function updateProgressBars(stations, selectedType = 'Check Post') {
 
         const val = st.totals[selectedType];
 
-        const total = securityData.total_summary[selectedType] || 1; // avoid divide-by-zero
+        const total = servicesData.total_summary[selectedType] || 1; // avoid divide-by-zero
 
         const percent = ((val / total) * 100).toFixed(1);
 
@@ -667,7 +671,7 @@ function updateProgressBars(stations, selectedType = 'Check Post') {
             <div class="progress-label">
                 <span class="district-name">${mapDHATag[st.station_name]}</span>
                 <div class="d-flex inline-flex">
-                    <span class="progress-value">${val.toLocaleString()} / ${total.toLocaleString()} Total Plots</span>
+                    <span class="progress-value">${val.toLocaleString()} / ${total.toLocaleString()} ${CATEGORY_UNITS[selectedType]}</span>
                 </div>
             </div>
             <div class="custom-progress">
@@ -767,7 +771,7 @@ function updateStationPieChart(station) {
     
 
 
-    // const phases = station.phases;
+    // const phases = station.phase_totals;
     // if (!phases) return;
 
     // const data = Object.entries(phases).map(([name, vals]) => ({
@@ -781,10 +785,10 @@ function updateStationPieChart(station) {
     const category = selectedCard ? selectedCard.dataset.category : null;
 
     // Bail early if no category or no phases
-    if (!category || !station.phases) return;
+    if (!category || !station.phase_totals) return;
 
     // Build Highcharts-compatible data dynamically
-    const data = Object.entries(station.phases).map(([phaseName, values]) => ({
+    const data = Object.entries(station.phase_totals).map(([phaseName, values]) => ({
         name: phaseName.replace(/([a-zA-Z]+)(\d+)/, (_, n, d) => n.charAt(0).toUpperCase() + n.slice(1) + '-' + d),
         y: Number(values[category]) || 0
     }));
@@ -816,6 +820,7 @@ function updateStationPieChart(station) {
                 }
             }
         },
+        credits: { enabled: false },
         series: [{
             name: 'Total',
             colorByPoint: true,

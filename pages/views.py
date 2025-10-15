@@ -29,7 +29,6 @@ def login_view(request):
                 else:
                     request.session.set_expiry(60 * 60 * 24 * 30)  # 30 days
 
-
                 messages.success(request, f"Welcome back, {user.username}!")
                 return redirect('land')
             else:
@@ -66,4 +65,13 @@ def horticulture(request):
 @login_required(login_url='/login/')
 def security(request):
     return render(request, 'security.html')
+
+@login_required(login_url='/login/')
+def coregis(request):
+    return render(request, 'coregis.html')
+
+@login_required(login_url='/login/')
+def query_engine(request):
+    return render(request, 'query_engine.html')
+
 

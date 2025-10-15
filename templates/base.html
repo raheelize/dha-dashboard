@@ -57,9 +57,9 @@
                 <a href="{% url 'cheif_engineering' %}" class="nav-tab {% if request.resolver_match.url_name == 'cheif_engineering' %}active{% endif %}">Cheif Engineering</a>
                 <a href="{% url 'horticulture' %}" class="nav-tab {% if request.resolver_match.url_name == 'horticulture' %}active{% endif %}">Horticulture</a>
                 <a href="{% url 'security' %}" class="nav-tab {% if request.resolver_match.url_name == 'security' %}active{% endif %}">Security</a>
-                <a href="#" class="nav-tab {% if request.resolver_match.url_name == 'coregis' %}active{% endif %}">CoreGIS</a>
-                <a href="#" class="nav-tab {% if request.resolver_match.url_name == 'query_engine' %}active{% endif %}">Query Engine</a>
-                <a href="#" class="nav-tab {% if request.resolver_match.url_name == 'analytics' %}active{% endif %}">Analytics</a>
+                <a href="{% url 'coregis' %}" class="nav-tab {% if request.resolver_match.url_name == 'coregis' %}active{% endif %}">CoreGIS</a>
+                <a href="{% url 'query_engine' %}" class="nav-tab {% if request.resolver_match.url_name == 'query_engine' %}active{% endif %}">Query Engine</a>
+                <a hidden href="#" class="nav-tab {% if request.resolver_match.url_name == 'analytics' %}active{% endif %}">Analytics</a>
             </div>
 
 
@@ -87,6 +87,18 @@
     </nav>
     {% block content %}
     {% endblock %}
+
+    <script>
+        window.IP_karachi_city = "{{IP_karachi_city | safe | escapejs}}";
+        window.IP_karachi = "{{IP_karachi | safe | escapejs}}";
+        window.IP_lahore = "{{IP_lahore | safe | escapejs}}";
+        window.IP_gujranwala = "{{IP_gujranwala | safe | escapejs}}";
+        window.IP_bahawalpur = "{{IP_bahawalpur | safe | escapejs}}";
+        window.IP_islamabad = "{{IP_islamabad | safe | escapejs}}";
+        window.IP_multan = "{{IP_multan | safe | escapejs}}";
+        window.IP_peshawar = "{{IP_peshawar | safe | escapejs}}";
+        window.IP_quetta = "{{IP_quetta | safe | escapejs}}";
+    </script>
     
     
     <!-- <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
@@ -95,9 +107,10 @@
     <script src="{% static 'assets/js/styles.js' %}"></script>
     <script src="{% static 'assets/js/bootstrap53.bundle.min.js' %}"></script>
     <script src="{% static 'lib/leaflet/dist/leaflet.js' %}"></script>
-    <script src="{% static 'assets/js/map.js' %}"></script>
+    
     <script src="{% static 'lib/highcharts/highcharts.js' %}"></script>
     <script src="{% static 'lib/highcharts/highcharts-more.js' %}"></script>
+    <script src="{% static 'assets/js/map.js' %}"></script>
     <script src="{% static 'assets/js/graph.js' %}"></script>
     
     <script src="{% static 'assets/js/loader.js' %}"></script>
@@ -162,7 +175,47 @@
             {% endfor %}
         });
         {% endif %}
-    </script>
+
+
+
+
+
+const mapCityToId = {
+        'Karachi': '#khi',
+        'Karachi_City': '#city',
+        'Lahore': '#lhr',
+        'Islamabad': '#isl',
+        'Quetta': '#qut',
+        'Multan': '#mul',
+        'Bahawalpur': '#bhwp',
+        'Gujranwala': '#guj',
+        'Peshawar': '#psw',
+};
+
+
+const mapDHATag = {
+    'Karachi': 'DHA K',
+    'Lahore': 'DHA L',
+    'Islamabad': 'DHA IR',
+    'Quetta': 'DHA Q',
+    'Multan': 'DHA M',
+    'Bahawalpur': 'DHA B',
+    'Gujranwala': 'DHA G',
+    'Karachi_City': 'DHA CITY',
+    'Peshawar': 'DHA P',
+};
+
+
+function sortStationsGlobally(stations) {
+    const dhaOrder = Object.keys(mapDHATag);
+    return stations.sort((a, b) => {
+        const orderA = dhaOrder.indexOf(a.station_name);
+        const orderB = dhaOrder.indexOf(b.station_name);
+        return (orderA === -1 ? Infinity : orderA) - (orderB === -1 ? Infinity : orderB);
+    });
+}
+
+</script>
 
     
 </body>

@@ -1,0 +1,190 @@
+{
+  "total_summary": {
+    "Area_Kanals": 18737.72433982659,
+    "Length_Km": 0.0,
+    "Points": 144
+  },
+  "stations": [
+    {
+      "station_name": "Gujranwala",
+      "summary": {
+        "Area_Kanals": 2081.969371091843,
+        "Length_Km": 0.0,
+        "Points": 16
+      },
+      "phases": {
+        "phase2": {
+          "Area_Kanals": 860.5382810121522,
+          "Length_Km": 0.0,
+          "Points": 4
+        },
+        "phase1": {
+          "Area_Kanals": 1221.4310900796909,
+          "Length_Km": 0.0,
+          "Points": 12
+        }
+      }
+    },
+    {
+      "station_name": "Karachi",
+      "summary": {
+        "Area_Kanals": 2081.969371091843,
+        "Length_Km": 0.0,
+        "Points": 16
+      },
+      "phases": {
+        "phase2": {
+          "Area_Kanals": 860.5382810121522,
+          "Length_Km": 0.0,
+          "Points": 4
+        },
+        "phase1": {
+          "Area_Kanals": 1221.4310900796909,
+          "Length_Km": 0.0,
+          "Points": 12
+        }
+      }
+    },
+    {
+      "station_name": "Bahawalpur",
+      "summary": {
+        "Area_Kanals": 2081.969371091843,
+        "Length_Km": 0.0,
+        "Points": 16
+      },
+      "phases": {
+        "phase2": {
+          "Area_Kanals": 860.5382810121522,
+          "Length_Km": 0.0,
+          "Points": 4
+        },
+        "phase1": {
+          "Area_Kanals": 1221.4310900796909,
+          "Length_Km": 0.0,
+          "Points": 12
+        }
+      }
+    },
+    {
+      "station_name": "Lahore",
+      "summary": {
+        "Area_Kanals": 2081.969371091843,
+        "Length_Km": 0.0,
+        "Points": 16
+      },
+      "phases": {
+        "phase2": {
+          "Area_Kanals": 860.5382810121522,
+          "Length_Km": 0.0,
+          "Points": 4
+        },
+        "phase1": {
+          "Area_Kanals": 1221.4310900796909,
+          "Length_Km": 0.0,
+          "Points": 12
+        }
+      }
+    },
+    {
+      "station_name": "Quetta",
+      "summary": {
+        "Area_Kanals": 2081.969371091843,
+        "Length_Km": 0.0,
+        "Points": 16
+      },
+      "phases": {
+        "phase2": {
+          "Area_Kanals": 860.5382810121522,
+          "Length_Km": 0.0,
+          "Points": 4
+        },
+        "phase1": {
+          "Area_Kanals": 1221.4310900796909,
+          "Length_Km": 0.0,
+          "Points": 12
+        }
+      }
+    },
+    {
+      "station_name": "Karachi_City",
+      "summary": {
+        "Area_Kanals": 2081.969371091843,
+        "Length_Km": 0.0,
+        "Points": 16
+      },
+      "phases": {
+        "phase2": {
+          "Area_Kanals": 860.5382810121522,
+          "Length_Km": 0.0,
+          "Points": 4
+        },
+        "phase1": {
+          "Area_Kanals": 1221.4310900796909,
+          "Length_Km": 0.0,
+          "Points": 12
+        }
+      }
+    },
+    {
+      "station_name": "Multan",
+      "summary": {
+        "Area_Kanals": 2081.969371091843,
+        "Length_Km": 0.0,
+        "Points": 16
+      },
+      "phases": {
+        "phase2": {
+          "Area_Kanals": 860.5382810121522,
+          "Length_Km": 0.0,
+          "Points": 4
+        },
+        "phase1": {
+          "Area_Kanals": 1221.4310900796909,
+          "Length_Km": 0.0,
+          "Points": 12
+        }
+      }
+    },
+    {
+      "station_name": "Islamabad",
+      "summary": {
+        "Area_Kanals": 2081.969371091843,
+        "Length_Km": 0.0,
+        "Points": 16
+      },
+      "phases": {
+        "phase2": {
+          "Area_Kanals": 860.5382810121522,
+          "Length_Km": 0.0,
+          "Points": 4
+        },
+        "phase1": {
+          "Area_Kanals": 1221.4310900796909,
+          "Length_Km": 0.0,
+          "Points": 12
+        }
+      }
+    },
+    {
+      "station_name": "Peshawar",
+      "summary": {
+        "Area_Kanals": 2081.969371091843,
+        "Length_Km": 0.0,
+        "Points": 16
+      },
+      "phases": {
+        "phase2": {
+          "Area_Kanals": 860.5382810121522,
+          "Length_Km": 0.0,
+          "Points": 4
+        },
+        "phase1": {
+          "Area_Kanals": 1221.4310900796909,
+          "Length_Km": 0.0,
+          "Points": 12
+        }
+      }
+    }
+  ],
+  "timestamp": "2025-10-14T15:27:41.416156"
+}

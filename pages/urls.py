@@ -15,5 +15,7 @@ urlpatterns = [
     path('cheif_engineering/', views.cheif_engineering, name='cheif_engineering'),
     path('horticulture/', views.horticulture, name='horticulture'),
     path('security/', views.security, name='security'),
+    path('corgis/', views.coregis, name='coregis'),
+    path('query-engine/', views.query_engine, name='query_engine'),
 ]
 

@@ -1,0 +1,1448 @@
+/* ========== CSS VARIABLES ========== */
+@import url("../fonts/css/font.css");
+
+
+/* ========== GENERAL ========== */
+:root {
+    --color-primary-green: #4caf50;
+    --color-primary-blue: #4254dd;
+    --color-primary-purple: #9c27b0;
+    --color-accent-yellow: #ffd54f;
+    --color-white: #ffffff;
+    --color-bg-light: #f8fafc;
+    --color-bg-green-tint: #e8f5e9;
+    --color-text-dark: #1e293b;
+    --color-text-green: #2e7d32;
+    --color-border: #e0e0e0;
+    --color-shadow: rgba(0, 0, 0, 0.1);
+}
+
+html,
+body {
+    height: 100%;
+    width: 100%;
+    margin: 0;
+    padding: 0;
+    overflow-y: auto;
+    overflow-x: hidden;
+    font-family: "Open Sans", sans-serif;
+}
+
+
+/* ========== ANIMATIONS ========== */
+
+@keyframes fadeInUp {
+    from {
+        opacity: 0;
+        transform: translateY(20px);
+    }
+
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+.fade-in {
+    animation: fadeInUp 0.6s ease-out forwards;
+    opacity: 0;
+}
+
+/* ========== NAVBAR ========== */
+
+.navbar {
+    background: var(--color-white) !important;
+    height: 45px;
+    border-bottom: 1px solid var(--color-bg-green-tint);
+    box-shadow: 0 0.25px 0 rgba(75, 74, 74, 0.636);
+    z-index: 1030;
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    width: 100%;
+    display: flex;
+    align-items: center;
+}
+
+.navbar .container-fluid {
+    display: flex;
+    align-items: center;
+    width: 100%;
+    padding: 0.5rem !important;
+}
+
+.navbar-brand img {
+    max-height: 35px;
+    filter: drop-shadow(0 0 2px var(--color-shadow));
+    display: inline-block !important;
+}
+
+.navbar-tabs {
+    gap: 1rem;
+}
+
+.nav-tab {
+    color: #546cdc;
+    text-decoration: none;
+    padding: 0.35rem 0.75rem;
+    transition: all 0.3s ease;
+    position: relative;
+    font-family: Arial, Helvetica, sans-serif;
+    font-size: clamp(14px, 1.1vw, 16px);
+    border-radius: 9999px;
+}
+
+.nav-tab:hover {
+    color: #0b0c0c;
+    background-color: rgba(84, 108, 220, 0.12);
+    box-shadow: 0 1px 4px rgba(84, 108, 220, 0.2);
+}
+
+.nav-tab.active {
+    color: #fff;
+    background-color: #0cb680;
+    box-shadow: 0 2px 6px rgba(84, 108, 220, 0.35);
+}
+
+.btn-red {
+    background: transparent;
+    color: #333;
+    padding: 0.5rem;
+    width: 30px;
+    height: 30px;
+    border-radius: 50%;
+    font-weight: 500;
+    transition: all 0.3s ease;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.btn-red:hover {
+    background-color: #f14141;
+    color: #fff;
+    transform: translateY(-2px);
+    box-shadow: 0 4px 8px rgba(76, 175, 80, 0.4);
+}
+
+.btn-green {
+    background: transparent;
+    color: #333;
+    border-radius: 50%;
+    font-weight: 600;
+    transition: all 0.3s ease;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.btn-green:hover {
+    color: #0cb680;
+    transform: translateY(-2px);
+}
+
+.authors {
+    color: #adb5bd;
+    font-size: 0.65rem;
+    letter-spacing: 0.3px;
+    transition: color 0.3s ease;
+}
+
+/* ========== MAIN CONTENT ========== */
+
+.main-content {
+    position: absolute;
+    height: calc(100vh - 50px);
+    bottom: 0;
+    left: 0;
+    right: 0;
+    padding: 1rem;
+    display: flex;
+    flex-direction: column;
+    overflow-y: auto;
+    overflow-x: hidden;
+    background-color: #f9fafe;
+}
+
+/* ========== ROW HEIGHTS ========== */
+.row-slim {
+    flex-shrink: 0;
+}
+
+
+.row-slim .card-header {
+    padding: 0.25rem 0.5rem;
+    font-size: 0.75rem;
+}
+
+.row-slim .card-body {
+    padding: 0.25rem;
+}
+
+.row-slim .card-body h5,
+.row-slim .card-body p {
+    font-size: 1rem;
+    margin-bottom: 0;
+}
+
+.row-slim .card-body small {
+    font-size: 0.7rem;
+}
+
+.row-slim {
+    margin-bottom: 0.5rem !important;
+}
+
+.stat-row {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 0.5rem;
+} /*new*/
+
+.stat-row .col-custom {
+    flex: 0 0 calc(100% / 7 - 0.5rem);
+} /*new*/
+
+.row-main {
+    min-height: 400px;
+}
+
+
+/* ========== CARDS ========== */
+
+.stat-card {
+    display: block;
+    border-left: 2px solid #999797;
+    text-decoration: none;
+    color: inherit;
+    border-radius: 3px;
+    overflow: hidden;
+    background: transparent;
+    transition: all 0.3s ease;
+    height: 100%;
+    cursor: pointer;
+    position: relative;
+}
+
+.stat-card.selected::after {
+    content: "";
+    position: absolute;
+    top: 6px;
+    right: 6px;
+    width: 14px;
+    height: 14px;
+    background: #0cb680;
+    border-radius: 50%;
+    border: 2px solid #ffffff;
+    box-shadow: 0 0 0 1px rgba(0, 0, 0, 0.08);
+}
+
+.stat-card:hover {
+    border: 2px solid #999797;
+    box-shadow: 0 6px 14px rgba(26, 54, 139, 0.35);
+    transform: translateY(-4px);
+}
+
+.stat-card.selected {
+    border: 1px solid #83cdb5;
+    box-shadow: 0 4px 4px rgba(185, 233, 205, 0.35);
+    transform: translateY(-4px);
+}
+
+.stat-card .card-header {
+    padding: 0.25rem;
+    margin-top: 1px;
+    text-align: center;
+    border: none;
+    color: rgb(101, 100, 100);
+    font-size: 0.875rem;
+}
+
+.stat-card .card-body {
+    padding: 0.5rem;
+    text-align: center;
+    background: transparent;
+}
+
+.stat-card .card-body h5 {
+    font-family: "Raleway", "Open Sans", "Inter", sans-serif;
+    font-size: 1.05rem;
+    font-weight: 100;
+    color: #64748b;
+    text-align: center;
+    text-shadow: 0px 0 2px rgba(63, 58, 58, 0.4);
+}
+
+.city-card {
+    border-radius: 3px;
+    overflow: hidden;
+    border: 1px solid var(--color-border);
+    transition: all 0.3s ease;
+    height: 100%;
+    cursor: pointer;
+    position: relative;
+}
+
+.city-card.selected::after {
+    content: "";
+    position: absolute;
+    top: 6px;
+    right: 6px;
+    width: 14px;
+    height: 14px;
+    background: #0cb680;
+    border-radius: 50%;
+    border: 2px solid #ffffff;
+    box-shadow: 0 0 0 1px rgba(0, 0, 0, 0.08);
+}
+
+.city-card:hover {
+    transform: translateY(-4px);
+    box-shadow: 0 8px 12px rgba(76, 175, 120, 0.25);
+}
+
+.city-card.selected {
+    border: 1px solid #83cdb5;
+    box-shadow: 0 4px 4px rgba(185, 233, 205, 0.35);
+}
+
+.city-card .card-header {
+    padding: 0.1rem;
+    font-size: 0.875rem;
+    text-align: left;
+    border: none;
+    background: transparent;
+    color: #4f5661;
+}
+
+.city-card .card-body {
+    padding: 0.15rem;
+    text-align: left;
+}
+
+.city-card .card-body p {
+    font-family: "Raleway", "Open Sans", "Inter", sans-serif;
+    font-size: 1.057rem;
+    font-weight: 200;
+    color: #64748b;
+    text-align: left;
+    text-shadow: 0px 0 2px rgba(63, 58, 58, 0.4);
+    margin: 0;
+}
+
+.city-card .card-body small {
+    margin-top: 0px;
+    padding: 0px;
+    color: rgb(67, 68, 65);
+    text-align: left;
+    text-shadow: 0px 0 2px rgba(63, 58, 58, 0.4);
+}
+
+/* Card Variants */
+.city-card-khi {
+    border-left: 2px solid #3fd469;
+}
+
+.city-card-lhr {
+    border-left: 2px solid #4dc0e7;
+}
+
+.city-card-isl {
+    border-left: 2px solid #eeee64;
+}
+
+.city-card-qut {
+    border-left: 1px solid #9f86cd;
+}
+
+.city-card-mul {
+    border-left: 2px solid #91f259;
+}
+
+.city-card-bhw {
+    border-left: 1px solid #66edff;
+}
+
+.city-card-guj {
+    border-left: 2px solid #cddc39;
+}
+
+.city-card-city {
+    border-left: 1px solid #ffb74d;
+}
+
+.city-card-psw {
+    border-left: 1px solid #ffb0ca;
+}
+
+/* ========== CHARTS PANEL ========== */
+
+.charts-panel {
+    background: var(--color-white);
+    border-radius: 8px;
+    padding: 1rem;
+    border: 1px solid var(--color-border);
+    box-shadow: 0 2px 4px var(--color-shadow);
+}
+
+.chart-wrapper {
+    background: var(--color-white);
+    border-radius: 6px;
+    border: 1px solid var(--color-bg-green-tint);
+    overflow: hidden;
+    display: flex;
+    flex-direction: column;
+}
+
+.chart-header {
+    background: linear-gradient(185deg, rgb(204, 208, 215) 0%, #e2e2e2 100%);
+    color: #717070;
+    padding: 0.75rem;
+    font-size: 0.875rem;
+    font-weight: 600;
+    text-align: center;
+}
+
+.chart-body {
+    flex: 1;
+    padding: 1rem;
+    min-height: 150px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+
+/* ========== MAP PANEL and Legend ========== */
+.map-panel {
+    background: var(--color-white);
+    border-radius: 8px;
+    overflow: hidden;
+    border: 1px solid var(--color-border);
+    box-shadow: 0 2px 4px var(--color-shadow);
+    position: relative;
+}
+
+#map {
+    width: 100%;
+    height: 100%;
+    min-height: 400px;
+    background: linear-gradient(135deg, #e3f2fd 0%, var(--color-bg-green-tint) 100%);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 0.8rem;
+}
+
+#map::before {
+    content: "Map will load here";
+}
+
+.map-legend {
+    position: absolute;
+    top: 1rem;
+    right: 1rem;
+    background: var(--color-white);
+    border-radius: 8px;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.15);
+    min-width: 150px;
+    z-index: 1000;
+    border: 1px solid var(--color-border);
+}
+
+.legend-header {
+    background: linear-gradient(135deg, var(--color-primary-green) 0%, #101110 100%);
+    color: var(--color-white);
+    padding: 0.65rem 0.6rem;
+    font-weight: 600;
+    font-size: 0.875rem;
+    display: flex;
+    align-items: center;
+    border-radius: 8px 8px 0 0;
+}
+
+.legend-body {
+    padding: 0.2rem;
+    display: flex;
+    flex-direction: column;
+    gap: 0.5rem;
+}
+
+.legend-body .form-check {
+    margin-bottom: 0;
+}
+
+.legend-body .form-check-input:checked {
+    background-color: var(--color-primary-green);
+    border-color: var(--color-primary-green);
+}
+
+.legend-body .form-check-label {
+    font-size: 0.75rem;
+    color: var(--color-text-dark);
+    cursor: pointer;
+}
+
+.map-overlay-box {
+    background: var(--color-white);
+    border-radius: 8px;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.15);
+    min-width: 180px;
+    max-width: 280px;
+    z-index: 1000;
+    border: 1px solid var(--color-border);
+    padding: 1rem;
+}
+
+.map-overlay-box h6 {
+    color: rgb(36, 35, 35);
+    font-weight: 600;
+    font-size: 0.9rem;
+    margin-bottom: 0.45rem;
+}
+
+.close-btn {
+    position: absolute;
+    top: 0.5rem;
+    right: 0.5rem;
+    background: transparent;
+    border: none;
+    font-size: 1.5rem;
+    color: var(--color-text-dark);
+    cursor: pointer;
+    line-height: 1;
+    padding: 0;
+    width: 24px;
+    height: 24px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    transition: all 0.2s ease;
+}
+
+.close-btn:hover {
+    color: #fff;
+    transform: scale(1.3);
+}
+
+/* ====== Map Legend Content ====== */
+.legend-content {
+    display: flex;
+    flex-direction: column;
+    gap: 0.3rem;
+}
+
+.legend-item {
+    padding: 0.3rem 0;
+    border-bottom: 1px solid rgba(0, 0, 0, 0.05);
+}
+
+.legend-item:last-child {
+    border-bottom: none;
+}
+
+.legend-checkbox {
+    cursor: pointer;
+    width: 16px;
+    height: 16px;
+    accent-color: rgb(225, 230, 236);
+    font-size: 0.875rem;
+}
+
+.legend-label {
+    cursor: pointer;
+    font-size: 0.65rem;
+    color: var(--color-text-dark);
+    display: flex;
+    align-items: center;
+    gap: 0.3rem;
+}
+
+.phase-highlight {
+    color: var(--color-primary-green);
+    font-weight: 600;
+}
+
+.legend-icon {
+    width: 12px;
+    height: 12px;
+    border-radius: 3px;
+    display: inline-block;
+    flex-shrink: 0;
+}
+
+/* Legend icon colors using theme variables */
+.legend-icon.icon1 {
+    background: #78a0e9;
+    border: 1px solid #485fbd;
+}
+
+.legend-icon.icon2 {
+    background: rgb(118, 71, 179);
+    border: 1px solid #2d1a85;
+}
+
+.legend-icon.icon3 {
+    background: var(--color-primary-green);
+    border: 1px solid #007e06;
+}
+
+.legend-icon.icon4 {
+    background: var(--color-accent-yellow);
+    border: 1px solid #f9a825;
+}
+
+.legend-icon.icon5 {
+    background: rgb(55, 112, 218);
+    border: 1px solid #125597;
+}
+
+.legend-icon.icon6 {
+    background: #fd7c7c;
+    border: 1px solid #9c1919;
+}
+
+.legend-icon.icon7 {
+    background: #906fd5;
+    border: 1px solid #c2a6ff;
+}
+
+.table-btn {
+    background: transparent;
+    border: none;
+    color: var(--color-primary-green);
+    cursor: pointer;
+    padding: 0;
+    font-size: 1.1rem;
+    transition: all 0.2s ease;
+}
+
+.table-btn:hover {
+    color: #1b5e20;
+    transform: scale(1.15);
+}
+
+.il {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+}
+
+
+#basemap {
+    display: none;
+}
+
+#basemap.active {
+    display: block;
+}
+
+#basemapGallery {
+    min-height: 100px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: #757575;
+    font-size: 0.875rem;
+}
+
+#basemapGallery::before {
+    content: "Basemap options will appear here";
+}
+
+/* ====== Progressbars ====== */
+
+.progress-container {
+    padding: 0;
+    max-height: 80%;
+    background: linear-gradient(135deg, rgba(248, 250, 252, 0.8) 0%, rgba(241, 245, 249, 0.8) 100%);
+    border-radius: 8px;
+}
+
+.progress-item {
+    margin-bottom: auto;
+    padding: 2px 3px;
+    background: linear-gradient(135deg, rgba(255, 255, 255, 0.9) 0%, rgba(248, 250, 252, 0.9) 100%);
+    border-radius: 8px;
+    border: 1px solid rgba(226, 232, 240, 0.8);
+    position: relative;
+    overflow: hidden;
+    box-shadow: 0 1px 3px rgba(0, 0, 0, 0.05);
+    transition: all 0.3s ease;
+}
+
+.progress-item::before {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: -100%;
+    width: 100%;
+    height: 100%;
+    background: linear-gradient(90deg, transparent, rgba(79, 70, 229, 0.1), transparent);
+    transition: left 0.5s ease;
+}
+
+.progress-item:hover {
+    border-color: rgba(79, 70, 229, 0.3);
+    box-shadow: 0 10px 15px -3px rgba(79, 70, 229, 0.1), 0 4px 6px -2px rgba(79, 70, 229, 0.05);
+}
+
+.progress-item:hover::before {
+    left: 100%;
+}
+
+.progress-label {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    font-size: 0.65rem;
+    position: relative;
+    z-index: 2;
+}
+
+.district-name {
+    color: #232831;
+    text-shadow: 0 1px 2px rgba(0, 0, 0, 0.05);
+    letter-spacing: 0.5px;
+    position: relative;
+    font-weight: 600;
+}
+
+.district-name::before {
+    content: "📍";
+    margin-right: 6px;
+    font-size: 0.8em;
+    opacity: 0.8;
+    filter: drop-shadow(0 1px 2px rgba(0, 0, 0, 0.1));
+}
+
+.progress-value {
+    font-size: 0.65rem;
+    color: #4d5867;
+    padding: 2px 6px;
+    border-radius: 8px;
+    border: 1px solid rgba(226, 232, 240, 0.8);
+    backdrop-filter: blur(4px);
+}
+
+.custom-progress {
+    height: 14px;
+    background: linear-gradient(135deg, #f1f5f9 0%, #e2e8f0 50%, #f1f5f9 100%);
+    border-radius: 8px;
+    overflow: hidden;
+    position: relative;
+    box-shadow: inset 0 1px 2px rgba(0, 0, 0, 0.05);
+    border: 1px solid rgba(226, 232, 240, 0.6);
+}
+
+.custom-progress::before {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    height: 1px;
+    background: linear-gradient(90deg, transparent, rgba(255, 255, 255, 0.8), transparent);
+}
+
+.custom-progress-bar {
+    height: 100%;
+    border-radius: 12px;
+    position: relative;
+    transition: all 2s cubic-bezier(0.4, 0, 0.2, 1);
+    display: flex;
+    align-items: center;
+    justify-content: flex-end;
+    padding-right: 12px;
+    overflow: hidden;
+}
+
+.custom-progress-bar::after {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background: linear-gradient(90deg,
+            rgba(255, 255, 255, 0) 0%,
+            rgba(255, 255, 255, 0.4) 50%,
+            rgba(255, 255, 255, 0) 100%);
+    animation: progressGlow 3s ease-in-out infinite;
+}
+
+.custom-progress-bar.khi {
+    background: linear-gradient(135deg, #00e676 0%, #69f0ae 100%);
+    box-shadow: 0 0 25px rgba(0, 230, 118, 0.7), inset 0 1px 3px rgba(255, 255, 255, 0.3);
+}
+
+.custom-progress-bar.lhr {
+    background: linear-gradient(135deg, #2196f3 0%, #03a9f4 100%);
+    box-shadow: 0 0 20px rgba(33, 150, 243, 0.5), inset 0 1px 3px rgba(255, 255, 255, 0.3);
+}
+
+.custom-progress-bar.isl {
+    background: linear-gradient(135deg, #ffc107 0%, #ffeb3b 100%);
+    box-shadow: 0 0 20px rgba(255, 193, 7, 0.5), inset 0 1px 3px rgba(255, 255, 255, 0.3);
+}
+
+.custom-progress-bar.mul {
+    background: linear-gradient(135deg, #91f259 0%, #8cf92d 100%);
+    box-shadow: 0 0 25px rgba(52, 218, 74, 0.7), inset 0 1px 3px rgba(255, 255, 255, 0.3);
+}
+
+.custom-progress-bar.psw {
+    background: linear-gradient(135deg, #ff4081 0%, #ff80ab 100%);
+    box-shadow: 0 0 20px rgba(255, 64, 129, 0.7), inset 0 1px 3px rgba(255, 255, 255, 0.3);
+}
+
+.custom-progress-bar.qut {
+    background: linear-gradient(135deg, #7b1fa2 0%, #ab47bc 100%);
+    box-shadow: 0 0 20px rgba(123, 31, 162, 0.7), inset 0 1px 3px rgba(255, 255, 255, 0.3);
+}
+
+.custom-progress-bar.bhwp {
+    background: linear-gradient(135deg, #66edff 0%, #4dd0e1 100%);
+    box-shadow: 0 0 20px rgba(0, 188, 212, 0.7), inset 0 1px 3px rgba(255, 255, 255, 0.3);
+}
+
+.custom-progress-bar.city {
+    background: linear-gradient(135deg, #ff9800 0%, #ffb74d 100%);
+    box-shadow: 0 0 20px rgba(255, 152, 0, 0.6), inset 0 1px 3px rgba(255, 255, 255, 0.3);
+}
+
+.custom-progress-bar.guj {
+    background: linear-gradient(135deg, #cddc39 0%, #e6ee9c 100%);
+    box-shadow: 0 0 20px rgba(205, 220, 57, 0.6), inset 0 1px 3px rgba(255, 255, 255, 0.3);
+}
+
+.progress-percentage {
+    font-size: 0.6rem;
+    font-weight: 700;
+    color: #ffffff;
+    text-shadow: 0 1px 2px rgba(0, 0, 0, 0.5);
+    z-index: 3;
+    position: relative;
+    background: rgba(20, 19, 19, 0.6);
+    padding: 2px 6px;
+    border-radius: 6px;
+    border: 1px solid rgba(255, 255, 255, 0.3);
+    backdrop-filter: blur(5px);
+}
+
+/* ====== Stacked Progress (Purchased View) ====== */
+.progressbar-stacked-container {
+    width: 100%;
+}
+
+.progress-stacked-item {
+    width: 100%;
+}
+
+.stacked-label {
+    font-size: 0.65rem;
+    font-weight: 500;
+    color: #333;
+    margin-bottom: 4px;
+}
+
+.stacked-progress {
+    display: flex;
+    height: 14px;
+    width: 100%;
+    overflow: hidden;
+    background-color: #e9ecef;
+}
+
+.stacked-segment {
+    height: 100%;
+    position: relative;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    transition: width 0.4s ease-in-out;
+}
+
+.stacked-segment .seg-percent {
+    font-size: 0.65rem;
+    font-weight: 600;
+    color: inherit;
+    pointer-events: none;
+}
+
+.stacked-segment.litigation {
+    background-color: #df6c6c;
+    color: #fff;
+}
+
+.stacked-segment.possessed {
+    background-color: #b6edd1;
+    color: #333;
+}
+
+.stacked-segment.hold {
+    background-color: #aecbfa;
+    color: #333;
+}
+
+.stacked-segment.unpossessed {
+    background-color: #f8d68d;
+    color: #333;
+}
+
+/* ====== Legend (for stacked only) ====== */
+.stacked-legend {
+    font-size: 0.7rem;
+    color: #444;
+    gap: 10px;
+}
+
+.legend-item {
+    display: flex;
+    align-items: center;
+    gap: 5px;
+    margin-bottom: 4px;
+}
+
+.legend-color {
+    display: inline-block;
+    width: 14px;
+    height: 14px;
+    border-radius: 3px;
+}
+
+.legend-color.litigation {
+    background-color: #f28b82;
+}
+
+.legend-color.possessed {
+    background-color: #b6edd1;
+}
+
+.legend-color.hold {
+    background-color: #f8d68d;
+}
+
+.legend-color.unpossessed {
+    background-color: #aecbfa;
+}
+
+/* ========== RESPONSIVE ========== */
+
+/* Extra large screens (min-width: 1200px) */
+@media (min-width: 1200px) {}
+
+/* Large screens (min-width: 992px) */
+@media (min-width: 992px) {
+
+    html,
+    body {
+        overflow-y: hidden;
+        overflow-x: hidden;
+    }
+
+    .main-content {
+        overflow-y: hidden;
+        overflow-x: hidden;
+        height: calc(100vh - 50px);
+    }
+}
+
+/* Tablets and medium screens (max-width: 991.98px) */
+@media (max-width: 991.98px) {
+    .navbar {
+        height: auto;
+        padding: 0.5rem;
+    }
+
+    .dropdown {
+        display: inline-block !important;
+        position: absolute;
+        top: 2px;
+        right: 6px;
+    }
+
+    .navbar-tabs {
+        display: grid !important;
+        grid-template-columns: repeat(4, minmax(0, 1fr));
+        gap: 0.42rem;
+        width: 100%;
+        margin-top: 0.1rem;
+    }
+
+    .navbar .navbar-tabs .nav-tab {
+        text-align: center;
+        padding: 0.4rem 0.5rem;
+        font-size: 0.75rem;
+    }
+
+    .main-content {
+        position: relative;
+        top: 190px;
+        height: calc(100vh - 190px);
+        overflow-y: auto;
+        overflow-x: hidden;
+        padding: 1rem;
+        padding-bottom: 2rem;
+    }
+
+    .row-main {
+        flex-direction: row;
+        padding-bottom: 4px;
+        /*new*/
+    }
+
+    .stat-row .col-custom {
+        flex: 0 0 calc(25% - 0.5rem);
+        /*new*/
+    }
+
+    .stat-row .col-custom:nth-child(n+5) {
+        flex: 0 0 calc(33.333% - 0.5rem);
+       /*new*/
+    }
+
+    .charts-panel {
+        min-height: auto;
+        margin-bottom: 1rem;
+    }
+
+    .chart-wrapper {
+        min-height: 200px;
+        margin-bottom: 1rem;
+    }
+
+    .chart-wrapper:last-child {
+        margin-bottom: 0;
+    }
+
+    #map {
+        min-height: 500px;
+        /*new*/
+    }
+
+    .col-lg-3,
+    .col-lg-9 {
+        max-width: 100%;
+        flex: 0 0 100%;
+    }
+}
+
+/* Small screens (max-width: 767.98px) */
+@media (max-width: 767.98px) {
+    .navbar {
+        height: auto;
+        padding: 0.5rem;
+        position: fixed;
+        top: 0;
+        left: 0;
+        right: 0;
+        width: 100%;
+    }
+
+    .navbar-brand img {
+        max-height: 30px;
+        display: inline-block !important;
+    }
+
+    .navbar-tabs {
+        display: grid !important;
+        grid-template-columns: repeat(4, minmax(0, 1fr));
+        gap: 0.4rem;
+        width: 100%;
+        margin-top: 0.5rem;
+    }
+
+    .navbar .navbar-tabs .nav-tab {
+        text-align: center;
+        padding: 0.3rem 0.4rem;
+        font-size: 0.70rem;
+    }
+
+    .main-content {
+        position: relative;
+        top: 180px;
+        height: calc(100vh - 180px);
+        bottom: 0;
+        left: 0;
+        right: 0;
+        padding: 0.75rem;
+        overflow-y: auto !important;
+        overflow-x: hidden;
+    }
+
+    .row-slim .col-6 {
+        flex: 0 0 33.333%;
+        max-width: 33.333%;
+    }
+
+    .stat-card .card-header,
+    .city-card .card-header {
+        font-size: 0.7rem;
+        padding: 0.4rem;
+    }
+
+    .stat-card .card-body,
+    .city-card .card-body {
+        padding: 0.4rem;
+    }
+
+    .stat-card .card-body h5,
+    .city-card .card-body p {
+        font-size: 0.9rem;
+    }
+
+    .stat-card .card-body small,
+    .city-card .card-body small {
+        font-size: 0.65rem;
+    }
+
+    .row-slim {
+        margin-bottom: 0.4rem !important;
+    }
+
+    .row-slim .col-6 {
+        flex: 0 0 50%;
+        max-width: 50%;
+    }
+
+
+    .row-main {
+        flex-direction: row;
+        min-height: auto;
+        padding-bottom: 10px;
+        /*new*/
+    }
+
+    .charts-panel {
+        margin-bottom: 1rem;
+        padding: 0.75rem;
+    }
+
+    .chart-header {
+        padding: 0.5rem;
+        font-size: 0.75rem;
+    }
+
+    .chart-body {
+        padding: 0.75rem;
+        min-height: 120px;
+    }
+
+    .chart-wrapper {
+        min-height: 150px;
+        margin-bottom: 0.75rem;
+    }
+
+    .map-panel {
+        margin-bottom: 1rem;
+    }
+
+    #map {
+        min-height: 400px;
+        /*new*/
+    }
+
+    .map-overlay-box {
+        max-width: 95vw;
+        min-width: 150px;
+        padding: 0.75rem;
+    }
+
+    .map-overlay-box h6 {
+        font-size: 0.8rem;
+        margin-bottom: 0.3rem;
+    }
+
+    .legend-checkbox {
+        width: 14px;
+        height: 14px;
+    }
+
+    .legend-label {
+        font-size: 0.6rem;
+    }
+
+    .legend-icon {
+        width: 14px;
+        height: 14px;
+    }
+
+    .progress-label {
+        font-size: 0.6rem;
+    }
+
+    .progress-value {
+        font-size: 0.6rem;
+    }
+
+    .district-name {
+        font-size: 0.6rem;
+    }
+
+    .stacked-label {
+        font-size: 0.6rem;
+    }
+
+    .progress-percentage {
+        font-size: 0.55rem;
+    }
+
+    .custom-progress {
+        height: 12px;
+    }
+
+    .col-lg-3,
+    .col-lg-9 {
+        max-width: 100%;
+        flex: 0 0 100%;
+    }
+
+    .col-md-4 {
+        flex: 0 0 33.333%;
+        max-width: 33.333%;
+    }
+
+    .col-sm-4 {
+        flex: 0 0 33.333%;
+        max-width: 33.333%;
+    }
+}
+
+@media (min-width: 768px) {
+    .col-md-2-4 {
+        flex: 0 0 20%;
+        max-width: 20%;
+    }
+}
+
+
+/* Extra small screens (mobile: max-width: 575.98px) */
+@media (max-width: 575.98px) {
+    .navbar {
+        height: auto;
+        padding: 0.3rem;
+    }
+
+    .navbar-brand img {
+        max-height: 28px;
+        display: inline-block !important;
+    }
+
+    .navbar-tabs {
+        display: grid !important;
+        grid-template-columns: repeat(4, minmax(0, 1fr));
+        gap: 0.2rem;
+        width: 100%;
+        margin-top: 0.4rem;
+    }
+
+    .navbar .navbar-tabs .nav-tab {
+        text-align: center;
+        padding: 0.25rem 0.3rem;
+        font-size: 0.6rem;
+    }
+
+    .main-content {
+        position: relative;
+        top: 150px;
+        height: calc(100vh - 150px);
+        bottom: 0;
+        left: 0;
+        right: 0;
+        padding: 0.5rem;
+        padding-bottom: 0.5rem;
+        /*new*/
+        overflow-y: auto !important;
+        overflow-x: hidden;
+    }
+
+    .row-slim .col-6 {
+        flex: 0 0 33.333%;
+        max-width: 33.333%;
+        margin-bottom: 0 !important;
+        padding-bottom: 0 !important;
+    }
+
+    .stat-card {
+        padding: 0.3rem !important;
+    }
+
+    .stat-card .card-header {
+        font-size: 0.65rem;
+        padding: 0.3rem;
+        margin-top: 0;
+    }
+
+    .stat-card .card-body {
+        padding: 0.3rem;
+    }
+
+    .stat-card .card-body h5 {
+        font-size: 0.85rem;
+    }
+
+    .stat-card .card-body small {
+        font-size: 0.6rem;
+    }
+
+    .city-card .card-header {
+        font-size: 0.65rem;
+        padding: 0.3rem;
+    }
+
+    .city-card .card-body {
+        padding: 0.3rem;
+    }
+
+    .city-card .card-body p {
+        font-size: 0.9rem;
+    }
+
+    .row-main {
+        flex-direction: row;
+        min-height: auto;
+        gap: 0.75rem;
+        padding-bottom: 4px;
+        /*new*/
+    }
+
+    .charts-panel {
+        margin-bottom: 0;
+        padding: 0.5rem;
+    }
+
+    .chart-header {
+        padding: 0.4rem;
+        font-size: 0.7rem;
+    }
+
+    .chart-body {
+        padding: 0.5rem;
+        min-height: 100px;
+    }
+
+    .chart-wrapper {
+        min-height: 120px;
+        margin-bottom: 0.5rem;
+        border-radius: 4px;
+    }
+
+    .chart-wrapper:last-child {
+        margin-bottom: 0;
+    }
+
+    .map-panel {
+        border-radius: 4px;
+    }
+
+    #map {
+        min-height: 400px;
+        /*new*/
+    }
+
+    .map-overlay-box {
+        max-width: 90vw;
+        min-width: 130px;
+        padding: 0.5rem;
+        border-radius: 4px;
+    }
+
+    .map-overlay-box h6 {
+        font-size: 0.75rem;
+        margin-bottom: 0.25rem;
+    }
+
+    .close-btn {
+        width: 20px;
+        height: 20px;
+        font-size: 1.2rem;
+    }
+
+    .legend-checkbox {
+        width: 12px;
+        height: 12px;
+    }
+
+    .legend-label {
+        font-size: 0.55rem;
+    }
+
+    .legend-icon {
+        width: 12px;
+        height: 12px;
+    }
+
+    .progress-label {
+        font-size: 0.55rem;
+    }
+
+    .progress-value {
+        font-size: 0.55rem;
+        padding: 1px 4px;
+    }
+
+    .district-name {
+        font-size: 0.55rem;
+    }
+
+    .district-name::before {
+        margin-right: 3px;
+        font-size: 0.7em;
+    }
+
+    .stacked-label {
+        font-size: 0.55rem;
+    }
+
+    .stacked-segment .seg-percent {
+        font-size: 0.55rem;
+    }
+
+    .progress-percentage {
+        font-size: 0.5rem;
+        padding: 1px 4px;
+    }
+
+    .custom-progress {
+        height: 10px;
+    }
+
+    .custom-progress-bar {
+        padding-right: 8px;
+    }
+
+    .stacked-legend {
+        font-size: 0.65rem;
+        gap: 5px;
+        flex-wrap: wrap;
+    }
+
+    .legend-item {
+        margin-bottom: 2px;
+        gap: 3px;
+    }
+
+    .legend-color {
+        width: 12px;
+        height: 12px;
+    }
+
+    .col-lg-3,
+    .col-lg-9 {
+        max-width: 100%;
+        flex: 0 0 100%;
+    }
+
+    .col-md-4,
+    .col-sm-4 {
+        flex: 0 0 50%;
+        max-width: 50%;
+    }
+
+    .col-lg {
+        flex: 0 0 50%;
+        max-width: 50%;
+    }
+}

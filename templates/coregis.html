@@ -1,0 +1,168 @@
+{% extends 'base.html' %}
+{% block content %}
+{% load static %}
+<link rel="stylesheet" href="{% static 'assets/css/modules/coregis.css' %}">
+
+    <!-- Main Content -->
+    <!-- Main Content -->
+    <!-- Main Content -->
+    <div class="main-content container-fluid pt-0 d-flex flex-row flex-column">
+        <div class="row g-3 flex-grow-1 row-main">
+            <div class="col-12 col-sm-6 col-md-4">
+                <div class="card city-card border-2 p-0 text-white position-relative overflow-hidden">
+                    <div class="card-img-container" onclick="openDHA('karachi')">
+                        <img src="{% static 'assets/img/images/DHAKLogo.png' %}" alt="DHA K">
+                    </div>
+                     <div class="card-header">
+                        <div class="d-flex align-items-center justify-content-start ms-4">
+                            <h6>DHA Karachi</h6>
+                            <button id="" class="card-icon me-2" title="icon">
+                                <i class="bi bi-arrow-right"></i>
+                            </button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="col-12 col-sm-6 col-md-4">
+                <div class="card city-card border-2 p-0 overflow-hidden">
+                    <div class="card-img-container" onclick="openDHA('lahore')">
+                        <img src="{% static 'assets/img/images/DHALlogo.png' %}" alt="DHA L">
+                    </div>
+                     <div class="card-header">
+                        <div class="d-flex align-items-center justify-content-start ms-4">
+                            <h6>DHA Lahore</h6>
+                            <button id="" class="card-icon me-2" title="icon">
+                                <i class="bi bi-arrow-right"></i>
+                            </button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="col-12 col-sm-6 col-md-4">
+                <div class="card city-card border-2 p-0 text-white position-relative overflow-hidden">
+                    <div class="card-img-container" onclick="openDHA('islamabad')">
+                        <img src="{% static 'assets/img/images/DHAIRlogo.png' %}" alt="DHAIR">
+                    </div>
+                     <div class="card-header">
+                        <div class="d-flex align-items-center justify-content-start ms-4">
+                            <h6>DHA Islamabad</h6>
+                            <button id="" class="card-icon me-2" title="icon">
+                                <i class="bi bi-arrow-right"></i>
+                            </button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="col-12 col-sm-6 col-md-4">
+                <div class="card city-card border-2 p-0 text-white position-relative overflow-hidden">
+                    <div class="card-img-container" onclick="openDHA('bahawalpur')">
+                        <img src="{% static 'assets/img/images/DHABLogo.png' %}" alt="DHAB">
+                    </div>
+                     <div class="card-header">
+                        <div class="d-flex align-items-center justify-content-start ms-4">
+                            <h6>DHA Bahawalpur</h6>
+                            <button id="" class="card-icon me-2" title="icon">
+                                <i class="bi bi-arrow-right"></i>
+                            </button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="col-12 col-sm-6 col-md-4">
+                <div class="card city-card border-2 p-0 text-white position-relative overflow-hidden">
+                    <div class="card-img-container" onclick="openDHA('peshawar')">
+                        <img src="{% static 'assets/img/images/DHAp-Logo' %}.jpg" alt="DHAP">
+                    </div>
+                    <div class="card-header">
+                        <div class="d-flex align-items-center justify-content-start ms-4">
+                            <h6>DHA Peshawar</h6>
+                            <button id="" class="card-icon me-2" title="icon">
+                                <i class="bi bi-arrow-right"></i>
+                            </button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="col-12 col-sm-6 col-md-4">
+                <div class="card city-card border-2 p-0 text-white position-relative overflow-hidden">
+                    <div class="card-img-container" onclick="openDHA('karachi_city')">
+                        <img src="{% static 'assets/img/images/DHACityLogo.png' %}" alt="DHACity">
+                    </div>
+                     <div class="card-header">
+                        <div class="d-flex align-items-center justify-content-start ms-4">
+                            <h6>DHA City</h6>
+                            <button id="" class="card-icon me-2" title="icon">
+                                <i class="bi bi-arrow-right"></i>
+                            </button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="col-12 col-sm-6 col-md-4">
+                <div class="card city-card border-2 p-0 text-white position-relative overflow-hidden">
+                    <div class="card-img-container" onclick="openDHA('Multan')">
+                        <img src="{% static 'assets/img/images/DHAGlogo.png' %}" alt="DHAG">
+                    </div>
+                     <div class="card-header">
+                        <div class="d-flex align-items-center justify-content-start ms-4">
+                            <h6>DHA Gujranwala</h6>
+                            <button id="" class="card-icon me-2" title="icon">
+                                <i class="bi bi-arrow-right"></i>
+                            </button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="col-12 col-sm-6 col-md-4">
+                <div class="card city-card border-2 p-0 text-white position-relative overflow-hidden">
+                    <div class="card-img-container" onclick="openDHA('Multan')">
+                        <img src="{% static 'assets/img/images/DHAMlogo.png' %}" alt="DHAM">
+                    </div>
+                     <div class="card-header">
+                        <div class="d-flex align-items-center justify-content-start ms-4">
+                            <h6>DHA Multan</h6>
+                            <button id="" class="card-icon me-2" title="icon">
+                                <i class="bi bi-arrow-right"></i>
+                            </button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="col-12 col-sm-6 col-md-4">
+                <div class="card city-card border-2 p-0 text-white position-relative overflow-hidden">
+                    <div class="card-img-container" onclick="openDHA('Multan')">
+                        <img src="{% static 'assets/img/images/DHAQLogo.jpg' %}" alt="DHAQ">
+                    </div>
+                     <div class="card-header">
+                        <div class="d-flex align-items-center justify-content-start ms-4">
+                            <h6>DHA Quetta</h6>
+                            <button id="" class="card-icon me-2" title="icon">
+                                <i class="bi bi-arrow-right"></i>
+                            </button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="small authors fw-light px-2 p-0 m-0">
+            Developed by <a href="https://www.r2v.com" target="_blank">www.r2v.com</a>
+        </div>
+
+    </div>
+
+
+<script>
+  function openDHA(city) {
+    const key = `IP_${city.toLowerCase()}`;
+    const ip = window[key];
+
+    if (!ip || ip === "undefined" || ip === "") {
+      alert(`IP not configured for ${city}`);
+      return;
+    }
+
+    // open the IP in new tab
+    window.open(`https://${ip}/`, "_blank");
+  }
+</script>
+{% endblock %}

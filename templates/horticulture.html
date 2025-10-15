@@ -5,21 +5,7 @@
     <div class="main-content container-fluid pt-0 d-flex flex-row flex-column">
 
         <!-- Row - 1 for Stats-cards -->
-        <div class="row g-2 mb-2 row-slim">
-            <div class="col-lg mt-0 mb-0 pt-2">
-                <div id="stat-card-1" class="card stat-card border-2 p-0 fade-in selected"
-                    style="animation-delay: 0.1s;">
-                    <div class="card-header">
-                        <span class="">Horticulture Points</span>
-                    </div>
-                    <div class="card-body mt-0 p-0 ">
-                        <h5 class="mb-0 px-2">5,990</h5>
-                        <!-- <small class="text-muted">408,000</small> -->
-                        <small class="text-muted">Km</small>
-                    </div>
-                </div>
-            </div>
-
+        <div id = "stat-row" class="row g-2 mb-2 row-slim">
             <div class="col-lg mt-0 mb-0 pt-2">
                 <div id="stat-card-2" class="card stat-card border-2 p-0 fade-in"
                     style="animation-delay: 0.2s;">
@@ -34,10 +20,39 @@
                 </div>
             </div>
 
+            <div class="col-lg mt-0 mb-0 pt-2">
+                <div id="stat-card-1" class="card stat-card border-2 p-0 fade-in selected"
+                    style="animation-delay: 0.1s;">
+                    <div class="card-header">
+                        <span class="">Horticulture Lines</span>
+                    </div>
+                    <div class="card-body mt-0 p-0 ">
+                        <h5 class="mb-0 px-2">5,990</h5>
+                        <!-- <small class="text-muted">408,000</small> -->
+                        <small class="text-muted">Km</small>
+                    </div>
+                </div>
+            </div>
+
+
+            <div class="col-lg mt-0 mb-0 pt-2">
+                <div id="stat-card-1" class="card stat-card border-2 p-0 fade-in selected"
+                    style="animation-delay: 0.1s;">
+                    <div class="card-header">
+                        <span class="">Horticulture Points</span>
+                    </div>
+                    <div class="card-body mt-0 p-0 ">
+                        <h5 class="mb-0 px-2">5,990</h5>
+                        <!-- <small class="text-muted">408,000</small> -->
+                        <small class="text-muted">Km</small>
+                    </div>
+                </div>
+            </div>
+
         </div>
 
         <!-- Row - 2 for City-cards -->
-        <div class="row g-2 mb-2 row-slim">
+        <div id = "station-cards" class="row g-2 mb-2 row-slim">
             <div class="col-6 col-sm-4 col-md-4 col-lg">
                 <div class="card city-card city-card-khi border-2 p-0" id="khi">
                     <div class="card-header mt-1">
@@ -347,5 +362,398 @@
 
 
     </div>
+
+
+    
+    <script>
+
+
+let horticultureData;
+
+
+document.addEventListener('DOMContentLoaded', function () {
+    showSkeleton(".card-body", 2);
+    showSkeleton('.progress-item',1);
+    // Call the API when page loads
+    fetchHorticultureData();
+});
+
+
+CATEGORIES = {
+        "Area_Kanals": "Area",
+        "Length_Km": "Lines",
+        "Points": "Points",
+}
+
+
+UNITS = {
+     "Area_Kanals": "Kanals",
+        "Length_Km": "Kilometers",
+        "Points": "Points",
+}
+
+
+// Fetch with cache
+async function fetchHorticultureData() {
+
+    fetch("{% url 'horticulture_summary' %}")
+        .then(response => response.json())
+        .then(data => {
+            data.stations = sortStationsGlobally(data.stations);
+            horticultureData = data; // ✅ Store globally
+            updateStatCards(horticultureData.total_summary);
+            updateStationCards(horticultureData.stations);
+            updateProgressBars(horticultureData.stations);
+        })
+        .catch(error => {
+            console.error('Error fetching land summary:', error);
+            alert("Failed to fetch land summary. Please try again later.");
+        })
+        .finally(() => {
+            hideLoader();
+            hideSkeleton(".card-body");
+        });
+}
+
+// Render stat cards
+function updateStatCards(summary) {
+  const container = document.getElementById("stat-row");
+  container.innerHTML = "";
+
+
+    const categories = Object.keys(CATEGORIES);
+
+    categories.forEach((cat, i) => {
+    const value = summary[cat] || 0;
+
+    console.log(cat, value, i)
+    const card = document.createElement("div");
+    card.className = `col-lg col-sm-6 mt-1 mb-0 pt-2`;
+
+    card.innerHTML = `
+            <div id="stat-card-1" class="card stat-card border-2 p-0 ${i == 0 ? "selected" : ""}"  style="animation-delay: 0.1s;"  data-category="${cat}">
+                <div class="card-header">
+                    <span class="">Horticulture ${CATEGORIES[cat]}</span>
+                </div>
+                <div class="card-body mt-0 p-0 ">
+                    <h5 class="mb-0 px-2">${value.toLocaleString()}</h5>
+                    <small class="text-muted">${UNITS[cat]}</small>
+                </div>
+            </div>
+    `;
+    container.appendChild(card);
+  });
+
+
+
+
+}
+
+// Render station-wise cards
+function updateStationCards(stations, category = "Area_Kanals") {
+  const container = document.getElementById("station-cards");
+  container.innerHTML = "";
+
+  stations.forEach(st => {
+    const phase1 = st.phases.phase1?.[category] || 0;
+    const phase2 = st.phases.phase2?.[category] || 0;
+    const total = phase1 + phase2;
+
+    const card = document.createElement("div");
+    card.className = "col col-sm-6 -sm-4 col-md-4 col-lg";
+
+
+      card.innerHTML = `
+            <div class="card city-card city-card-khi border-2 p-0" id="khi" data-station="${st.station_name}">
+                <div class="card-header mt-1">
+                    <h6 class="mb-0 px-2">${mapDHATag[st.station_name]}</h6>
+                </div>
+                <div class="card-body mt-1 p-0">
+                    <p class="mb-0 px-2">${total.toLocaleString()} <small class="text-muted">${UNITS[category]}</small></p>
+
+                </div>
+            </div>`;
+    container.appendChild(card);
+  });
+}
+
+
+// -------------------------
+// Selections
+// -------------------------
+
+// Stat Cards
+document.addEventListener('click', function (e) {
+    const card = e.target.closest('.stat-card'); 
+    if (!card) return; // Not a stat-card, ignore it
+
+    // Remove selected from all
+    document.querySelectorAll('.stat-card').forEach(c => c.classList.remove('selected'));
+    document.querySelectorAll('.city-card').forEach(c => c.classList.remove('selected'));
+
+    // Add selected to clicked one
+    card.classList.add('selected');
+
+    const id = card.id;
+    const type = id.replace('stat-card-', '');
+
+    const category = e.target.closest('.stat-card')?.dataset.category
+
+    updateStationCards(horticultureData.stations, category);
+
+
+    // Generate Cards
+    updateProgressBars(horticultureData.stations, category);
+    resetMap();
+    const chartTitle = type.charAt(0).toUpperCase() + type.slice(1);
+    // document.querySelector('#phaseChartTitle').textContent = `${category} Plot - DHA Wise Statistics`;
+});
+
+
+
+
+// Station Cards
+document.addEventListener('click', function (e) {
+    const card = e.target.closest('.city-card'); 
+    if (!card) return; // Not a stat-card, ignore it
+
+    // Remove selected from all
+    document.querySelectorAll('.city-card').forEach(c => c.classList.remove('selected'));
+
+    // Add selected to clicked one
+    card.classList.add('selected');
+
+    const id = card.id;
+    const type = id.replace('city-card-', '');
+
+
+    const station_name = e.target.closest('.city-card')?.dataset.station;
+
+    const station = horticultureData.stations.find(st => st.station_name === station_name);
+
+    const selectedCard = document.querySelector('.stat-card.selected');
+    const category = selectedCard ? selectedCard.dataset.category : null;
+
+    setMap(category, null,mapDHATag[station_name]);
+
+    updateStationBarChart(station);
+    updateStationPieChart(station);
+});
+
+
+
+// -------------------------
+// Graphs
+// -------------------------
+
+
+// -------------------------
+// Update Progress Bars
+// -------------------------
+
+function updateProgressBars(stations, selectedType = 'Area_Kanals') {
+    const panel = document.getElementById('progressbarspanel');
+    const title = panel.querySelector('.chart-header');
+
+    // Update heading
+    // const titleMap = {
+    //     possessed: 'Possessed Land — DHA Wise Statistics',
+    //     unpossessed: 'Unpossessed Land — DHA Wise Statistics',
+    //     unpurchased: 'Possessed Not Purchased — DHA Wise Statistics',
+    //     hold: 'Hold Land — DHA Wise Statistics',
+    //     litigation: 'Litigation Land — DHA Wise Statistics'
+    // };
+    // title.textContent = titleMap[selectedType] || 'Land Summary — DHA Wise Statistics';
+
+    // Build HTML dynamically
+    const container = panel.querySelector('.progress-container');
+    container.innerHTML = ''; // Clear old bars
+
+    stations.forEach(st => {
+        const name = st.station_name;
+        // const cls = name.toLowerCase().replace('_', '');
+
+        const cls =  mapCityToId[st.station_name].replace('#', '');
+
+
+        const val = st.summary[selectedType];
+
+        const total = horticultureData.total_summary[selectedType] || 1; // avoid divide-by-zero
+
+        const percent = ((val / total) * 100).toFixed(1);
+
+
+        const item = document.createElement('div');
+        item.className = 'progress-item mb-2';
+        item.innerHTML = `
+            <div class="progress-label">
+                <span class="district-name">${mapDHATag[st.station_name]}</span>
+                <div class="d-flex inline-flex">
+                    <span class="progress-value">${val.toLocaleString()} / ${total.toLocaleString()} Total ${UNITS[selectedType]}</span>
+                </div>
+            </div>
+            <div class="custom-progress">
+                <div class="custom-progress-bar ${cls}" style="width: ${percent}%">
+                    <span class="progress-percentage">${percent}%</span>
+                </div>
+            </div>`;
+        container.appendChild(item);
+    });
+}
+
+
+
+function updateStationBarChart(station) {
+  const totals = station.summary || {};
+  const name = station.station_name || 'Unknown';
+
+  // Update chart title
+  document.querySelector('#stationwisechartpanel .chart-wrapper:nth-child(2) .chart-header')
+    .textContent = `${mapDHATag[name]} - Horitculture Summary`;
+
+
+  const values = [
+    totals.Area_Kanals || 0,
+    totals.Length_Km || 0,
+    totals.Points || 0,
+  ];
+
+  const colors = ['#f99d5f', '#75f577', '#25e17a', '#92a5f9', '#6cadee', '#c95a5a'];
+  const categories = Object.values(CATEGORIES);
+
+  Highcharts.chart('bar-chart', {
+    chart: {
+      type: 'column',
+      backgroundColor: 'transparent',
+      height: '66%',
+      spacing: [0, 0, 0, 0],
+      marginLeft: 2
+    },
+    title: { text: null },
+    xAxis: {
+      categories,
+      title: { text: 'Categories' },
+      labels: { enabled: false },
+      lineWidth: 0,
+      tickLength: 0
+    },
+    yAxis: {
+      title: { text: '' },
+      labels: {
+        style: { fontSize: '9px', color: '#333' }
+      },
+      gridLineColor: '#e2e8f0'
+    },
+    legend: { enabled: false },
+    credits: { enabled: false },
+    plotOptions: {
+      column: {
+        pointPadding: 0.7,
+        groupPadding: 0.05,
+        pointWidth: 40,
+        borderRadius: 4,
+        states: {
+          hover: { brightness: -0.4 }
+        },
+        dataLabels: {
+          enabled: true,
+          useHTML: true,
+          inside: false,
+          y: -18,
+          style: {
+            color: '#3b3f46',
+            fontSize: '9px',
+            fontWeight: 'normal',
+            textOutline: 'none',
+            textShadow: 'none'
+          },
+          formatter: function () {
+            return `${this.point.name}:<br/>
+                    <strong>${Highcharts.numberFormat(this.y, 0)}</strong><br/>`;
+          }
+        }
+      }
+    },
+    series: [{
+      name: 'Count',
+      data: categories.map((cat, i) => ({
+        name: cat,
+        y: values[i],
+        color: colors[i]
+      })),
+      colorByPoint: true
+    }]
+  });
+}
+
+
+
+function updateStationPieChart(station) {
+
+    
+
+
+    // const phases = station.phases;
+    // if (!phases) return;
+
+    // const data = Object.entries(phases).map(([name, vals]) => ({
+    //     name: `${name}`,
+    //     y: vals.purchased || 0
+    // }));
+
+
+    // Get selected category from active stat-card
+    const selectedCard = document.querySelector('.stat-card.selected');
+    const category = selectedCard ? selectedCard.dataset.category : null;
+
+    // Update chart title
+    document.querySelector('#stationwisechartpanel .chart-wrapper:nth-child(1) .chart-header')
+    .textContent = `${mapDHATag[station.station_name]} - Phase Wise ${CATEGORIES[category]} Distribution`;
+
+    // Bail early if no category or no phases
+    if (!category || !station.phases) return;
+
+    // Build Highcharts-compatible data dynamically
+    const data = Object.entries(station.phases).map(([phaseName, values]) => ({
+        name: phaseName.replace(/([a-zA-Z]+)(\d+)/, (_, n, d) => n.charAt(0).toUpperCase() + n.slice(1) + '-' + d),
+        y: Number(values[category]) || 0
+    }));
+
+
+    
+
+    Highcharts.chart('pie-chart', {
+        chart: {
+            type: 'pie',
+            backgroundColor: 'transparent',
+            height: '60%'
+        },
+        title: { text: null },
+        tooltip: {
+            pointFormat: '{series.name}: <b>{point.y:.2f}</b>'
+        },
+        plotOptions: {
+            pie: {
+                allowPointSelect: true,
+                cursor: 'pointer',
+                dataLabels: {
+                    enabled: true,
+                    format: '<b>{point.name}</b>: {point.percentage:.1f} %'
+                }
+            }
+        },
+        credits: { enabled: false },
+        series: [{
+            name: 'Total',
+            colorByPoint: true,
+            data
+        }]
+    });
+}
+
+
+
+    </script>
+
 
 {% endblock %}

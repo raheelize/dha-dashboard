@@ -1,5 +1,5 @@
 ﻿/* ========== CSS VARIABLES ========== */
-@import url("../../fonts/css/fonts.css");
+@import url("../fonts/css/font.css");
 
 
 /* ========== GENERAL ========== */
@@ -255,10 +255,10 @@ body {
 }
 
 .stat-card .card-body h5 {
-  /* font-family: "Raleway", "Open Sans", "Inter", sans-serif; */
+  font-family: "Raleway", "Open Sans", "Inter", sans-serif;
   font-size: 1.05rem;
   font-weight: 100;
-  color: #64748b !important;
+  color: #64748b;
   text-align: center;
   text-shadow: 0px 0 2px rgba(63, 58, 58, 0.4);
 }
@@ -311,7 +311,7 @@ body {
 }
 
 .city-card .card-body p {
-  /* font-family: "Raleway", "Open Sans", "Inter", sans-serif; */
+  font-family: "Raleway", "Open Sans", "Inter", sans-serif;
   font-size: 1.057rem;
   font-weight: 200;
   color: #64748b;
@@ -515,15 +515,7 @@ body {
   transform: scale(1.3);
 }
 
-
-
 /* ====== Map Legend Content ====== */
-
-
-#legend{
-  display: none !important;
-}
-
 .legend-content {
   display: flex;
   flex-direction: column;
@@ -924,10 +916,7 @@ body {
 
 /* ========== RESPONSIVE ========== */
 
-/* Extra large screens (min-width: 1200px) */
-@media (min-width: 1200px) {
- 
-}
+
 
 /* Large screens (min-width: 992px) */
 @media (min-width: 992px) {
@@ -978,10 +967,12 @@ body {
   overflow-y: auto;
   overflow-x: hidden;
   padding: 1rem;
+  padding-bottom: 2rem;
   }
 
   .row-main {
     flex-direction: row;
+    padding-bottom: 4px; /*new*/
   }
 
   .charts-panel {
@@ -999,7 +990,7 @@ body {
   }
 
   #map {
-    min-height: 400px;
+    min-height: 500px; /*new*/
   }
 
   .col-lg-3,
@@ -1090,6 +1081,7 @@ body {
   .row-main {
     flex-direction: row;
     min-height: auto;
+    padding-bottom: 10px; /*new*/
   }
 
   .charts-panel {
@@ -1117,7 +1109,7 @@ body {
   }
 
   #map {
-    min-height: 300px;
+    min-height: 400px; /*new*/
   }
 
   .map-overlay-box {
@@ -1220,6 +1212,7 @@ body {
     left: 0;
     right: 0;
     padding: 0.5rem;
+    padding-bottom: 0.5rem; /*new*/
     overflow-y: auto !important;
     overflow-x: hidden;
   }
@@ -1270,6 +1263,7 @@ body {
     flex-direction: row;
     min-height: auto;
     gap: 0.75rem;
+    padding-bottom: 4px; /*new*/
   }
 
   .charts-panel {
@@ -1302,7 +1296,7 @@ body {
   }
 
   #map {
-    min-height: 300px;
+    min-height: 400px; /*new*/
   }
 
   .map-overlay-box {

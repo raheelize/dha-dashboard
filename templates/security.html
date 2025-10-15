@@ -257,31 +257,6 @@
 
     <script>
         
-const mapCityToId = {
-    'Karachi': '#khi',
-    'Karachi_City': '#city',
-    'Lahore': '#lhr',
-    'Islamabad': '#isl',
-    'Quetta': '#qut',
-    'Multan': '#mul',
-    'Bahawalpur': '#bhwp',
-    'Gujranwala': '#guj',
-    'Peshawar': '#psw',
-};
-
-
-const mapDHATag = {
-    'Karachi': 'DHA K',
-    'Karachi_City': 'DHA CITY',
-    'Lahore': 'DHA L',
-    'Islamabad': 'DHA IR',
-    'Quetta': 'DHA Q',
-    'Multan': 'DHA M',
-    'Bahawalpur': 'DHA B',
-    'Gujranwala': 'DHA G',
-    'Peshawar': 'DHA P',
-};
-
 
 let securityData;
 const CATEGORIES = ["Check Post","QRF","Picquet","Camera","Incidents"];
@@ -301,6 +276,7 @@ async function fetchSecurityData() {
     fetch("{% url 'security_summary' %}")
         .then(response => response.json())
         .then(data => {
+            data.stations = sortStationsGlobally(data.stations);
             securityData = data; // ✅ Store globally
             updateStatCards(securityData.total_summary);
             updateStationCards(securityData.stations);
@@ -406,8 +382,8 @@ document.addEventListener('click', function (e) {
 
     // Generate Cards
     updateProgressBars(securityData.stations, category);
+    resetMap();
     const chartTitle = type.charAt(0).toUpperCase() + type.slice(1);
-    document.querySelector('#phaseChartTitle').textContent = `${category} Plot - DHA Wise Statistics`;
 });
 
 
@@ -431,6 +407,11 @@ document.addEventListener('click', function (e) {
     const station_name = e.target.closest('.city-card')?.dataset.station;
 
     const station = securityData.stations.find(st => st.station_name === station_name);
+
+    const selectedCard = document.querySelector('.stat-card.selected');
+    const category = selectedCard ? selectedCard.dataset.category : null;
+
+    setMap(category, null,mapDHATag[station_name]);
 
     updateStationBarChart(station);
     updateStationPieChart(station);
@@ -634,6 +615,7 @@ function updateStationPieChart(station) {
                 }
             }
         },
+        credits: { enabled: false },
         series: [{
             name: 'Total',
             colorByPoint: true,

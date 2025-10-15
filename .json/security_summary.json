@@ -1,0 +1,264 @@
+{
+  "total_summary": {
+    "Camera": 117,
+    "Check Post": 63,
+    "Picquet": 18,
+    "QRF": 18,
+    "Incidents": 0
+  },
+  "stations": [
+    {
+      "station_name": "Karachi_City",
+      "totals": {
+        "Camera": 13,
+        "Total_Features": 116,
+        "Check Post": 7,
+        "Picquet": 2,
+        "QRF": 2
+      },
+      "phases": {
+        "phase1": {
+          "Camera": 7,
+          "Check Post": 4,
+          "Picquet": 1,
+          "QRF": 1,
+          "Incidents": 0,
+          "Total_Features": 64
+        },
+        "phase2": {
+          "Camera": 6,
+          "Check Post": 3,
+          "Picquet": 1,
+          "QRF": 1,
+          "Incidents": 0,
+          "Total_Features": 52
+        }
+      }
+    },
+    {
+      "station_name": "Gujranwala",
+      "totals": {
+        "Camera": 13,
+        "Total_Features": 116,
+        "Check Post": 7,
+        "Picquet": 2,
+        "QRF": 2
+      },
+      "phases": {
+        "phase1": {
+          "Camera": 7,
+          "Check Post": 4,
+          "Picquet": 1,
+          "QRF": 1,
+          "Incidents": 0,
+          "Total_Features": 64
+        },
+        "phase2": {
+          "Camera": 6,
+          "Check Post": 3,
+          "Picquet": 1,
+          "QRF": 1,
+          "Incidents": 0,
+          "Total_Features": 52
+        }
+      }
+    },
+    {
+      "station_name": "Lahore",
+      "totals": {
+        "Camera": 13,
+        "Total_Features": 116,
+        "Check Post": 7,
+        "Picquet": 2,
+        "QRF": 2
+      },
+      "phases": {
+        "phase1": {
+          "Camera": 7,
+          "Check Post": 4,
+          "Picquet": 1,
+          "QRF": 1,
+          "Incidents": 0,
+          "Total_Features": 64
+        },
+        "phase2": {
+          "Camera": 6,
+          "Check Post": 3,
+          "Picquet": 1,
+          "QRF": 1,
+          "Incidents": 0,
+          "Total_Features": 52
+        }
+      }
+    },
+    {
+      "station_name": "Multan",
+      "totals": {
+        "Camera": 13,
+        "Total_Features": 116,
+        "Check Post": 7,
+        "Picquet": 2,
+        "QRF": 2
+      },
+      "phases": {
+        "phase1": {
+          "Camera": 7,
+          "Check Post": 4,
+          "Picquet": 1,
+          "QRF": 1,
+          "Incidents": 0,
+          "Total_Features": 64
+        },
+        "phase2": {
+          "Camera": 6,
+          "Check Post": 3,
+          "Picquet": 1,
+          "QRF": 1,
+          "Incidents": 0,
+          "Total_Features": 52
+        }
+      }
+    },
+    {
+      "station_name": "Quetta",
+      "totals": {
+        "Camera": 13,
+        "Total_Features": 116,
+        "Check Post": 7,
+        "Picquet": 2,
+        "QRF": 2
+      },
+      "phases": {
+        "phase1": {
+          "Camera": 7,
+          "Check Post": 4,
+          "Picquet": 1,
+          "QRF": 1,
+          "Incidents": 0,
+          "Total_Features": 64
+        },
+        "phase2": {
+          "Camera": 6,
+          "Check Post": 3,
+          "Picquet": 1,
+          "QRF": 1,
+          "Incidents": 0,
+          "Total_Features": 52
+        }
+      }
+    },
+    {
+      "station_name": "Karachi",
+      "totals": {
+        "Camera": 13,
+        "Total_Features": 116,
+        "Check Post": 7,
+        "Picquet": 2,
+        "QRF": 2
+      },
+      "phases": {
+        "phase1": {
+          "Camera": 7,
+          "Check Post": 4,
+          "Picquet": 1,
+          "QRF": 1,
+          "Incidents": 0,
+          "Total_Features": 64
+        },
+        "phase2": {
+          "Camera": 6,
+          "Check Post": 3,
+          "Picquet": 1,
+          "QRF": 1,
+          "Incidents": 0,
+          "Total_Features": 52
+        }
+      }
+    },
+    {
+      "station_name": "Bahawalpur",
+      "totals": {
+        "Camera": 13,
+        "Total_Features": 116,
+        "Check Post": 7,
+        "Picquet": 2,
+        "QRF": 2
+      },
+      "phases": {
+        "phase1": {
+          "Camera": 7,
+          "Check Post": 4,
+          "Picquet": 1,
+          "QRF": 1,
+          "Incidents": 0,
+          "Total_Features": 64
+        },
+        "phase2": {
+          "Camera": 6,
+          "Check Post": 3,
+          "Picquet": 1,
+          "QRF": 1,
+          "Incidents": 0,
+          "Total_Features": 52
+        }
+      }
+    },
+    {
+      "station_name": "Islamabad",
+      "totals": {
+        "Camera": 13,
+        "Total_Features": 116,
+        "Check Post": 7,
+        "Picquet": 2,
+        "QRF": 2
+      },
+      "phases": {
+        "phase1": {
+          "Camera": 7,
+          "Check Post": 4,
+          "Picquet": 1,
+          "QRF": 1,
+          "Incidents": 0,
+          "Total_Features": 64
+        },
+        "phase2": {
+          "Camera": 6,
+          "Check Post": 3,
+          "Picquet": 1,
+          "QRF": 1,
+          "Incidents": 0,
+          "Total_Features": 52
+        }
+      }
+    },
+    {
+      "station_name": "Peshawar",
+      "totals": {
+        "Camera": 13,
+        "Total_Features": 116,
+        "Check Post": 7,
+        "Picquet": 2,
+        "QRF": 2
+      },
+      "phases": {
+        "phase1": {
+          "Camera": 7,
+          "Check Post": 4,
+          "Picquet": 1,
+          "QRF": 1,
+          "Incidents": 0,
+          "Total_Features": 64
+        },
+        "phase2": {
+          "Camera": 6,
+          "Check Post": 3,
+          "Picquet": 1,
+          "QRF": 1,
+          "Incidents": 0,
+          "Total_Features": 52
+        }
+      }
+    }
+  ],
+  "timestamp": "2025-10-14T15:34:11.679148"
+}

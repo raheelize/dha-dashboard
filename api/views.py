@@ -147,43 +147,28 @@ def land_summary(request):
 
 
 
-
 @csrf_exempt
 def town_summary(request):
-    
-    
+    # Build station URLs dynamically
     STATION_URLS = {
         name.title(): f"http://{cfg['dhaip']}/geoserver/dha_coregis_v2/ows?service=WFS&version=1.0.0&request=GetFeature&typeName=dha_coregis_v2%3Aphase_plot_category_summary&maxFeatures=50&outputFormat=application%2Fjson&authkey={cfg['auth_key']}"
         for name, cfg in dha_configs.items()
     }
-    
+
+    CATEGORIES = ["Residential", "Commercial", "Education", "Amenities", "Parks", "Total_Plots"]
     result = {
-        "total_summary": {
-            "Residential": 0,
-            "Commercial": 0,
-            "Education": 0,
-            "Amenities": 0,
-            "Parks": 0,
-            "Total_Plots": 0
-        },
+        "total_summary": {cat: 0 for cat in CATEGORIES},
         "stations": []
     }
 
-    for station_name, url in STATION_URLS.items():
-
+    def fetch_station_summary(station_name, url):
+        """Fetch and summarize one station's data"""
         try:
             resp = requests.get(url, timeout=10)
             data = resp.json()
 
             station_summary = {}
-            totals = {
-                "Residential": 0,
-                "Commercial": 0,
-                "Education": 0,
-                "Amenities": 0,
-                "Parks": 0,
-                "Total_Plots": 0
-            }
+            totals = {cat: 0 for cat in CATEGORIES}
 
             for feature in data.get("features", []):
                 props = feature["properties"]
@@ -192,7 +177,7 @@ def town_summary(request):
                 count = int(props.get("Count_of_Plots", 0) or 0)
                 total = int(props.get("Total_Plots", 0) or 0)
 
-                # Normalize category name
+                # Normalize category
                 if "residential" in category:
                     cat_key = "Residential"
                 elif "commercial" in category:
@@ -206,64 +191,291 @@ def town_summary(request):
                 else:
                     continue
 
-                # Initialize phase if not exists
                 if phase not in station_summary:
-                    station_summary[phase] = {
-                        "Residential": 0,
-                        "Commercial": 0,
-                        "Education": 0,
-                        "Amenities": 0,
-                        "Parks": 0,
-                        "Total_Plots": 0
-                    }
+                    station_summary[phase] = {cat: 0 for cat in CATEGORIES}
 
-                # Update per-phase counts
                 station_summary[phase][cat_key] += count
                 station_summary[phase]["Total_Plots"] += total
 
-                # Update totals across all phases
                 totals[cat_key] += count
                 totals["Total_Plots"] += total
 
-                # Update global totals as before
-                result["total_summary"][cat_key] += count
-                result["total_summary"]["Total_Plots"] += total
-
-            # Add this station’s data to results
-            result["stations"].append({
+            return {
                 "station_name": station_name,
                 "phases": station_summary,
                 "totals": totals
-            })
+            }
 
         except Exception as e:
-            print(f"Error fetching {station_name}: {e}")
+            print(f"[Error] {station_name}: {e}")
+            return {
+                "station_name": station_name,
+                "error": str(e),
+                "phases": {},
+                "totals": {cat: 0 for cat in CATEGORIES}
+            }
+
+    # --- Parallel Execution of all station requests ---
+    with ThreadPoolExecutor(max_workers=8) as executor:
+        futures = {executor.submit(fetch_station_summary, name, url): name for name, url in STATION_URLS.items()}
+
+        for future in as_completed(futures):
+            station_result = future.result()
+            result["stations"].append(station_result)
+
+            # Merge station totals into global totals
+            for cat in CATEGORIES:
+                result["total_summary"][cat] += station_result["totals"].get(cat, 0)
 
     result["timestamp"] = datetime.now().isoformat()
-    
     return JsonResponse(result, safe=False, json_dumps_params={"indent": 2})
 
 
+
+@csrf_exempt
+def services_summary(request):
+    """
+    Fetch and summarize infrastructure service stats from all DHA stations.
+    """
+    # Build station URLs dynamically
+    STATION_URLS = {
+        name.title(): f"http://{cfg['dhaip']}/geoserver/dha_coregis_v2/ows"
+                      f"?service=WFS&version=1.0.0&request=GetFeature"
+                      f"&typeName=dha_coregis_v2%3Ainfrastructure_summary"
+                      f"&maxFeatures=100&outputFormat=application%2Fjson"
+                      f"&authkey={cfg['auth_key']}"
+        for name, cfg in dha_configs.items()
+    }
+
+
+    FIELD_MAP = {
+        "Total Roads Planned (KM)": "Roads",
+        "Total Daily Yield (GPD)": "Water Supply",
+        "Total Electricity Production (KV)": "Electricity",
+        "Total Gas Supply (BTU)": "Gas Supply",
+        "Total Sewerage Lines (KM)": "Sewerage",
+        "Total Drain Capacity": "Drainage",
+        "Area Coverage (Kanals)": "Communication",
+    }
+
+    # --- Helpers ---
+    def parse_float(val):
+        try:
+            if val is None:
+                return 0.0
+            if isinstance(val, str):
+                val = val.replace(",", "").strip()
+            return float(val)
+        except Exception:
+            return 0.0
+
+    def summarize_geojson(station_name, url):
+        """
+        Fetch and summarize GeoJSON for one station.
+        """
+        try:
+            response = requests.get(url, timeout=15)
+            response.raise_for_status()
+            data = response.json()
+            features = data.get("features", [])
+            if not features:
+                raise ValueError("No features found")
+
+            summary = {}
+            total_summary = {v: 0 for v in FIELD_MAP.values()}
+
+            for feat in features:
+                props = feat.get("properties", {})
+                phase = str(props.get("Phase") or "Unknown").strip().lower()
+                status = str(props.get("Status") or "Unknown").strip().title()
+
+                if phase not in summary:
+                    summary[phase] = {}
+
+                if status not in summary[phase]:
+                    summary[phase][status] = {v: 0 for v in FIELD_MAP.values()}
+
+                for field, alias in FIELD_MAP.items():
+                    val = parse_float(props.get(field))
+                    summary[phase][status][alias] += val
+                    total_summary[alias] += val
+
+            # Phase totals
+            phase_totals = {phase: {v: 0 for v in FIELD_MAP.values()} for phase in summary}
+            for phase, statuses in summary.items():
+                for status, metrics in statuses.items():
+                    for k, v in metrics.items():
+                        phase_totals[phase][k] += v
+
+            return {
+                "station_name": station_name,
+                "success": True,
+                "phase_wise": summary,
+                "phase_totals": phase_totals,
+                "totals": total_summary,
+            }
+
+        except Exception as e:
+            return {
+                "station_name": station_name,
+                "success": False,
+                "error": str(e),
+                "phase_wise": {},
+                "phase_totals": {},
+                "totals": {v: 0 for v in FIELD_MAP.values()},
+            }
+
+    # --- Parallel execution ---
+    results = []
+    total_summary = {v: 0 for v in FIELD_MAP.values()}
+
+    with ThreadPoolExecutor(max_workers=8) as executor:
+        futures = {executor.submit(summarize_geojson, name, url): name for name, url in STATION_URLS.items()}
+
+        for future in as_completed(futures):
+            result = future.result()
+            results.append(result)
+
+            # Merge into global totals if successful
+            if result["success"]:
+                for key in FIELD_MAP.values():
+                    total_summary[key] += result["totals"].get(key, 0)
+
+    final = {
+        "total_summary": total_summary,
+        "stations": results,
+        "timestamp": datetime.now().isoformat(),
+    }
+
+    return JsonResponse(final, json_dumps_params={"indent": 2})
+
+@csrf_exempt
+def horticulture_summary(request):
+    """
+    Fetch and summarize horticulture data (Polygon/Line/Point)
+    for all DHA stations in parallel, including total and phase-wise values.
+    """
+
+    GEOMETRY_TYPES = {
+        "Polygon": "Horticulture%20Polygon",
+        "LineString": "Horticulture%20Line",
+        "Points": "Horticulture%20Point",
+    }
+
+    # For mapping internal geometry to display-friendly names
+    CATEGORY_MAP = {
+        "Polygon": "Area_Kanals",
+        "LineString": "Length_Km",
+        "Points": "Points"
+    }
+
+    # Build URLs for each station and geometry type
+    STATION_URLS = {
+        name.title(): {
+            geom: (
+                f"http://{cfg['dhaip']}/geoserver/dha_coregis_v2/ows?"
+                f"service=WFS&version=1.0.0&request=GetFeature&"
+                f"typeName=dha_coregis_v2%3A{endpoint}"
+                f"&maxFeatures=1000&outputFormat=application%2Fjson&authkey={cfg['auth_key']}"
+            )
+            for geom, endpoint in GEOMETRY_TYPES.items()
+        }
+        for name, cfg in dha_configs.items()
+    }
+
+    result = {
+        "total_summary": {"Area_Kanals": 0.0, "Length_Km": 0.0, "Points": 0},
+        "stations": []
+    }
+
+    def fetch_station_data(station_name, urls):
+        """Fetch horticulture data and summarize phase-wise + station totals."""
+        station_totals = {"Area_Kanals": 0.0, "Length_Km": 0.0, "Points": 0}
+        phase_summary = {}
+
+        for geom_type, url in urls.items():
+            try:
+                resp = requests.get(url, timeout=10)
+                data = resp.json()
+                features = data.get("features", [])
+
+                value_field = None
+                if geom_type == "Polygon":
+                    value_field = "Area_Kanals"
+                elif geom_type == "LineString":
+                    value_field = "Length_Km"
+
+                for f in features:
+                    props = f.get("properties", {})
+                    phase = props.get("Phase", "").lower().strip() or "unknown"
+
+                    # Initialize phase
+                    if phase not in phase_summary:
+                        phase_summary[phase] = {
+                            "Area_Kanals": 0.0,
+                            "Length_Km": 0.0,
+                            "Points": 0
+                        }
+
+                    if geom_type == "Polygon":
+                        val = float(props.get(value_field, 0) or 0)
+                        phase_summary[phase]["Area_Kanals"] += val
+                        station_totals["Area_Kanals"] += val
+
+                    elif geom_type == "LineString":
+                        val = float(props.get(value_field, 0) or 0)
+                        phase_summary[phase]["Length_Km"] += val
+                        station_totals["Length_Km"] += val
+
+                    elif geom_type == "Points":
+                        phase_summary[phase]["Points"] += 1
+                        station_totals["Points"] += 1
+
+            except Exception as e:
+                print(f"⚠️ Error fetching {geom_type} for {station_name}: {e}")
+
+        return {
+            "station_name": station_name,
+            "summary": station_totals,
+            "phases": phase_summary
+        }
+
+    # Threaded fetching
+    with ThreadPoolExecutor(max_workers=8) as executor:
+        futures = [
+            executor.submit(fetch_station_data, station_name, urls)
+            for station_name, urls in STATION_URLS.items()
+        ]
+        for f in as_completed(futures):
+            station_data = f.result()
+            result["stations"].append(station_data)
+
+            # Add to overall totals
+            result["total_summary"]["Area_Kanals"] += station_data["summary"]["Area_Kanals"]
+            result["total_summary"]["Length_Km"] += station_data["summary"]["Length_Km"]
+            result["total_summary"]["Points"] += station_data["summary"]["Points"]
+
+    result["timestamp"] = datetime.now().isoformat()
+
+    return JsonResponse(result, safe=False, json_dumps_params={"indent": 2})
 
 
 
 @csrf_exempt
 def security_summary(request):
-    
-    
+    CATEGORIES = ["Camera", "Check Post", "Picquet", "QRF", "Incidents"]
+
     STATION_URLS = {
         name.title(): f"http://{cfg['dhaip']}/geoserver/dha_coregis_v2/ows?service=WFS&version=1.0.0&request=GetFeature&typeName=dha_coregis_v2%3Aphase_security_summary&maxFeatures=50&outputFormat=application%2Fjson&authkey={cfg['auth_key']}"
         for name, cfg in dha_configs.items()
     }
 
-    CATEGORIES = ["Camera", "Check Post", "Picquet", "QRF", "Incidents"]
-    
     result = {
         "total_summary": {cat: 0 for cat in CATEGORIES},
         "stations": []
     }
 
-    for station_name, url in STATION_URLS.items():
+    def fetch_station(station_name, url):
         try:
             resp = requests.get(url, timeout=10)
             data = resp.json()
@@ -278,35 +490,39 @@ def security_summary(request):
                 count = props.get("Count_of_Features", 0)
                 total = props.get("Total_Features", 0)
 
-                # Normalize missing/extra categories
                 if category not in CATEGORIES:
                     continue
 
-                # Initialize phase if needed
                 if phase not in phase_summary:
                     phase_summary[phase] = {cat: 0 for cat in CATEGORIES}
                     phase_summary[phase]["Total_Features"] = 0
 
-                # Update counts
                 phase_summary[phase][category] += count
                 phase_summary[phase]["Total_Features"] += total
 
-                # Update station-level total
                 station_summary[category] = station_summary.get(category, 0) + count
                 station_summary["Total_Features"] = station_summary.get("Total_Features", 0) + total
 
-                # Update global total
-                result["total_summary"][category] += count
-
-            result["stations"].append({
+            return {
                 "station_name": station_name,
                 "totals": station_summary,
                 "phases": phase_summary
-            })
+            }
 
         except Exception as e:
-            print(f"⚠️ Failed to fetch {station_name}: {e}")
+            print(f"Failed to fetch {station_name}: {e}")
+            return None
+
+    # Run parallel fetching
+    with ThreadPoolExecutor(max_workers=8) as executor:
+        futures = [executor.submit(fetch_station, name, url) for name, url in STATION_URLS.items()]
+        for future in as_completed(futures):
+            station_data = future.result()
+            if station_data:
+                result["stations"].append(station_data)
+                for cat, val in station_data["totals"].items():
+                    if cat in result["total_summary"]:
+                        result["total_summary"][cat] += val
 
     result["timestamp"] = datetime.now().isoformat()
-    
     return JsonResponse(result, safe=False, json_dumps_params={"indent": 2})
