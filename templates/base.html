@@ -32,7 +32,25 @@
 
 </head>
 
+<style>
+    .watermark-overlay {
+      position: fixed;
+      inset: 0;
+      z-index: 9999;
+      pointer-events: none;
+      opacity: 0.06;
+      background-repeat: repeat;
+      background-size: 300px 200px;
+      background-image: url("data:image/svg+xml;charset=UTF-8,%3Csvg%20xmlns='http://www.w3.org/2000/svg'%20width='300'%20height='200'%3E%3Ctext%20x='50%25'%20y='50%25'%20text-anchor='middle'%20fill='rgba(0,0,0,0.25)'%20font-size='20'%20font-family='Arial'%20transform='rotate(-30%20150%20100)'%3EDHA%20Core%20GIS%3C/text%3E%3C/svg%3E");
+    }
+  </style>
+
+
 <body>
+
+
+
+
 
     <!-- Loader Overlay -->
     <div id="page-loader" class="loader-overlay d-none">
@@ -85,6 +103,8 @@
             </div>
         </div>
     </nav>
+
+    
     {% block content %}
     {% endblock %}
 

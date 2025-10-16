@@ -1,9 +1,7 @@
 
 {% extends 'base.html' %}
 {% block content %}
-{% load static %}
-<link rel="stylesheet" href="{% static 'assets/css/modules/land.css' %}" />
-<!-- Main Content -->
+
 <div class="main-content container-fluid pt-0 d-flex flex-row flex-column">
 
     <!-- Row - 1 for Stats-cards -->
@@ -18,7 +16,7 @@
                 </div>
             </div>
         </div>
-
+        <div class="watermark-overlay"></div>
         <div class="col-6 col-md-4 col-lg-2 mt-0 mb-0 pt-2">
             <div id="stat-card-purchased" class="card stat-card border-2 p-0 fade-in" style="animation-delay: 0.2s;" data-category ='purchased'>
                 <div class="card-header">
