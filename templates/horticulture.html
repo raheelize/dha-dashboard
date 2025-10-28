@@ -324,7 +324,7 @@
                     <div id="legend" class="position-absolute end-0 top-0 m-0 shadow map-overlay-box m-2">
                         <h6 class="mb-3">Map Legend</h6>
                         <button class="close-btn btn-red" aria-label="Close">×</button>
-                        <div class="legend-content">
+                        <div class="legend-content" id="legend-content">
                             <div class="legend-item">
                                 <div class="d-flex align-items-center">
                                     <input type="checkbox" id="phase1" class="legend-checkbox me-2" checked>
@@ -340,17 +340,6 @@
                                     <label for="running-checkbox" class="legend-label mb-0">
                                         <span class="legend-icon icon3"></span>
                                         <span>Horticulture Area</span>
-                                    </label>
-                                </div>
-                            </div>
-                            <div class="legend-item">
-                                <div class="d-flex align-items-center">
-                                    <input type="checkbox" id="" value="0" class="legend-checkbox me-2" checked>
-                                    <label for="running-checkbox" class="legend-label mb-0">
-                                        <span class="legend-icon ">
-                                            <i class="bi bi-map-fill"></i>
-                                        </span>
-                                        <span>Townplan</span>
                                     </label>
                                 </div>
                             </div>
@@ -374,6 +363,8 @@ let horticultureData;
 document.addEventListener('DOMContentLoaded', function () {
     showSkeleton(".card-body", 2);
     showSkeleton('.progress-item',1);
+    showSkeleton('.legend-content',2);
+
     // Call the API when page loads
     fetchHorticultureData();
 });
@@ -407,7 +398,7 @@ async function fetchHorticultureData() {
         })
         .catch(error => {
             console.error('Error fetching land summary:', error);
-            alert("Failed to fetch land summary. Please try again later.");
+            showToast("Failed to fetch data. Please try again later.","error");
         })
         .finally(() => {
             hideLoader();
@@ -420,6 +411,9 @@ function updateStatCards(summary) {
   const container = document.getElementById("stat-row");
   container.innerHTML = "";
 
+  const map_container = document.getElementById("legend-content");
+  map_container.innerHTML = "";
+
 
     const categories = Object.keys(CATEGORIES);
 
@@ -427,7 +421,9 @@ function updateStatCards(summary) {
     const value = summary[cat] || 0;
 
     console.log(cat, value, i)
+
     const card = document.createElement("div");
+
     card.className = `col-lg col-sm-6 mt-1 mb-0 pt-2`;
 
     card.innerHTML = `
@@ -442,6 +438,22 @@ function updateStatCards(summary) {
             </div>
     `;
     container.appendChild(card);
+
+
+    const legendItem = document.createElement("div");
+    legendItem.className = `legend-item`;
+
+    legendItem.innerHTML = `
+                <div class="d-flex align-items-center" data-category="${cat}">
+                    <input type="checkbox" id="phase${i+1}" class="legend-checkbox me-2" onchange="toggleLayer('${cat}', this.checked, null)">
+                    <label for="running-checkbox" class="legend-label mb-0">
+                        <span class="legend-icon icon${i+1}"></span>
+                        <span>Horticulture ${CATEGORIES[cat]}</span>
+                    </label>
+                </div>
+    `;
+
+    map_container.appendChild(legendItem);
   });
 
 

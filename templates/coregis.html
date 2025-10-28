@@ -9,8 +9,8 @@
     <div class="main-content container-fluid pt-0 d-flex flex-row flex-column">
         <div class="row g-3 flex-grow-1 row-main">
             <div class="col-12 col-sm-6 col-md-4">
-                <div class="card city-card border-2 p-0 text-white position-relative overflow-hidden">
-                    <div class="card-img-container" onclick="openDHA('karachi')">
+                <div class="card city-card border-2 p-0 text-white position-relative overflow-hidden" onclick="openDHA('karachi')">
+                    <div class="card-img-container" >
                         <img src="{% static 'assets/img/images/DHAKLogo.png' %}" alt="DHA K">
                     </div>
                      <div class="card-header">
@@ -24,8 +24,8 @@
                 </div>
             </div>
             <div class="col-12 col-sm-6 col-md-4">
-                <div class="card city-card border-2 p-0 overflow-hidden">
-                    <div class="card-img-container" onclick="openDHA('lahore')">
+                <div class="card city-card border-2 p-0 overflow-hidden" onclick="openDHA('lahore')">
+                    <div class="card-img-container" >
                         <img src="{% static 'assets/img/images/DHALlogo.png' %}" alt="DHA L">
                     </div>
                      <div class="card-header">
@@ -39,8 +39,8 @@
                 </div>
             </div>
             <div class="col-12 col-sm-6 col-md-4">
-                <div class="card city-card border-2 p-0 text-white position-relative overflow-hidden">
-                    <div class="card-img-container" onclick="openDHA('islamabad')">
+                <div class="card city-card border-2 p-0 text-white position-relative overflow-hidden" onclick="openDHA('islamabad')">
+                    <div class="card-img-container">
                         <img src="{% static 'assets/img/images/DHAIRlogo.png' %}" alt="DHAIR">
                     </div>
                      <div class="card-header">
@@ -54,8 +54,8 @@
                 </div>
             </div>
             <div class="col-12 col-sm-6 col-md-4">
-                <div class="card city-card border-2 p-0 text-white position-relative overflow-hidden">
-                    <div class="card-img-container" onclick="openDHA('bahawalpur')">
+                <div class="card city-card border-2 p-0 text-white position-relative overflow-hidden" onclick="openDHA('bahawalpur')">
+                    <div class="card-img-container">
                         <img src="{% static 'assets/img/images/DHABLogo.png' %}" alt="DHAB">
                     </div>
                      <div class="card-header">
@@ -69,8 +69,8 @@
                 </div>
             </div>
             <div class="col-12 col-sm-6 col-md-4">
-                <div class="card city-card border-2 p-0 text-white position-relative overflow-hidden">
-                    <div class="card-img-container" onclick="openDHA('peshawar')">
+                <div class="card city-card border-2 p-0 text-white position-relative overflow-hidden" onclick="openDHA('peshawar')">
+                    <div class="card-img-container">
                         <img src="{% static 'assets/img/images/DHAp-Logo' %}.jpg" alt="DHAP">
                     </div>
                     <div class="card-header">
@@ -84,8 +84,8 @@
                 </div>
             </div>
             <div class="col-12 col-sm-6 col-md-4">
-                <div class="card city-card border-2 p-0 text-white position-relative overflow-hidden">
-                    <div class="card-img-container" onclick="openDHA('karachi_city')">
+                <div class="card city-card border-2 p-0 text-white position-relative overflow-hidden" onclick="openDHA('karachi_city')">
+                    <div class="card-img-container">
                         <img src="{% static 'assets/img/images/DHACityLogo.png' %}" alt="DHACity">
                     </div>
                      <div class="card-header">
@@ -99,8 +99,8 @@
                 </div>
             </div>
             <div class="col-12 col-sm-6 col-md-4">
-                <div class="card city-card border-2 p-0 text-white position-relative overflow-hidden">
-                    <div class="card-img-container" onclick="openDHA('Multan')">
+                <div class="card city-card border-2 p-0 text-white position-relative overflow-hidden" onclick="openDHA('Multan')">
+                    <div class="card-img-container">
                         <img src="{% static 'assets/img/images/DHAGlogo.png' %}" alt="DHAG">
                     </div>
                      <div class="card-header">
@@ -114,8 +114,8 @@
                 </div>
             </div>
             <div class="col-12 col-sm-6 col-md-4">
-                <div class="card city-card border-2 p-0 text-white position-relative overflow-hidden">
-                    <div class="card-img-container" onclick="openDHA('Multan')">
+                <div class="card city-card border-2 p-0 text-white position-relative overflow-hidden" onclick="openDHA('Multan')">
+                    <div class="card-img-container">
                         <img src="{% static 'assets/img/images/DHAMlogo.png' %}" alt="DHAM">
                     </div>
                      <div class="card-header">
@@ -129,8 +129,8 @@
                 </div>
             </div>
             <div class="col-12 col-sm-6 col-md-4">
-                <div class="card city-card border-2 p-0 text-white position-relative overflow-hidden">
-                    <div class="card-img-container" onclick="openDHA('Multan')">
+                <div class="card city-card border-2 p-0 text-white position-relative overflow-hidden" onclick="openDHA('Multan')">
+                    <div class="card-img-container">
                         <img src="{% static 'assets/img/images/DHAQLogo.jpg' %}" alt="DHAQ">
                     </div>
                      <div class="card-header">
@@ -158,6 +158,7 @@
 
     if (!ip || ip === "undefined" || ip === "") {
       alert(`IP not configured for ${city}`);
+      showToast(`IP not configured for ${city}`,"error");
       return;
     }
 

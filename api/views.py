@@ -1,21 +1,39 @@
 
-import requests
+import requests, os, json
 from django.http import JsonResponse
 from django.views.decorators.csrf import csrf_exempt
 from datetime import datetime
-
 from concurrent.futures import ThreadPoolExecutor, as_completed
-
 from api.geo_server_config import GEOSERVER_CONFIG
-dha_configs = GEOSERVER_CONFIG['dha_servers']
 
+
+DHA_CONFIGS = GEOSERVER_CONFIG['dha_servers']
+
+
+def get_json_template(name, base_dir="response_templates"):
+    path = os.path.join(base_dir, f"{name}.json")
+
+    if not os.path.exists(path):
+        return JsonResponse({"error": f"Template '{name}' not found"}, status=404)
+
+    try:
+        with open(path, encoding="utf-8") as f:
+            data = json.load(f)
+        return JsonResponse(data, safe=False)
+    except json.JSONDecodeError:
+        return JsonResponse({"error": f"Invalid JSON in '{name}.json'"}, status=500)
 
 @csrf_exempt
 def land_summary(request):
+
+    # For Demo purposes only
+    # return get_json_template("land_summary")
+
+
         
     STATION_URLS = {
         name.title(): f"http://{cfg['dhaip']}/geoserver/dha_coregis/ows?service=WFS&version=1.0.0&request=GetFeature&typeName=dha_coregis%3Afinalreport&outputFormat=application%2Fjson&authkey={cfg['auth_key']}"
-        for name, cfg in dha_configs.items()
+        for name, cfg in DHA_CONFIGS.items()
     }
 
 
@@ -145,14 +163,16 @@ def land_summary(request):
     print(f"[{datetime.now()}] Consolidated DHA Report API completed")
     return JsonResponse(response_payload, safe=False, json_dumps_params={"indent": 2})
 
-
-
 @csrf_exempt
 def town_summary(request):
+
+    # For Demo purposes only
+    # return get_json_template("town_summary")
+
     # Build station URLs dynamically
     STATION_URLS = {
         name.title(): f"http://{cfg['dhaip']}/geoserver/dha_coregis_v2/ows?service=WFS&version=1.0.0&request=GetFeature&typeName=dha_coregis_v2%3Aphase_plot_category_summary&maxFeatures=50&outputFormat=application%2Fjson&authkey={cfg['auth_key']}"
-        for name, cfg in dha_configs.items()
+        for name, cfg in DHA_CONFIGS.items()
     }
 
     CATEGORIES = ["Residential", "Commercial", "Education", "Amenities", "Parks", "Total_Plots"]
@@ -230,10 +250,11 @@ def town_summary(request):
     result["timestamp"] = datetime.now().isoformat()
     return JsonResponse(result, safe=False, json_dumps_params={"indent": 2})
 
-
-
 @csrf_exempt
 def services_summary(request):
+        
+    # For Demo purposes only
+    # return get_json_template("services_summary")
     """
     Fetch and summarize infrastructure service stats from all DHA stations.
     """
@@ -244,7 +265,7 @@ def services_summary(request):
                       f"&typeName=dha_coregis_v2%3Ainfrastructure_summary"
                       f"&maxFeatures=100&outputFormat=application%2Fjson"
                       f"&authkey={cfg['auth_key']}"
-        for name, cfg in dha_configs.items()
+        for name, cfg in DHA_CONFIGS.items()
     }
 
 
@@ -351,6 +372,9 @@ def services_summary(request):
 
 @csrf_exempt
 def horticulture_summary(request):
+            
+    # For Demo purposes only
+    # return get_json_template("horticulture_summary")
     """
     Fetch and summarize horticulture data (Polygon/Line/Point)
     for all DHA stations in parallel, including total and phase-wise values.
@@ -380,7 +404,7 @@ def horticulture_summary(request):
             )
             for geom, endpoint in GEOMETRY_TYPES.items()
         }
-        for name, cfg in dha_configs.items()
+        for name, cfg in DHA_CONFIGS.items()
     }
 
     result = {
@@ -459,15 +483,16 @@ def horticulture_summary(request):
 
     return JsonResponse(result, safe=False, json_dumps_params={"indent": 2})
 
-
-
 @csrf_exempt
 def security_summary(request):
+                
+    # For Demo purposes only
+    # return get_json_template("security_summary")
     CATEGORIES = ["Camera", "Check Post", "Picquet", "QRF", "Incidents"]
 
     STATION_URLS = {
         name.title(): f"http://{cfg['dhaip']}/geoserver/dha_coregis_v2/ows?service=WFS&version=1.0.0&request=GetFeature&typeName=dha_coregis_v2%3Aphase_security_summary&maxFeatures=50&outputFormat=application%2Fjson&authkey={cfg['auth_key']}"
-        for name, cfg in dha_configs.items()
+        for name, cfg in DHA_CONFIGS.items()
     }
 
     result = {

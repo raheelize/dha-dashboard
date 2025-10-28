@@ -366,7 +366,7 @@
                     <div class="legend-content">
                         <div class="legend-item">
                             <div class="d-flex align-items-center">
-                                <input type="checkbox" id="phase1" class="legend-checkbox me-2" checked>
+                                <input type="checkbox" id="phase1" class="legend-checkbox me-2" onchange="toggleLayer('purchase_layer', this.checked, null, 'possessed')">
                                 <label for="running-checkbox" class="legend-label mb-0">
                                     <span class="legend-icon icon1"></span>
                                     <span>Possessed</span>
@@ -375,7 +375,7 @@
                         </div>
                         <div class="legend-item">
                             <div class="d-flex align-items-center">
-                                <input type="checkbox" id="" value="0" class="legend-checkbox me-2" checked>
+                                <input type="checkbox" id="" value="0" class="legend-checkbox me-2" onchange="toggleLayer('purchase_layer', this.checked, null, 'purchased')">
                                 <label for="running-checkbox" class="legend-label mb-0">
                                     <span class="legend-icon icon2"></span>
                                     <span>Unpossessed</span>
@@ -384,7 +384,7 @@
                         </div>
                         <div class="legend-item">
                             <div class="d-flex align-items-center">
-                                <input type="checkbox" id="" value="0" class="legend-checkbox me-2" checked>
+                                <input type="checkbox" id="" value="0" class="legend-checkbox me-2" onchange="toggleLayer('purchase_layer', this.checked, null, 'unpossessed')">
                                 <label for="running-checkbox" class="legend-label mb-0">
                                     <span class="legend-icon icon3"></span>
                                     <span>Purchased</span>
@@ -393,7 +393,7 @@
                         </div>
                         <div class="legend-item">
                             <div class="d-flex align-items-center">
-                                <input type="checkbox" id="" value="0" class="legend-checkbox me-2" checked>
+                                <input type="checkbox" id="" value="0" class="legend-checkbox me-2" onchange="toggleLayer('purchase_layer', this.checked, null, 'unpurchased')">
                                 <label for="running-checkbox" class="legend-label mb-0">
                                     <span class="legend-icon icon4"></span>
                                     <span class="text-wrap">Possessed </br> Not Purchased</span>
@@ -402,7 +402,7 @@
                         </div>
                         <div class="legend-item">
                             <div class="d-flex align-items-center">
-                                <input type="checkbox" id="" value="0" class="legend-checkbox me-2" checked>
+                                <input type="checkbox" id="" value="0" class="legend-checkbox me-2" onchange="toggleLayer('purchase_layer', this.checked, null, 'hold')">
                                 <label for="running-checkbox" class="legend-label mb-0">
                                     <span class="legend-icon icon5"></span>
                                     <span>Hold</span>
@@ -411,21 +411,10 @@
                         </div>
                         <div class="legend-item">
                             <div class="d-flex align-items-center">
-                                <input type="checkbox" id="" value="0" class="legend-checkbox me-2" checked>
+                                <input type="checkbox" id="" value="0" class="legend-checkbox me-2" onchange="toggleLayer('purchase_layer', this.checked, null, 'litigation')">
                                 <label for="running-checkbox" class="legend-label mb-0">
                                     <span class="legend-icon icon6"></span>
                                     <span>Litigation</span>
-                                </label>
-                            </div>
-                        </div>
-                        <div class="legend-item">
-                            <div class="d-flex align-items-center">
-                                <input type="checkbox" id="" value="0" class="legend-checkbox me-2" checked>
-                                <label for="running-checkbox" class="legend-label mb-0">
-                                    <span class="legend-icon ">
-                                        <i class="bi bi-map-fill"></i>
-                                    </span>
-                                    <span>Townplan</span>
                                 </label>
                             </div>
                         </div>
@@ -466,7 +455,7 @@ function fetchLandSummary() {
         })
         .catch(error => {
             console.error('Error fetching land summary:', error);
-            alert("Failed to fetch land summary. Please try again later.");
+            showToast("Failed to fetch data. Please try again later.","error");
         })
         .finally(() => {
             hideLoader();
@@ -513,7 +502,7 @@ function updateStatCards(summary) {
 
 
 
-function updateCityCards(stations) {
+function updateCityCards(stations, category = 'possessed') {
 
     stations.forEach(st => {
         const elId = mapCityToId[st.station_name];
@@ -525,7 +514,7 @@ function updateCityCards(stations) {
             
             if (el) {
                 el.innerHTML = `
-                <p class="mb-0 px-2">${Number(st.totals.possessed).toLocaleString()}&nbsp;<small class="text-muted">Kanals</small></p>
+                <p class="mb-0 px-2">${Number(st.totals[category]).toLocaleString()}&nbsp;<small class="text-muted">Kanals</small></p>
                 `;
             }
         }
@@ -548,7 +537,9 @@ document.addEventListener('DOMContentLoaded', function () {
             document.querySelectorAll('.stat-card').forEach(c => c.classList.remove('selected'));
             this.classList.add('selected');
             const type = id.replace('stat-card-', '');    
-            resetMap();        
+            resetMap(); 
+            
+            updateCityCards(landData.stations,type);
             if (id === 'stat-card-purchased') {
                 updatePurchasedBars(landData.stations);
             }else{

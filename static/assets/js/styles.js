@@ -91,3 +91,9 @@ document.addEventListener('DOMContentLoaded', function () {
   }
 
 });
+
+
+document.querySelector('.close-btn').addEventListener('click', () => {
+    const wrapper = document.getElementById('legend');
+    wrapper.style.display = 'none'; // hides the entire legend
+});

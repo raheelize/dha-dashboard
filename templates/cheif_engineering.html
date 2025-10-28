@@ -352,7 +352,7 @@
                     <div id="legend" class="position-absolute end-0 top-0 m-0 shadow map-overlay-box m-2">
                         <h6 class="mb-3">Map Legend</h6>
                         <button class="close-btn btn-red" aria-label="Close">×</button>
-                        <div class="legend-content">
+                        <div id="legend-content" class="legend-content">
                             <div class="legend-item">
                                 <div class="d-flex align-items-center">
                                     <input type="checkbox" id="phase1" class="legend-checkbox me-2" checked>
@@ -416,17 +416,6 @@
                                     </label>
                                 </div>
                             </div>
-                            <div class="legend-item">
-                                <div class="d-flex align-items-center">
-                                    <input type="checkbox" id="" value="0" class="legend-checkbox me-2" checked>
-                                    <label for="running-checkbox" class="legend-label mb-0">
-                                        <span class="legend-icon ">
-                                            <i class="bi bi-map-fill"></i>
-                                        </span>
-                                        <span>Townplan</span>
-                                    </label>
-                                </div>
-                            </div>
                         </div>
                     </div>
                 </div>
@@ -464,10 +453,40 @@ const CATEGORY_UNITS = {
 }
 
 
+LEGEND_ITEMS = [
+        "Roads",
+        "Water Supply - Lines (Mains)",
+        "Water Supply - Lines (House Connections)",
+        "Water Supply - Pump Stations",
+        "Water Supply - Source (Bulk Supply)",
+        "Water Supply - Source (Tube Wells)",
+        "Water Supply - Storage (Surface Water Tank)",
+        "Water Supply - Storage (Underground Water Tank)",
+        "Electricity - Lines (LT)",
+        "Electricity - Lines (HT)",
+        "Electricity - Lines (House Connections)",
+        "Electricity - Controls (PMT HT)",
+        "Electricity - Controls (RMU)",
+        "Electricity - Controls (Transformer)",
+        "Electricity - Stations (Feeder)",
+        "Electricity - Stations (Grid Station)",
+        "Gas Supply",
+        "Sewerage",
+        "Drains Closed",
+        "Drains Nullah",
+        "Drains Open",
+        "Gutter",
+        "Communication",
+]
+
+
+
 document.addEventListener('DOMContentLoaded', function () {
     // return;
     showSkeleton(".card-body", 2);
     showSkeleton('.progress-item',1);
+    showSkeleton('.legend-content',2);
+
     // Call the API when page loads
     fetchServicesData();
 });
@@ -489,7 +508,7 @@ async function fetchServicesData() {
         })
         .catch(error => {
             console.error('Error fetching land summary:', error);
-            alert("Failed to fetch land summary. Please try again later.");
+            showToast("Failed to fetch data. Please try again later.","error");
         })
         .finally(() => {
             hideLoader();
@@ -499,37 +518,54 @@ async function fetchServicesData() {
 
 // Render stat cards
 function updateStatCards(summary) {
-  const container = document.getElementById("stat-row");
-  container.innerHTML = "";
+    const container = document.getElementById("stat-row");
+    container.innerHTML = "";   
 
-  
+    
 
-  CATEGORIES.forEach((cat, i) => {
+    CATEGORIES.forEach((cat, i) => {
 
 
-    const value = summary[cat] || 0;
+        const value = summary[cat] || 0;
 
-    console.log(cat, value, i)
-    const card = document.createElement("div");
-    card.className = `col-lg col-sm-6 mt-1 mb-0 pt-2`;
+        console.log(cat, value, i)
+        const card = document.createElement("div");
+        card.className = `col-lg col-sm-6 mt-1 mb-0 pt-2`;
 
-    card.innerHTML = `
-            <div id="stat-card-1" class="card stat-card border-2 p-0 ${i == 0 ? "selected" : ""}"  style="animation-delay: 0.1s;"  data-category="${cat}">
-                <div class="card-header">
-                    <span class="">${cat}</span>
+        card.innerHTML = `
+                <div id="stat-card-1" class="card stat-card border-2 p-0 ${i == 0 ? "selected" : ""}"  style="animation-delay: 0.1s;"  data-category="${cat}">
+                    <div class="card-header">
+                        <span class="">${cat}</span>
+                    </div>
+                    <div class="card-body mt-0 p-0 ">
+                        <h5 class="mb-0 px-2">${value.toLocaleString()}</h5>
+                        <small class="text-muted">${CATEGORY_UNITS[cat]}</small>
+                    </div>
                 </div>
-                <div class="card-body mt-0 p-0 ">
-                    <h5 class="mb-0 px-2">${value.toLocaleString()}</h5>
-                    <small class="text-muted">${CATEGORY_UNITS[cat]}</small>
-                </div>
-            </div>
-    `;
-    container.appendChild(card);
-  });
+        `;
+        container.appendChild(card);
+    });
+
+    //   Populate Map Legend
+    const map_container = document.getElementById("legend-content");
+    map_container.innerHTML = "";
 
 
+    LEGEND_ITEMS.forEach((item, i ) => {
+        const legendItem = document.createElement("div");
+        legendItem.className = `legend-item`;
 
-
+        legendItem.innerHTML = `
+                    <div class="d-flex align-items-center" data-category="${item}">
+                        <input type="checkbox" id="phase${(i+6)%6+1}" class="legend-checkbox me-2" onchange="toggleLayer('${item}', this.checked, null)">
+                        <label for="running-checkbox" class="legend-label mb-0">
+                            <span class="legend-icon icon${(i+6)%6+1}"></span>
+                            <span>${item}</span>
+                        </label>
+                    </div>
+        `;
+        map_container.appendChild(legendItem);    
+    });
 }
 
 // Render station-wise cards
