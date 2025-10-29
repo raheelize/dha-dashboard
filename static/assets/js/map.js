@@ -181,7 +181,7 @@ function setMap(layer = "purchase_layer", category = null, station = "DHA Gujran
     
 
     const stationData = DHA_PHASES.find(
-        p => p.name.toUpperCase() == station.toUpperCase()
+        p => p.name.toUpperCase() === station.toUpperCase()
     );
 
     if (!stationData) {
@@ -251,6 +251,12 @@ function toggleLayer(layerName, isChecked, station = null, category = null) {
     if (!map) {
         console.warn("⚠️ Map not initialized yet!");
         return;
+    }
+
+    // 🔄 Remove previous WMS layer if any
+    if (currentWmsLayer) {
+        map.removeLayer(currentWmsLayer);
+        currentWmsLayer = null;
     }
 
     // 🧭 Check selected station
