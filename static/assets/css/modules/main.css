@@ -701,6 +701,7 @@ body {
   text-shadow: 0 1px 2px rgba(0, 0, 0, 0.05);
   letter-spacing: 0.5px;
   position: relative;
+  font-size: 0.75rem;
   font-weight: 600;
 }
 
@@ -869,22 +870,22 @@ body {
 }
 
 .stacked-segment.litigation {
-  background-color: #df6c6c;
+  background-color: rgba(115,76,0) ;
   color: #fff;
 }
 
 .stacked-segment.possessed {
-  background-color: #b6edd1;
+  background-color: rgba(38,115,0);
   color: #333;
 }
 
 .stacked-segment.hold {
-  background-color: #aecbfa;
+  background-color: rgba(239,13,13) ;
   color: #333;
 }
 
 .stacked-segment.unpossessed {
-  background-color: #f8d68d;
+  background-color: rgb(193,230,153);
   color: #333;
 }
 
@@ -910,19 +911,19 @@ body {
 }
 
 .legend-color.litigation {
-  background-color: #f28b82;
+  background-color: rgba(115,76,0);
 }
 
 .legend-color.possessed {
-  background-color: #b6edd1;
+  background-color: rgba(38,115,0);
 }
 
 .legend-color.hold {
-  background-color: #f8d68d;
+  background-color: rgba(239,13,13);
 }
 
 .legend-color.unpossessed {
-  background-color: #aecbfa;
+  background-color: rgb(193,230,153);
 }
 
 /* ========== RESPONSIVE ========== */

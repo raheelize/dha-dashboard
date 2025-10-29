@@ -194,6 +194,7 @@ class GraphController {
         } else {
             icon.classList.remove('bi-arrow-right');
             icon.classList.add('bi-arrow-left');
+           
         }
     }
 

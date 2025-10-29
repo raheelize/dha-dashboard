@@ -199,7 +199,7 @@
                 <!-- Progress bars -->
                 <div id="progressbarspanel" class="charts-panel h-100 d-flex flex-column pt-0 px-0">
                     <div class="chart-wrapper">
-                        <div class="chart-header"> Road Network Distribution - DHA Wise Statistics</div>
+                        <div class="chart-header">DHA Wise Statistics</div>
                         <div class="progress-container m-0 p-0">
                             <div class="progress-item mb-2">
                                 <div class="progress-label">
@@ -702,7 +702,7 @@ function updateProgressBars(stations, selectedType = 'Roads') {
 
 
         const item = document.createElement('div');
-        item.className = 'progress-item mb-2';
+        item.className = 'progress-item my-2 py-1';
         item.innerHTML = `
             <div class="progress-label">
                 <span class="district-name">${mapDHATag[st.station_name]}</span>
@@ -711,7 +711,7 @@ function updateProgressBars(stations, selectedType = 'Roads') {
                 </div>
             </div>
             <div class="custom-progress">
-                <div class="custom-progress-bar ${cls}" style="width: ${percent}%">
+                <div class="custom-progress-bar khi" style="width: ${percent}%">
                     <span class="progress-percentage">${percent}%</span>
                 </div>
             </div>`;

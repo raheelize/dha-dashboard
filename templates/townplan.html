@@ -513,7 +513,7 @@ function updateProgressBars(stations, selectedType = 'Residential') {
 
 
         const item = document.createElement('div');
-        item.className = 'progress-item mb-2';
+        item.className = 'progress-item my-2 py-1';
         item.innerHTML = `
             <div class="progress-label">
                 <span class="district-name">${mapDHATag[st.station_name]}</span>
@@ -522,7 +522,7 @@ function updateProgressBars(stations, selectedType = 'Residential') {
                 </div>
             </div>
             <div class="custom-progress">
-                <div class="custom-progress-bar ${cls}" style="width: ${percent}%">
+                <div class="custom-progress-bar khi" style="width: ${percent}%">
                     <span class="progress-percentage">${percent}%</span>
                 </div>
             </div>`;

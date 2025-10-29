@@ -10,15 +10,15 @@ let defaultView = {
 
 
 const DHA_PHASES = [
-    { name: "DHA CITY", coords: [25.008, 67.4528], ip: window.IP_karachi_city , auth_key: window.KEY_karachi_city },
-    { name: "DHA K", coords: [24.7873, 67.0705], ip: window.IP_karachi , auth_key: window.KEY_karachi },
-    { name: "DHA L", coords: [31.47780, 74.40966], ip: window.IP_lahore , auth_key: window.KEY_lahore },
-    { name: "DHA G", coords: [32.27924, 74.13658], ip: window.IP_gujranwala , auth_key: window.KEY_gujranwala },
-    { name: "DHA B", coords: [29.32569, 71.67619], ip: window.IP_bahawalpur , auth_key: window.KEY_bahawalpur },
-    { name: "DHA IR", coords: [33.5395, 73.0986], ip: window.IP_islamabad , auth_key: window.KEY_islamabad },
-    { name: "DHA M", coords: [30.2907, 71.51773], ip: window.IP_multan , auth_key: window.KEY_multan },
-    { name: "DHA P", coords: [34.05411, 71.43258], ip: window.IP_peshawar , auth_key: window.KEY_peshawar },
-    { name: "DHA Q", coords: [30.3049, 66.9150], ip: window.IP_quetta , auth_key: window.KEY_quetta }
+    { name: "DHA City", coords: [25.008, 67.4528], ip: window.IP_karachi_city , auth_key: window.KEY_karachi_city },
+    { name: "DHA Karachi", coords: [24.7873, 67.0705], ip: window.IP_karachi , auth_key: window.KEY_karachi },
+    { name: "DHA Lahore", coords: [31.47780, 74.40966], ip: window.IP_lahore , auth_key: window.KEY_lahore },
+    { name: "DHA Gujranwala", coords: [32.27924, 74.13658], ip: window.IP_gujranwala , auth_key: window.KEY_gujranwala },
+    { name: "DHA Bahawalpur", coords: [29.32569, 71.67619], ip: window.IP_bahawalpur , auth_key: window.KEY_bahawalpur },
+    { name: "DHA Islamabad", coords: [33.5395, 73.0986], ip: window.IP_islamabad , auth_key: window.KEY_islamabad },
+    { name: "DHA Multan", coords: [30.2907, 71.51773], ip: window.IP_multan , auth_key: window.KEY_multan },
+    { name: "DHA Peshawar", coords: [34.05411, 71.43258], ip: window.IP_peshawar , auth_key: window.KEY_peshawar },
+    { name: "DHA Quetta", coords: [30.3049, 66.9150], ip: window.IP_quetta , auth_key: window.KEY_quetta }
 ];
 
 
@@ -84,7 +84,7 @@ function initMap() {
     // }).addTo(map);
 
 
-    let station = 'DHA K';
+    let station = 'DHA Karachi';
     const ip = DHA_PHASES.find(
         p => p.name.toUpperCase() === station.toUpperCase()
     )?.ip;
@@ -164,7 +164,7 @@ function resetMap() {
     initMap();
 }
 
-function setMap(layer = "purchase_layer", category = null, station = "DHA G") {
+function setMap(layer = "purchase_layer", category = null, station = "DHA Gujranwala") {
     if (!map) {
         console.warn("⚠️ Map not initialized yet!");
         return;
@@ -181,7 +181,7 @@ function setMap(layer = "purchase_layer", category = null, station = "DHA G") {
     
 
     const stationData = DHA_PHASES.find(
-        p => p.name.toUpperCase() === station.toUpperCase()
+        p => p.name.toUpperCase() == station.toUpperCase()
     );
 
     if (!stationData) {

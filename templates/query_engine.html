@@ -1,178 +1,291 @@
 {% extends 'base.html' %}
 {% block content %}
-
 {% load static %}
 
 <link rel="stylesheet" href="{% static 'assets/css/modules/queryeng.css' %}" />
 <link rel="stylesheet" href="{% static 'assets/css/modules/graph_visualization.css' %}" />
 
-
 <style>
-    .col-12.col-lg-3.d-flex.flex-column {
-        height: calc(100vh - 100px) !important;
-        overflow: hidden !important;
-    }
-        
-    #configPanel, .graph-display-area{
-        overflow-y: scroll !important;
-        overflow-x: hidden !important;
-        height: calc(100vh - 100px) !important;
-        -webkit-overflow-scrolling: touch;
-        scrollbar-width: thin;
-        scrollbar-color: #aaa transparent;
-    }
+/* --- GENERAL LAYOUT --- */
+.main-content {
+  position: relative;
+  margin-top: 50px;
+  height: 100vh;
+  overflow: hidden;
+}
 
-    #configPanel::-webkit-scrollbar {
-        width: 6px;
-    }
-    #configPanel::-webkit-scrollbar-thumb {
-        background: #bbb;
-        border-radius: 4px;
-    }
-    #configPanel::-webkit-scrollbar-thumb:hover {
-        background: #888;
-    }
+.col-12.col-lg-3.d-flex.flex-column {
+  height: calc(100vh - 100px);
+  overflow: hidden;
+  transition: width 0.3s ease, min-width 0.3s ease;
+}
 
+.graph-display-area {
+  height: calc(100vh - 100px);
+  overflow-y: auto;
+  transition: all 0.3s ease;
+}
+
+/* --- CONFIG PANEL SCROLL --- */
+#configPanel {
+  position: relative;
+  height: 100%;
+  overflow-y: auto;
+  overflow-x: hidden;
+  scrollbar-width: thin;
+  scrollbar-color: #aaa transparent;
+  -webkit-overflow-scrolling: touch;
+  transition: opacity 0.25s ease;
+}
+#configPanel::-webkit-scrollbar { width: 6px; }
+#configPanel::-webkit-scrollbar-thumb {
+  background: #bbb;
+  border-radius: 4px;
+}
+#configPanel::-webkit-scrollbar-thumb:hover { background: #888; }
+
+/* --- STICKY BUTTONS INSIDE PANEL --- */
+#saveLayoutBtn { position: sticky; top: 0; z-index: 10; }
+#addGraphBtn { position: sticky; bottom: 0; left: 0; width: 100%; }
+
+/* --- COLLAPSED (CONFIG COLUMN) --- */
+#configCol.collapsed-panel {
+  width: 55px !important;
+  min-width: 55px !important;
+  overflow: visible; /* allow toggle to float */
+  transition: width 0.3s ease;
+  box-shadow: 2px 0 6px rgba(0,0,0,0.08);
+}
+
+/* hide the configPanel contents when collapsed */
+#configCol.collapsed-panel #configPanel > * {
+  display: none !important;
+}
+
+/* --- TOGGLE BAR (always visible) --- */
+/* NOTE: toggle-only is outside #configPanel now so it won't be hidden */
+.toggle-only {
+  position: relative;
+  z-index: 30;
+  background: #fff;
+  border-bottom: 1px solid #ddd;
+  padding: 6px;
+  display: flex;
+  align-items: center;
+  justify-content: flex-end;
+}
+
+/* base toggle button appearance */
+#toggleConfigPanel {
+  position: relative;
+  z-index: 999;
+  transition: all 0.25s ease;
+}
+
+/* arrow icon rotation */
+#toggleConfigPanel i {
+  transition: transform 0.25s ease;
+  display: inline-block;
+}
+
+/* When collapsed: float the toggle button outside and center vertically */
+#configCol.collapsed-panel .toggle-only {
+  /* keep the top bar visually; but button will float */
+  padding: 6px 6px 6px 6px;
+}
+
+/* Float the button */
+#configCol.collapsed-panel #toggleConfigPanel {
+  position: fixed;
+  left: 18px;            /* adjust to taste (left side float) */
+  top: 70px;
+  transform: translateY(-50%);
+  background: #fff;
+  /* border-radius: 50%; */
+  padding: 8px 10px;
+  box-shadow: 0 0 10px rgba(0,0,0,0.12);
+  z-index: 9999;
+  width: auto;
+  height: auto;
+}
+
+/* rotate arrow to indicate expand */
+/* #configCol.collapsed-panel #toggleConfigPanel i {
+  transform: rotate(180deg);
+} */
+
+/* --- GRAPH AREA EXPANDS WHEN COLLAPSED --- */
+#configCol.collapsed-panel + .col-lg-9,
+#configCol.collapsed-panel ~ .col-lg-9 {
+  flex: 1;
+  width: calc(100% - 55px) !important;
+  transition: all 0.3s ease;
+}
+
+/* small responsive tweaks */
+@media (max-width: 991px) {
+  /* on small screens, don't float fixed — keep inline behavior */
+  #configCol.collapsed-panel #toggleConfigPanel {
+    position: relative;
+    left: 0;
+    top: auto;
+    transform: none;
+    box-shadow: none;
+  }
+}
 </style>
-    <!-- Main Content -->
-    <div class="main-content container-fluid pt-0 d-flex flex-column">
-        <div class="row">
 
-            <!-- Configuration Panel (Left Side) -->
-            <div class="col-12 col-lg-3 order-1 order-lg-1 d-flex flex-column">
-                <div id="configPanel" class="config-panel p-0 m-0">
+<!-- =================== MAIN CONTENT =================== -->
+<div class="main-content container-fluid pt-0 d-flex flex-column">
+  <div class="row">
 
-                    <!-- Server Selection -->
-                    <div class="config-section py-1 px-1">
-                        <div class="d-flex inline-flex align-items-center justify-content-end">
-                            <button id="saveLayoutBtn" class="btn  btn-sm btn-outline-primary p-1" title="Save">
-                                <i class="bi bi-download"></i>
-                            </button>
-                            <div class="position-relative">
-                                <button class="btn btn-sm btn-outline-secondary w-100 p-1" title="Load">
-                                    <i class="bi bi-upload"></i>
-                                </button>
-                                <input type="file" id="loadLayoutInput" class="file-input-overlay" accept=".json"
-                                    title="Load">
-                            </div>
-                            <button id="clearAllGraphsBtn" class="btn btn-sm btn-outline-danger p-1" title="Clear">
-                                <i class="bi bi-trash"></i>
-                            </button>
-                            <button id="toggleConfigPanel" class="btn btn-sm btn-outline-secondary">
-                                <i class="bi bi-arrow-left"></i>
-                            </button>
-                        </div>
-                        <h6 class="mb-0 px-2">Server Selection</h6>
-                        <div class="form-check mb-1">
-                            <input type="checkbox" class="form-check-input" id="selectAllServers">
-                            <label class="form-check-label small" for="selectAllServers">Select All</label>
-                        </div>
-                        <div id="serverList" class="server-list">
-                            <div class="d-flex align-items-center">
-                                <!-- <div class="spinner-border spinner-border-sm" role="status">
-                                    <span class="visually-hidden">Loading...</span>
-                                </div> -->
-                                <!-- <span class="ms-2 small">Loading servers...</span> -->
-                            </div>
-                        </div>
-                        <button id="testConnectionBtn" class="btn btn-sm btn-outline-primary mt-1 w-100 p-1">
-                            <i class="bi bi-lightning-charge"></i> Connect
-                        </button>
-                        <div id="connectionMessage" class="mt-1 small"></div>
-                    </div>
+    <!-- CONFIG PANEL COLUMN -->
+    <div id="configCol" class="col-12 col-lg-3 order-1 order-lg-1 d-flex flex-column">
+      
+      <!-- TOGGLE BAR (moved OUTSIDE #configPanel so it's never hidden) -->
+      <div class="config-section py-1 px-1 toggle-only">
+        <div class="d-flex inline-flex align-items-center justify-content-end w-100">
+          <button id="saveLayoutBtn" class="btn btn-sm btn-outline-primary p-1 me-1" title="Save">
+            <i class="bi bi-download"></i>
+          </button>
 
-                    <!-- Layer Selection -->
-                    <div class="config-section py-1 px-1">
-                        <h6 class="mb-0 px-2">Layer Selection</h6>
-                        <select id="layerSelect" class="form-select form-select-sm mb-1" disabled>
-                            <option value="" selected>Select a layer</option>
-                        </select>
-                        <div id="layerStatus"></div>
-                    </div>
+          <div class="position-relative me-1">
+            <button class="btn btn-sm btn-outline-secondary w-100 p-1" title="Load">
+              <i class="bi bi-upload"></i>
+            </button>
+            <input type="file" id="loadLayoutInput" class="file-input-overlay" accept=".json" title="Load">
+          </div>
 
-                    <!-- Field Selection -->
-                    <div class="config-section py-1 px-1">
-                        <h6 class="mb-0 px-2">Field Selection</h6>
-                        <div class="mb-2">
-                            <label for="xAxisSelect" class="form-label small mb-1">Group Field:</label>
-                            <select id="xAxisSelect" class="form-select form-select-sm" disabled>
-                                <option value="" selected>Select Group field</option>
-                            </select>
-                        </div>
-                        <div>
-                            <label class="form-label small mb-1">Value Fields:</label>
-                            <div id="yAxisFields" class="y-axis-fields">
-                                <div class="text-muted">Select a layer first</div>
-                            </div>
-                        </div>
-                    </div>
+          <button id="clearAllGraphsBtn" class="btn btn-sm btn-outline-danger p-1 me-1" title="Clear">
+            <i class="bi bi-trash"></i>
+          </button>
 
-                    <!-- Summary Techniques -->
-                    <div class="config-section py-1 px-1">
-                        <h6 class="mb-0 px-2">Summarization Options</h6>
-                        <div id="summaryTechniques" class="summary-techniques">
-                            <div class="text-muted">Select Y-Axis fields first</div>
-                        </div>
-                    </div>
-
-                    <!-- Graph Configuration -->
-                    <div class="config-section border-0 py-1 px-1">
-                        <h6 class="mb-0 px-2">Graph Configuration</h6>
-                        <div class="mb-2">
-                            <label for="graphTypeSelect" class="form-label small mb-1">Graph Type</label>
-                            <select id="graphTypeSelect" class="form-select form-select-sm">
-                                <option value="column" selected>Column</option>
-                                <option value="bar">Bar</option>
-                                <option value="line">Line</option>
-                                <option value="area">Area</option>
-                                <option value="pie">Pie</option>
-                            </select>
-                        </div>
-                        <div class="mb-2">
-                            <label for="graphTitle" class="form-label small mb-1">Graph Title</label>
-                            <input type="text" id="graphTitle" class="form-control form-control-sm"
-                                placeholder="Enter graph title">
-                        </div>
-                        <button id="addGraphBtn" class="btn btn-primary w-100 p-1" disabled>
-                            <i class="bi bi-plus-circle me-1"></i><span class="d-none d-sm-inline">Add Graph</span>
-                        </button>
-                    </div>
-                      <!-- Authors -->
-             
-                </div>
-                   <div class="small authors fw-light px-2 p-0 m-0">
-                    Developed by <a href="https://www.r2v.com" target="_blank">www.r2v.com</a>
-                </div>
-            </div>
-
-            <!-- Graph Display Panel (Right Side) -->
-            <div class="col-12 col-lg-9 order-2 order-lg-2 d-flex flex-column flex-row">
-                <div class="graph-display-area flex-grow-1 d-flex flex-column">
-                    <div class="container-fluid h-100 d-flex flex-column">
-                        <!-- Graphs Container -->
-                        <div id="graphsContainer" class="row graphs-container g-3 flex-grow-1">
-                            <!-- Empty State -->
-                            <div id="emptyState"
-                                class="empty-state w-100 d-flex align-items-center justify-content-center">
-                                <div class="empty-state-content text-center fw-light">
-                                    <i class="bi bi-bar-chart-line display-1 text-muted mb-3"></i>
-                                    <h5>No Graphs Yet</h5>
-                                    <p class="text-muted">Configure and add graphs using the panel on the left.</p>
-                                </div>
-                            </div>
-                            <!-- Graphs will be added here dynamically -->
-                        </div>
-                    </div>
-                </div>
-            </div>
+          <!-- KEEP: your toggle button (JS unchanged) -->
+          <button id="toggleConfigPanel" class="btn btn-sm btn-outline-secondary" onclick="toggleConfigPanel()" title="Collapse / Expand">
+            <i class="bi bi-arrow-left"></i>
+          </button>
         </div>
+      </div>
+
+      <!-- CONFIG PANEL -->
+      <div id="configPanel" class="config-panel pb-5 mb-5">
+
+        <!-- SERVER SELECTION -->
+        <div class="config-section py-1 px-1">
+          <h6 class="mb-0 px-2">Server Selection</h6>
+          <div class="form-check mb-1">
+            <input type="checkbox" class="form-check-input" id="selectAllServers">
+            <label class="form-check-label small" for="selectAllServers">Select All</label>
+          </div>
+          <div id="serverList" class="server-list"></div>
+          <button id="testConnectionBtn" class="btn btn-sm btn-outline-primary mt-1 w-100 p-1">
+            <i class="bi bi-lightning-charge"></i> Connect
+          </button>
+          <div id="connectionMessage" class="mt-1 small"></div>
+        </div>
+
+        <!-- LAYER SELECTION -->
+        <div class="config-section py-1 px-1">
+          <h6 class="mb-0 px-2">Layer Selection</h6>
+          <select id="layerSelect" class="form-select form-select-sm mb-1" disabled>
+            <option value="" selected>Select a layer</option>
+          </select>
+          <div id="layerStatus"></div>
+        </div>
+
+        <!-- FIELD SELECTION -->
+        <div class="config-section py-1 px-1">
+          <h6 class="mb-0 px-2">Field Selection</h6>
+          <div class="mb-2">
+            <label for="xAxisSelect" class="form-label small mb-1">Group Field:</label>
+            <select id="xAxisSelect" class="form-select form-select-sm" disabled>
+              <option value="" selected>Select Group field</option>
+            </select>
+          </div>
+          <div>
+            <label class="form-label small mb-1">Value Fields:</label>
+            <div id="yAxisFields" class="y-axis-fields">
+              <div class="text-muted">Select a layer first</div>
+            </div>
+          </div>
+        </div>
+
+        <!-- SUMMARY TECHNIQUES -->
+        <div class="config-section py-1 px-1">
+          <h6 class="mb-0 px-2">Summarization Options</h6>
+          <div id="summaryTechniques" class="summary-techniques">
+            <div class="text-muted">Select Y-Axis fields first</div>
+          </div>
+        </div>
+
+        <!-- GRAPH CONFIGURATION -->
+        <div class="config-section border-0 py-1 px-1">
+          <h6 class="mb-0 px-2">Graph Configuration</h6>
+          <div class="mb-2">
+            <label for="graphTypeSelect" class="form-label small mb-1">Graph Type</label>
+            <select id="graphTypeSelect" class="form-select form-select-sm">
+              <option value="column" selected>Column</option>
+              <option value="bar">Bar</option>
+              <option value="line">Line</option>
+              <option value="area">Area</option>
+              <option value="pie">Pie</option>
+            </select>
+          </div>
+          <div class="mb-2 pb-3">
+            <label for="graphTitle" class="form-label small mb-1">Graph Title</label>
+            <input type="text" id="graphTitle" class="form-control form-control-sm" placeholder="Enter graph title">
+          </div>
+        
+        </div>
+      </div>
+
+        <button id="addGraphBtn" class="btn btn-primary w-100 p-1">
+            <i class="bi bi-plus-circle me-1"></i><span class="d-none d-sm-inline">Add Graph</span>
+          </button>
+      <div class="small authors fw-light px-2 p-0 m-0">
+        Developed by <a href="https://www.r2v.com" target="_blank">www.r2v.com</a>
+      </div>
     </div>
 
+    <!-- GRAPH AREA -->
+    <div class="col-12 col-lg-9 order-2 order-lg-2 d-flex flex-column flex-row">
+      <div class="graph-display-area flex-grow-1 d-flex flex-column">
+        <div class="container-fluid h-100 d-flex flex-column">
+          <div id="graphsContainer" class="row graphs-container g-3 flex-grow-1">
+            <div id="emptyState" class="empty-state w-100 d-flex align-items-center justify-content-center">
+              <div class="empty-state-content text-center fw-light">
+                <i class="bi bi-bar-chart-line display-1 text-muted mb-3"></i>
+                <h5>No Graphs Yet</h5>
+                <p class="text-muted">Configure and add graphs using the panel on the left.</p>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
 
-
+  </div>
+</div>
 
 <script src="{% static 'assets/js/jquery/jquery-3.6.0.min.js'%}"></script>
 <script src="{% static 'assets/js/jquery/jquery-ui.min.js'%}"></script>
 <script src="{% static 'assets/js/query_engine/config_loader.js'%}"></script>
 <script src="{% static 'assets/js/query_engine/graph_controller.js'%}"></script>
+
+<!-- ✅ Toggle Function (UNCHANGED) -->
+<script>
+function toggleConfigPanel() {
+  const configCol = document.getElementById('configCol');
+  const toggleIcon = document.querySelector('#toggleConfigPanel i');
+
+  configCol.classList.toggle('collapsed-panel');
+
+  if (configCol.classList.contains('collapsed-panel')) {
+    toggleIcon.classList.replace('bi-arrow-left', 'bi-arrow-right');
+  } else {
+    toggleIcon.classList.replace('bi-arrow-right', 'bi-arrow-left');
+  }
+}
+</script>
+
 {% endblock %}
