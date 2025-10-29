@@ -610,7 +610,7 @@ function updateProgressBars(stations, selectedType = 'possessed') {
 
         const cls =  mapCityToId[st.station_name].replace('#', '');
         const val = st.totals[selectedType] || 0;
-        const total = st.totals.purchased || 1; // avoid divide-by-zero
+        const total = landData.total_summary.total_purchased || 1; // avoid divide-by-zero
         const percent = ((val / total) * 100).toFixed(1);
 
 
